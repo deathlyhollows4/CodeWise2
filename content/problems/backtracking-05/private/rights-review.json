@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "78be4ad23840d97f44af1a147ab52fd59957091a1abd631d4bd05af6793c35b3",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Complete source, statement/examples, independent model and all native references read by coordinator. All60hidden cases and nine materialized language assets reconcile to original author/project templates; no imported assets. Enumerates denomination quantity vectors with bounded stock, rather than indexed exact-cardinality subsets02 or a minimum/count-only coin answer. Positive denomination pruning, zero target and wide positive/negative targets are explicit, and an independent mixed-radix enumeration covers stock multiplicities.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-stock.mjs",
+    "sourceHash": "09cfed213e20f019c93d364a6720ac323990fcec03c994cef29b414b5a845781",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

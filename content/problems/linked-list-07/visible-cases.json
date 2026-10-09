@@ -1,0 +1,95 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "data": {
+        "values": [
+          7,
+          7
+        ],
+        "next": [
+          1,
+          null
+        ],
+        "random": [
+          1,
+          1
+        ],
+        "heads": [
+          0
+        ]
+      }
+    },
+    "expected": {
+      "values": [
+        7,
+        7
+      ],
+      "next": [
+        1,
+        null
+      ],
+      "random": [
+        1,
+        1
+      ],
+      "head": 0,
+      "aliasesOriginal": false
+    },
+    "explanation": "Two equal-valued nodes remain distinct; both random links share the cloned second node."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "data": {
+        "values": [
+          5
+        ],
+        "next": [
+          0
+        ],
+        "random": [
+          0
+        ],
+        "heads": [
+          0
+        ]
+      }
+    },
+    "expected": {
+      "values": [
+        5
+      ],
+      "next": [
+        0
+      ],
+      "random": [
+        0
+      ],
+      "head": 0,
+      "aliasesOriginal": false
+    },
+    "explanation": "A self-linked input needs one newly allocated self-linked clone."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "data": {
+        "values": [],
+        "next": [],
+        "random": [],
+        "heads": [
+          null
+        ]
+      }
+    },
+    "expected": {
+      "values": [],
+      "next": [],
+      "random": [],
+      "head": null,
+      "aliasesOriginal": false
+    },
+    "explanation": "An empty root has an empty clone."
+  }
+]

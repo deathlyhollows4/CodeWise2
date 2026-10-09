@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D01",
+  "hiddenCount": 903,
+  "suiteHash": "68b211c0e6deec5a391913f9eb30fc0c2dc1f56fef090764a3ad4e3cc9bdb540",
+  "categories": [
+    "empty",
+    "degenerate",
+    "exhaustive-3x3-obstacles",
+    "seeded-open-endpoint-obstacles",
+    "max-open-modular-count",
+    "max-unique-corridor"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

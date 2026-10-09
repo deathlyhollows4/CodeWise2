@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "advanced-graphs-03",
+  "version": "1.0.0",
+  "slug": "smallest-worst-edge-risk",
+  "title": "Smallest worst edge risk",
+  "primaryTopic": "advanced-graphs",
+  "skillIds": [
+    "graphs.minimax-route-risk",
+    "graphs.threshold-connectivity"
+  ],
+  "prerequisites": [
+    "graphs.layered-distance"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Minimize the greatest individual edge risk on an undirected route from vertex 0 to vertex n - 1, rather than its sum or hop count.",
+  "constraints": [
+    "0 <= n <= 500",
+    "0 <= edges.length <= 5000",
+    "Each row is [u,v,risk], endpoints in 0..n - 1",
+    "0 <= risk <= 1000000000",
+    "Return -1 or a risk in 0..1000000000"
+  ],
+  "interface": "Solution.solve(n,edges) receives int and int[][]; returns an int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "n": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 500
+      },
+      "edges": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 5000,
+        "items": {
+          "kind": "array",
+          "minLength": 3,
+          "maxLength": 3,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1,
+    "maximum": 1000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "advanced-graphs-04"
+  ],
+  "remedialIds": [
+    "graphs-02",
+    "advanced-graphs-01"
+  ],
+  "nextIds": [
+    "advanced-graphs-05",
+    "advanced-graphs-06"
+  ],
+  "rationale": "A risk threshold permits a route exactly when its allowed edges connect the two endpoints; one high-risk edge dominates a route score.",
+  "commonMistakes": [
+    "minimize-total-additive-cost",
+    "consider-only-direct-offers"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "weighted-edges",
+      "field": "edges",
+      "vertices": "n",
+      "directed": false,
+      "allowSelfLoops": true,
+      "allowDuplicates": true,
+      "minWeight": 0,
+      "maxWeight": 1000000000
+    }
+  ]
+}

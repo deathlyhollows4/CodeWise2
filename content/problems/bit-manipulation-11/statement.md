@@ -1,0 +1,1 @@
+The binary reflected Gray ordering starts 0, 1, 3, 2, 6, 7, 5, 4. At each additional bit width, keep the previous ordering prefixed by 0, then append its reverse prefixed by 1. Return the codeword at zero-based ordinal value in the reflected ordering of all 31 bit words. Return the codeword as a nonnegative integer, not as a string.

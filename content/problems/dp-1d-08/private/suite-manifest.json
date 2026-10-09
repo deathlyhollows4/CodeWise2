@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC208",
+  "hiddenCount": 756,
+  "suiteHash": "e71f8d71bc56b68b29704c0e012d205ffbe897caac0b324683d3dfc0606b7bbd",
+  "categories": [
+    "exhaustive-bounded-index-subsets",
+    "zero-empty-reuse-and-duplicate-indices",
+    "large-uniform-closed-form"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

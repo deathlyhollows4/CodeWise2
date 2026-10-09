@@ -1,0 +1,48 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        4,
+        2,
+        7,
+        1
+      ],
+      "target": 8
+    },
+    "expected": [
+      2,
+      3
+    ],
+    "explanation": "7+1 is the only matching pair."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 0
+    },
+    "expected": [
+      -1,
+      -1
+    ],
+    "explanation": "No positions exist."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "target": 5
+    },
+    "expected": [
+      0,
+      3
+    ],
+    "explanation": "[0, 3] wins over [1, 2] because 0 is smaller."
+  }
+]

@@ -1,0 +1,1 @@
+Return the cell values encountered by a clockwise spiral starting at the top-left cell, first moving right. Continue along the outer edge, then wind inward. Every cell appears exactly once. If the grid has no cells, return an empty array.

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-next.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 721,
+  "suiteHash": "d26110c1bbb835c2b365a7ab23e6462ecff5f029f349b25701f33911ac2178ab",
+  "categories": [
+    "equal-values-with-disjoint-identity",
+    "shared-tail-permuted-identity",
+    "long-identical-values-shared-suffix"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

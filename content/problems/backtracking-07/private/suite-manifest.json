@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-mini-grid.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "d21d2e987e479b4be1afe182b4d59c970f751cc5ee1264ec8be928907de1fe98",
+  "categories": [
+    "maximum-all-288-completions",
+    "fixed-row-column-or-block-contradiction",
+    "valid-rows-columns-but-invalid-blocks",
+    "one-missing-fixed-location",
+    "sparse-line-block-diagonal-clue-shape",
+    "distinct-clue-location-mask"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

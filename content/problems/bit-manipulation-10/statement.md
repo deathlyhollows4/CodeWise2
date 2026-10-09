@@ -1,0 +1,1 @@
+A device has 31 switches numbered 0 through 30. Bit p of initial is 1 exactly when switch p starts on. For each position in positions, toggle that switch once. Return the final nonnegative mask. Repeated positions must be processed, and an empty history leaves the initial mask unchanged.

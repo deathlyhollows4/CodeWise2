@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        4,
+        2,
+        4,
+        1,
+        2
+      ]
+    },
+    "expected": [
+      4,
+      2,
+      1
+    ],
+    "explanation": "The first appearances are 4, then 2, then 1."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "Nothing to keep."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -1,
+        0,
+        -1,
+        0,
+        -2
+      ]
+    },
+    "expected": [
+      -1,
+      0,
+      -2
+    ],
+    "explanation": "Negative labels and zero are ordinary values."
+  }
+]

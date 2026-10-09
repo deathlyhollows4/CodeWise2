@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "cabaabb",
+      "pattern": "ab"
+    },
+    "expected": [
+      1,
+      2,
+      4
+    ],
+    "explanation": "ab, ba, and the later ab have the required two letter counts."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "",
+      "pattern": "a"
+    },
+    "expected": [],
+    "explanation": "The text is too short."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "aaaa",
+      "pattern": "aa"
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Overlapping length-two matches are all included."
+  }
+]

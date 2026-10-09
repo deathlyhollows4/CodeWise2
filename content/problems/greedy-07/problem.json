@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "greedy-07",
+  "version": "1.0.0",
+  "slug": "lexically-smallest-subsequence-containing-each-letter-once",
+  "title": "Smallest unique-letter subsequence",
+  "primaryTopic": "greedy",
+  "skillIds": [
+    "greedy.future-occurrence-feasibility",
+    "greedy.unique-letter-commitment"
+  ],
+  "prerequisites": [
+    "greedy.lexicographic-prefix-improvement",
+    "stack.push-pop-history"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Select one occurrence of each required letter while preserving order and minimizing lexicographic text.",
+  "constraints": [
+    "0 <= text.length <= 100000",
+    "Text contains only lowercase English letters a..z",
+    "The output has at most 26 letters, each occurring exactly once"
+  ],
+  "interface": "Solution.solve(text) returns the lexically smallest one-of-each-letter subsequence.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 100000,
+        "ascii": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "string",
+    "minLength": 0,
+    "maxLength": 26,
+    "ascii": true
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "greedy-06"
+  ],
+  "remedialIds": [
+    "greedy-05",
+    "stack-02",
+    "arrays-hashing-01",
+    "heap-06"
+  ],
+  "nextIds": [],
+  "rationale": "A larger prefix letter may be removed only if it appears again later; uniqueness and future availability constrain each improvement.",
+  "commonMistakes": [
+    "sort-distinct-letters-without-subsequence-check",
+    "always-keep-first-occurrence"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "text",
+      "alphabet": "lowercase"
+    }
+  ]
+}

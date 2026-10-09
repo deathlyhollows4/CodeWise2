@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "lengths": [
+        3,
+        2,
+        2,
+        5
+      ],
+      "width": 6
+    },
+    "expected": 10,
+    "explanation": "Use lines [3], [2,2], [5]. Their costs are 9, 1 and 0. Greedily filling the first line would cost 16."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "lengths": [
+        3
+      ],
+      "width": 6
+    },
+    "expected": 0,
+    "explanation": "The only line is also the final line, so its unused width is free."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "lengths": [
+        7
+      ],
+      "width": 6
+    },
+    "expected": -1,
+    "explanation": "An indivisible word is wider than the available line."
+  }
+]

@@ -1,0 +1,1 @@
+Return the greatest length of a contiguous batch containing at most `k` different integer values. Repeated copies of one value count as one type. Empty input returns zero. When k is zero, only the empty batch qualifies, so return zero.

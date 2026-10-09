@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-16",
+  "version": "1.0.0",
+  "slug": "balanced-binary-span",
+  "title": "Balanced binary span",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "prefix.balance-transform",
+    "hashing.first-prefix-position"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "prefix.accumulation",
+    "hashing.membership",
+    "numbers.signed-accumulation"
+  ],
+  "step": 7,
+  "status": "published",
+  "objective": "Find the longest contiguous span containing equally many zeros and ones.",
+  "constraints": [
+    "0 <= values.length <=100000",
+    "Every value is either0 or1."
+  ],
+  "interface": "Solution.solve(values), receiving a typed integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-14"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-03",
+    "arrays-hashing-04",
+    "arrays-hashing-09"
+  ],
+  "nextIds": [
+    "arrays-hashing-17"
+  ],
+  "rationale": "Treat zero as-1 and one as+1; equal prefix balances locate a span with zero total.",
+  "commonMistakes": [
+    "scattered-count",
+    "overwrite-earliest"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

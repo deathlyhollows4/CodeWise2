@@ -1,0 +1,1 @@
+class Solution { public int solve(int[] a,int[] b) { int[] dp=new int[b.length+1];for(int x:a){int diagonal=0;for(int j=1;j<=b.length;j++){int old=dp[j];dp[j]=x==b[j-1]?diagonal+1:Math.max(dp[j],dp[j-1]);diagonal=old;}}return dp[b.length]; } }

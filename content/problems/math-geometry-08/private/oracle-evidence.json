@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "75915fa9412f8b2f1fe3103f14baa44ea81638e720d3d49dc2466074dd20f885",
+  "suiteHash": "e36a2f04d9dde816e54354e4fafb2723e50451f70391d711c0ccdb5f14834826",
+  "oracleChecks": 620,
+  "hiddenUnique": 617,
+  "mutations": [
+    {
+      "name": "row-major",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "drop-final-cell",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

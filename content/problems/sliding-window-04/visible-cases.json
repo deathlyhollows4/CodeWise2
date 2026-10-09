@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "abcaac"
+    },
+    "expected": 3,
+    "explanation": "abc and bca each contain three different letters."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": 0,
+    "explanation": "There is no letter span."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "aaaa"
+    },
+    "expected": 1,
+    "explanation": "Any longer span repeats a."
+  }
+]

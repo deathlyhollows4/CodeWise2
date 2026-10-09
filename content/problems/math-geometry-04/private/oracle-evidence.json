@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "021a4a3460e64264a33cd1509e71c81a2f427f47b505dd4ffbe38ba12fd20093",
+  "suiteHash": "cded4b996519f4b2fd36c17528de194731a137bc4f4fad401f67fdc3c39634e1",
+  "oracleChecks": 756,
+  "hiddenUnique": 753,
+  "mutations": [
+    {
+      "name": "exclude-high-end",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "one-is-prime",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

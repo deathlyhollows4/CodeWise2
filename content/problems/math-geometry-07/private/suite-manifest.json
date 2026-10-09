@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-matrices.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca78",
+  "hiddenCount": 656,
+  "suiteHash": "4f2f2d7d86b38825fa4f769c40dccb65e34b1ff536cf7150bd64b09348b3676f",
+  "categories": [
+    "signed-cell-layout",
+    "maximum-matrix-shape"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

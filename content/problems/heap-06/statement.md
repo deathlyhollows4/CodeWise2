@@ -1,0 +1,1 @@
+Repeatedly remove the two largest remaining stone weights a and b, with a >= b. If they are equal, discard both. Otherwise insert one stone of weight a - b. Continue until zero or one stone remains. Return its weight, or 0 for no remaining stone. Follow this exact largest-pair process; do not optimize over a different order.

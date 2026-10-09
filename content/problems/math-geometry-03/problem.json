@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-03",
+  "version": "1.0.0",
+  "slug": "modular-power",
+  "title": "A large modular power",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "numbers.modular-normalization",
+    "numbers.exponent-decomposition",
+    "numbers.wide-intermediates"
+  ],
+  "prerequisites": [
+    "numbers.remainder-operation"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Compute a large nonnegative power modulo a positive modulus without constructing the full power.",
+  "constraints": [
+    "-1000000000 <= value <= 1000000000",
+    "0 <= exponent <= 1000000000",
+    "1 <= modulus <= 1000000000"
+  ],
+  "interface": "Solution.solve(value, exponent, modulus) receives three long integers.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      },
+      "exponent": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      },
+      "modulus": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-04"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-02",
+    "math-geometry-04",
+    "math-geometry-09"
+  ],
+  "nextIds": [
+    "math-geometry-15",
+    "math-geometry-05"
+  ],
+  "rationale": "Reduce after multiplication and decompose the exponent to keep work logarithmic.",
+  "commonMistakes": [
+    "zero-exponent-is-zero",
+    "remove-negative-sign"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

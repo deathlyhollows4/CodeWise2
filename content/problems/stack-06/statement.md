@@ -1,0 +1,1 @@
+The nonnegative entries of `values` describe adjacent bars, each of width one. Return the greatest area of a rectangle that lies under these bars and spans consecutive positions. Its height cannot exceed the shortest selected bar. Empty input returns zero.

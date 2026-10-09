@@ -1,0 +1,49 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        5,
+        3,
+        8
+      ],
+      "value": 4
+    },
+    "expected": [
+      5,
+      3,
+      8,
+      null,
+      4
+    ],
+    "explanation": "The new leaf becomes the right child of 3; all earlier links stay in their positions."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        5,
+        3,
+        8
+      ],
+      "value": 5
+    },
+    "expected": [
+      5,
+      3,
+      8
+    ],
+    "explanation": "The existing root key makes insertion a no-op."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [],
+      "value": -2
+    },
+    "expected": [
+      -2
+    ],
+    "explanation": "A missing root becomes a singleton with the requested key."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "ae6a9592812d420914137148085e67f49262027a752401ca7d792e2568146621",
+  "suiteHash": "0ae9dd3fe6c72bff5dabc7d69f335d56f73d60b7482536d71b12cd79a8aa7ecd",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "sort-distinct-letters-without-subsequence-check",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "always-keep-first-occurrence",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

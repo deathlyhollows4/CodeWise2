@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "c222c256aab0195b6f30f3a2c8faa3233c5c8938c1d4443d6f1cd02d87d76c4d",
+  "suiteHash": "7d6c55508a3d8cd089f1a6b0ca2c54be56409ea1e9b2cbaca297d8016a4a9cc1",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "every-edge-is-a-bridge",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "only-leaf-incident-edges",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

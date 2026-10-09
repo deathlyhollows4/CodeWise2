@@ -1,0 +1,181 @@
+{
+  "id": "heap-09",
+  "version": "1.0.0",
+  "language": "cpp",
+  "validationIdentity": "fc2f6885abff8264b910bad10b4e21834c6e871292c1c7681808ccad3687e404",
+  "suiteHash": "2bc728c419648a39921b50c43f6dd0a21968b3bf342531b60299ed9a3bd36be5",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T10:25:43.530Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 719,
+      "executed": 719,
+      "passed": 719,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "commands": [
+            "add",
+            "add",
+            "cancel",
+            "pop",
+            "pop"
+          ],
+          "ids": [
+            10,
+            11,
+            11,
+            0,
+            0
+          ],
+          "priorities": [
+            4,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        "expected": [
+          10,
+          -1
+        ],
+        "actual": [
+          10,
+          -1
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "commands": [
+            "add",
+            "add",
+            "cancel",
+            "add",
+            "pop",
+            "pop"
+          ],
+          "ids": [
+            7,
+            3,
+            7,
+            7,
+            0,
+            0
+          ],
+          "priorities": [
+            10,
+            5,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "expected": [
+          3,
+          7
+        ],
+        "actual": [
+          3,
+          7
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "commands": [
+            "add",
+            "add",
+            "pop",
+            "pop"
+          ],
+          "ids": [
+            9,
+            2,
+            0,
+            0
+          ],
+          "priorities": [
+            4,
+            4,
+            0,
+            0
+          ]
+        },
+        "expected": [
+          9,
+          2
+        ],
+        "actual": [
+          9,
+          2
+        ],
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.002",
+          "wallSeconds": "0.002",
+          "memoryKb": "3296"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.009",
+          "wallSeconds": "0.008",
+          "memoryKb": "3680"
+        }
+      ]
+    }
+  }
+}

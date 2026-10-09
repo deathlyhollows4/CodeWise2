@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values,long long target){unordered_map<long long,int> first;vector<int> result={-1,-1};for(int j=0;j<(int)values.size();j++){auto it=first.find(target-values[j]);if(it!=first.end()&&(result[0]<0||it->second<result[0]))result={it->second,j};first.emplace(values[j],j);}return result;}};

@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values,long target){HashMap<Long,Integer> first=new HashMap<>();int[] result={-1,-1};for(int j=0;j<values.length;j++){Integer i=first.get(target-values[j]);if(i!=null&&(result[0]<0||i<result[0]))result=new int[]{i,j};first.putIfAbsent((long)values[j],j);}return result;}}

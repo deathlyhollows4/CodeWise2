@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D09",
+  "hiddenCount": 60,
+  "suiteHash": "42b99a4c03b53082e24de458a6a8a89d8d7ac8b3a445b0198f026c5425652e9e",
+  "categories": [
+    "curated-boundary-empty-chain",
+    "curated-boundary-no-matrices",
+    "curated-boundary-single-matrix",
+    "curated-boundary-single-multiplication",
+    "curated-boundary-thin-inner-matrix",
+    "curated-boundary-wide-product",
+    "max-forty-matrix-wide-cost",
+    "max-unit-dimensions",
+    "seeded-adjacent-reduction-orders",
+    "no-matrices",
+    "one-matrix"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

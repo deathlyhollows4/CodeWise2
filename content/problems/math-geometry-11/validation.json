@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "suiteHash": "395b61ecd43c8b79f84986bb1dd19f2ebe3cea4da0d8edc8473e03aae0e4bbc7",
+  "status": "references-passed-review-pending",
+  "languages": {
+    "java": {
+      "status": "passed",
+      "validationIdentity": "17e18c08e0b79ade10e8af423561730c19a0b249afa9079581121453b489e38a",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 762,
+      "passed": 762,
+      "executedAt": "2026-10-08T10:30:44.387Z",
+      "evidencePath": "docs/release-evidence/validation-math-geometry-11-java.json",
+      "outcome": "accepted"
+    },
+    "cpp": {
+      "status": "passed",
+      "validationIdentity": "8855e1dcabc1e7839be05938072c36db6814382589b7deca3048efeada9e90ed",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 762,
+      "passed": 762,
+      "executedAt": "2026-10-08T10:30:50.297Z",
+      "evidencePath": "docs/release-evidence/validation-math-geometry-11-cpp.json",
+      "outcome": "accepted"
+    },
+    "python": {
+      "status": "passed",
+      "validationIdentity": "5b12cc4f7394acf9ca9a9ef2a6e7802407534c7331436314ef8cb9954d37b8c7",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 762,
+      "passed": 762,
+      "executedAt": "2026-10-08T10:30:50.515Z",
+      "evidencePath": "docs/release-evidence/validation-math-geometry-11-python.json",
+      "outcome": "accepted"
+    }
+  },
+  "independentReview": "passed"
+}

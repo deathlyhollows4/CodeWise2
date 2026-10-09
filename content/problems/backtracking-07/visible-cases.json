@@ -1,0 +1,115 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "clues": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2,
+          0
+        ]
+      ]
+    },
+    "expected": [
+      [
+        "1234",
+        "3412",
+        "2143",
+        "4321"
+      ]
+    ],
+    "explanation": "The single missing value is 1, preserving every fixed clue."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "clues": [
+        [
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "expected": [],
+    "explanation": "The first row repeats a fixed 1; no completion can repair that contradiction."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "clues": [
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          2,
+          1
+        ]
+      ]
+    },
+    "expected": [
+      [
+        "1234",
+        "3412",
+        "2143",
+        "4321"
+      ]
+    ],
+    "explanation": "A completed valid grid is its own one completion."
+  }
+]

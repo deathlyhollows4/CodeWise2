@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-11",
+  "version": "1.0.0",
+  "slug": "closed-segment-intersection",
+  "title": "Do two closed segments intersect?",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.orientation",
+    "geometry.closed-segment-bounds"
+  ],
+  "prerequisites": [
+    "geometry.cross-product-collinearity",
+    "numbers.wide-intermediates",
+    "geometry.coordinate-difference"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Detect proper crossings, shared endpoints, collinear overlap and degenerate intersections between closed integer segments.",
+  "constraints": [
+    "first and second each contain exactly two [x,y] endpoint pairs.",
+    "Every coordinate is an integer in [-1000000,1000000].",
+    "Endpoint order does not matter; zero-length segments are allowed."
+  ],
+  "interface": "Solution.solve(first, second) receives two typed endpoint matrices.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "first": {
+        "kind": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      },
+      "second": {
+        "kind": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-15"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-02",
+    "math-geometry-04",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "math-geometry-12"
+  ],
+  "rationale": "Orientation tests locate proper crossings, while bounding checks handle collinear and endpoint cases.",
+  "commonMistakes": [
+    "reject-zero-length-segments",
+    "proper-crossings-only",
+    "bounding-boxes-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

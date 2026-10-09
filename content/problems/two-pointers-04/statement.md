@@ -1,0 +1,1 @@
+Arrays `left` and `right` are both sorted in nondecreasing order. Return one sorted array containing every entry from both inputs. Keep duplicate entries, including equal values that occur in different inputs. Either input may be empty. You may modify the local decoded input arrays; only the returned merged result is graded.

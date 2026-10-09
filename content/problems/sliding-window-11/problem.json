@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "sliding-window-11",
+  "version": "1.0.0",
+  "slug": "shortest-variety-cover",
+  "title": "Shortest batch reaching enough variety",
+  "primaryTopic": "sliding-window",
+  "skillIds": [
+    "windows.minimum-distinct-cover",
+    "windows.frequency-removal"
+  ],
+  "prerequisites": [
+    "windows.frequency-removal",
+    "windows.variable-shrink"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Shrink every window that contains enough distinct values while preserving multiplicity counts.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "Each integer is in [-1,000,000,1,000,000].",
+    "1 ≤ k ≤ 2,000."
+  ],
+  "interface": "Solution.solve(values,k) returns an integer length or zero.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "sliding-window-06",
+    "sliding-window-07",
+    "sliding-window-10"
+  ],
+  "remedialIds": [
+    "sliding-window-02",
+    "sliding-window-03"
+  ],
+  "nextIds": [
+    "sliding-window-08"
+  ],
+  "rationale": "The same frequency state now helps find a minimum valid window.",
+  "commonMistakes": [
+    "always-return-k",
+    "first-qualifying-prefix"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

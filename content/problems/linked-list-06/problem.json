@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-06",
+  "version": "1.0.0",
+  "slug": "add-least-significant-first-digit-lists",
+  "title": "Add two digit chains",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.digit-carry",
+    "list.result-chain-building"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Add nonnegative integers stored least-significant digit first in native linked lists, propagating carries across unequal chain lengths.",
+  "constraints": [
+    "1 ≤ left.length and right.length ≤ 2,000.",
+    "Every input/output digit lies in [0,9].",
+    "Inputs are finite and acyclic; most-significant leading zero nodes are allowed.",
+    "Output must be finite, have at most 2,001 nodes, and have no final most-significant zero except singleton [0]."
+  ],
+  "interface": "Solution.solve(left,right) receives two native ListNode heads and returns a native ListNode head.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "left": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 9
+        }
+      },
+      "right": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 9
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 1,
+    "maxLength": 2001,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 9
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-05"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-02"
+  ],
+  "nextIds": [
+    "linked-list-08"
+  ],
+  "rationale": "The last carry can extend a result beyond both input lengths; canonical zero must also survive redundant input zero nodes.",
+  "commonMistakes": [
+    "omit-final-carry",
+    "ignore-carry-between-digits"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        1,
+        2,
+        3,
+        2
+      ],
+      "k": 3
+    },
+    "expected": 3,
+    "explanation": "The batch [1,2,3] has three different values."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -7
+      ],
+      "k": 1
+    },
+    "expected": 1,
+    "explanation": "A single reading contains one value."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "k": 2
+    },
+    "expected": 1,
+    "explanation": "Each batch has two copies but only one different value."
+  }
+]

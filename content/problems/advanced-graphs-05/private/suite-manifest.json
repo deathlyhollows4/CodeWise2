@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA605",
+  "hiddenCount": 60,
+  "suiteHash": "35b749515026e23cf517c07e20d1b90dbaecf5c55b48ca027b5c94a459b7250e",
+  "categories": [
+    "curated-boundary-infeasible-demand",
+    "curated-boundary-free-one-unit",
+    "curated-boundary-capacity-shortage",
+    "curated-boundary-capacity-and-cost-maxima",
+    "max-wide-thirty-unit-cut-certificate",
+    "max-one-hundred-parallel-flow-offers",
+    "max-zero-capacity-infeasibility",
+    "seeded-bounded-integer-edge-flows"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

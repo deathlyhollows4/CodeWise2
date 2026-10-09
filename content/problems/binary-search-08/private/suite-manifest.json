@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC702",
+  "hiddenCount": 768,
+  "suiteHash": "f4a4fe3b5051fc20f79935e06bdc0ef5de9fbe26073b01a7a044b48d6f8cf002",
+  "categories": [
+    "arbitrary-many-local-peaks",
+    "targeted-edge-peak",
+    "large-slope-or-many-peaks"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

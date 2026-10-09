@@ -1,0 +1,82 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          1,
+          9
+        ]
+      ],
+      "required": 2
+    },
+    "expected": 14,
+    "explanation": "Send both units along 0->1->2, paying 7 per unit. Mixing in the direct 9-cost edge would cost more."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 2,
+      "edges": [],
+      "required": 0
+    },
+    "expected": 0,
+    "explanation": "Sending exactly zero units costs nothing, even without a route."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          3,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1,
+          0
+        ]
+      ],
+      "required": 2
+    },
+    "expected": 5,
+    "explanation": "The cheapest first unit uses 0->1->2->3 for 1. The final optimum reroutes it through 1->3 and sends the other unit 0->2->3, costing 3+2=5. Cancelling 1->2 uses reverse cost -1."
+  }
+]

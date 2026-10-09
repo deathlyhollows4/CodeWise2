@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "f854d1a1dd2d2223fdb70b2d33b8a246ccf31c156355f93ca211f57da9f97dc8",
+  "suiteHash": "48ab705286ad197611aaac339a90f07a91c1b0d431f7021301cd6636c245d56c",
+  "oracleChecks": 203,
+  "hiddenUnique": 200,
+  "mutations": [
+    {
+      "name": "ordered-pairs-double-count",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "combined-array-xor",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "narrow-total",
+      "detected": true,
+      "caseId": "hidden-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

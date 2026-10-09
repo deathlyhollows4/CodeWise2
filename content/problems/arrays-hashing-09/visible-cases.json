@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        -1,
+        4
+      ]
+    },
+    "expected": [
+      0,
+      2,
+      1,
+      5
+    ],
+    "explanation": "The first 0, 1, 2 and 3 readings total 0, 2, 1 and 5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [
+      0
+    ],
+    "explanation": "Only the empty prefix exists."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -3,
+        -2
+      ]
+    },
+    "expected": [
+      0,
+      -3,
+      -5
+    ],
+    "explanation": "Negative totals must be retained."
+  }
+]

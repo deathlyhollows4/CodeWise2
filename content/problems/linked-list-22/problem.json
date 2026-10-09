@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-22",
+  "version": "1.0.0",
+  "slug": "flatten-genuine-multilevel-doubly-linked-list",
+  "title": "Flatten every child list before its next sibling",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.walk",
+    "list.link-splice",
+    "list.original-identity",
+    "list.multilevel-depthfirst",
+    "list.bidirectional-flatten"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice",
+    "list.original-identity"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Flatten original multilevel native nodes in node/child/next order, clearing child fields and making a valid reciprocal doubly linked chain.",
+  "constraints": [
+    "0 to 2,000 original nodes.",
+    "Values lie in [-1,000,000,000,1,000,000,000]; values may repeat.",
+    "All next/child targets are valid original nodes; each non-root node has exactly one incoming next or child link.",
+    "All nodes are reachable from head through next/child, with no cycle.",
+    "The result must reuse the original nodes and preserve values while repairing next/prev and clearing child."
+  ],
+  "interface": "Solution.solve(head) receives MultiListNode and returns the original flattened MultiListNode head.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": -1000000000,
+              "maximum": 1000000000
+            }
+          },
+          "next": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "child": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "head": {
+            "kind": "nullable",
+            "value": {
+              "kind": "integer",
+              "minimum": 0,
+              "maximum": 1999
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-09",
+    "linked-list-10",
+    "linked-list-11",
+    "linked-list-12",
+    "linked-list-20"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-03"
+  ],
+  "nextIds": [],
+  "rationale": "Deferred next siblings resume after an entire child sublist; identity, unchanged values and reciprocal previous links are part of the result, not merely a copied value sequence.",
+  "commonMistakes": [
+    "breadth-first-instead-of-child-first",
+    "ignore-all-child-lists",
+    "copy-values-instead-of-original-identities"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "multilevel-list",
+      "field": "head",
+      "maxNodes": 2000
+    }
+  ]
+}

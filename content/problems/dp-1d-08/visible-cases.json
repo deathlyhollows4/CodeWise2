@@ -1,0 +1,34 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3
+      ],
+      "target": 6
+    },
+    "expected": false,
+    "explanation": "There is only one item of value 3; it cannot be reused."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        2,
+        2
+      ],
+      "target": 4
+    },
+    "expected": true,
+    "explanation": "The two different items may both be chosen."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [],
+      "target": 0
+    },
+    "expected": true,
+    "explanation": "The empty subset forms zero."
+  }
+]

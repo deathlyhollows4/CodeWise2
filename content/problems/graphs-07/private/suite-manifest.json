@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A07",
+  "hiddenCount": 60,
+  "suiteHash": "57de645a3cd18c8cfe27f10a3e6a711668c5af1e5253d54187aeb0cea0ef2316",
+  "categories": [
+    "curated-boundary-isolated-singleton",
+    "curated-boundary-self-loop",
+    "curated-boundary-odd-cycle",
+    "max-bipartite-chain",
+    "max-even-cycle",
+    "max-disconnected-odd-cycle",
+    "max-self-loop-components",
+    "max-five-thousand-edge-triangle-conflict",
+    "seeded-undirected-color-components"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

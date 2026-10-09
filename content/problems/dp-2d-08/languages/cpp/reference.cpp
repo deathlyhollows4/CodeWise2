@@ -1,0 +1,1 @@
+class Solution {public:bool solve(string text,string pattern){vector<bool>d(text.size()+1);d[0]=true;for(char token:pattern){if(token=='*'){for(int j=1;j<=(int)text.size();j++)d[j]=d[j]||d[j-1];}else{for(int j=text.size();j>=1;j--)d[j]=d[j-1]&&(token=='?'||token==text[j-1]);d[0]=false;}}return d[text.size()];}};

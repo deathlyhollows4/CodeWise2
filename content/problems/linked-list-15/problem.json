@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-15",
+  "version": "1.0.0",
+  "slug": "merge-sorted-chains-with-shared-suffix",
+  "title": "Merge sorted chains without duplicating their shared tail",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.alias-aware-stable-merge",
+    "list.shared-suffix-once"
+  ],
+  "prerequisites": [
+    "list.shared-tail-identity",
+    "list.link-splice",
+    "sorted.order"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Merge the disjoint prefixes of sorted native chains stably, then append their shared suffix exactly once.",
+  "constraints": [
+    "0 ≤ original node count ≤ 2,000; values lie in [-1,000,000,1,000,000].",
+    "Both next chains are acyclic and nondecreasing; every node is reachable from at least one head.",
+    "The input may have a shared suffix; equal-valued distinct nodes remain distinct.",
+    "Output contains the original union once, preserves values, and is finite."
+  ],
+  "interface": "Solution.solve(data) receives IdentityList and returns ListNodeIdentitySequence.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "data": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "next": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "heads": {
+            "kind": "array",
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-07",
+    "linked-list-08"
+  ],
+  "remedialIds": [
+    "linked-list-05",
+    "linked-list-01",
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "linked-list-11"
+  ],
+  "rationale": "A shared suffix is one physical chain, not two copies of equal values. Equal-valued prefixes must be finished before attaching that suffix.",
+  "commonMistakes": [
+    "duplicate-shared-suffix",
+    "right-prefix-before-left-ties"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "node-table",
+      "field": "data",
+      "links": [
+        "next"
+      ],
+      "heads": "heads",
+      "requireReachable": true,
+      "acyclicLinks": [
+        "next"
+      ],
+      "sortedLinks": [
+        "next"
+      ]
+    }
+  ]
+}

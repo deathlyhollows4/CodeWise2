@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "greedy-08",
+  "version": "1.0.0",
+  "slug": "minimum-total-cost-of-merging-all-components",
+  "title": "Minimum pair-merge cost",
+  "primaryTopic": "greedy",
+  "skillIds": [
+    "greedy.two-smallest-exchange",
+    "greedy.sorted-merge-queues"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "numbers.signed-accumulation"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Minimize repeated merge costs by repeatedly combining the two lightest available components.",
+  "constraints": [
+    "0 <= weights.length <= 100000",
+    "Each weight is in 0..1000000000",
+    "The optimal cost is at most 1668928000000000 and is JavaScript-safe"
+  ],
+  "interface": "Solution.solve(weights) returns the minimum total pair-merge cost.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "weights": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 1668928000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "greedy-05"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "stack-02"
+  ],
+  "nextIds": [
+    "greedy-06",
+    "greedy-07"
+  ],
+  "rationale": "Each component contributes its weight once for every merge above it; keeping heavier weights closer to the root minimizes total repeated contribution.",
+  "commonMistakes": [
+    "report-only-final-weight",
+    "merge-largest-first"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

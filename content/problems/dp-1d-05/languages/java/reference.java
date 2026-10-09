@@ -1,0 +1,1 @@
+class Solution {public int solve(String s){if(s.isEmpty())return 0;int a=1,b=s.charAt(0)=='0'?0:1;for(int i=1;i<s.length();i++){int n=s.charAt(i)=='0'?0:b,p=(s.charAt(i-1)-'0')*10+s.charAt(i)-'0';if(p>=10&&p<=26)n=(n+a)%1000000007;a=b;b=n;}return b;}}

@@ -1,0 +1,1 @@
+class Solution {public:bool solve(long long value){return value>0&&(value&(value-1))==0;}};

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "2b8b99b62d326ba024ae1f8c0a5c7045109b4492aefd8035120eae23ca46cb14",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:01:28.986Z",
+  "rationale": "Independently read all source algorithms, generator and native references for Extract tasks after handle cancellations. Objective: Process stable-priority task extraction with cancellation and safe reuse of inactive handles. Current statement, examples, all716hidden cases and nine language assets reconcile to original author source/project typed harness templates. No imported assets occur. Explicit source review of wide arithmetic, ordering, multiplicity or stateful handle semantics is recorded separately from this rights conclusion.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-handles.mjs",
+    "sourceHash": "60f37a825bab4e3d15dd0cbf6659571fac2987b936f4acbf8e2113f8bc832788",
+    "reconciliation": "docs/release-evidence/coordinator-heap-original-assets.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Rights only; native execution, progression and global diversity remain separate gates.",
+    "Later bound changes invalidate this review."
+  ]
+}

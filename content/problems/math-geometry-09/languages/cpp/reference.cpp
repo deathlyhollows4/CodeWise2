@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<vector<int>> corners){long long width=llabs(1LL*corners[0][0]-corners[1][0]),height=llabs(1LL*corners[0][1]-corners[1][1]);return width*height;}};

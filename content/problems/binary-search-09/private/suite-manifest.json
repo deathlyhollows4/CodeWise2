@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC703",
+  "hiddenCount": 766,
+  "suiteHash": "688f4bef85d7d6278abc28635a1c6ebe14d282aba66bd6fd2ee530fb12a41c10",
+  "categories": [
+    "two-direction-monotone",
+    "not-row-major-total-order",
+    "large-rectangular-monotone"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

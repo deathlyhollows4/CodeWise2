@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "source": "ababa",
+      "target": "aba"
+    },
+    "expected": 4,
+    "explanation": "Using zero-based indices, the selections are (0,1,2), (0,1,4), (0,3,4), and (2,3,4)."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "source": "abc",
+      "target": ""
+    },
+    "expected": 1,
+    "explanation": "Choosing no positions is the single empty selection."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "source": "aaa",
+      "target": "aa"
+    },
+    "expected": 3,
+    "explanation": "Choose indices (0,1), (0,2), or (1,2); equal characters do not merge these choices."
+  }
+]

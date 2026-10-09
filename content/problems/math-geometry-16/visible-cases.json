@@ -1,0 +1,50 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "point": [
+        4,
+        7
+      ],
+      "line": "vertical",
+      "offset": 2
+    },
+    "expected": [
+      0,
+      7
+    ],
+    "explanation": "The x coordinate moves from two units right of x = 2 to two units left."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "point": [
+        1,
+        4
+      ],
+      "line": "rising",
+      "offset": 2
+    },
+    "expected": [
+      2,
+      3
+    ],
+    "explanation": "The midpoint [1.5,3.5] lies on y - x = 2."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "point": [
+        3,
+        -1
+      ],
+      "line": "falling",
+      "offset": 2
+    },
+    "expected": [
+      3,
+      -1
+    ],
+    "explanation": "The point already satisfies x + y = 2."
+  }
+]

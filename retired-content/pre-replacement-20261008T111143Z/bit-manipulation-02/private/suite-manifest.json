@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 663,
+  "suiteHash": "699eaa4930a5e259d09d5681c9a9ddaef3f5585fcbb6f5dc5275375103874d1d",
+  "categories": [
+    "seeded-uint32",
+    "one-set-bit",
+    "one-clear-bit",
+    "all-bits-set"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

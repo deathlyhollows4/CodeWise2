@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-hull-union.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca13",
+  "hiddenCount": 664,
+  "suiteHash": "8edc74306e7edd4203f59ea72fbe7890841e9a76725ec3e4ffa256c0ccb6840d",
+  "categories": [
+    "independent-integer-cell-unions",
+    "maximum-count-known-containing-rectangle",
+    "maximum-count-disjoint-strips",
+    "maximum-count-connected-dense-overlap-strips",
+    "maximum-count-crossing-checkerboard-strips"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

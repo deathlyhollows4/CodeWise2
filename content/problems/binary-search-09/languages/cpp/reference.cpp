@@ -1,0 +1,1 @@
+class Solution {public:bool solve(vector<vector<int>> g,int t){if(g.empty()||g[0].empty())return false;int r=0,c=(int)g[0].size()-1;while(r<(int)g.size()&&c>=0){if(g[r][c]==t)return true;if(g[r][c]>t)c--;else r++;}return false;}};

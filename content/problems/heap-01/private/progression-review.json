@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "progression",
+  "contentIdentity": "a2fb28e8b8fdb170b2e8780712c7f8c1cea968d8d3666212cef85d0d2ae562b6",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:46:33.539Z",
+  "rationale": "Effective step1 traversal prerequisites have actual Arrays01/02 teachers. Prescribed-subtraction06 is a same-step checkpoint, online-threshold02 introduces step2.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-first.mjs",
+    "sourceHash": "88b77d3f7e4daefa0f67c25744d59b1b399f75c22b7fc1b408cabf4168c7ec4f",
+    "reconciliation": "docs/release-evidence/coordinator-early-heap-effective-review.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Effective learningOverrides inspected; raw author nextIds are not the shipped route contract.",
+    "Per-pack conclusion only; final243 diversity synthesis and current execution gates remain separate.",
+    "Heap04 comparator-variation judgment remains independently pending."
+  ]
+}

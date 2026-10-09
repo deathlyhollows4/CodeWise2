@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "6dfeee49ec097515e410b6bf193e9fd6aa8f61445a2b5a623f74616d5bf6c869",
+  "suiteHash": "ccbe0bbb141456ace49c9881913bf1e366edf167cff31695451070de5e98d08d",
+  "oracleChecks": 1196,
+  "hiddenUnique": 1193,
+  "mutations": [
+    {
+      "name": "leak-prefixes-between-sibling-branches",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "count-only-root-starts",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "signed-int32-prefix-accumulator",
+      "detected": true,
+      "caseId": "hidden-716"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,3 @@
+Server i has positive weight weights[i]. Task j arrives at time j and takes durations[j] time units. Tasks waiting for service must start in arrival order. Whenever the next waiting task can start, choose a free server with the smallest weight; break equal weights by the smaller original server index.
+
+All servers are free at time zero. A server finishing at time t is available for a task starting at exactly t. If several servers finish together, release all of them before choosing. When every server is busy, wait until the earliest completion and then continue the FIFO queue. Return the chosen server index for every task, in task order. Completion times can exceed signed 32-bit range even though each input duration fits it.

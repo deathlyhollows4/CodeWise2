@@ -1,0 +1,1 @@
+class Solution {public:bool solve(TreeNode* root,int value){while(root){if(root->val==value)return true;root=value<root->val?root->left:root->right;}return false;}};

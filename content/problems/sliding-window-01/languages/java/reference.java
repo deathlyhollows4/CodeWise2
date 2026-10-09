@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values,int k){long total=0;for(int i=0;i<k;i++)total+=values[i];long best=total;for(int right=k;right<values.length;right++){total+=(long)values[right]-values[right-k];best=Math.max(best,total);}return best;}}

@@ -1,0 +1,12 @@
+import {Store} from '../apps/server/src/store.ts';
+import {mkdtempSync,mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {randomUUID,createHash} from 'node:crypto';
+import {join} from 'node:path';
+mkdirSync('.runtime/profile-probes',{recursive:true});
+const dataDir=mkdtempSync(join(process.cwd(),'.runtime/profile-probes/live-owner-'));
+const first=new Store(dataDir),id=randomUUID();
+first.insert('jobs',{id,idempotencyKey:randomUUID(),problemId:'controlled-no-execution-fixture',language:'cpp',mode:'submit',code:'Fixture marker only; no code executed',status:'running',createdAt:new Date().toISOString()});
+const before=first.get('jobs',id).status,second=new Store(dataDir),after=first.get('jobs',id).status;
+second.close();first.close();
+const report={schemaVersion:1,command:'node --import tsx scripts/probe-profile-recovery.mjs',timestamp:new Date().toISOString(),scope:'Controlled two live SQLite Store handles sharing one temporary profile; deliberately seeded active row, no worker/program execution or user data',dataDir,before,after,observedRecoveryOfLiveProfile:before==='running'&&after==='interrupted',sourceHash:createHash('sha256').update(readFileSync('apps/server/src/store.ts')).digest('hex')};
+writeFileSync('docs/release-evidence/profile-recovery-concurrency-probe.json',JSON.stringify(report,null,2));console.log(JSON.stringify({before,after,observed:report.observedRecoveryOfLiveProfile}));

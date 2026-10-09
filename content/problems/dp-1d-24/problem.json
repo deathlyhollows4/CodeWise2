@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-24",
+  "version": "1.0.0",
+  "slug": "longest-strict-sign-alternating-subsequence",
+  "title": "Longest wiggle subsequence",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.last-difference-sign-state",
+    "dp.opposite-direction-extension"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Maximize an indexed subsequence whose nonzero consecutive differences alternate sign.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "Each value is in -1000000000..1000000000",
+    "The answer is between 0 and values.length"
+  ],
+  "interface": "Solution.solve(values) returns the maximum strict sign-alternating subsequence length.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 100000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-15",
+    "dp-1d-22"
+  ],
+  "remedialIds": [
+    "dp-1d-01"
+  ],
+  "nextIds": [
+    "dp-1d-09",
+    "dp-1d-16",
+    "dp-1d-17",
+    "dp-1d-20"
+  ],
+  "rationale": "The next extension depends on whether the previous difference rose or fell, not on a globally increasing value frontier.",
+  "commonMistakes": [
+    "count-every-nonzero-difference",
+    "force-first-difference-positive"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

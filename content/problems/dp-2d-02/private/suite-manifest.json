@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D02",
+  "hiddenCount": 727,
+  "suiteHash": "1c5a445dbd8cfad2279beec48dab517407999d69134873d8dd15a4f35cf8ab9e",
+  "categories": [
+    "zero-columns",
+    "max-value-singleton",
+    "zero-row",
+    "overflow-column",
+    "seeded-small-costs",
+    "max-wide-total",
+    "max-zero-corridor",
+    "max-zero-grid"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

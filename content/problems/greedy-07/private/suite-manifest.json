@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC307",
+  "hiddenCount": 60,
+  "suiteHash": "0ae9dd3fe6c72bff5dabc7d69f335d56f73d60b7482536d71b12cd79a8aa7ecd",
+  "categories": [
+    "unique-letters-last-occurrence-and-lexical-feasibility",
+    "upper-bound-one-required-letter",
+    "upper-bound-alphabetical-cycle-global-lexical-certificate",
+    "upper-bound-reversed-cycles-ascending-subsequence-certificate",
+    "upper-bound-block-order-prohibits-sorted-letter-output",
+    "enumerate-all-index-subsets-with-exact-letter-set"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

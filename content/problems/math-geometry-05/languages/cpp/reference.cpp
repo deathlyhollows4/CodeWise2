@@ -1,0 +1,1 @@
+class Solution {long long step(long long n){long long s=0;while(n){long long d=n%10;s+=d*d;n/=10;}return s;}public:bool solve(long long value){long long slow=value,fast=value;do{slow=step(slow);fast=step(step(fast));}while(slow!=fast);return slow==1;}};

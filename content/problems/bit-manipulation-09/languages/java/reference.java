@@ -1,0 +1,1 @@
+class Solution {public long solve(long value){if(value==0)return -1;long low=value&-value,raised=value+low;if(raised>2147483647L)return -1;return raised+((raised^value)/low/4);}}

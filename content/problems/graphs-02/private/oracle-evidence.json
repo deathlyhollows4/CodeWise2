@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "273bfb61b2bc393d8bda822db03c9f339aaa1ad03e61864c49957753260c0bae",
+  "suiteHash": "4e6827d1a81cfb5b7be178eb862b0ae449180e43702cc5d1b3db2076693cd9a0",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "reachability-only",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "drop-parallel-edges",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

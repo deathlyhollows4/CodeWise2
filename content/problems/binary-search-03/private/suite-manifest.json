@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backend-c-c.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC101",
+  "hiddenCount": 701,
+  "suiteHash": "53e7f7defb0169720c93bf68440054881e5aa9b485257b96359e1a6258bc7010",
+  "categories": [
+    "seeded-sorted-boundaries",
+    "large-tail-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "3f67e2cac3a0503e66a46a7f308da4bea1e1c0c5f65f9f7fb310afc68e9647f2",
+  "suiteHash": "cb48f0fc1acdda5b78e53c2470cbdcc112c0a671480f5f38498963d6d3781356",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "evaluate-multiplication-left-to-right",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "allow-leading-zero-operands",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "truncate-target-to-32-bits",
+      "detected": true,
+      "caseId": "hidden-8"
+    }
+  ],
+  "languageExecution": "not-run"
+}

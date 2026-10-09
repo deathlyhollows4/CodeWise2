@@ -1,0 +1,1 @@
+Return true if the two closed line segments have any point in common. Endpoints count as part of a segment. Collinear overlap also counts. A segment whose endpoints are equal is a single point and must be handled correctly. Use exact integer arithmetic.

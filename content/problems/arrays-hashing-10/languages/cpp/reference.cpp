@@ -1,0 +1,1 @@
+class Solution {public:vector<long long> solve(vector<int> values){vector<long long> out(values.size(),1);long long left=1,right=1;for(int i=0;i<(int)values.size();i++){out[i]*=left;left*=values[i];}for(int i=(int)values.size()-1;i>=0;i--){out[i]*=right;right*=values[i];}return out;}};

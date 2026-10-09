@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "480c0f6aaec954efe27be86214a6e52faf3192c7f830de60dba2fa75f941ba2c",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Compare frequency balance for each window exactly the pattern length, update both endpoints, and record every matching start in ascending order including overlaps. Empty pattern returns no matches.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "progression",
+  "rationale": "Step4 teaches windows.fixed-frequency-equality, windows.frequency-removal. Prerequisites remain windows.frequency-removal, hashing.counts; explicit teachers sliding-window-02, sliding-window-03 preserve independently demonstrated eligibility. Same-step related checkpoints sliding-window-06, sliding-window-10, sliding-window-11 and actual step+1 targets sliding-window-08 were checked against current manifests. The R21 actual-engine diagnostic and learning5 bounded first-entry/teacher tests distinguish prerequisite teaching, practice-only shared skills and finite related-peer exhaustion. Compare frequency balance for each window exactly the pattern length, update both endpoints, and record every matching start in ascending order including overlaps. Empty pattern returns no matches."
+}

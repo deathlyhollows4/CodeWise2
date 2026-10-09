@@ -1,0 +1,1 @@
+class Solution { public String solve(String text) { char[] out=text.toCharArray(); int left=0,right=out.length-1; while(left<right){char temp=out[left];out[left]=out[right];out[right]=temp;left++;right--;}return new String(out); } }

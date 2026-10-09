@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "1686fbeefa722e7ad2d42bbc0025852991828e4cd561745e8ce7f07e9456d9aa",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T07:45:27.463Z",
+  "rationale": "Read the complete rational-number author module. Eighteen add/sub/mul/div canonical test cases are adapted from the pinned Exercism problem-specifications revision9943fd751b684ba1a6a8673c3700a6e79c10a808. Independently fetched upstream source JSON matches the saved file byte for byte; preserved MIT notice matches after line-ending/trailing-whitespace normalization. Each retained UUID, typed field mapping and expected result reconciles to the upstream case. Original statement, examples, remaining generated tests, references, starters and wrappers match inspected project author/template source. No Exercism statement or reference code is imported.",
+  "evidence": [
+    "docs/release-evidence/coordinator-exercism-rational-source-check.json",
+    "docs/release-evidence/coordinator-math15-rights-reconciliation.json",
+    "content/sources/exercism-MIT.txt"
+  ],
+  "limitations": [
+    "Rights only, not language execution, global diversity, progression or publication approval.",
+    "Bound asset changes stale this record; dependency-license packaging remains a separate review."
+  ]
+}

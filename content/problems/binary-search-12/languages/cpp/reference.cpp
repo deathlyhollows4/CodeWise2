@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> a,int k){int l=0,h=a.back()-a[0];while(l<h){int m=l+(h-l+1LL)/2,n=1,last=a[0];for(int i=1;i<(int)a.size();i++)if(a[i]-last>=m){n++;last=a[i];}if(n>=k)l=m;else h=m-1;}return l;}};

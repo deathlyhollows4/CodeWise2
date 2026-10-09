@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head,int k){if(head==null)return null;int n=1;ListNode tail=head;while(tail.next!=null){tail=tail.next;n++;}int amount=k%n;if(amount==0)return head;ListNode newTail=head;for(int i=0;i<n-amount-1;i++)newTail=newTail.next;ListNode newHead=newTail.next;tail.next=head;newTail.next=null;return newHead;}}

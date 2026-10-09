@@ -1,0 +1,1 @@
+Return the length of the longest run of consecutive distinct integer labels present anywhere in values. Original position does not matter. Duplicates do not increase the length. Empty input has result 0. Aim for expected linear time using membership lookups.

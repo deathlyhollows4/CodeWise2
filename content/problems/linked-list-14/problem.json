@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-14",
+  "version": "1.0.0",
+  "slug": "browser-history-forward-branch-invalidation",
+  "title": "Keep a browser history after changing direction",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.cursor-navigation",
+    "list.forward-branch-invalidation"
+  ],
+  "prerequisites": [
+    "list.link-splice"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Maintain a current history position, clamp back/forward navigation, and discard the forward branch after a new visit.",
+  "constraints": [
+    "1 ≤ homepage.length and every page-label length ≤ 40; labels contain lowercase letters.",
+    "0 ≤ command count ≤ 2,000; parallel arrays have equal lengths.",
+    "0 ≤ steps[i] ≤ 1,000,000,000.",
+    "Commands are exactly visit, back, or forward; unused page/step slots are ignored."
+  ],
+  "interface": "Solution.solve(homepage,commands,pages,steps) receives string,string[],string[],int[] and returns string[].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "homepage": {
+        "kind": "string",
+        "ascii": true,
+        "minLength": 1,
+        "maxLength": 40
+      },
+      "commands": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "enum",
+          "values": [
+            "visit",
+            "back",
+            "forward"
+          ]
+        }
+      },
+      "pages": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "string",
+          "ascii": true,
+          "minLength": 1,
+          "maxLength": 40
+        }
+      },
+      "steps": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "string",
+      "ascii": true,
+      "minLength": 1,
+      "maxLength": 40
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-13",
+    "linked-list-16"
+  ],
+  "remedialIds": [
+    "linked-list-01"
+  ],
+  "nextIds": [
+    "linked-list-17"
+  ],
+  "rationale": "History navigation preserves previous visits, while a visit after going back deliberately invalidates only the forward branch.",
+  "commonMistakes": [
+    "keep-invalidated-forward-branch",
+    "back-always-one-step"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "pages"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "steps"
+    },
+    {
+      "kind": "alphabet",
+      "field": "homepage",
+      "alphabet": "lowercase"
+    },
+    {
+      "kind": "alphabet",
+      "field": "pages",
+      "alphabet": "lowercase",
+      "each": true
+    }
+  ]
+}

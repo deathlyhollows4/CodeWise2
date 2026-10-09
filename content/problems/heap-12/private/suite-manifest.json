@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-pair-frontier.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xde12",
+  "hiddenCount": 60,
+  "suiteHash": "e10f0e673a8b447696327a931527b831fcb26f631e15e6504b3b7eb6dbc73bf4",
+  "categories": [
+    "maximum-Cartesian-equal-sum-index-certificate",
+    "maximum-varied-frontiers-independent-sum-layer-diagonals",
+    "wide-sums-and-exhausted-frontier",
+    "empty-right-boundary",
+    "zero-selection-boundary",
+    "duplicate-and-tied-frontier",
+    "curated-signed-Cartesian-rows"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

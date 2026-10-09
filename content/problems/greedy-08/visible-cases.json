@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "weights": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": 9,
+    "explanation": "Merge 1 and 2 for cost 3, then merge 3 and 3 for cost 6; total 9."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "weights": [
+        9
+      ]
+    },
+    "expected": 0,
+    "explanation": "A single component requires no merge."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "weights": []
+    },
+    "expected": 0,
+    "explanation": "No components require no merge."
+  }
+]

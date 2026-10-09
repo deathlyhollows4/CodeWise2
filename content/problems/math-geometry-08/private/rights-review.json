@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "75915fa9412f8b2f1fe3103f14baa44ea81638e720d3d49dc2466074dd20f885",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T07:43:53.916Z",
+  "rationale": "Read content/authoring/batches/math-matrices.mjs in full and reconciled the materialized statement, three visible examples, all 617 deterministic hidden cases, three reference sources, and starters with original author definitions. The actual objective is: Read every cell exactly once while winding clockwise from the top-left corner inward. The author source imports no third-party statement, example, reference or test assets. Mathematical ideas are expressed in project-authored prose and code.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/math-matrices.mjs",
+    "authorSourceSha256": "8a47878f2a906684a62d8e0ffb2e099be944f5f30494002c1686a0759c10ba13",
+    "reconciliation": "docs/release-evidence/coordinator-math-original-assets.json",
+    "wrapperReview": "Generated project templates reconciled exactly, allowing only the inspected prior Java Gson-construction line without serializeNulls. Runtime-library imports are dependencies, not copied library implementations in these packs."
+  },
+  "limitations": [
+    "Rights review only; no publication, global diversity, progression or runtime-health approval.",
+    "Application dependency-license packaging is a separate release gate.",
+    "Changes to bound assets invalidate this review."
+  ]
+}

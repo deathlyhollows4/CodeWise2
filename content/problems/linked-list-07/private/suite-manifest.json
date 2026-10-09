@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-next.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 704,
+  "suiteHash": "cbf00d1afff729dabb25124ceacbf0376be479741c5c543484db7037f6404ee0",
+  "categories": [
+    "finite-next-random-sharing",
+    "next-cycle-random-aliases",
+    "large-cycle-and-shared-random-target"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

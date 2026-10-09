@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 16
+    },
+    "expected": true,
+    "explanation": "16 equals 2 raised to the fourth power."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 0
+    },
+    "expected": false,
+    "explanation": "No nonnegative exponent produces zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 2147483648
+    },
+    "expected": true,
+    "explanation": "The highest unsigned bit is a valid power of two."
+  }
+]

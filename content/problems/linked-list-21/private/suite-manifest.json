@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-normalize-parts.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 732,
+  "suiteHash": "03f46efcfd6ce55226ca839b6ae65e1b986898f712bf785e39a2da1791ca87d8",
+  "categories": [
+    "empty-tail-parts",
+    "balanced-remainder-prefix",
+    "large-equal-valued-original-partition",
+    "all-2000-native-heads-null"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

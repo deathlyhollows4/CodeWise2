@@ -1,0 +1,1 @@
+class Solution {public:long long solve(long long value){long long count=0;while(value){value&=value-1;count++;}return count;}};

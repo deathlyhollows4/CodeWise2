@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "526067f42460fdd8d6ca39b1c23d9536d8d958d633104b731189bd92d4496f05",
+  "suiteHash": "dfe0c08ceb3c5f1423460a69715586ae6c79f51c1fa083341bb3cd2413a71549",
+  "oracleChecks": 203,
+  "hiddenUnique": 200,
+  "mutations": [
+    {
+      "name": "return-original-topology",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "discard-pivot-inner-subtree",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "rotate-in-the-opposite-direction",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-18",
+  "version": "1.0.0",
+  "slug": "merge-sparse-histograms",
+  "title": "Merge sparse histograms",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "hashing.weighted-counts",
+    "sorted.key-merge"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 8,
+  "status": "published",
+  "objective": "Merge preaggregated sorted histograms by adding shared-label weights without expanding them.",
+  "constraints": [
+    "0 <= a.length,b.length <=1000",
+    "Labels are integers in[-1000000,1000000]; counts in[1,1000000].",
+    "Every pair has exactly two entries; each histogram has strictly increasing labels."
+  ],
+  "interface": "Solution.solve(a,b) returns a typed integer matrix of[label,count] pairs.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "a": {
+        "kind": "array",
+        "maxLength": 1000,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "b": {
+        "kind": "array",
+        "maxLength": 1000,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-17"
+  ],
+  "remedialIds": [
+    "arrays-hashing-17"
+  ],
+  "nextIds": [],
+  "rationale": "Counts are already aggregated. Merge their keys and add weights instead of replaying every occurrence.",
+  "commonMistakes": [
+    "overwrite-shared",
+    "concatenate-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted-pairs",
+      "field": "a"
+    },
+    {
+      "kind": "sorted-pairs",
+      "field": "b"
+    },
+    {
+      "kind": "pair-ranges",
+      "field": "a",
+      "firstMin": -1000000,
+      "firstMax": 1000000,
+      "secondMin": 1,
+      "secondMax": 1000000
+    },
+    {
+      "kind": "pair-ranges",
+      "field": "b",
+      "firstMin": -1000000,
+      "firstMax": 1000000,
+      "secondMin": 1,
+      "secondMax": 1000000
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-bst-rank-range.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 807,
+  "suiteHash": "1835027417fa44bc8da176d32b6576bda66c00aabb88914ae8efb0c77fb6fc8c",
+  "categories": [
+    "inclusive-native-bst-range",
+    "inclusive-single-key-boundary",
+    "maximum-skew-wide-positive-range"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

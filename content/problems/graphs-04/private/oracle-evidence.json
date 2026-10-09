@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "7b4067e72f7ab90d648bcc554950d0f54796d48cb21d0dada7e0bc9da5763ebe",
+  "suiteHash": "483851e9ee511090342c2cdda4fec1fd9c096e2b376aac7355f6094fbf0e9900",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "count-islands-not-shapes",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "identify-shapes-by-area",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

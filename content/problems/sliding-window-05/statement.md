@@ -1,0 +1,1 @@
+Every reading is 0 or 1. You may treat at most `k` zeros as repaired ones. Return the greatest length of a contiguous batch that can become entirely ones. You do not have to use every repair. Empty input returns zero.

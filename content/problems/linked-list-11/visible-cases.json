@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        3,
+        1,
+        3,
+        1
+      ]
+    },
+    "expected": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "explanation": "Both1nodes and both3nodes retain their relative input order."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        -2,
+        -2,
+        -2
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Sorting equal values cannot exchange their original identities."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": []
+    },
+    "expected": [],
+    "explanation": "The empty list is already sorted."
+  }
+]

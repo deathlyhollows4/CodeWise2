@@ -1,0 +1,1 @@
+class Solution {public long[] solve(int[] values){long[] result=new long[values.length+1];for(int i=0;i<values.length;i++)result[i+1]=result[i]+values[i];return result;}}

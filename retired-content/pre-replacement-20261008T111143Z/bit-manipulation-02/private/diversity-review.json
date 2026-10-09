@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "failed",
+  "reviewType": "diversity",
+  "contentIdentity": "5615dd513b60bebe0308e731fa72f07c7468dd748be81b93ecccf44e46cf2a32",
+  "reviewer": "CodeWise2 coordinator following independent frontend second review",
+  "reviewedAt": "2026-10-08T11:07:54.230Z",
+  "rationale": "Fixed population-count==1 predicate over exactly the existing Bit01 word domain adds no coupled input or distinct reconstruction/choice objective. Replace with unsigned packed-field extraction.",
+  "evidence": "docs/release-evidence/independent-bit-heap-near-duplicate-verdict.json",
+  "requiredRepair": "Version2 authoring, historical archive, applicable minimum200 suite, independent model/mutations, three language execution and new reviews. No receipt migration."
+}

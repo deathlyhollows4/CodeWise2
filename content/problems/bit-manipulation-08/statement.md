@@ -1,0 +1,1 @@
+For every integer from lo through hi inclusive, take the bitwise AND of their nonnegative binary representations. Return the resulting integer. The interval can contain billions of integers, so do not enumerate it.

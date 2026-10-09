@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){long total=0,left=0;for(int v:values)total+=v;for(int k=1;k<values.length;k++){left+=values[k-1];if(left==total-left)return k;}return -1;}}

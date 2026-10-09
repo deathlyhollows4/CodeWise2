@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-stock.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "1feed5553ec4565edef8382237a550a914ef6ea3e33fd84c4c55fb3163da7b52",
+  "categories": [
+    "empty-stock-boundary-wide-target-and-composition",
+    "declared-wide-target-endpoint",
+    "negative-target",
+    "above-total-stock",
+    "feasible-bounded-quantities",
+    "feasible-with-zero-stocks"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

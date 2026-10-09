@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] a){int[] tails=new int[a.length];int n=0;for(int v:a){int l=0,h=n;while(l<h){int m=l+(h-l)/2;if(tails[m]<v)l=m+1;else h=m;}tails[l]=v;if(l==n)n++;}return n;}}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-18",
+  "version": "1.0.0",
+  "slug": "rotate-original-node-chain-right",
+  "title": "Rotate the original chain to the right",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.modular-cut-point",
+    "list.close-and-break-ring"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice",
+    "list.original-identity"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Move a suffix to the front using a modular cut point while preserving all original node identities and values.",
+  "constraints": [
+    "0 ≤ node count ≤ 2,000; 0 ≤ k ≤ 1,000,000,000.",
+    "Values lie in [-1,000,000,1,000,000].",
+    "Preserve original values, identities, and the relative order inside the moved suffix and retained prefix."
+  ],
+  "interface": "Solution.solve(head,k) returns ListNodeIdentitySequence.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-17",
+    "linked-list-19",
+    "linked-list-08"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-03"
+  ],
+  "nextIds": [
+    "linked-list-10"
+  ],
+  "rationale": "The rotation count may greatly exceed the length; locate the new tail after reducing it modulo n, and break the temporary ring.",
+  "commonMistakes": [
+    "rotate-left-instead",
+    "omit-modulo-reduction"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

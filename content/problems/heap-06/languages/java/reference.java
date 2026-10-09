@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] weights){PriorityQueue<Integer> q=new PriorityQueue<>(Comparator.reverseOrder());for(int v:weights)q.offer(v);while(q.size()>1){int a=q.poll(),b=q.poll();if(a!=b)q.offer(a-b);}return q.isEmpty()?0:q.peek();}}

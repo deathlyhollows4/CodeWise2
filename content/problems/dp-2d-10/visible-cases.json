@@ -1,0 +1,65 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          3,
+          1,
+          4
+        ],
+        [
+          2,
+          8,
+          2
+        ],
+        [
+          7,
+          1,
+          6
+        ]
+      ]
+    },
+    "expected": 30,
+    "explanation": "The start gives 3+4=7. On row 1 choose columns 0 and 1 for 2+8=10. On row 2 choose columns 0 and 2 for 7+6=13."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          5
+        ],
+        [
+          9
+        ]
+      ]
+    },
+    "expected": 14,
+    "explanation": "Both share every cell; rewards 5 and 9 are counted once each."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          9,
+          0,
+          9
+        ]
+      ]
+    },
+    "expected": 30,
+    "explanation": "Meet at the middle reward 10, counted once, then separate to collect both final 9 rewards: 2+10+18=30."
+  }
+]

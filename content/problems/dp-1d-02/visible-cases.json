@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "costsA": [
+        1,
+        100
+      ],
+      "costsB": [
+        100,
+        1
+      ],
+      "switchCost": 5
+    },
+    "expected": 7,
+    "explanation": "Use A on the first day and B on the second: daily costs 1+1 and one change cost 5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "costsA": [
+        2,
+        2,
+        2
+      ],
+      "costsB": [
+        1,
+        1,
+        1
+      ],
+      "switchCost": 100
+    },
+    "expected": 3,
+    "explanation": "Start at B for free and stay there on all three days."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "costsA": [],
+      "costsB": [],
+      "switchCost": 0
+    },
+    "expected": 0,
+    "explanation": "No days require tasks or changes."
+  }
+]

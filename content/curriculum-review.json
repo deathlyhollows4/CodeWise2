@@ -1,0 +1,22 @@
+{
+  "schemaVersion":1,
+  "status":"provisional-global-review-pending",
+  "reviewer":"coordinator /root plus content worker",
+  "reviewerType":"independent automated source review",
+  "reviewDate":"2026-10-08",
+  "findings":[
+    {"slots":["linked-list-05","linked-list-06"],"issue":"Iterative/recursive reversal is one task","replacement":"Stable node partition by pivot"},
+    {"slots":["graphs-02","graphs-03"],"issue":"DFS/BFS reachability is one task","replacement":"Count minimum-hop routes"},
+    {"slots":["sliding-window-10","heap-13"],"issue":"Window medians are the same task across approaches","replacement":"Indexed priority update queue"},
+    {"slots":["tries-06","bit-manipulation-12"],"issue":"Maximum XOR pair via trie/masks duplicates","replacement":"Prefix autocomplete ranking"},
+    {"slots":["arrays-hashing-06","bit-manipulation-04"],"issue":"Missing range label via membership/XOR is one task","replacement":"XOR of a complete integer interval"},
+    {"slots":["heap-09","intervals-07","intervals-08"],"issue":"Room count/peak overlap repeat the same maximum overlap task","replacement":"Heap priority cancellation handles; intervals earliest available schedule gap; retain one peak overlap task"},
+    {"slots":["greedy-01","intervals-06"],"issue":"Maximum selected/minimum removed intervals are complements","replacement":"Minimum adjacent swaps to cluster markers"},
+    {"slots":["dp-1d-11","dp-1d-24"],"issue":"Minimum deletions to order is n minus LIS","replacement":"Longest wiggle subsequence"},
+    {"slots":["dp-2d-15","dp-2d-16"],"issue":"Minimum palindrome insertions is n minus LPS","replacement":"Optimal binary search tree cost"},
+    {"slots":["dp-1d-11","dp-1d-12"],"issue":"Length/reconstruction alone risks output-only variation","replacement":"Count longest increasing subsequences"},
+    {"slots":["dp-2d-05","dp-2d-06"],"issue":"Length/reconstruction alone risks output-only variation","replacement":"Smallest shortest common supersequence"},
+    {"slots":["arrays-hashing-05","two-pointers-03"],"issue":"Sorted distinct output may be subset/approach-only duplicate of stable distinct","resolution":"Frontend requested to replace with stable zero migration; pending rematerialization"}
+  ],
+  "limitations":["String/title uniqueness does not prove semantic task distinctness.","These replacements are authoring decisions; all300 final tasks require independent global review.","Progression prerequisites/checkpoints in planned slots remain provisional until actually authored and validated."]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-multilevel.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 743,
+  "suiteHash": "6e8bf276bfb5ed9b0fc2de2caf6a224cde0f788d614d17a9419dcae5bc321cc6",
+  "categories": [
+    "permuted-native-multilevel-branches",
+    "maximum-next-depth",
+    "maximum-child-depth",
+    "long-child-chain-before-deferred-siblings"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

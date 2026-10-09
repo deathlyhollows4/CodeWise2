@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-15",
+  "version": "1.0.0",
+  "slug": "count-repeated-value-and-shape-subtree-types",
+  "title": "Count repeated subtree types",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.structural-interning",
+    "hashing.membership",
+    "trees.subtree-type-frequency"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "hashing.membership"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Count distinct complete rooted subtree types, including both values and child orientation, that occur at least twice.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) returns int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-14"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "trees-12"
+  ],
+  "rationale": "Interning value/left-type/right-type summaries distinguishes structure from a value multiset and counts each repeated type once.",
+  "commonMistakes": [
+    "count-extra-occurrences-not-types",
+    "count-only-repeated-leaf-types"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

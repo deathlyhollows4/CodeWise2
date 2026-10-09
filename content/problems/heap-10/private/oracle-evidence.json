@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "571c1980aea52efb2a1d891480d4dba36c0bed218bef0e95c136c00bb6b3e467",
+  "suiteHash": "c24c3f2c657748323863ceb3f5eade31945c15831ce4e3f9bd356bfd048a69d3",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "sum-instead-max",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "closed-endpoints",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "emit-redundant-events",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

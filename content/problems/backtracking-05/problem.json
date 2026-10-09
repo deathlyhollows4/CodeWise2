@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-05",
+  "version": "1.0.0",
+  "slug": "enumerate-bounded-stock-target-quantity-vectors",
+  "title": "Build a target total from limited stock",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "backtracking.branch-restoration",
+    "numbers.signed-accumulation",
+    "backtracking.bounded-multiplicity",
+    "backtracking.positive-target-pruning"
+  ],
+  "prerequisites": [
+    "backtracking.branch-restoration",
+    "numbers.signed-accumulation"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Enumerate bounded multiplicity vectors for a wide target without inventing stock or duplicate orderings.",
+  "constraints": [
+    "0 ≤ values.length = stock.length ≤ 7.",
+    "Denominations are strictly increasing integers in [1,1,000,000,000].",
+    "Every stock count lies in [0,3].",
+    "−21,000,000,000 ≤ target ≤ 21,000,000,000.",
+    "At most 4^7 = 16,384 quantity vectors can be explored; answer rows must preserve all denomination positions."
+  ],
+  "interface": "Solution.solve(values:int[],stock:int[],target:long / long long) returns sorted int[][].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 7,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      },
+      "stock": {
+        "kind": "array",
+        "maxLength": 7,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 3
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -21000000000,
+        "maximum": 21000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 16384,
+    "items": {
+      "kind": "array",
+      "maxLength": 7,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 3
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-06"
+  ],
+  "remedialIds": [
+    "backtracking-01",
+    "backtracking-02"
+  ],
+  "nextIds": [
+    "backtracking-07",
+    "backtracking-08"
+  ],
+  "rationale": "Choices are quantities per distinct denomination, rather than original-position subsets or arbitrary reuse. Positive denominations justify pruning only when a partial total exceeds the target.",
+  "commonMistakes": [
+    "ignore-stock-cap",
+    "use-32-bit-target",
+    "omit-zero-denomination-counts"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "values"
+    },
+    {
+      "kind": "unique",
+      "field": "values"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "values",
+      "right": "stock"
+    }
+  ]
+}

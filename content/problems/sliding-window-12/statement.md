@@ -1,0 +1,1 @@
+Return the greatest length of a contiguous batch for which its largest value minus its smallest value is at most `limit`. Single-value batches have spread zero. Negative values are allowed and compared normally. Empty input returns zero.

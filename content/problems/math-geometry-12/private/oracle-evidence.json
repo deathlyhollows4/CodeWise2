@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d2795c14175086c19a2c0a8289592441129014e4dd58975f53029bd1d1a12091",
+  "suiteHash": "f2345ef5c168f0f54ecfa8a4ac018454ee36c8851df6d01bb67158caf175f97d",
+  "oracleChecks": 857,
+  "hiddenUnique": 854,
+  "mutations": [
+    {
+      "name": "axis-only-polygons",
+      "detected": true,
+      "caseId": "hidden-2"
+    },
+    {
+      "name": "exclude-boundary",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "bounding-box-only",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

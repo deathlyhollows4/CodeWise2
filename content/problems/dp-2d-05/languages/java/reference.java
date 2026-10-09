@@ -1,0 +1,1 @@
+class Solution {public int solve(String source,String target){int[] d=new int[target.length()+1];d[0]=1;for(int i=0;i<source.length();i++)for(int j=target.length();j>=1;j--)if(source.charAt(i)==target.charAt(j-1))d[j]=(d[j]+d[j-1])%1000000007;return d[target.length()];}}

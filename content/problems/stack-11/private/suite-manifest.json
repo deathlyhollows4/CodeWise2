@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 699,
+  "suiteHash": "296bc90a2f609b1c01562dc0b2aa6f36f6f474c7272cf2bcb53da25cc8eeba51",
+  "categories": [
+    "nonnegative-height-and-equality-runs",
+    "wide-exact-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

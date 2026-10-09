@@ -1,0 +1,1 @@
+class Solution {public boolean solve(int[] pushes,int[] pops){if(pushes.length!=pops.length)return false;int[] stack=new int[pushes.length];int size=0,next=0;for(int value:pushes){stack[size++]=value;while(size>0&&next<pops.length&&stack[size-1]==pops[next]){size--;next++;}}return next==pops.length&&size==0;}}

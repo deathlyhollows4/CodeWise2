@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "78be4ad23840d97f44af1a147ab52fd59957091a1abd631d4bd05af6793c35b3",
+  "suiteHash": "1feed5553ec4565edef8382237a550a914ef6ea3e33fd84c4c55fb3163da7b52",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "ignore-stock-cap",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "use-32-bit-target",
+      "detected": true,
+      "caseId": "hidden-15"
+    },
+    {
+      "name": "omit-zero-denomination-counts",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

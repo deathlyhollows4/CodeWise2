@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-14",
+  "version": "1.0.0",
+  "slug": "weighted-fifo-server-dispatch",
+  "title": "Assign queued tasks to weighted servers",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.dual-resource-frontiers",
+    "scheduling.fifo-time-jump"
+  ],
+  "prerequisites": [
+    "heap.release-frontier",
+    "arrays.index-semantics"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Assign FIFO arrivals to free weighted servers while advancing a separate completion-time frontier.",
+  "constraints": [
+    "1 <= weights.length <= 1000",
+    "0 <= durations.length <= 50000",
+    "Weights and durations are integers in [1,1000000000].",
+    "Task j arrives at integer time j; total completion times are at most 50000000000000."
+  ],
+  "interface": "Solution.solve(weights, durations) receives native integer arrays and returns original server indices in arrival order.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "weights": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 1000,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      },
+      "durations": {
+        "kind": "array",
+        "maxLength": 50000,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 50000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-11",
+    "heap-13"
+  ],
+  "remedialIds": [
+    "heap-08",
+    "arrays-hashing-03",
+    "arrays-hashing-04",
+    "heap-05",
+    "heap-06",
+    "two-pointers-04"
+  ],
+  "nextIds": [],
+  "rationale": "One heap chooses among free servers by weight and original index; another releases busy servers by completion time. Jump time only when every server is busy, preserving the waiting queue order.",
+  "commonMistakes": [
+    "narrow-completion-time",
+    "reverse-index-ties",
+    "reuse-busy-best-weight"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

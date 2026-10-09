@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-server-dispatch.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xde14",
+  "hiddenCount": 60,
+  "suiteHash": "29f9a2421e831772de614c73995b5c877aae8630294de69c2634506b81105298",
+  "categories": [
+    "maximum-signed64-completion-alternation-certificate",
+    "maximum-server-count-periodic-completion-frontier",
+    "maximum-equal-weight-immediate-release-index-certificate",
+    "coincident-wide-finishes-release-all-before-choice",
+    "exact-server-weight-and-duration-extrema-with-index-ties",
+    "single-task-maximum-weight-index-tie",
+    "curated-server-index-ties-and-release-frontiers",
+    "curated-busy-time-jumps-and-FIFO-order"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

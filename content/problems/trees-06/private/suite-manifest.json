@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-next.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1136,
+  "suiteHash": "846c379eadb2bf99054f1186e7cd01933816fa32f13e6ce3b488167d86ddaceb",
+  "categories": [
+    "duplicate-negative-values-sparse-shape",
+    "varied-branching-and-sparse-shape",
+    "empty-tree",
+    "left-depth-spectrum",
+    "right-depth-spectrum",
+    "deep-2000-native-nodes",
+    "wide-2000-positive-nodes",
+    "wide-2000-negative-nodes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

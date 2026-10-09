@@ -1,0 +1,2 @@
+# Preserve exact source/content bytes used by validation identities across clones.
+* -text

@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head,int value){while(head&&head->val==value)head=head->next;auto p=head;while(p&&p->next){if(p->next->val==value)p->next=p->next->next;else p=p->next;}return head;}};

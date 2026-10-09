@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/slice.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 448,
+  "suiteHash": "227604bd3ed28988b20b26fb25fbc27720c268108620ca19097f5f8f87d108ac",
+  "categories": [
+    "exhaustive-small",
+    "seeded-random",
+    "wide-result",
+    "negative-wide-result",
+    "non-adjacent-repeat",
+    "performance-distinct",
+    "performance-negative"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

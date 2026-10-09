@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 690,
+  "suiteHash": "f8b989460f7e52faa37b2e4d4b16bce58586942ebff5a32c945b96cbca206f77",
+  "categories": [
+    "seeded-small",
+    "wide-cancellation",
+    "half-tie",
+    "even-half-tie",
+    "large-majority"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": [
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        2
+      ]
+    ],
+    "explanation": "The left column becomes the top row in reverse order."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          7
+        ]
+      ]
+    },
+    "expected": [
+      [
+        7
+      ]
+    ],
+    "explanation": "A single cell stays in place."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": []
+    },
+    "expected": [],
+    "explanation": "There are no cells to rotate."
+  }
+]

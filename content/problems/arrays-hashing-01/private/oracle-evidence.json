@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "b492a0092aa22a0ec2961adf2cfa6a9221431771781b43acbaba0f4691e43776",
+  "suiteHash": "5592a277f93ca169be4e5dd6348c446fbba36051057e8bfa371fa9e653d174de",
+  "oracleChecks": 861,
+  "hiddenUnique": 858,
+  "mutations": [
+    {
+      "name": "skip-first",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "absolute-values",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "32-bit-overflow",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

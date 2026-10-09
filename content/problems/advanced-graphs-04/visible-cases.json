@@ -1,0 +1,77 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          0,
+          2,
+          9
+        ]
+      ]
+    },
+    "expected": [
+      "0",
+      "5",
+      "3",
+      "UNREACHABLE"
+    ],
+    "explanation": "The cheaper walk to 2 has cost 5-2=3. Vertex 3 cannot be reached."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "An empty graph has no source or output entry."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": [
+      "0",
+      "UNBOUNDED",
+      "UNBOUNDED",
+      "UNBOUNDED",
+      "UNREACHABLE"
+    ],
+    "explanation": "The reachable 1-2 cycle costs -1 per repetition and can continue to 3. It cannot return to 0; vertex 4 remains unreachable."
+  }
+]

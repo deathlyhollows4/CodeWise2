@@ -1,0 +1,1 @@
+class Solution {public:vector<long long> solve(vector<int> values){vector<long long> result(values.size()+1,0);for(int i=0;i<(int)values.size();i++)result[i+1]=result[i]+values[i];return result;}};

@@ -1,0 +1,83 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "b": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "expected": [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "explanation": "Label4 combines counts1+5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": [],
+      "b": []
+    },
+    "expected": [],
+    "explanation": "Both histograms are empty."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": [
+        [
+          -1,
+          2
+        ]
+      ],
+      "b": [
+        [
+          -1,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "expected": [
+      [
+        -1,
+        5
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "explanation": "Negative labels are keys, not missing-value markers."
+  }
+]

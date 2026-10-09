@@ -1,0 +1,131 @@
+{
+  "id": "greedy-06",
+  "version": "1.0.0",
+  "language": "cpp",
+  "validationIdentity": "331af30bdf82491f64ad6b8dc6557ab443bc42015b01caaae2bdea42fe9641a4",
+  "suiteHash": "9db0f4af0c003abccbaee7f92cc9f989651ce72b76112db6df627eda244964db",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T10:25:26.899Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 63,
+      "executed": 63,
+      "passed": 63,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "target": 100,
+          "startFuel": 10,
+          "stations": [
+            [
+              10,
+              60
+            ],
+            [
+              20,
+              30
+            ],
+            [
+              30,
+              30
+            ],
+            [
+              60,
+              40
+            ]
+          ]
+        },
+        "expected": 2,
+        "actual": 2,
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "target": 100,
+          "startFuel": 1,
+          "stations": [
+            [
+              10,
+              100
+            ]
+          ]
+        },
+        "expected": -1,
+        "actual": -1,
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "target": 1,
+          "startFuel": 1,
+          "stations": []
+        },
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.002",
+          "wallSeconds": "0.002",
+          "memoryKb": "3168"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.071",
+          "wallSeconds": "0.068",
+          "memoryKb": "14932"
+        }
+      ]
+    }
+  }
+}

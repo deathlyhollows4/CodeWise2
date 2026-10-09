@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "64edf277f08ee0da1b1085bfb9d8ed92dc300b75b00108d43e1831050fa31e43",
+  "suiteHash": "f8b989460f7e52faa37b2e4d4b16bce58586942ebff5a32c945b96cbca206f77",
+  "oracleChecks": 693,
+  "hiddenUnique": 690,
+  "mutations": [
+    {
+      "name": "accept-half",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "candidate-without-verification",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

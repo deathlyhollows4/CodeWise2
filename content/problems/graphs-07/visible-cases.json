@@ -1,0 +1,63 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "expected": true,
+    "explanation": "Alternate the two colors around the even four-edge cycle."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": true,
+    "explanation": "There are no edges that could violate the rule."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          2
+        ]
+      ]
+    },
+    "expected": false,
+    "explanation": "The component containing 0 is fine, but the disconnected triangle cannot use two opposite colors."
+  }
+]

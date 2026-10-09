@@ -1,0 +1,1 @@
+class Solution {public:bool solve(TreeNode* root){if(!root)return true;vector<tuple<TreeNode*,long long,long long>> stack{{root,LLONG_MIN,LLONG_MAX}};while(!stack.empty()){auto [n,lo,hi]=stack.back();stack.pop_back();if(n->val<=lo||n->val>=hi)return false;if(n->left)stack.push_back({n->left,lo,n->val});if(n->right)stack.push_back({n->right,n->val,hi});}return true;}};

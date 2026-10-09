@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-03",
+  "version": "1.0.0",
+  "slug": "cancel-adjacent-letter-pairs",
+  "title": "Cancel adjacent letter pairs",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.cascading-cancellation"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Keep unresolved letters and allow removals to expose another matching pair.",
+  "constraints": [
+    "0 ≤ text.length ≤ 2,000",
+    "Only ASCII letters a..z and A..Z occur."
+  ],
+  "interface": "Solution.solve(text) returns a string.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "ascii": true,
+        "maxLength": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "string",
+    "ascii": true,
+    "maxLength": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-02"
+  ],
+  "remedialIds": [
+    "stack-02",
+    "stack-01",
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "stack-07"
+  ],
+  "rationale": "Removing the top can create a new match with the next arriving letter.",
+  "commonMistakes": [
+    "single-cancellation-pass",
+    "case-insensitive-cancellation"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "text",
+      "alphabet": "letters"
+    }
+  ]
+}

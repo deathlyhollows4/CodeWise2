@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-native-ancestor.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1186,
+  "suiteHash": "05e206c32be40079e11071fb4c4672457562eb4ffa3e3f89941948b2942ee71d",
+  "categories": [
+    "native-ancestor-query",
+    "same-original-target-twice",
+    "duplicate-values-sparse-original-slot-pairs"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

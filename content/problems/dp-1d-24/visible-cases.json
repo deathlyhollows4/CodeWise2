@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        7,
+        4,
+        9,
+        2,
+        5
+      ]
+    },
+    "expected": 6,
+    "explanation": "The consecutive differences rise, fall, rise, fall and rise, so every element can be kept."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "expected": 2,
+    "explanation": "All differences rise; keeping any two distinct elements is optimal."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": []
+    },
+    "expected": 0,
+    "explanation": "There are no elements to keep."
+  }
+]

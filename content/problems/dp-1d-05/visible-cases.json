@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "digits": "226"
+    },
+    "expected": 3,
+    "explanation": "The valid splits are [2,2,6], [22,6] and [2,26]."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "digits": "06"
+    },
+    "expected": 0,
+    "explanation": "A leading zero cannot be a code or begin the two-digit code 06."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "digits": "10"
+    },
+    "expected": 1,
+    "explanation": "The token 10 is valid; [1,0] is not."
+  }
+]

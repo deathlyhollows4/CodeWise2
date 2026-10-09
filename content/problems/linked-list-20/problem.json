@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-20",
+  "version": "1.0.0",
+  "slug": "zero-sum-original-list-normalization",
+  "title": "Remove zero-sum blocks until none remain",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.prefix-equality-unlinking",
+    "list.normalized-survivor-invariant"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice",
+    "list.original-identity"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Return an original-node subsequence obtainable by zero-sum block removal, with no zero-sum consecutive block left.",
+  "constraints": [
+    "0 ≤ node count ≤ 2,000; values lie in [-1,000,000,000,1,000,000,000].",
+    "Each removed block is nonempty and sums to zero.",
+    "Survivors retain original order/values/identities and have no zero-sum consecutive block.",
+    "The returned native chain must be finite; use a wide prefix-sum accumulator."
+  ],
+  "interface": "Solution.solve(head) returns ListNodeIdentitySequence, checked as a valid zero-sum-list normalization.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "custom",
+    "name": "zero-sum-list-normalization"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-11",
+    "linked-list-09"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-03"
+  ],
+  "nextIds": [],
+  "rationale": "Several legitimate survivor chains can exist. Validate what was removed and the terminal invariant, rather than insisting on one algorithm's witness.",
+  "commonMistakes": [
+    "leave-original-zero-sum-blocks",
+    "remove-nonzero-whole-chain",
+    "int32-prefix-wrap"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

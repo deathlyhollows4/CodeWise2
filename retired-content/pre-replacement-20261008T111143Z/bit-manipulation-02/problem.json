@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-02",
+  "version": "1.0.0",
+  "slug": "single-bit-power",
+  "title": "A single bit power",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.unsigned32",
+    "bits.power-of-two"
+  ],
+  "prerequisites": [],
+  "step": 1,
+  "status": "draft",
+  "objective": "Recognize a positive power of two and reject zero.",
+  "constraints": [
+    "value is an integer from 0 through 4294967295 inclusive.",
+    "Interpret it as an unsigned sequence of exactly 32 bits."
+  ],
+  "interface": "Solution.solve(value) receives a signed 64 bit integer holding an unsigned 32 bit value.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 4294967295
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-01"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "bit-manipulation-04"
+  ],
+  "rationale": "A positive power of two has one active bit. Zero must be checked separately.",
+  "commonMistakes": [
+    "accept-zero",
+    "signed-positive-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

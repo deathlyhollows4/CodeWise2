@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA601",
+  "hiddenCount": 60,
+  "suiteHash": "6c1fe2db0e5746fd1ab244718660fba6d69f05b2b5558824f3f48730c22a9c70",
+  "categories": [
+    "curated-boundary-empty-network",
+    "curated-boundary-free-connection",
+    "curated-boundary-parallel-price-choice",
+    "curated-boundary-self-loop-not-a-join",
+    "max-wide-unique-spanning-tree",
+    "max-five-thousand-edge-cut-certificate",
+    "max-disconnected-self-loop-network",
+    "seeded-weighted-network-cuts"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

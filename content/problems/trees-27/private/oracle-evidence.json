@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "2b4ac091203eef3d7169849f5cd24c970045e4aa307df3d2306dad2605eb560d",
+  "suiteHash": "1a8dc1ad863839144bc7b6205e14b3edd25eb21aced876dd7d86930cfc5ca63a",
+  "oracleChecks": 1128,
+  "hiddenUnique": 1125,
+  "mutations": [
+    {
+      "name": "ignore-inherited-flip-parity",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "only-one-operation-for-any-nonzero-tree",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

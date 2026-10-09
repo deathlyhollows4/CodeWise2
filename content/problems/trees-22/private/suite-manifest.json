@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-bst-rank-range.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 800,
+  "suiteHash": "b7c596b674c54947d2bec9a82088f6af669881a5dd085def267f10170be02ebf",
+  "categories": [
+    "existing-original-node-rank",
+    "missing-rank-null"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

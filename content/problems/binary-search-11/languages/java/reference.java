@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] a,int d){long l=0,h=0;for(int x:a){l=Math.max(l,x);h+=x;}while(l<h){long m=l+(h-l)/2,load=0;int n=1;for(int x:a){if(load+x>m){n++;load=0;}load+=x;}if(n<=d)h=m;else l=m+1;}return l;}}

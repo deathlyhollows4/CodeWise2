@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC306",
+  "hiddenCount": 60,
+  "suiteHash": "9db0f4af0c003abccbaee7f92cc9f989651ce72b76112db6df627eda244964db",
+  "categories": [
+    "already-at-zero-target",
+    "station-at-origin-is-reachable",
+    "exactly-reaching-station-and-goal",
+    "largest-passed-fuel-beats-nearest-stop",
+    "zero-fuel-stations-cannot-create-reach",
+    "upper-bound-60000-necessary-unit-chain-stops",
+    "upper-bound-entire-unit-chain-still-insufficient",
+    "upper-bound-60000-stations-one-first-large-refill-suffices",
+    "enumerate-every-station-subset-and-physical-reach"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

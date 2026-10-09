@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-root-rotation.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 200,
+  "suiteHash": "dfe0c08ceb3c5f1423460a69715586ae6c79f51c1fa083341bb3cd2413a71549",
+  "categories": [
+    "zero-valued-singleton-no-pivot",
+    "one-sided-pivot-or-absent-pivot",
+    "inner-subtree-transfer-and-sparse-descendants",
+    "duplicate-values-with-topology-change",
+    "maximum-left-chain-pivot-or-noop",
+    "maximum-right-chain-pivot-or-noop",
+    "maximum-wide-tree-with-inner-subtrees",
+    "balanced-inner-and-outer-subtrees",
+    "curated-complete-shape-by-size-and-direction",
+    "odd-even-chain-and-absent-pivot-boundary",
+    "curated-irregular-inner-subtree-and-pivot-shape"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

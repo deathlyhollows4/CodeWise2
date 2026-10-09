@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-11",
+  "version": "1.0.0",
+  "slug": "affordable-project-frontier",
+  "title": "Grow capital through affordable projects",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.affordability-frontier",
+    "heap.profit-choice"
+  ],
+  "prerequisites": [
+    "heap.frequency-frontier",
+    "sorted.order"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Maximize final capital after at most k one-use projects whose eligibility changes with earned profit.",
+  "constraints": [
+    "capital.length = profits.length, between 0 and 90000",
+    "Every required capital, profit and initial capital lies in [0,1000000000].",
+    "0 <= k <= 90000",
+    "The final capital may exceed signed 32-bit range."
+  ],
+  "interface": "Solution.solve(capital, profits, initial, k) receives two native integer arrays, a long initial balance and an integer limit.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "capital": {
+        "kind": "array",
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "profits": {
+        "kind": "array",
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "initial": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 90000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 100001000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-13",
+    "heap-14"
+  ],
+  "remedialIds": [
+    "heap-05",
+    "two-pointers-04",
+    "heap-06",
+    "heap-08",
+    "arrays-hashing-03",
+    "arrays-hashing-04"
+  ],
+  "nextIds": [],
+  "rationale": "Move newly affordable projects into a max-profit frontier; taking the largest available nonnegative profit cannot shrink later eligibility.",
+  "commonMistakes": [
+    "required-capital-is-spent",
+    "never-refresh-eligibility"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "capital",
+      "right": "profits"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "43d7e2857e7cbb3485550baa895ce1d5f70df84ca57052beafe2a9baf824b1a4",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T07:38:26.981Z",
+  "rationale": "Reviewed content/authoring/batches/bits-fourth.mjs in full and reconciled the materialized statement, three visible examples, all 757 deterministic hidden cases, three reference sources, and starters with the original author definitions. The task is Map a binary ordinal to its reflected Gray codeword with one-bit transitions between consecutive ordinals. No imported statement, example, reference or test assets occur in this source. Common algorithmic ideas are expressed in project-authored prose and implementation.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/bits-fourth.mjs",
+    "authorSourceSha256": "e89b56bdbca75a92e4a5b792dba2c6e6e130f15e5903f58adc94a0ef2f2918c2",
+    "reconciliation": "docs/release-evidence/coordinator-bit-original-assets.json",
+    "wrapperReview": "C++ and Python equal the project template. Java equals the project template or its inspected older Gson-construction line without serializeNulls; scalar/nonnullable results here make that difference irrelevant to provenance. Library imports are dependencies, not copied library sources in these packs."
+  },
+  "limitations": [
+    "Rights review only; no publication, global diversity, progression or runtime-health approval.",
+    "Application dependency-license packaging remains a separate release review.",
+    "Any change to bound assets invalidates this review."
+  ]
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        8,
+        11,
+        -3,
+        1,
+        4
+      ],
+      "target": 1
+    },
+    "expected": 3,
+    "explanation": "Target1 occurs at index3 in the rotated order."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 7
+    },
+    "expected": -1,
+    "explanation": "An empty list has no target."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        4,
+        7,
+        1,
+        2
+      ],
+      "target": 6
+    },
+    "expected": -1,
+    "explanation": "The target is absent even though it lies within the value range."
+  }
+]

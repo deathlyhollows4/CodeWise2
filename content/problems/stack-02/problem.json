@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-02",
+  "version": "1.0.0",
+  "slug": "undo-reading-stack",
+  "title": "Track undoable readings",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.push-pop-history"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Apply push and undo commands and report the current top after every event.",
+  "constraints": [
+    "0 ≤ commands.length ≤ 2,000",
+    "Each command is -1 or an integer in [0,1,000,000]."
+  ],
+  "interface": "Solution.solve(commands) returns an integer history array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "commands": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-03"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "stack-07"
+  ],
+  "rationale": "A stack remembers the most recent reading that has not been undone.",
+  "commonMistakes": [
+    "undo-oldest-first",
+    "ignore-zero-push"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

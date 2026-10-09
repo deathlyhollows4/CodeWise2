@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "b92aee5b6ca73a115289b451bdbedd34a6d8b973f2e9607c2f15192884b3ea90",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Read each entry once, retain nonzero entries in their original order, then append the counted zeros. Repeated values and output length are preserved in all references.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "rights",
+  "rationale": "Read original frontend author modules and all three references; exact actual statement,81-example subset, hidden generation and language assets reconcile with that source. All five provenance asset categories explicitly identify codewise2-original/project-owned, with no imported/adapted asset claimed. This is bounded origin/notice review, not an exhaustive external plagiarism search."
+}

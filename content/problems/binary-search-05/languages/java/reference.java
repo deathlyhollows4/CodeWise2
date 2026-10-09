@@ -1,0 +1,1 @@
+class Solution {public long solve(long n){long lo=0,hi=n,answer=0;while(lo<=hi){long m=lo+(hi-lo)/2;if(m==0||m<=n/m){answer=m;lo=m+1;}else hi=m-1;}return answer;}}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "a4bcc90cf20dda2b1a84538787c9c0162c3b5a4fcd8cde34db7bc1adfce5e571",
+  "suiteHash": "23a742f1c13e00980a1bf51c80f59a584dd8d4bbd3eaa959e77a5d56a7f0a9c2",
+  "oracleChecks": 758,
+  "hiddenUnique": 755,
+  "mutations": [
+    {
+      "name": "ignore-overflow",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "discard-sign",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

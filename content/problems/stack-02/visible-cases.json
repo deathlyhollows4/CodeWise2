@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "commands": [
+        3,
+        5,
+        -1,
+        2
+      ]
+    },
+    "expected": [
+      3,
+      5,
+      3,
+      2
+    ],
+    "explanation": "Undo removes 5 and reveals the previous 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "commands": []
+    },
+    "expected": [],
+    "explanation": "No commands means no history."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "commands": [
+        -1,
+        0,
+        -1,
+        -1
+      ]
+    },
+    "expected": [
+      -1,
+      0,
+      -1,
+      -1
+    ],
+    "explanation": "Empty undos are harmless, and zero is a real stored reading."
+  }
+]

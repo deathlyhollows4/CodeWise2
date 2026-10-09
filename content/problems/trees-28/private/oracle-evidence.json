@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "ec0a8e107ab61ccd0f78252dab6b64725b695ec9099b4f2ac407c38a7cd90917",
+  "suiteHash": "901680933bfbdc58c9134462f89b2f63723c047ef08647dc63d0430b7ab873ba",
+  "oracleChecks": 1143,
+  "hiddenUnique": 1140,
+  "mutations": [
+    {
+      "name": "allow-empty-path-in-nonempty-tree",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "force-path-through-root",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "signed-int32-path-accumulator",
+      "detected": true,
+      "caseId": "hidden-1134"
+    }
+  ],
+  "languageExecution": "not-run"
+}

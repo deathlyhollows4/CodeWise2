@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-12",
+  "version": "1.0.0",
+  "slug": "decode-bounded-repeated-blocks",
+  "title": "Decode bounded repeated blocks",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.prefix-and-repeat-frames"
+  ],
+  "prerequisites": [
+    "stack.nested-aggregation"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Remember the surrounding prefix and repeat count while decoding a nested block safely.",
+  "constraints": [
+    "0 ≤ encoded text.length ≤ 200",
+    "Input is ASCII text; unsupported characters are malformed.",
+    "Valid counts are 1..10,000 with no leading zero.",
+    "The decoded output limit is 10,000 characters."
+  ],
+  "interface": "Solution.solve(text) returns decoded text or exactly INVALID.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "ascii": true,
+        "maxLength": 200
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "string",
+    "ascii": true,
+    "maxLength": 10000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-09"
+  ],
+  "remedialIds": [
+    "stack-10"
+  ],
+  "nextIds": [
+    "stack-06"
+  ],
+  "rationale": "A frame stores both the partial output and what to do when an inner block closes.",
+  "commonMistakes": [
+    "ignore-repeat-counts",
+    "strip-structural-text"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 725,
+  "suiteHash": "0890fd19ec01045ee6ee065e89d818e9aa7aee36232dd97bb718ea829ae2370f",
+  "categories": [
+    "acyclic-permuted-storage",
+    "cycle-with-duplicate-values-and-permuted-storage",
+    "empty-list",
+    "large-tail-before-cycle-identical-values"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

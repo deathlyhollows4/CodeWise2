@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-independent-reroot.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1139,
+  "suiteHash": "fc466c1d1107db6a833318f97f96bdeb661ee5e6739e8bd5d144ca030360f8b5",
+  "categories": [
+    "duplicate-negative-values-sparse-shape",
+    "varied-branching-and-sparse-shape",
+    "empty-tree",
+    "left-depth-spectrum",
+    "right-depth-spectrum",
+    "deep-2000-native-nodes",
+    "wide-2000-positive-nodes",
+    "wide-2000-negative-nodes",
+    "adjacency-negative-empty-and-weighted-counterexamples",
+    "maximum-skew-wide-independent-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

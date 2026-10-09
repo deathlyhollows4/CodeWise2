@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "8a14cedcbf22dab83d639d5fb6a92c78b76a51317ea0466dfa0407fc9fae18cc",
+  "suiteHash": "27635a1404262b549639a43819aafe09c1a13e2c1ab271e03f5bbb13423f2281",
+  "oracleChecks": 712,
+  "hiddenUnique": 709,
+  "mutations": [
+    {
+      "name": "required-capital-is-spent",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "never-refresh-eligibility",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    "expected": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "explanation": "Equal-valued nodes are still reordered by their original identities."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        4,
+        9,
+        -2,
+        7,
+        5
+      ]
+    },
+    "expected": [
+      0,
+      4,
+      1,
+      3,
+      2
+    ],
+    "explanation": "The middle node appears once at the end."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": []
+    },
+    "expected": [],
+    "explanation": "No input node means an empty result chain."
+  }
+]

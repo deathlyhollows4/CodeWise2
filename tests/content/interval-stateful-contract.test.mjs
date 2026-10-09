@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {validateSemantics} from '../../packages/judge-adapter/src/semantic.mjs';
+import {definitions} from '../../content/authoring/batches/intervals-dynamic.mjs';
+import {buildStatefulHarness} from '../../content/authoring/stateful.mjs';
+const d=definitions[0];
+test('approved stateful argument ordering rejects reversed ranges, unknown methods and bad declarations',()=>{const base={operations:[{op:'constructor',args:[]},{op:'put',args:[1,2,4]}]};assert.equal(validateSemantics(d.semanticConstraints,base),true);assert.equal(validateSemantics(d.semanticConstraints,{operations:[...base.operations.slice(0,1),{op:'put',args:[1,4,2]}]}),false);assert.equal(validateSemantics(d.semanticConstraints,{operations:[{op:'constructor',args:[]},{op:'eval',args:[]}]}),false);for(const orderedArguments of ['bad',[[1,8]],[[1,1.5]]]){const rules=structuredClone(d.semanticConstraints);rules[0].methods.put.orderedArguments=orderedArguments;assert.equal(validateSemantics(rules,base),false);}});
+test('stateful wrappers statically dispatch only CoverageSet methods with native argument types',()=>{const wrappers=buildStatefulHarness(d.stateful);for(const code of Object.values(wrappers)){assert.ok(code.includes('{{USER_CODE}}'));assert.ok(code.includes('CoverageSet'));assert.ok(code.includes('covered'));assert.ok(code.includes('put'));}assert.match(wrappers.cpp,/make_unique<CoverageSet>/);assert.match(wrappers.java,/new CoverageSet/);assert.match(wrappers.python,/obj=CoverageSet/);});

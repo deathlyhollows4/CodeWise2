@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] a,int k){int l=0,h=a[a.length-1]-a[0];while(l<h){int m=(int)(l+((long)h-l+1)/2),n=1,last=a[0];for(int i=1;i<a.length;i++)if(a[i]-last>=m){n++;last=a[i];}if(n>=k)l=m;else h=m-1;}return l;}}

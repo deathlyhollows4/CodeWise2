@@ -1,0 +1,88 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        1,
+        -2
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        -2,
+        1,
+        0
+      ]
+    ],
+    "explanation": "Both corners are sources. Each open cell uses the nearer source through non-wall orthogonal moves."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          0
+        ]
+      ]
+    },
+    "expected": [
+      [
+        -1
+      ]
+    ],
+    "explanation": "The open cell has no source and is unreachable."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        -2,
+        -1
+      ],
+      [
+        1,
+        -2,
+        -1
+      ]
+    ],
+    "explanation": "The wall column separates the right cells from the source; Manhattan distance alone would be wrong."
+  }
+]

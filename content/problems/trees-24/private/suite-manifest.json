@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-order-reconstruct.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1112,
+  "suiteHash": "552087f767c6f34a6330057f42b18cb05f232f5e48b700ae63a78b100ac2a824",
+  "categories": [
+    "unique-values-duplicate-negative-values-sparse-shape",
+    "unique-values-varied-branching-and-sparse-shape",
+    "unique-values-left-depth-spectrum",
+    "unique-values-right-depth-spectrum",
+    "unique-values-deep-2000-native-nodes",
+    "unique-values-wide-2000-positive-nodes",
+    "unique-values-wide-2000-negative-nodes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

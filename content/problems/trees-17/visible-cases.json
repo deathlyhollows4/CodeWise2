@@ -1,0 +1,62 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "data": {
+        "values": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "targetIndices": [
+          3,
+          4
+        ]
+      }
+    },
+    "expected": 1,
+    "explanation": "The two equal-valued targets are the children of original slot 1. Their value 5 cannot distinguish them from any other node."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "data": {
+        "values": [
+          1,
+          2,
+          3,
+          null,
+          4
+        ],
+        "targetIndices": [
+          1,
+          4
+        ]
+      }
+    },
+    "expected": 1,
+    "explanation": "The target at slot 1 is already an ancestor of the target at slot 4, so it is the lowest common ancestor."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "data": {
+        "values": [
+          9,
+          9,
+          9
+        ],
+        "targetIndices": [
+          2,
+          2
+        ]
+      }
+    },
+    "expected": 2,
+    "explanation": "Both target references are the same original right-child object; return that object."
+  }
+]

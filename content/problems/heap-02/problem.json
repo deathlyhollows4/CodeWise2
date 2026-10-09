@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-02",
+  "version": "1.0.0",
+  "slug": "stream-rank-thresholds",
+  "title": "A rank threshold after each arrival",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.bounded-frontier",
+    "heap.incremental-order-statistic"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "heap.bounded-frontier"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Track the kth-largest multiset reading after each new stream arrival.",
+  "constraints": [
+    "1 <= k <= initial.length <= 100000",
+    "0 <= arrivals.length <= 10000",
+    "Every reading is an integer in [-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(initial, arrivals, k) receives two integer arrays and a rank.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "initial": {
+        "kind": "array",
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        },
+        "minLength": 1
+      },
+      "arrivals": {
+        "kind": "array",
+        "maxLength": 10000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 100000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 10000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-04"
+  ],
+  "remedialIds": [
+    "heap-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "math-geometry-01",
+    "math-geometry-09"
+  ],
+  "nextIds": [
+    "heap-05",
+    "heap-07"
+  ],
+  "rationale": "Keep only the k largest readings seen so far; the min-heap root is the current threshold.",
+  "commonMistakes": [
+    "largest-only",
+    "initial-threshold-forever"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "initial",
+      "minimum": 1
+    }
+  ]
+}

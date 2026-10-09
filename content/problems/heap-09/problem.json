@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-09",
+  "version": "1.0.0",
+  "slug": "cancelable-task-handles",
+  "title": "Extract tasks after handle cancellations",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.stale-entry-versioning",
+    "heap.stable-priority-order"
+  ],
+  "prerequisites": [
+    "heap.max-extraction",
+    "hashing.membership"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Process stable-priority task extraction with cancellation and safe reuse of inactive handles.",
+  "constraints": [
+    "The three arrays have equal lengths between 0 and 2000.",
+    "commands contains only add, cancel and pop.",
+    "Handles lie in [0,1000000000]; priorities lie in [-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(commands, ids, priorities) receives three native typed arrays and returns extraction results.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "commands": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "enum",
+          "values": [
+            "add",
+            "cancel",
+            "pop"
+          ]
+        }
+      },
+      "ids": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "priorities": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-08"
+  ],
+  "remedialIds": [
+    "heap-06",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "heap-11",
+    "heap-13"
+  ],
+  "rationale": "Cancelled heap entries may remain physically present. An active handle and its successful-add generation determine whether an entry is still current.",
+  "commonMistakes": [
+    "cancel-is-noop",
+    "handle-without-generation"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "ids"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "priorities"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-final.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 589,
+  "suiteHash": "e1144880e9f5ac46ff8f8930b80fe1e31bb941e5653faebc14a1c5c0b31edf03",
+  "categories": [
+    "binary-balance",
+    "maximum-alternation"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca72",
+  "hiddenCount": 753,
+  "suiteHash": "53acf3c3163ea32d2aecebbddd4f90d4ce444b565ada932298dbc63423bd74df",
+  "categories": [
+    "varied-integer",
+    "exact-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

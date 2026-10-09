@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-07",
+  "version": "1.0.0",
+  "slug": "running-exact-medians",
+  "title": "An exact median after each arrival",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.two-partition-balance",
+    "heap.median-cut"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "heap.bounded-frontier"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Maintain the exact median of each growing ordered prefix, returning twice its value.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "Each reading is an integer in [-1000000000,1000000000].",
+    "Each returned integer lies in [-2000000000,2000000000]."
+  ],
+  "interface": "Solution.solve(values) receives a native integer array and returns a native long array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 100000,
+    "items": {
+      "kind": "integer",
+      "minimum": -2000000000,
+      "maximum": 2000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-05"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "heap-01",
+    "heap-02",
+    "heap-05"
+  ],
+  "nextIds": [
+    "heap-08"
+  ],
+  "rationale": "Balance lower and upper heaps so their boundary values determine the median without sorting each prefix.",
+  "commonMistakes": [
+    "lower-middle-only",
+    "latest-reading"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        2,
+        1
+      ],
+      "limit": 3
+    },
+    "expected": 5,
+    "explanation": "All three singletons and both length-two batches qualify."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "limit": 0
+    },
+    "expected": 0,
+    "explanation": "There is no nonempty batch."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0
+      ],
+      "limit": 0
+    },
+    "expected": 3,
+    "explanation": "Both singleton positions and their combined batch total zero."
+  }
+]

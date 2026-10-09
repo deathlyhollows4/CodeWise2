@@ -1,0 +1,62 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "allowed": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "explanation": "Both original item IDs can occupy either position; each is used exactly once."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "allowed": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    "expected": [],
+    "explanation": "Each position permits some item, but the first two require the same single item, so no permutation exists."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "allowed": []
+    },
+    "expected": [
+      []
+    ],
+    "explanation": "There is one empty permutation for zero items and zero positions."
+  }
+]

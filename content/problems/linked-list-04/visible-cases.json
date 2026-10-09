@@ -1,0 +1,66 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "data": {
+        "values": [
+          7,
+          7,
+          7,
+          7
+        ],
+        "next": [
+          1,
+          2,
+          3,
+          1
+        ],
+        "heads": [
+          0
+        ]
+      }
+    },
+    "expected": 1,
+    "explanation": "Traversal first repeats node1. Equal values cannot locate the entry."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "data": {
+        "values": [
+          4,
+          -2,
+          8
+        ],
+        "next": [
+          null,
+          2,
+          0
+        ],
+        "heads": [
+          1
+        ]
+      }
+    },
+    "expected": null,
+    "explanation": "The permuted traversal1→2→0 ends at null."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "data": {
+        "values": [
+          9
+        ],
+        "next": [
+          0
+        ],
+        "heads": [
+          0
+        ]
+      }
+    },
+    "expected": 0,
+    "explanation": "A self-loop begins at its only node."
+  }
+]

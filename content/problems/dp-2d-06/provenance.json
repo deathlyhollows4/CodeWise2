@@ -1,0 +1,35 @@
+{
+  "origin": "original",
+  "author": "CodeWise2 DP2D author worker",
+  "reviewDate": "2026-10-08",
+  "reviewerType": "automated-author",
+  "rightsStatus": "original-no-imported-assets",
+  "assets": {
+    "statement": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "examples": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "tests": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "references": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "explanation": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    }
+  },
+  "independentReview": "pending"
+}

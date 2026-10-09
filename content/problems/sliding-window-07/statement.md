@@ -1,0 +1,1 @@
+Return all starting indices where a contiguous part of `text` has the same length and exactly the same letter counts as `pattern`. The order of letters within that part does not matter. Output zero-based indices in ascending order. Matches may overlap. An empty pattern produces no matches.

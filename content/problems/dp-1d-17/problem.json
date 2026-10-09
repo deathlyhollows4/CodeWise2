@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-17",
+  "version": "1.0.0",
+  "slug": "count-indexed-palindromic-substrings",
+  "title": "Count palindromic substrings",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "strings.palindrome-interval-state",
+    "dp.rolling-interval-state"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Count all indexed contiguous palindromes using mirrored endpoints and their previously solved interior.",
+  "constraints": [
+    "0 <= text.length <= 2000",
+    "Text contains ASCII characters",
+    "The answer is at most 2001000"
+  ],
+  "interface": "Solution.solve(text) returns the number of indexed nonempty palindromic substrings.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 2000,
+        "ascii": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2001000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-09",
+    "dp-1d-10",
+    "dp-1d-16"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-18",
+    "dp-1d-11",
+    "dp-1d-12"
+  ],
+  "rationale": "Matching endpoints form a palindrome only when their interior is also a palindrome; equal text at different positions counts separately.",
+  "commonMistakes": [
+    "count-distinct-text-only",
+    "omit-even-palindromes"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,172 @@
+{
+  "id": "linked-list-14",
+  "version": "1.0.0",
+  "language": "python",
+  "validationIdentity": "7a19fede24fcfc487e6127860d37d81ee4257623d5df5a31dfcb51d1b1e2e3c9",
+  "suiteHash": "b49adc66503d681f8e1631e9c4f6d2ae4191bda7cc87dd696095a42bdb21edb7",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T12:15:27.169Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 715,
+      "executed": 715,
+      "passed": 715,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "homepage": "home",
+          "commands": [
+            "visit",
+            "visit",
+            "back",
+            "visit",
+            "forward",
+            "back"
+          ],
+          "pages": [
+            "alpha",
+            "beta",
+            "unused",
+            "gamma",
+            "unused",
+            "unused"
+          ],
+          "steps": [
+            0,
+            0,
+            1,
+            0,
+            10,
+            1
+          ]
+        },
+        "expected": [
+          "alpha",
+          "beta",
+          "alpha",
+          "gamma",
+          "gamma",
+          "alpha"
+        ],
+        "actual": [
+          "alpha",
+          "beta",
+          "alpha",
+          "gamma",
+          "gamma",
+          "alpha"
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "homepage": "home",
+          "commands": [
+            "back",
+            "visit",
+            "back",
+            "forward"
+          ],
+          "pages": [
+            "unused",
+            "alpha",
+            "unused",
+            "unused"
+          ],
+          "steps": [
+            1000000000,
+            0,
+            1000000000,
+            1000000000
+          ]
+        },
+        "expected": [
+          "home",
+          "alpha",
+          "home",
+          "alpha"
+        ],
+        "actual": [
+          "home",
+          "alpha",
+          "home",
+          "alpha"
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "homepage": "home",
+          "commands": [],
+          "pages": [],
+          "steps": []
+        },
+        "expected": [],
+        "actual": [],
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.017",
+          "wallSeconds": "0.017",
+          "memoryKb": "9996"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.067",
+          "wallSeconds": "0.065",
+          "memoryKb": "10932"
+        }
+      ]
+    }
+  }
+}

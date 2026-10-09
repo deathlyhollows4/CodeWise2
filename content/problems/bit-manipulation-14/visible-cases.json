@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "required": 7,
+      "people": [
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "expected": 2,
+    "explanation": "The person with mask 3 covers the first two skills; mask 4 covers the third."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "required": 3,
+      "people": [
+        1,
+        4
+      ]
+    },
+    "expected": -1,
+    "explanation": "No person supplies skill 1, represented by bit value 2."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "required": 0,
+      "people": []
+    },
+    "expected": 0,
+    "explanation": "No required skills need no people."
+  }
+]

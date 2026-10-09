@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values){int candidate=0,count=0;for(int v:values){if(count==0)candidate=v;count+=v==candidate?1:-1;}count=0;for(int v:values)if(v==candidate)count++;return count>values.length/2?new int[]{candidate}:new int[0];}}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "a2a36f6bf559071dcda455ca240aa9209033b8c59a0f72b06c8fa862de7fd500",
+  "suiteHash": "d9bc3b6ad29c00845d81f455eb075360155cc8952dee6140108e338568a8da22",
+  "oracleChecks": 718,
+  "hiddenUnique": 715,
+  "mutations": [
+    {
+      "name": "duplicate-shared-suffix",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "right-prefix-before-left-ties",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

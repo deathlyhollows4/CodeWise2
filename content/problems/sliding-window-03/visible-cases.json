@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        3,
+        1,
+        2,
+        4
+      ],
+      "target": 6
+    },
+    "expected": 2,
+    "explanation": "The final batch [2,4] reaches 6 using two entries."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 1
+    },
+    "expected": 0,
+    "explanation": "There is no nonempty batch."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "target": 4
+    },
+    "expected": 0,
+    "explanation": "Even the entire array is too small."
+  }
+]

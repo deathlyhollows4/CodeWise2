@@ -1,0 +1,1 @@
+Return the coordinates of point reflected across the specified mirror line. The line names mean: vertical is x = offset; horizontal is y = offset; rising is y - x = offset; falling is x + y = offset. These four families always produce integer reflected coordinates. A point already on its mirror line remains unchanged.

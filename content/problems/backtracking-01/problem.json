@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-01",
+  "version": "1.0.0",
+  "slug": "all-fixed-sum-allowed-digit-strings",
+  "title": "Build every fixed-sum digit string",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "arrays.traversal",
+    "backtracking.branch-restoration",
+    "backtracking.fixed-depth-choices",
+    "backtracking.nonnegative-remainder-pruning"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Enumerate every fixed-length ordered string from an allowed digit set whose digit sum equals the target.",
+  "constraints": [
+    "0 ≤ digits.length ≤ 10; every entry is an integer from 0 to 9.",
+    "0 ≤ length ≤ 6.",
+    "-54 ≤ target ≤ 54.",
+    "At most 55,252 answers exist for any valid input; order and leading zeroes are part of each answer."
+  ],
+  "interface": "Solution.solve(digits,length,target) receives int[] and integers, returns sorted string[].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "digits": {
+        "kind": "array",
+        "maxLength": 10,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 9
+        }
+      },
+      "length": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 6
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -54,
+        "maximum": 54
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 55252,
+    "items": {
+      "kind": "string",
+      "maxLength": 6,
+      "ascii": true
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-02"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "backtracking-03",
+    "backtracking-04"
+  ],
+  "rationale": "Each position is an independent reusable choice, while restoring the partial path separates siblings; order and leading zeroes remain significant.",
+  "commonMistakes": [
+    "forbid-leading-zero-strings",
+    "forbid-reusing-a-digit",
+    "treat-order-as-an-unordered-combination"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

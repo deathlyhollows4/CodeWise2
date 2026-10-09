@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-11",
+  "version": "1.0.0",
+  "slug": "length-of-a-strict-increasing-subsequence",
+  "title": "Longest strict increasing subsequence",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.sequence-extension",
+    "binary-search.tail-frontier"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state",
+    "binary-search.lower-bound"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Find the length of a strictly increasing indexed subsequence without requiring contiguous positions.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "-1000000000 <= values[i] <= 1000000000"
+  ],
+  "interface": "Solution.solve(values) returns the maximum integer subsequence length.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 100000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-12"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02",
+    "binary-search-01",
+    "binary-search-02"
+  ],
+  "nextIds": [
+    "dp-1d-21",
+    "dp-1d-23"
+  ],
+  "rationale": "A smaller tail preserves more future extension options; equal values do not increase the length.",
+  "commonMistakes": [
+    "allow-nondecreasing-extension",
+    "require-a-contiguous-run"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

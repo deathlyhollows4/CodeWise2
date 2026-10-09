@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head){ListNode dummy=new ListNode(0),tail=dummy;while(head!=null){ListNode last=head;while(last.next!=null&&last.next.val==head.val)last=last.next;ListNode after=last.next;if(last==head){tail.next=head;tail=head;}head=after;}tail.next=null;return dummy.next;}}

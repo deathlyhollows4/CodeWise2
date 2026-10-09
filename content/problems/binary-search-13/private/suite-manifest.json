@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-final.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC1301",
+  "hiddenCount": 765,
+  "suiteHash": "589159f064741842bec0804ff3d0539750a9eea848151f613eedf005b53b0adc",
+  "categories": [
+    "partition-with-duplicates-and-signs",
+    "empty-side-or-unbalanced-partition",
+    "large-interleaved-sorted-halves"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

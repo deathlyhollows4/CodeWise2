@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-10",
+  "version": "1.0.0",
+  "slug": "score-nested-delimiters",
+  "title": "Score nested delimiters",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.nested-aggregation"
+  ],
+  "prerequisites": [
+    "stack.last-open-first-close"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Accumulate values inside stack frames while validating delimiter types.",
+  "constraints": [
+    "0 ≤ text.length ≤ 50",
+    "Only (, ), [, ], {, and } occur.",
+    "All valid scores fit within 1,000,000,000."
+  ],
+  "interface": "Solution.solve(text) returns the score or -1.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "ascii": true,
+        "maxLength": 50
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1,
+    "maximum": 1000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-07"
+  ],
+  "remedialIds": [
+    "stack-01"
+  ],
+  "nextIds": [
+    "stack-12"
+  ],
+  "rationale": "Each unfinished pair now remembers an inner score in addition to its closing type.",
+  "commonMistakes": [
+    "erase-delimiter-types",
+    "count-empty-pairs-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "text",
+      "alphabet": "brackets"
+    }
+  ]
+}

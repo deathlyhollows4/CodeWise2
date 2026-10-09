@@ -1,0 +1,66 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          7
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          9
+        ]
+      ]
+    },
+    "expected": 9,
+    "explanation": "Choose costs 4,2,and 3 to connect all four sites; total 9. Adding another edge is unnecessary."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 1,
+      "edges": []
+    },
+    "expected": 0,
+    "explanation": "One site is already connected without buying any connection."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "expected": -1,
+    "explanation": "The self-loop cannot connect isolated site 2, so no spanning network exists."
+  }
+]

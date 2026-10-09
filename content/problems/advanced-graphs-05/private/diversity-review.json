@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "contentIdentity": "46783b5692a0400bfd4c0d72846a32026371a7951bf5de684eb7fe07ce225f4d",
+  "reviewIdentityVersion": 2,
+  "reviewer": "dp2d-graphs-thread-coordinator",
+  "reviewerType": "automated-independent",
+  "reviewedAt": "2026-10-08T12:10:14.782Z",
+  "rationale": "Exact integral multi-unit min-cost flow couples paths through capacities and negative reverse cancellation costs, unlike independently shortest routes. Original costs are nonnegative, so no profitable original negative circulation is omitted. Exhaustive original-edge flow vectors verify capacities/conservation/total costs;60 cases exclude zero-capacity/equal-price parallel padding and preserve30 vertices/100 edges/30 units and870e9 witness. The two-unit example costs5 via reverse-1; wrong reverse+1 costs7 and no reverse cannot complete it.",
+  "evidence": "docs/release-evidence/advanced-thread/independent-first-five-review.json",
+  "limitations": [
+    "Actual production weighted/capacity guard source and malformed input probes were reviewed; no guard or budget was relaxed.",
+    "Native references have not yet been accepted in this packet; these are content category approvals, with isolated native validation a separate required gate.",
+    "Global243 map and learner-history synthesis remain separate; automated technical rights review does not imply human legal clearance.",
+    "Index reports current sources not_tracked, so direct source and actual packed assets support conclusions."
+  ],
+  "nativeValidation": "separate-gate",
+  "publication": "not-implied"
+}

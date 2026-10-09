@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-hull-union.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca13",
+  "hiddenCount": 686,
+  "suiteHash": "45b97230f95853e5a5bc13d63755d0e483fcd9e78f98f58e5081da23753a23d1",
+  "categories": [
+    "independent-support-edge-small-sets",
+    "maximum-size-known-rectangular-hull",
+    "maximum-size-collinear-set",
+    "maximum-size-all-extreme-convex-parabola",
+    "near-maximum-all-extreme-concave-parabola"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

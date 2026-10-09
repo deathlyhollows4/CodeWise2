@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] coins,int a){int[] dp=new int[a+1];dp[0]=1;for(int c:coins)for(int n=c;n<=a;n++)dp[n]=(dp[n]+dp[n-c])%1000000007;return dp[a];}}

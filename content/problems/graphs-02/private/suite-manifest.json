@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A02",
+  "hiddenCount": 60,
+  "suiteHash": "4e6827d1a81cfb5b7be178eb862b0ae449180e43702cc5d1b3db2076693cd9a0",
+  "categories": [
+    "curated-boundary-singleton-empty-route",
+    "curated-boundary-self-loops-do-not-count",
+    "curated-boundary-unreachable-vertices",
+    "curated-boundary-longer-cycle-routes-excluded",
+    "max-five-hundred-vertex-chain",
+    "max-modular-layered-parallel-count",
+    "max-five-thousand-parallel-edges",
+    "seeded-directed-shortest-layer-count"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

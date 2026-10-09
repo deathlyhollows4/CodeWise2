@@ -1,0 +1,59 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "k": 2
+    },
+    "expected": [
+      2,
+      1,
+      4,
+      3,
+      5
+    ],
+    "explanation": "Two complete pairs reverse; the single-node tail stays unchanged."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "k": 3
+    },
+    "expected": [
+      3,
+      2,
+      1,
+      4,
+      5
+    ],
+    "explanation": "The two-node final group is incomplete and keeps its order."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [
+        7,
+        7
+      ],
+      "k": 1
+    },
+    "expected": [
+      7,
+      7
+    ],
+    "explanation": "Groups of size1 leave the values unchanged."
+  }
+]

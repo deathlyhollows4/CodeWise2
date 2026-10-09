@@ -1,0 +1,1 @@
+class Solution {public long solve(long value){long count=0;while(value!=0){value&=value-1;count++;}return count;}}

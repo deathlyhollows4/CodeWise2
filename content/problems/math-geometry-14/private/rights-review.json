@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "10f8bcbba8eac709951ac4e8c7fea42647bd8935002f195cc78f1fa96fcd1bd1",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:20:45.947Z",
+  "rationale": "Fully read original author source, generator/independent model and native references. Current statement, three visible examples, 664 hidden cases and nine native assets exactly reconcile to authored source and project templates. No imported material occurs; project-owned asset provenance matches the observed source.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/math-hull-union.mjs",
+    "sourceHash": "bd0fa1634635e9cf8f442eabfddbd3e7f6106f3c802e03e1fbb7c67b9b6fcfd5",
+    "reconciliation": "docs/release-evidence/coordinator-repaired-eight-review.json"
+  },
+  "limitations": [
+    "Current per-pack source/progression/distinctness/rights conclusion, not language execution or publication.",
+    "Final243 global synthesis remains required; changed bound assets invalidate this record."
+  ]
+}

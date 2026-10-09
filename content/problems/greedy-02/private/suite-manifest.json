@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC302",
+  "hiddenCount": 60,
+  "suiteHash": "7d1b74a30dedd46df3edc1393706b5cc738bb9f0f0559df43772dfdcd4af396d",
+  "categories": [
+    "no-station-has-no-start",
+    "single-zero-station-feasible",
+    "single-deficit-infeasible",
+    "multiple-feasible-starts-return-smallest",
+    "wraparound-and-exact-zero-completion",
+    "upper-bound-90000-uniform-circuit-int64-sum-certificate",
+    "simulate-every-start-and-entire-circular-route"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

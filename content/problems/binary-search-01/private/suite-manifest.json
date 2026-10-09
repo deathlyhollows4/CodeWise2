@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backend-c-c.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC101",
+  "hiddenCount": 682,
+  "suiteHash": "fd3c92992d9c9433f0e4e10c3f9d041cc2dc194362fae3908314d38a6392ecd6",
+  "categories": [
+    "exercism-adapted-canonical",
+    "seeded-sorted-boundaries",
+    "large-tail-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

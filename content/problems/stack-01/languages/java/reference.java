@@ -1,0 +1,1 @@
+class Solution {public boolean solve(String text){char[] stack=new char[text.length()];int size=0;for(char c:text.toCharArray()){if(c=='(')stack[size++]=')';else if(c=='[')stack[size++]=']';else if(c=='{')stack[size++]='}';else{if(size==0||stack[--size]!=c)return false;}}return size==0;}}

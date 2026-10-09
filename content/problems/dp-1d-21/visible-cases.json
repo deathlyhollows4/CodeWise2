@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "prices": [
+        1,
+        2,
+        3,
+        0,
+        2
+      ]
+    },
+    "expected": 3,
+    "explanation": "Buy day0 and sell day1 for1, rest day2, then buy day3 and sell day4 for2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "prices": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    "expected": 1,
+    "explanation": "Two adjacent profitable trades would buy immediately after a sale; that violates the full-day cooldown."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "prices": []
+    },
+    "expected": 0,
+    "explanation": "There are no complete transactions."
+  }
+]

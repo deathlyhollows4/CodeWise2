@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "aab"
+    },
+    "expected": 1,
+    "explanation": "The partition aa | b has two pieces and one cut."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "abacdc"
+    },
+    "expected": 1,
+    "explanation": "The partition aba | cdc has one cut even though the entire text is not a palindrome."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": ""
+    },
+    "expected": 0,
+    "explanation": "No characters and no pieces require no cuts."
+  }
+]

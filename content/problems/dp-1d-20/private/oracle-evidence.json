@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "e48189b87cb468146d2bed9e2d29831cfb5526b3b4c3c2e460651bdc20c3d4cc",
+  "suiteHash": "c6a5726d37b1e6bc57e0b3d6f119521ffd38a5442ee320a106d669ca2601b101",
+  "oracleChecks": 862,
+  "hiddenUnique": 859,
+  "mutations": [
+    {
+      "name": "duration-counts-trip-entries",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "only-one-day-passes",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

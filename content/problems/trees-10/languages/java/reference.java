@@ -1,0 +1,1 @@
+class Solution {public boolean solve(TreeNode root){if(root==null)return true;ArrayList<TreeNode> queue=new ArrayList<>();queue.add(root);boolean missing=false;for(int i=0;i<queue.size();i++){TreeNode n=queue.get(i);if(n==null){missing=true;continue;}if(missing)return false;queue.add(n.left);queue.add(n.right);}return true;}}

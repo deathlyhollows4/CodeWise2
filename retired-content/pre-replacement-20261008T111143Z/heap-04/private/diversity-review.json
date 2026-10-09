@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "failed",
+  "reviewType": "diversity",
+  "contentIdentity": "33fdc31008d47fef0775032aed4c026c23634c0627a2cab09bd7d37df30fbc64",
+  "reviewer": "CodeWise2 coordinator following independent frontend second review",
+  "reviewedAt": "2026-10-08T11:07:54.230Z",
+  "rationale": "Top-k origin-distance selection substitutes a total-order key and coordinate payload without geometric interaction between choices. Replace with dynamically revealed candidate-window hiring.",
+  "evidence": "docs/release-evidence/independent-bit-heap-near-duplicate-verdict.json",
+  "requiredRepair": "Version2 authoring, historical archive, applicable minimum200 suite, independent model/mutations, three language execution and new reviews. No receipt migration."
+}

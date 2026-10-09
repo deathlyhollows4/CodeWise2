@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC207",
+  "hiddenCount": 708,
+  "suiteHash": "6952337ab4eecf05775ade70f4d58f51dab15e166345c374cc08866404f7a700",
+  "categories": [
+    "independent-multiplicity-enumeration",
+    "large-generating-function-modular-count"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

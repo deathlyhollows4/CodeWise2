@@ -1,0 +1,1 @@
+class Solution {public long solve(long a,long b){a=Math.abs(a);b=Math.abs(b);while(b!=0){long remainder=a%b;a=b;b=remainder;}return a;}}

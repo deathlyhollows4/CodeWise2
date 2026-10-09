@@ -1,0 +1,1 @@
+class Solution {public:vector<long long> solve(vector<int> values){vector<long long> out(values.size());int l=0,r=(int)values.size()-1;for(int w=r;w>=0;w--){long long a=1LL*values[l]*values[l],b=1LL*values[r]*values[r];if(a>b){out[w]=a;l++;}else{out[w]=b;r--;}}return out;}};

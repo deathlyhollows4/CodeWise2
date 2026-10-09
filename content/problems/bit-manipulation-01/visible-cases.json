@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 13
+    },
+    "expected": 3,
+    "explanation": "13 has binary form 1101, containing three one bits."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 0
+    },
+    "expected": 0,
+    "explanation": "All 32 bits are zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 4294967295
+    },
+    "expected": 32,
+    "explanation": "Every bit is one, including the highest bit."
+  }
+]

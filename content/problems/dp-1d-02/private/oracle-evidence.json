@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "f29ca55ae6078f10a062f5ca72ce140d22740ec5b7aee1106904be41aa5578b1",
+  "suiteHash": "1cac03afc7815381a6672ce26fc3fe787fa3dd292a22aa318f3b6a7e8bba068a",
+  "oracleChecks": 790,
+  "hiddenUnique": 787,
+  "mutations": [
+    {
+      "name": "ignore-switch-charges",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "never-switch-workstation",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "narrow-total-to-int32",
+      "detected": true,
+      "caseId": "hidden-785"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public:long long solve(int lo,int hi){vector<bool> composite(hi+1,false);for(int d=2;d*d<=hi;d++)if(!composite[d])for(int p=d*d;p<=hi;p+=d)composite[p]=true;long long answer=0;for(int n=max(2,lo);n<=hi;n++)if(!composite[n])answer++;return answer;}};

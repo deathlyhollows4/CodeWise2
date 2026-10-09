@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d5968ae5ab4269935c68720427d62002f88c6c71719ab3658ffcb8cf1ededdcb",
+  "suiteHash": "d5ffb98aa0e88f553ee5038acb26588e3f84bcae1f730ad58ed43297ba44eb42",
+  "oracleChecks": 1138,
+  "hiddenUnique": 1135,
+  "mutations": [
+    {
+      "name": "only-leaf-levels",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "reverse-each-level",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

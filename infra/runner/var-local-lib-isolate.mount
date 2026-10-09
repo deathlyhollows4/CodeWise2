@@ -1,0 +1,10 @@
+[Unit]
+Description=Bounded ephemeral CodeWise2 sandbox storage
+Before=codewise2-runner.service
+[Mount]
+What=tmpfs
+Where=/var/local/lib/isolate
+Type=tmpfs
+Options=size=128m,nr_inodes=8192,mode=0700,nodev,nosuid
+[Install]
+WantedBy=multi-user.target

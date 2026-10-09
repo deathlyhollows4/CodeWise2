@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-05",
+  "version": "1.0.0",
+  "slug": "one-odd-frequency",
+  "title": "One odd-frequency label",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.xor-cancellation"
+  ],
+  "prerequisites": [
+    "bits.unsigned32",
+    "arrays.traversal"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Cancel paired contributions to identify the one odd-frequency value.",
+  "constraints": [
+    "1 <= values.length <=100000",
+    "Every label is an integer in[-1000000000,1000000000].",
+    "Exactly one label has odd frequency; all other frequencies are even."
+  ],
+  "interface": "Solution.solve(values) receives a typed integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-06"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "bit-manipulation-07"
+  ],
+  "rationale": "Equal values cancel under XOR, leaving the contribution whose count is odd.",
+  "commonMistakes": [
+    "or-instead-of-xor",
+    "return-last"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "frequency-modulo",
+      "field": "values",
+      "modulus": 2,
+      "exceptionCount": 1,
+      "exceptionRemainder": 1
+    }
+  ]
+}

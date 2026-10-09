@@ -1,0 +1,1 @@
+class Solution { public: long long solve(vector<vector<int>> grid) { int n=grid.empty()?0:grid[0].size();if(!n)return 0;const long long INF=LLONG_MAX/4;vector<long long> dp(n,INF);for(int r=0;r<(int)grid.size();r++)for(int c=0;c<n;c++)dp[c]=grid[r][c]+(r==0&&c==0?0:min(dp[c],c?dp[c-1]:INF));return dp[n-1]; } };

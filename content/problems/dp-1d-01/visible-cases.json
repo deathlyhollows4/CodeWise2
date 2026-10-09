@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 5
+    },
+    "expected": 8,
+    "explanation": "Combine the 5 routes to position 4 with the 3 routes to position 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0
+    },
+    "expected": 1,
+    "explanation": "The empty route already reaches position zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 2
+    },
+    "expected": 2,
+    "explanation": "The routes are [1,1] and [2]."
+  }
+]

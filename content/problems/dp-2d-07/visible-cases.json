@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "items": [
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "capacity": 5
+    },
+    "expected": 9,
+    "explanation": "Choose weights 3 and 2 for value 5+4=9. The weight-4 item alone is worse."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "items": [],
+      "capacity": 0
+    },
+    "expected": 0,
+    "explanation": "There are no items; choosing nothing is valid."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "items": [
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "capacity": 2
+    },
+    "expected": 11,
+    "explanation": "Take the zero-weight item once and either one of the two weight-2 items."
+  }
+]

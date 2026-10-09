@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-coordinates.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xcac0",
+  "hiddenCount": 759,
+  "suiteHash": "395b61ecd43c8b79f84986bb1dd19f2ebe3cea4da0d8edc8473e03aae0e4bbc7",
+  "categories": [
+    "signed-segment-layout",
+    "wide-cross-products",
+    "degenerate-endpoint-reversal-and-collinear-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

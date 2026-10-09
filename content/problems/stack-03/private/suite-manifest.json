@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 690,
+  "suiteHash": "cec4f71fd7655ccb69593db2362d0b3241bf756a845f64ebb168825554b27a0c",
+  "categories": [
+    "cascading-letter-pairs",
+    "case-sensitive-noncancellation",
+    "retained-declared-max-stack-03-1",
+    "retained-declared-max-stack-03-2",
+    "retained-declared-max-stack-03-3",
+    "retained-declared-max-stack-03-4"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

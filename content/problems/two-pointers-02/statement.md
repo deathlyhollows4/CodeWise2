@@ -1,0 +1,1 @@
+Return `true` when `text` reads identically from left to right and right to left. Compare every ASCII letter exactly; uppercase and lowercase are different. Empty and single-character strings count as mirrors. Do not ignore any characters.

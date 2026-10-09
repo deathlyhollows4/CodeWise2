@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 556,
+  "suiteHash": "dee4c3e4fdc4e5db8855011d67cbd980160537a7503768b489213338b933ed7c",
+  "categories": [
+    "generated-bounded-expression-tree"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

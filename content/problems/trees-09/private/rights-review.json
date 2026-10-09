@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "f858a9965496719b95bdaa788800fdcb009d280f24cd23c85ef419585c09c59a",
+  "reviewer": "CodeWise2 judge/content independent of the Tree problem author",
+  "reviewedAt": "2026-10-08T12:49:15.732Z",
+  "evidence": [
+    "docs/release-evidence/judge-tree-review/assets-review-bundle.json",
+    "docs/release-evidence/judge-tree-review/first-four-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/subtree-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/first-eight-route-evidence.json"
+  ],
+  "assessmentScope": {
+    "authorSource": "content/authoring/trees-compare-target-cover.mjs",
+    "sourceHash": "126802fdbf40a74f95c58d2353a7b4823fcf8bb876d75d878682bb70afe8407f",
+    "actualAllNineLanguageAssets": {
+      "java": {
+        "starter": "53b4fc04f52ade05162b0aaa1d435b4e24f75bc61397c8d153ba371c83302a4a",
+        "wrapper": "915d82a8a35c93b62899bb1ba3359fc602ab383ca1c46f5dd18ce304c3ec246b",
+        "reference": "7dd70498d970121a1f903a832cb4d0448258af5adbf97276679661093ebed8c9"
+      },
+      "cpp": {
+        "starter": "b4623e5f8bcef07fe633b61692714d65e436bb83f4efcd7878aa91297ef7185f",
+        "wrapper": "57884e8e90b34f70099945e00c3dd5b68812557f924670e71a868403eb85fac2",
+        "reference": "b87ac036486fa3084abf12bcf30120c1567a58503a3712526de71fec4afcc27e"
+      },
+      "python": {
+        "starter": "b6a1384776d5bf5b08a446a09a92f9ecf1020374530158a0c8eff2fc868e0f26",
+        "wrapper": "eb3e40fcfecffcfea7a9ccd3b9e79fd92f7d246c56b9583fdbe7ef54ab0b5352",
+        "reference": "96d0184ccbf951b464e90293d1ab32f4cb6f463af827951fc5b8ff31b66876b3"
+      }
+    },
+    "actualSchemaAndReadonlyWrapperReviewed": true,
+    "graphQualification": "Generation2026-10-07T22:57:49 marked all relevant sources not_tracked; full direct source/actual asset fallback used."
+  },
+  "limitations": [
+    "These are content rights/progression/diversity assessments, not publication or containment approval.",
+    "Route evidence is conditional on a genuinely eligible source and explicit independent teacher demonstrations; it does not claim every possible history or learner mastery.",
+    "Native reference receipts and final243 global distinctness/runtime gates remain separate."
+  ],
+  "reviewType": "rights",
+  "rationale": "Inspected original authored statement/examples/generator/oracles/mutations and all actual starter/wrapper/reference bytes. Provenance consistently declares project-original assets; no imported Tree problem text, tests or reference code is identified. Common native helper prefixes were read once and matched byte-identical use across these packs. Wrapper imports use separately installed Gson/nlohmann dependencies; their distribution notices are preserved separately, not claimed as original embedded library code."
+}

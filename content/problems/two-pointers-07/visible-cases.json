@@ -1,0 +1,60 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -2,
+        0,
+        1,
+        1,
+        2
+      ],
+      "target": 0
+    },
+    "expected": [
+      [
+        -2,
+        0,
+        2
+      ],
+      [
+        -2,
+        1,
+        1
+      ]
+    ],
+    "explanation": "The two 1 positions permit the repeated-value triple."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        1,
+        2
+      ],
+      "target": 3
+    },
+    "expected": [],
+    "explanation": "Three distinct positions are required."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "target": 0
+    },
+    "expected": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "explanation": "Several index choices still represent one value triple."
+  }
+]

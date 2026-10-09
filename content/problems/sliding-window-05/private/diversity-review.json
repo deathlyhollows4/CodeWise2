@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "d2b1c34227cff3c7ee4ef75c3c22c3f44b75acb64eb9a452dd6bb6576d231236",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Count zeros in the active binary span, shrink while the violation count exceeds k, and maximize feasible length. Repairs need not all be spent and k=0 permits only existing-one spans.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "diversity",
+  "rationale": "A repair budget controls violations rather than required variety or summed target. All-zero, all-one, empty and boundary budgets test feasibility and maximal span. Actual687 canonical hidden inputs and categories zero-budget-window, retained-declared-max-sliding-window-05-1, retained-declared-max-sliding-window-05-2, retained-declared-max-sliding-window-05-3, retained-declared-max-sliding-window-05-4 were reconciled; these counts are input uniqueness, not a fabricated count of independent algorithms."
+}

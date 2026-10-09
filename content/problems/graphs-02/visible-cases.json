@@ -1,0 +1,76 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "explanation": "Vertex 3 has two two-edge shortest routes, through 1 and through 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "An empty graph has no output entries."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      2,
+      1
+    ],
+    "explanation": "There are two one-edge choices to 1. Vertex 2 has one direct shortest route; longer routes through 1 and the loop do not count."
+  }
+]

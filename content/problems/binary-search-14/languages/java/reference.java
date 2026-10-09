@@ -1,0 +1,1 @@
+class Solution {public long solve(int r,int c,long k){if(r>c){int t=r;r=c;c=t;}long l=1,h=(long)r*c;while(l<h){long m=l+(h-l)/2,n=0;for(int i=1;i<=r;i++){n+=Math.min((long)c,m/i);if(n>=k)break;}if(n>=k)h=m;else l=m+1;}return l;}}

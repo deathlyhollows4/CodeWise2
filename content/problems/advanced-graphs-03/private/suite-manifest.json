@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA603",
+  "hiddenCount": 60,
+  "suiteHash": "0e2c7629d712d3cacce77ebd5f272c38c7a1552fdd8f9f52238cfdc4e35d6b42",
+  "categories": [
+    "curated-boundary-no-route-without-vertices",
+    "curated-boundary-zero-risk-is-a-connection",
+    "curated-boundary-unreachable-finish",
+    "curated-boundary-max-not-sum-overflow",
+    "max-high-risk-chain",
+    "max-five-thousand-edge-threshold-certificate",
+    "max-no-route-loop-component",
+    "seeded-weighted-network-cuts"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

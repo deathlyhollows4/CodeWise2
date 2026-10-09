@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 0
+    },
+    "expected": 0,
+    "explanation": "The first codeword is zero."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 4
+    },
+    "expected": 6,
+    "explanation": "The fifth entry in the shown ordering is 6."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 7
+    },
+    "expected": 4,
+    "explanation": "Ordinal 7 is the final entry of the three-bit prefix ordering."
+  }
+]

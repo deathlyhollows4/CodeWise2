@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "5e14b80d03807ecc1a2c183dacaeb35fbcc26a304423bb4de846c82ce80d0613",
+  "suiteHash": "d0624694d8d5fafd945886bc2dcde2c5775bdbfa91891aba4ded6930a3ab9bf8",
+  "oracleChecks": 792,
+  "hiddenUnique": 789,
+  "mutations": [
+    {
+      "name": "ignore-child-capacity",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "accept-multiple-root-forest",
+      "detected": true,
+      "caseId": "hidden-4"
+    },
+    {
+      "name": "check-only-one-root-and-capacity",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

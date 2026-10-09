@@ -1,0 +1,1 @@
+class Solution {public:vector<vector<int>> solve(vector<vector<int>> points,int k){priority_queue<pair<long long,pair<int,int>>> q;for(auto p:points){q.push({1LL*p[0]*p[0]+1LL*p[1]*p[1],{p[0],p[1]}});if((int)q.size()>k)q.pop();}vector<vector<int>> out;while(!q.empty()){auto p=q.top().second;q.pop();out.push_back({p.first,p.second});}reverse(out.begin(),out.end());return out;}};

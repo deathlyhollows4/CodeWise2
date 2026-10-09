@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values){vector<int> result(values.size(),0);int write=0;for(int read=0;read<(int)values.size();read++){if(values[read]!=0)result[write++]=values[read];}return result;}};

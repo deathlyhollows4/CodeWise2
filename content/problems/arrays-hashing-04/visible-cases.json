@@ -1,0 +1,59 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        -1,
+        3,
+        2,
+        -1,
+        3
+      ]
+    },
+    "expected": [
+      [
+        -1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "explanation": "Labels -1, 2 and 3 occur 2, 1 and 3 times."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No label occurs."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        5,
+        5,
+        1
+      ]
+    },
+    "expected": [
+      [
+        1,
+        1
+      ],
+      [
+        5,
+        2
+      ]
+    ],
+    "explanation": "Label order comes before frequency."
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-parent-target-routes.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1193,
+  "suiteHash": "ccbe0bbb141456ace49c9881913bf1e366edf167cff31695451070de5e98d08d",
+  "categories": [
+    "duplicate-negative-values-sparse-shape",
+    "varied-branching-and-sparse-shape",
+    "empty-tree",
+    "left-depth-spectrum",
+    "right-depth-spectrum",
+    "deep-2000-native-nodes",
+    "wide-2000-positive-nodes",
+    "wide-2000-negative-nodes",
+    "branch-prefix-zero-negative-and-wide-target",
+    "two-million-overlapping-zero-routes",
+    "target-total-exceeds-signed-int32",
+    "maximum-wide-root-to-last-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

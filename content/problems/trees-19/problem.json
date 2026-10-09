@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-19",
+  "version": "1.0.0",
+  "slug": "insert-unique-key-at-bst-search-leaf",
+  "title": "Insert at the search route endpoint",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.bst-search-route",
+    "trees.bst-leaf-insertion"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Return the exact tree formed by adding an absent key at its search-route null child, while preserving existing structure.",
+  "constraints": [
+    "The input has 0 to 2,000 native nodes.",
+    "All node values and value lie in [-1,000,000,000,1,000,000,000].",
+    "All original values are distinct. Every left subtree value is strictly less than its root and every right subtree value is strictly greater."
+  ],
+  "interface": "Solution.solve(root,value) returns TreeNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 4003,
+    "trimTrailingNulls": true,
+    "items": {
+      "kind": "nullable",
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-23",
+    "trees-13",
+    "trees-16"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-18"
+  ],
+  "nextIds": [
+    "trees-20"
+  ],
+  "rationale": "An insertion changes one child link, or the root for an empty tree; rebalancing would produce the wrong specified shape.",
+  "commonMistakes": [
+    "reverse-insertion-direction",
+    "ignore-absent-key"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    },
+    {
+      "kind": "strict-bst",
+      "field": "root"
+    }
+  ]
+}

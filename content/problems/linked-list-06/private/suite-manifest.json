@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-next.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 722,
+  "suiteHash": "1fc03c0ead4d0e6af9f6cc38f6bbf438d4d30066186b807cb34cbfb58a85b10c",
+  "categories": [
+    "carry-and-signed-free-digits",
+    "unequal-length-and-leading-zero-inputs",
+    "full-length-carry-cascade",
+    "canonical-zero-output"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

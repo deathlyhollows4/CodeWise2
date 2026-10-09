@@ -1,0 +1,3 @@
+For each original interval [start, end], count the other input records whose start is at most start and whose end is at least end. Return the counts in original input order.
+
+Endpoints are included. Equal intervals at different positions are separate records: each contains the other. A record does not contain itself for this count. Point intervals are valid. For large inputs, sorting starts and compressing end values into ranks lets a Fenwick tree maintain prefix counts as records are processed. A Fenwick tree stores cumulative counts in a compact array; its prefix query reports how many processed endpoints lie below a rank. Identical records must be counted as a group. Preserve the original order of the answers even if your algorithm sorts a copy of the records.

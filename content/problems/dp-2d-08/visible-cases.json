@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "abbbc",
+      "pattern": "a*c"
+    },
+    "expected": true,
+    "explanation": "The star consumes bbb between the literal a and c."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "",
+      "pattern": "**"
+    },
+    "expected": true,
+    "explanation": "Both stars may consume zero characters."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "ab",
+      "pattern": "a?"
+    },
+    "expected": true,
+    "explanation": "The question mark consumes exactly the final b."
+  }
+]

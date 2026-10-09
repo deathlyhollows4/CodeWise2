@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "sliding-window-09",
+  "version": "1.0.0",
+  "slug": "count-batches-within-total",
+  "title": "Count batches within a total limit",
+  "primaryTopic": "sliding-window",
+  "skillIds": [
+    "windows.count-valid-endings",
+    "windows.positive-sum"
+  ],
+  "prerequisites": [
+    "windows.positive-sum"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Count all valid subarrays ending at each right boundary instead of only one optimum.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "0 ≤ each value ≤ 1,000,000",
+    "0 ≤ limit ≤ 2,000,000,000."
+  ],
+  "interface": "Solution.solve(values,limit) returns a 64-bit integer count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "limit": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "sliding-window-03"
+  ],
+  "remedialIds": [
+    "sliding-window-02",
+    "sliding-window-03"
+  ],
+  "nextIds": [
+    "sliding-window-04"
+  ],
+  "rationale": "Once a nonnegative window fits the limit, every shorter suffix ending there fits too.",
+  "commonMistakes": [
+    "singletons-only",
+    "strict-limit-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

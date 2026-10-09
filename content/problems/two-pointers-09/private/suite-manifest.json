@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 673,
+  "suiteHash": "79827bc60707f7aca1377328ebbb5b7500e663c882a87404fc411659d5fa23ba",
+  "categories": [
+    "end-removal-target",
+    "long-half-removal"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

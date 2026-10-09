@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "dd4ff92cecc0c6d426d332d0b663ae312e0ccd1907a1a219019e1ab221e5c254",
+  "suiteHash": "b49adc66503d681f8e1631e9c4f6d2ae4191bda7cc87dd696095a42bdb21edb7",
+  "oracleChecks": 715,
+  "hiddenUnique": 712,
+  "mutations": [
+    {
+      "name": "keep-invalidated-forward-branch",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "back-always-one-step",
+      "detected": true,
+      "caseId": "hidden-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

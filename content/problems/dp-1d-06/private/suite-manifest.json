@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC206",
+  "hiddenCount": 744,
+  "suiteHash": "8b01f6f17905a756aad7681985a1939e237f88211bffb585fcbc0366fce5efe1",
+  "categories": [
+    "small-unweighted-state-graph",
+    "unreachable-empty-or-nongreedy",
+    "large-exact-coin-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

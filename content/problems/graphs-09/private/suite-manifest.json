@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A09",
+  "hiddenCount": 60,
+  "suiteHash": "f086b16f6d4fcf427a2de2a489d24d4659ab01f25ae72fee7c0320e3eb05f9a4",
+  "categories": [
+    "curated-boundary-single-terminal",
+    "curated-boundary-single-infinite-walk",
+    "curated-boundary-one-terminating-choice-is-not-enough",
+    "max-all-terminating-chain",
+    "max-dense-terminating-DAG",
+    "max-no-terminating-vertices",
+    "seeded-directed-cycle-components"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

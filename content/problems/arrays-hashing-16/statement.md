@@ -1,0 +1,1 @@
+values contains only0 and1. Return the maximum length of a contiguous span with the same number of zeros and ones. Empty spans contribute length0. Positions must be consecutive; selecting scattered zeros and ones is not allowed.

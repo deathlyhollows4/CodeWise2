@@ -1,0 +1,1 @@
+class Solution {public long solve(TreeNode root){if(root==null)return 0L;ArrayDeque<TreeNode> stack=new ArrayDeque<>();stack.push(root);long total=0;while(!stack.isEmpty()){TreeNode node=stack.pop();if(node.left==null&&node.right==null)total+=node.val;if(node.left!=null)stack.push(node.left);if(node.right!=null)stack.push(node.right);}return total;}}

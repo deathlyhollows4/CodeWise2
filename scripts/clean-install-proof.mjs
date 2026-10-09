@@ -1,0 +1,50 @@
+import {readdir,stat,lstat,mkdir,copyFile,writeFile,readFile} from 'node:fs/promises';
+import {resolve,join,relative,sep} from 'node:path';
+import {spawn} from 'node:child_process';
+import {createHash,randomUUID} from 'node:crypto';
+import {createServer} from 'node:net';
+const root=process.cwd(),scratch=resolve(root,'.runtime','clean-install-'+randomUUID()),data=join(scratch,'isolated-data');
+if(!scratch.startsWith(resolve(root,'.runtime')+sep))throw Error('Scratch must stay in workspace runtime directory');
+const delivery=JSON.parse(await readFile(join(root,'packages/contracts/src/delivery-scope.json'),'utf8'));
+const catalogue=JSON.parse(await readFile(join(root,'content/catalogue.json'),'utf8'));
+if(catalogue.problems.length!==delivery.questionTarget||new Set(catalogue.problems.map(p=>p.id)).size!==delivery.questionTarget)throw Error('Current complete delivery catalogue required');
+for(const {id,path}of catalogue.problems){if(path!==`problems/${id}`||!/^[a-z0-9-]+$/.test(id))throw Error('Invalid catalogue path');const manifest=JSON.parse(await readFile(join(root,'content',path,'problem.json'),'utf8'));if(manifest.status!=='published')throw Error('Clean final proof is held until every current question is published: '+id);}
+if(!(await stat(join(root,'dist/web/index.html')).catch(()=>null)))throw Error('Final current frontend build required before clean proof');
+const attestation=JSON.parse(await readFile(join(root,'docs/release-evidence/runner-canary-attestation.json'),'utf8'));
+if(!attestation.passed||!/^[a-f0-9]{64}$/.test(attestation.identityHash??'')||Date.now()/1000>=attestation.expiresAt)throw Error('Current unexpired recorded runner identity required; this proof never refreshes controls');
+await mkdir(scratch,{recursive:true});
+const evidence=join(root,'docs','release-evidence','clean-install-proof.json');
+let priorEvidence=null;try{const previous=await readFile(evidence);const archive=join(root,'docs','release-evidence','clean-install-proof-before-'+randomUUID()+'.json');await copyFile(evidence,archive);priorEvidence={archive:relative(root,archive),sha256:createHash('sha256').update(previous).digest('hex')};}catch(error){if(error.code!=='ENOENT')throw error;}
+const runnerData=process.env.CODEWISE2_RUNNER_DATA_DIR??join(process.env.LOCALAPPDATA??join(root,'.runtime','unavailable-runner-profile'),'CodeWise2');
+const report={schemaVersion:1,status:'running',startedAt:new Date().toISOString(),root,scratch,data,expectedPublished:delivery.questionTarget,expectedRunnerIdentity:attestation.identityHash,priorEvidence,runtime:{node:process.version,platform:process.platform,architecture:process.arch},copiedSourceHashes:{},commands:[],preservesCurrentDependencies:true,preservesUserProfile:true,runnerConfiguration:'Read existing private configuration by path; never copy or print credentials',sourceRoots:['apps','packages','content','scripts','tests','docs','infra'],startupTimeoutMs:60000};
+const save=async()=>writeFile(evidence,JSON.stringify(report,null,2));
+const excluded=name=>['node_modules','.runtime','.data','.git','.codex','.agents','.aws','dist','credentials','exports'].includes(name)||/^\.env(?:\.|$)/.test(name)||/\.(sqlite|sqlite-wal|sqlite-shm|db|log|token|key|secret)$/.test(name)||name==='runner.json';
+async function copy(path){const absolute=resolve(root,path);if(!absolute.startsWith(resolve(root)+sep))throw Error('Source path outside workspace');const info=await lstat(absolute);if(info.isSymbolicLink())throw Error('Source symlink excluded');if(info.isDirectory()){await mkdir(join(scratch,path),{recursive:true});for(const entry of await readdir(absolute,{withFileTypes:true})){if(excluded(entry.name)||entry.isSymbolicLink())continue;if(path===join('docs','release-evidence')&&!/^validation-[a-z0-9-]+-(?:java|cpp|python)\.json$/.test(entry.name))continue;await copy(join(path,entry.name));}}else {await mkdir(resolve(join(scratch,path),'..'),{recursive:true});await copyFile(absolute,join(scratch,path));report.copiedSourceHashes[path]=createHash('sha256').update(await readFile(join(scratch,path))).digest('hex');}}
+function command(binary,args,env={}){return new Promise((resolveCommand,reject)=>{const startedAt=new Date().toISOString(),child=spawn(binary,args,{cwd:scratch,env:{...process.env,...env},windowsHide:true});let output='';child.stdout.on('data',chunk=>output+=chunk);child.stderr.on('data',chunk=>output+=chunk);child.on('error',reject);child.on('exit',async exitCode=>{const record={binary,args,cwd:scratch,startedAt,finishedAt:new Date().toISOString(),exitCode};report.commands.push(record);await writeFile(join(scratch,`command-${report.commands.length}.txt`),JSON.stringify(record)+'\n'+output);await save();exitCode===0?resolveCommand(output):reject(Error('Command failed: '+binary+' '+args.join(' ')));});});}
+let server;
+try {
+ for(const name of ['apps','packages','content','scripts','tests','docs','infra','package.json','package-lock.json','tsconfig.json','vite.config.ts','eslint.config.js','README.md','BUILD_STATUS.md','specs_CodeWise2.md','AGENTS.md','.gitignore','THIRD_PARTY_NOTICES.md']){try{await stat(join(root,name));await copy(name);}catch(error){if(error.code!=='ENOENT')throw error;}}
+ await save();console.log('Verified isolated scratch source copy: '+scratch);
+ await command('pwsh.exe',['-NoProfile','-File','scripts/setup.ps1']);
+ await command('pwsh.exe',['-NoProfile','-Command','npm.cmd run doctor'],{CODEWISE2_DATA_DIR:data,CODEWISE2_RUNNER_DATA_DIR:runnerData});
+ const port=3135;await new Promise((resolvePort,reject)=>{const probe=createServer();probe.once('error',reject);probe.listen(port,'127.0.0.1',()=>probe.close(resolvePort));});
+ const startedAt=new Date().toISOString();server=spawn(process.execPath,['dist/server/index.mjs'],{cwd:scratch,env:{...process.env,PORT:String(port),CODEWISE2_DATA_DIR:data,CODEWISE2_RUNNER_DATA_DIR:runnerData},windowsHide:true});let log='';server.stdout.on('data',chunk=>log+=chunk);server.stderr.on('data',chunk=>log+=chunk);
+ const base=`http://127.0.0.1:${port}`;let response;
+ const deadline=Date.now()+60000;for(;Date.now()<deadline;){if(server.exitCode!==null)throw Error('Fresh compiled server exited before readiness');try{response=await fetch(base+'/api/bootstrap',{signal:AbortSignal.timeout(2000)});if(response.ok)break;}catch{}await new Promise(resolveWait=>setTimeout(resolveWait,250));}
+ if(!response?.ok)throw Error('Fresh compiled server did not become ready');
+ const boot=await response.json();if(boot.fixture||boot.key.configured||boot.storagePath!==data||boot.catalogue.published!==delivery.questionTarget||boot.catalogue.preview!==0||!boot.runner.ready||!boot.runner.controlsVerified||!boot.runner.phaseEventsSupported||boot.runner.identityHash!==attestation.identityHash)throw Error('Fresh complete-catalogue/profile/current-runner invariants failed');
+ const cookie=response.headers.get('set-cookie')?.split(';')[0];if(!cookie)throw Error('Fresh session cookie missing');
+ const freshRead=async path=>{const r=await fetch(base+path,{headers:{cookie},signal:AbortSignal.timeout(5000)});if(!r.ok)throw Error('Fresh read failed: '+path);return r.json();};
+ const progress=await freshRead('/api/progress'),jobs=await freshRead('/api/jobs'),library=await freshRead('/api/library'),settings=await freshRead('/api/settings');
+ if(progress.independent!==0||progress.assisted!==0||progress.evidence.length||progress.reviewQueue.length||progress.scheduledReviews.length||progress.skills.some(s=>s.status!=='not_assessed'||s.evidenceIds.length||s.highestIndependentStep!==null)||jobs.items.length||library.items.length)throw Error('Fresh profile contains fabricated learning/job/library state');
+ const preferences=settings.preferences;if(preferences.onboarded!==false||preferences.displayName!==''||preferences.focusTopic!==null||preferences.model!==''||preferences.language!=='python'||preferences.autoExplain!==false||settings.key.configured)throw Error('Fresh first-run preferences are not defaults');
+ report.freshProfile={evidence:0,independent:0,assisted:0,assessedSkills:0,reviewQueue:0,jobs:0,library:0,onboarded:false,focusTopic:null,modelConfigured:false,noFakeProgress:true};
+ const html=await fetch(base);if(!html.ok)throw Error('Fresh static frontend unavailable');
+ const page=await html.text(),asset=page.match(/src="([^"]+\.js)"/)?.[1];if(!asset||!(await fetch(base+asset)).ok)throw Error('Fresh JavaScript asset unavailable');
+ report.production={pid:server.pid,startedAt,url:base,bootstrapStatus:response.status,startupMs:Date.now()-Date.parse(startedAt),fixture:false,keyConfigured:false,published:boot.catalogue.published,runnerReady:boot.runner.ready,controlsVerified:boot.runner.controlsVerified,phaseEventsSupported:boot.runner.phaseEventsSupported,runtimeIdentity:boot.runner.identityHash,staticHtmlStatus:html.status,staticAssetStatus:200,runnerSubmissions:0};
+ await command('pwsh.exe',['-NoProfile','-File','scripts/stop.ps1','-Address',base]);
+ for(let i=0;i<30&&server.exitCode===null;i++)await new Promise(resolveWait=>setTimeout(resolveWait,100));
+ let stopped=false;try{await fetch(base+'/api/bootstrap');}catch{stopped=true;}if(!stopped||server.exitCode===null)throw Error('Owned fresh server did not stop');
+ await writeFile(join(scratch,'production.txt'),log);report.production.stopped=true;report.production.exitCode=server.exitCode;
+ const drift=[];for(const [path,digest]of Object.entries(report.copiedSourceHashes)){const current=await readFile(join(root,path));if(createHash('sha256').update(current).digest('hex')!==digest)drift.push(path);}report.sourceChangedDuringProof=drift.length>0;report.driftPaths=drift;if(drift.length)throw Error('Live source changed after the clean copy; this is not a final-current proof');report.status='passed';
+}catch(error){report.status='failed';report.failure=error.message;process.exitCode=1;}finally{if(server&&server.exitCode===null)server.kill();report.finishedAt=new Date().toISOString();await save();console.log(JSON.stringify({status:report.status,scratch,evidence:relative(root,evidence)}));}

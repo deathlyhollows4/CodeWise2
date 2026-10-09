@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "The vertex groups {0,1,2} and {3,4} are separate components."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": 0,
+    "explanation": "No vertices means no components."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "The triangle is one component, and isolated vertex 3 is another."
+  }
+]

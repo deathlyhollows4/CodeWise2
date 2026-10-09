@@ -1,0 +1,1 @@
+class Solution {public:TreeNode* solve(TreeNode* root,int value){if(!root)return new TreeNode(value);TreeNode* n=root;while(n->val!=value){if(value<n->val){if(!n->left){n->left=new TreeNode(value);break;}n=n->left;}else{if(!n->right){n->right=new TreeNode(value);break;}n=n->right;}}return root;}};

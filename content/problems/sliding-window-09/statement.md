@@ -1,0 +1,1 @@
+Return the number of nonempty contiguous batches in nonnegative `values` whose total is at most `limit`. Different starting or ending positions are different batches, even if their values are equal. Zero values and a zero limit are valid. Empty input returns zero.

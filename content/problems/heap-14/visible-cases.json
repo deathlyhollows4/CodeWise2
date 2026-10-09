@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "weights": [
+        3,
+        1
+      ],
+      "durations": [
+        3,
+        1,
+        2,
+        1
+      ]
+    },
+    "expected": [
+      1,
+      0,
+      0,
+      1
+    ],
+    "explanation": "At time 2 server 0 has finished its one-unit task. At time 3 server 1 becomes free again."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "weights": [
+        2,
+        2
+      ],
+      "durations": [
+        2,
+        1,
+        1
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      0
+    ],
+    "explanation": "Both servers finish at time 2; the smaller index wins the tie."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "weights": [
+        5
+      ],
+      "durations": []
+    },
+    "expected": [],
+    "explanation": "No tasks require assignments."
+  }
+]

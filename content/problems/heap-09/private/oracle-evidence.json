@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "2b8b99b62d326ba024ae1f8c0a5c7045109b4492aefd8035120eae23ca46cb14",
+  "suiteHash": "2bc728c419648a39921b50c43f6dd0a21968b3bf342531b60299ed9a3bd36be5",
+  "oracleChecks": 719,
+  "hiddenUnique": 716,
+  "mutations": [
+    {
+      "name": "cancel-is-noop",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "handle-without-generation",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

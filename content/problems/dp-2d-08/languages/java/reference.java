@@ -1,0 +1,1 @@
+class Solution {public boolean solve(String text,String pattern){boolean[] d=new boolean[text.length()+1];d[0]=true;for(int i=0;i<pattern.length();i++){char token=pattern.charAt(i);if(token=='*'){for(int j=1;j<=text.length();j++)d[j]=d[j]||d[j-1];}else{for(int j=text.length();j>=1;j--)d[j]=d[j-1]&&(token=='?'||token==text.charAt(j-1));d[0]=false;}}return d[text.length()];}}

@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(IdentityList data,int k){auto node=data.heads[0];if(!node)return nullptr;int rank=0;for(int size=2;size<=(int)data.nodes.size();size++)rank=(rank+k)%size;for(int i=0;i<rank;i++)node=node->next;return node;}};

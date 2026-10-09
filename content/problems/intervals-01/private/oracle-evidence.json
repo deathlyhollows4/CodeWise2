@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "3df05115f7532c7bc9d79e626cb04f4daa9f9491fca0b5469f3c82672fa334bc",
+  "suiteHash": "b07bc5868f342ca283e2cf2f47fc36faef940069016dabff4a093b6f43f97c4d",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "do-not-merge-touching",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "drop-point-ranges",
+      "detected": true,
+      "caseId": "hidden-3"
+    },
+    {
+      "name": "overwrite-containing-end",
+      "detected": true,
+      "caseId": "hidden-4"
+    }
+  ],
+  "languageExecution": "not-run"
+}

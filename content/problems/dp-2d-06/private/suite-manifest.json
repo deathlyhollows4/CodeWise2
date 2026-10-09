@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D06",
+  "hiddenCount": 879,
+  "suiteHash": "8874ec213c81839bb4e26f88abfbfa07d8b4bc9565ba9873cbf41b64a7f2d44a",
+  "categories": [
+    "generated-order-trap",
+    "generated-valid-merge",
+    "max-equal-values",
+    "max-whole-source-blocks",
+    "max-unreachable-first-character",
+    "wrong-total-length"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

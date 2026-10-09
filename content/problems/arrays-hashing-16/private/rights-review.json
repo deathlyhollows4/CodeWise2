@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "060043433aa3c36142d4668e9e69f49d54f4beb010cd53805416adfd450d39fe",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:52:21.850Z",
+  "rationale": "Full independently inspected author source and native algorithms for Balanced binary span. The objective is: Find the longest contiguous span containing equally many zeros and ones. Exact reconciliation covers the current statement, three examples, 589 hidden cases, all three references and original or project-template starters/wrappers. No imported prose, tests or code assets occur in the source; common algorithmic ideas are expressed as original project assets.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/arrays-final.mjs",
+    "authorSourceSha256": "70ceaf144c714c3ca435953e8ebbfb6be77fe643fb916a9f51dbcc4f20fc67a0",
+    "reconciliation": "docs/release-evidence/coordinator-arrays-original-assets.json",
+    "wrapperReview": "Read all actual wrappers for Arrays10/16: only the optional blank line before USER_CODE and earlier Java Gson constructor differ from factory. Starters are exact original author strings, not placeholders."
+  },
+  "limitations": [
+    "Rights only; not diversity, progression, publication or execution approval.",
+    "Changed bound assets invalidate the review."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC401",
+  "hiddenCount": 735,
+  "suiteHash": "d11769fafac59eb163ba36e737f64a7eb4d07d0ab1b651190e4b9e1eed5c46dd",
+  "categories": [
+    "multiple-sparse-gaps",
+    "targeted-rank-boundary",
+    "large-complete-prefix-and-far-tail",
+    "wide-gap-before-first"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

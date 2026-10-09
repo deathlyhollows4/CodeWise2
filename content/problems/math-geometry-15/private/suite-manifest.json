@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-rationals.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca15",
+  "hiddenCount": 772,
+  "suiteHash": "092bf8ad0e7cc7d0e1f9893f4bedc28ed5a950ab1b8d051a7d23179fd2c2db6b",
+  "categories": [
+    "exercism-adapted-rational-arithmetic",
+    "exact-signed-rational-pairs",
+    "maximum-products"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

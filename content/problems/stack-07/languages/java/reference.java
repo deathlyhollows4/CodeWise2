@@ -1,0 +1,1 @@
+class Solution {public long solve(String[] tokens){ArrayDeque<Long> stack=new ArrayDeque<>();for(String token:tokens){if(token.equals("+")||token.equals("-")||token.equals("*")){long b=stack.removeLast(),a=stack.removeLast();stack.addLast(token.equals("+")?a+b:token.equals("-")?a-b:a*b);}else stack.addLast(Long.parseLong(token));}return stack.peekLast();}}

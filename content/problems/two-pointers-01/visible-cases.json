@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "cab"
+    },
+    "expected": "bac",
+    "explanation": "Read positions 2, 1, then 0."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": "",
+    "explanation": "There are no characters to move."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "AaB"
+    },
+    "expected": "BaA",
+    "explanation": "Case stays attached to each character."
+  }
+]

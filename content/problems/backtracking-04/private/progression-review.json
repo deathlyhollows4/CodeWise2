@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "progression",
+  "contentIdentity": "8460311740844ffde1a9f6f9ed367042cff4651eaba27cf04f4718a64c3746e3",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Step2 teaches used-item state after01/02 restoration. Grammar03 is its same-step peer;05/06 at step3 retain concrete signed-sum teacher02 if needed.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-permissions.mjs",
+    "sourceHash": "77d38e9cbc955679509880e3c47069543181b2480e7a451e2728b72fd15fcb30",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

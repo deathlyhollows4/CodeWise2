@@ -1,0 +1,1 @@
+Return the k points closest to [0,0]. Rank points by squared distance x*x + y*y, then by x, then by y, all in ascending order. Return the selected points in that rank order. Equal coordinates at different positions remain separate points. Use exact integer distances, not rounded square roots.

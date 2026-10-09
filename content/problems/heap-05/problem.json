@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-05",
+  "version": "1.0.0",
+  "slug": "frequent-label-frontier",
+  "title": "Rank the most frequent labels",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.frequency-frontier",
+    "hashing.counts"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "heap.bounded-frontier"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Select distinct labels by descending occurrence count with ascending numeric tie order.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "0 <= k <= 100000",
+    "Each label is an integer in [-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(values, k) receives a native integer array and an integer limit.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 100000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 100000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-07"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "heap-01",
+    "heap-02"
+  ],
+  "nextIds": [
+    "heap-08"
+  ],
+  "rationale": "Build label counts, then retain the strongest k distinct labels in a bounded heap.",
+  "commonMistakes": [
+    "reverse-tie",
+    "ignore-frequencies"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

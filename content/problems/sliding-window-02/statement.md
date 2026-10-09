@@ -1,0 +1,1 @@
+For every contiguous batch containing exactly `k` integers, count its different values. Return the largest such count. Multiple copies of one value contribute only one different value. Values outside the batch do not contribute. Negative numbers are ordinary values.

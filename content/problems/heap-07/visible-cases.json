@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        4,
+        2
+      ]
+    },
+    "expected": [
+      2,
+      5,
+      4
+    ],
+    "explanation": "The prefix medians are 1, 2.5 and 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -5,
+        -1
+      ]
+    },
+    "expected": [
+      -10,
+      -6
+    ],
+    "explanation": "The second median is -3; twice it is -6."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "There are no arrivals and no median requests."
+  }
+]

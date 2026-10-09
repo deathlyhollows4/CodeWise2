@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC301",
+  "hiddenCount": 60,
+  "suiteHash": "5b74cdbbbc6166b81632b2e43f6b9459f94d28ccdc8928080da6f0a297bc0af5",
+  "categories": [
+    "empty-singleton-barriers-and-frontier-choice",
+    "upper-bound-all-unit-jumps-99999",
+    "upper-bound-immediately-unreachable",
+    "upper-bound-first-stride-reaches-goal-directly",
+    "independent-shortest-path-over-every-legal-jump"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

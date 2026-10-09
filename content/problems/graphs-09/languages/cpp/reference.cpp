@@ -1,0 +1,1 @@
+class Solution {public:vector<int>solve(int n,vector<vector<int>>edges){vector<vector<int>>reverse(n);vector<int>degree(n),q;for(auto e:edges){reverse[e[1]].push_back(e[0]);degree[e[0]]++;}for(int i=0;i<n;i++)if(!degree[i])q.push_back(i);for(int i=0;i<(int)q.size();i++)for(int u:reverse[q[i]])if(--degree[u]==0)q.push_back(u);sort(q.begin(),q.end());return q;}};

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-13",
+  "version": "1.0.0",
+  "slug": "partition-two-sorted-lists-for-median",
+  "title": "Median across two sorted lists",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.partition-balance",
+    "binary-search.cross-array-boundaries"
+  ],
+  "prerequisites": [
+    "binary-search.halving",
+    "binary-search.lower-bound"
+  ],
+  "step": 7,
+  "status": "published",
+  "objective": "Partition two sorted lists at the combined midpoint while searching only the shorter list.",
+  "constraints": [
+    "0 <= left.length,right.length <= 100000",
+    "1 <= left.length+right.length <= 100000",
+    "Each list is nondecreasing; values lie in -1000000000..1000000000",
+    "Return twice the median in -2000000000..2000000000"
+  ],
+  "interface": "Solution.solve(left,right) returns a long/integer equal to twice the combined median.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "left": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "right": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": -2000000000,
+    "maximum": 2000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-14"
+  ],
+  "remedialIds": [
+    "binary-search-02",
+    "binary-search-04",
+    "binary-search-05",
+    "binary-search-10"
+  ],
+  "nextIds": [],
+  "rationale": "A correct partition has all left-side values at most every right-side boundary, even when either list is empty.",
+  "commonMistakes": [
+    "discard-half-integer-part",
+    "take-median-of-list-medians"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "left"
+    },
+    {
+      "kind": "sorted",
+      "field": "right"
+    },
+    {
+      "kind": "combined-length",
+      "fields": [
+        "left",
+        "right"
+      ],
+      "minimum": 1,
+      "maximum": 100000
+    }
+  ]
+}

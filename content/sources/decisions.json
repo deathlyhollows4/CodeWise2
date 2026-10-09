@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-08",
+  "reviewerType": "automated asset and curriculum screening",
+  "exercismRevision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+  "licenseEvidence": "content/sources/exercism-MIT.txt",
+  "decisions": [
+    {
+      "candidate": "binary-search",
+      "selectedAssets": [
+        "canonical-data.json"
+      ],
+      "decision": "adapted into binary-search-01",
+      "reason": "The11 canonical test inputs use sorted distinct arrays and match exact indexed search. A small normalization converts missing-value error objects to our documented -1 sentinel; sourceUUIDs and original expectations are preserved privately. Statements and references remain original. Metadata attributes algorithm background to Wikipedia; no Wikipedia prose is reused."
+    },
+    {
+      "candidate": "list-ops",
+      "selectedAssets": [],
+      "decision": "not selected for Arrays01..18 or identity linked lists",
+      "reason": "Source is a broad multi-operation functional-list exercise with function-valued map/filter/fold callbacks and language-dependent operation names. Arrays01..18 deliberately separate individual skills and use fixed typed methods; upcoming identity-linked-list tasks require actual node pointer changes and aliases, not these value-list operations. Splitting callbacks into renamed tasks would risk duplicate padding."
+    },
+    {
+      "candidate": "flatten-array",
+      "selectedAssets": [],
+      "decision": "defer, not substituted for current array slice",
+      "reason": "Canonical domain is arbitrary nested arrays with null removal. Current slice focuses signed accumulation, membership, prefix invariants and rectangular matrix behavior. General recursive flattening is a different representation/skill, and the full cross-language recursive-value helper is not ready. Do not copy its tests into an incompatible numeric-array task."
+    },
+    {
+      "candidate": "knapsack",
+      "selectedAssets": [],
+      "decision": "preferred candidate for later DP2D 0-1 capacity slot, pending asset fit review",
+      "reason": "Weight/value items and bounded capacity plausibly match the intended0-1 state. Actual schema, canonical expectations, metadata and notices must be compared with the authored DP pack before selection; no currently imported asset claimed."
+    },
+    {
+      "candidate": "saddle-points",
+      "selectedAssets": [],
+      "decision": "not substituted for Arrays17 matrix zero propagation",
+      "reason": "A saddle-point task compares row maxima and column minima and returns coordinate witnesses. Zero propagation teaches original-state flags and writes rows/columns; these requirements and oracle outputs differ. Source tests cannot validate the zero-propagation task."
+    },
+    {
+      "candidate": "pascals-triangle",
+      "selectedAssets": [],
+      "decision": "reserve as possible learning prerequisite rather than replace a planned geometry task",
+      "reason": "Triangle generation teaches binomial recurrence. The frozen quota is unchanged and current geometry objectives include coordinate transforms and spatial relations. A future explicit slot replacement/fit review could use this source, but it is not a substitute test suite for a coordinate task."
+    },
+    {
+      "candidate": "word-search",
+      "selectedAssets": [],
+      "decision": "not substituted for planned backtracking grid word trail",
+      "reason": "Source finds straight words in horizontal/vertical/diagonal directions and returns endpoints. Intended grid trails may turn at adjacent cells with no cell reuse and teach backtracking state restoration. Adapting straight-line endpoints would change task semantics and fail to teach that objective."
+    },
+    {
+      "decision": "not selected for MathGeometry08 spiral traversal",
+      "candidate": "spiral-matrix",
+      "reason": "Pinned canonical exercise receives size and constructs a numbered square spiral. Our task receives arbitrary signed rectangular cells and reads their order, including zero-width and non-square grids. Reusing generated square expected matrices as inputs would cover only a narrow transformed subset; original tests directly cover the actual contract.",
+      "selectedAssets": []
+    },
+    {
+      "decision": "18 arithmetic cases adapted into MathGeometry15",
+      "candidate": "rational-numbers",
+      "reason": "Pinned add/sub/mul/div cases exactly fit typed numerators, positive denominators and exact reduced outputs. Operation names map to symbols and rational pair inputs become typed fields. Source UUIDs/expected pairs remain private, MIT notice is preserved, and original boundary/generator tests expand coverage. Real exponent, absolute-value and standalone reduction groups are not copied because they are outside this task.",
+      "selectedAssets": [
+        "canonical-data.json"
+      ]
+    }
+  ],
+  "limits": "Binary-search11 and rational-arithmetic18 canonical cases are reused with asset-level pins and preserved notices. Other candidates remain screened/deferred with concrete fit reasons. Imported statements and references are not claimed."
+}

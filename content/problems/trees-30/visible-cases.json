@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": [
+      2,
+      3,
+      3
+    ],
+    "explanation": "From the root the distances are 0,1,1. From either child the distances to itself, the root, and its sibling are 0,1,2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        7,
+        null,
+        7,
+        null,
+        7
+      ]
+    },
+    "expected": [
+      3,
+      2,
+      3
+    ],
+    "explanation": "The three equal-valued nodes form a chain; breadth-first order still distinguishes their positions."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": [],
+    "explanation": "There is no origin node needing a total."
+  }
+]

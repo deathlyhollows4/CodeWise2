@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-cover.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xde03",
+  "hiddenCount": 60,
+  "suiteHash": "6e4b8eabb7d0cdc32765016a545ac0424d95c9c37de2108e50c98435cf10d822",
+  "categories": [
+    "maximum-20-distinct-feeds-unit-span-certificate",
+    "maximum-repeated-timestamp-boundary",
+    "maximum-possible-timestamp-width",
+    "duplicate-events-and-late-narrower-cover",
+    "single-feed-earliest-point-boundary",
+    "sole-empty-feed-infeasible-boundary",
+    "non-last-empty-feed-infeasible-boundary",
+    "curated-equal-width-and-overlapping-timestamps",
+    "curated-ragged-minimum-cover"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

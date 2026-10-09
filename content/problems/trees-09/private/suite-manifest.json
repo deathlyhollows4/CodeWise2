@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-compare-target-cover.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1298,
+  "suiteHash": "f512859d7fb270c4390011c0bfebba6f86d6969fe0971a79ac26d00338029d43",
+  "categories": [
+    "identical-sparse-copies",
+    "shape-or-value-difference",
+    "same-nonnull-sequence-opposite-child-shapes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

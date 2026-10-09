@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 604,
+  "suiteHash": "32524da788febbc45196da3d3525a504cec19f28e3cf1a38ade41ea088a6cc53",
+  "categories": [
+    "seeded-small",
+    "wide-products"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

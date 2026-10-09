@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] a,int t){int s=0;for(int v:a)s+=v;if(Math.abs(t)>s||(s+t)%2!=0)return 0;int w=(s+t)/2;int[] dp=new int[w+1];dp[0]=1;for(int v:a)for(int n=w;n>=v;n--)dp[n]=(dp[n]+dp[n-v])%1000000007;return dp[w];}}

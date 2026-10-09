@@ -1,0 +1,58 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      2,
+      3,
+      6,
+      5,
+      4
+    ],
+    "explanation": "Read the top row, right edge, then the remaining bottom row backward."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          -1
+        ],
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": [
+      -1,
+      0,
+      3
+    ],
+    "explanation": "A single column is read from top to bottom."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": []
+    },
+    "expected": [],
+    "explanation": "An empty grid has an empty readout."
+  }
+]

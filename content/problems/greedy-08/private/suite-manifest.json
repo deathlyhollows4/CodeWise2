@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC308",
+  "hiddenCount": 60,
+  "suiteHash": "312db867876d77f5cf6ece856624cf073995bc52832c9db384d26678b2b33dce",
+  "categories": [
+    "zeros-multiplicity-unbalanced-cost-and-large-component",
+    "upper-bound-balanced-optimal-tree1668928000000000-certificate",
+    "upper-bound-all-zero-merge-cost",
+    "upper-bound-one-positive-leaf-merged-only-once",
+    "enumerate-every-pair-merge-plan-with-canonical-memo"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

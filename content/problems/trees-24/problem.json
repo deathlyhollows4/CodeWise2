@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-24",
+  "version": "1.0.0",
+  "slug": "native-tree-from-preorder-inorder",
+  "title": "Reconstruct the tree from two traversals",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.preorder-order",
+    "trees.inorder-partition",
+    "trees.traversal-pair-reconstruction"
+  ],
+  "prerequisites": [
+    "trees.preorder-order",
+    "trees.child-links"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Reconstruct the unique native tree described by compatible distinct-valued preorder and inorder traversals.",
+  "constraints": [
+    "Both arrays contain 0 to 2,000 integers.",
+    "All values lie in [-1,000,000,000,1,000,000,000].",
+    "Values are unique, arrays have the same value set and are compatible traversals of one tree."
+  ],
+  "interface": "Solution.solve(preorder,inorder) receives int[] arrays and returns TreeNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "preorder": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "inorder": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 4001,
+    "trimTrailingNulls": true,
+    "items": {
+      "kind": "nullable",
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-14",
+    "trees-15"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-04"
+  ],
+  "nextIds": [
+    "trees-12"
+  ],
+  "rationale": "Preorder identifies each subtree root, while its inorder position divides the remaining nodes between left and right branches.",
+  "commonMistakes": [
+    "ignore-inorder-build-preorder-right-chain",
+    "mirror-the-required-tree"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-traversal-pair",
+      "preorder": "preorder",
+      "inorder": "inorder",
+      "maxNodes": 2000
+    }
+  ]
+}

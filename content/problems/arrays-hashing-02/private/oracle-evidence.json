@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "0b82bcb36a78e9e19e39eeb1261a62e14f4b9a2b1c6c2cacf0cddd5eb39efeb0",
+  "suiteHash": "43a70c74020cbb08aebe7358a2dbc2c64b46abc55293f10882d78876bdbed553",
+  "oracleChecks": 414,
+  "hiddenUnique": 411,
+  "mutations": [
+    {
+      "name": "zero-initialization",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "minimum-instead",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "last-only",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,1 @@
+You may repeatedly remove the first or last remaining entry from the nonnegative array `values`. Return the minimum number of removed entries whose total equals `target`. Return -1 if impossible. Removing nothing is allowed and totals zero. An entry cannot be removed twice, and removals from opposite ends cannot overlap.

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "44214f93b56195ba82e141b322bea62202c39e17d60a68e5f5001f72db0147fc",
+  "suiteHash": "79827bc60707f7aca1377328ebbb5b7500e663c882a87404fc411659d5fa23ba",
+  "oracleChecks": 676,
+  "hiddenUnique": 673,
+  "mutations": [
+    {
+      "name": "only-remove-left",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "overlap-end-removals",
+      "detected": true,
+      "caseId": "hidden-5"
+    }
+  ],
+  "languageExecution": "not-run"
+}

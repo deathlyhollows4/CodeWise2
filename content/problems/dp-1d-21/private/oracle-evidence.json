@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "c5053f3264a21cb61a4fca594dd16fb48bba3de76b83eda8e04610cfd6e20a9a",
+  "suiteHash": "eb976d8b6253c3a9bacee5e627f2b7931ee2b72f9207d8e35ac4aee0f913713e",
+  "oracleChecks": 758,
+  "hiddenUnique": 755,
+  "mutations": [
+    {
+      "name": "narrow-profit-to-int32",
+      "detected": true,
+      "caseId": "hidden-755"
+    },
+    {
+      "name": "ignore-cooldown",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "allow-only-one-transaction",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

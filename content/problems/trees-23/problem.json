@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-23",
+  "version": "1.0.0",
+  "slug": "inclusive-bst-range-wide-total",
+  "title": "Total the keys inside an inclusive range",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.bst-search-route",
+    "trees.ordered-range-pruning",
+    "numbers.signed-accumulation"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.bst-search-route",
+    "numbers.signed-accumulation"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Sum every native key in the inclusive bounds, pruning branches ruled out by strict subtree ordering.",
+  "constraints": [
+    "The input has 0 to 2,000 native nodes.",
+    "All node values lie in [-1,000,000,000,1,000,000,000].",
+    "All original values are distinct. Every left subtree value is strictly less than its root and every right subtree value is strictly greater.",
+    "-1,000,000,000 ≤ lo ≤ hi ≤ 1,000,000,000.",
+    "A total can exceed 32-bit range; return long / long long."
+  ],
+  "interface": "Solution.solve(root,lo,hi) returns long / long long.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "lo": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      },
+      "hi": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -2000000000000,
+    "maximum": 2000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-19",
+    "trees-22"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-19",
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "trees-20",
+    "trees-26"
+  ],
+  "rationale": "A key below lo rules out its whole left subtree; a key above hi rules out its whole right subtree. Signed keys still require wide totals and inclusive endpoints.",
+  "commonMistakes": [
+    "exclude-endpoint-keys",
+    "signed-int32-range-total"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    },
+    {
+      "kind": "strict-bst",
+      "field": "root"
+    },
+    {
+      "kind": "field-order",
+      "lower": "lo",
+      "upper": "hi"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+import {writeFile} from 'node:fs/promises';
+import {definitions as first} from '../content/authoring/batches/heap-first.mjs';
+import {definitions as ranks} from '../content/authoring/batches/heap-ranking-medians.mjs';
+import {definitions as cover} from '../content/authoring/batches/heap-cover.mjs';
+import {definitions as skyline} from '../content/authoring/batches/heap-skyline.mjs';
+import {definitions as dispatch} from '../content/authoring/batches/heap-server-dispatch.mjs';
+import {definitions as cooldown} from '../content/authoring/batches/heap-cooldown.mjs';
+import {definitions as handles} from '../content/authoring/batches/heap-handles.mjs';
+import {definitions as pair} from '../content/authoring/batches/heap-pair-frontier.mjs';
+import {definitions as capital} from '../content/authoring/batches/heap-capital.mjs';
+import {definitions as deviation} from '../content/authoring/batches/heap-deviation.mjs';
+import {logicalCases} from '../content/authoring/pack-builder.mjs';
+import {canonicalJson} from '../packages/judge-adapter/src/canonical.mjs';
+const all=[...first,...ranks,...cover,...skyline,...dispatch,...cooldown,...handles,...pair,...capital,...deviation],byId=new Map(all.map(d=>[d.id,d])),rows=[],failures=[];for(const d of all.filter(d=>['heap-02','heap-04','heap-05','heap-07'].includes(d.id))){const cases=logicalCases(d);for(const c of [...d.visible,...cases])if(canonicalJson(d.independent(c.input))!==canonicalJson(c.expected))failures.push(d.id+':oracle');for(const id of d.nextIds)if(byId.get(id)?.step!==d.step+1)failures.push(d.id+':next:'+id);if(d.remedialIds.includes(d.id))failures.push(d.id+':self-remedial');rows.push({id:d.id,hidden:cases.length,comparisons:cases.length+3,step:d.step,nextIds:d.nextIds,remedialIds:d.remedialIds});}const r={kind:'source-only-heap-route-structure-and-model-audit',generatedAt:new Date().toISOString(),rows,failures,passed:failures.length===0,materialized:false,nativeReferenceExecution:'not-run',publicationProgressionApproval:'pending-independent-path-review'};await writeFile('docs/release-evidence/heap-early-nextlinks-author-audit.json',JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify(r));if(!r.passed)process.exitCode=1;

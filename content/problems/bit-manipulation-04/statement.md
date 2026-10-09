@@ -1,0 +1,1 @@
+Return the bitwise XOR of every integer from left through right inclusive. Both endpoints are included. For example, XOR combines bits by keeping a bit set when an odd number of input values have that bit set. Do not enumerate a large interval in the intended solution.

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC205",
+  "hiddenCount": 773,
+  "suiteHash": "e3bfc0eee54a15b73c7f4808788bef2dba505d0c82411ea983f93d4582d424d2",
+  "categories": [
+    "zeros-and-two-digit-boundaries",
+    "targeted-zero-and-26-boundaries",
+    "large-modular-or-forced-pair"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

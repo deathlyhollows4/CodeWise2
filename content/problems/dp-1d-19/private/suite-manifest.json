@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-eighth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC219",
+  "hiddenCount": 604,
+  "suiteHash": "c70b7694843b07411739662c7827a7188254ac048c43d0fbeefb8945b3309b4d",
+  "categories": [
+    "all-small-distinct-widths-independent-geometric-frontier",
+    "large-width-matrix-power-certificate"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

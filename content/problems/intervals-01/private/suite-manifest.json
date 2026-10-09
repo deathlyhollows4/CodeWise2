@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-union.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a01",
+  "hiddenCount": 60,
+  "suiteHash": "b07bc5868f342ca283e2cf2f47fc36faef940069016dabff4a093b6f43f97c4d",
+  "categories": [
+    "maximum-disjoint-output-certificate",
+    "maximum-overlap-chain-certificate",
+    "extreme-isolated-points",
+    "extreme-containing-range",
+    "curated-nesting-and-endpoint-contact",
+    "curated-signed-overlap-components"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

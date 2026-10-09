@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-ranking-medians.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdef5",
+  "hiddenCount": 710,
+  "suiteHash": "939840b83cfe5640a06a707123736899428e1c850bbcaf6601de4061e68a3a45",
+  "categories": [
+    "ordered-prefix-balance",
+    "maximum-monotone-prefix-property",
+    "maximum-identical-positive-boundary",
+    "maximum-identical-negative-boundary",
+    "exact-opposite-boundary-stream"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

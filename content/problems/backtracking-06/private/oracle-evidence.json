@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "aa0196fba067a16f8b78b7e12868a566bc21f777b2dd3bdb5a378b457e9341f1",
+  "suiteHash": "e19f95c9cf6fefc517092a1da287035e4828bb0a60829094831b438218ffa276",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "ignore-fixed-symbols",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "only-check-final-balance",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "reverse-answer-order",
+      "detected": true,
+      "caseId": "hidden-10"
+    }
+  ],
+  "languageExecution": "not-run"
+}

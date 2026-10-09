@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        6,
+        1,
+        7,
+        4
+      ]
+    },
+    "expected": 13,
+    "explanation": "Choose positions 0 and 2 for 6+7=13."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": 0,
+    "explanation": "There are no rewards to choose."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        5,
+        9,
+        5
+      ]
+    },
+    "expected": 10,
+    "explanation": "Two smaller separated rewards beat the largest single reward."
+  }
+]

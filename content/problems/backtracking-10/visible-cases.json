@@ -1,0 +1,66 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "release": [
+        0,
+        0
+      ],
+      "duration": [
+        2,
+        1
+      ],
+      "deadline": [
+        2,
+        3
+      ]
+    },
+    "expected": [
+      [
+        0,
+        1
+      ]
+    ],
+    "explanation": "Task 0 must finish by time 2; placing task 1 first would make task 0 finish too late."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "release": [
+        0,
+        0
+      ],
+      "duration": [
+        1,
+        1
+      ],
+      "deadline": [
+        2,
+        2
+      ]
+    },
+    "expected": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "explanation": "Original task IDs stay distinct even though their release, duration, and deadline are equal."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "release": [],
+      "duration": [],
+      "deadline": []
+    },
+    "expected": [
+      []
+    ],
+    "explanation": "There is one empty execution order for no tasks."
+  }
+]

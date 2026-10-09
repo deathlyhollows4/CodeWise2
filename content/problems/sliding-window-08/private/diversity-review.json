@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "5928e631e707ac8bbe3531b681657406f846da0c9143e5516667c228db874d96",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "An index deque expires old positions and removes dominated smaller/equal tails; its front yields each fixed-window maximum. Indices preserve expiration behavior for repeated maxima.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "diversity",
+  "rationale": "Outputs one extremum per fixed batch with candidate lifetime state, not a single optimum sum or a first greater neighbor. Retained2k monotone/equal/signed families exercise expiration and domination. Actual695 canonical hidden inputs and categories fixed-window-extrema, retained-declared-max-sliding-window-08-1, retained-declared-max-sliding-window-08-2, retained-declared-max-sliding-window-08-3, retained-declared-max-sliding-window-08-4 were reconciled; these counts are input uniqueness, not a fabricated count of independent algorithms."
+}

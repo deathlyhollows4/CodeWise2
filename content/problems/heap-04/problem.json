@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-04",
+  "version": "2.0.0",
+  "slug": "moving-end-window-hiring",
+  "title": "Hire from two moving candidate windows",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.dual-eligible-windows",
+    "arrays.original-index-tie"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "heap.bounded-frontier"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Follow deterministic hiring from the first and last remaining candidate windows, revealing a new candidate only from the chosen side.",
+  "constraints": [
+    "0 <= costs.length <= 100000",
+    "1 <= costs[i] <= 1000000000",
+    "0 <= k <= costs.length",
+    "1 <= candidates <= 100000",
+    "The total is at most 100000000000000."
+  ],
+  "interface": "Solution.solve(costs, k, candidates) receives a native integer array and two integers; return a long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "costs": {
+        "kind": "array",
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 100000
+      },
+      "candidates": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 100000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 100000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-02"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "heap-01"
+  ],
+  "nextIds": [
+    "heap-05",
+    "heap-07"
+  ],
+  "rationale": "The eligible set changes after each hire. Two heaps represent its ends, while inward pointers prevent overlapping windows from counting a worker twice.",
+  "commonMistakes": [
+    "global-cheapest-original-k",
+    "reverse-original-index-tie",
+    "narrow-paid-total"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "costs",
+      "minimum": 0
+    }
+  ]
+}

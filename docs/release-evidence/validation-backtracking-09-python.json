@@ -1,0 +1,196 @@
+{
+  "id": "backtracking-09",
+  "version": "1.0.0",
+  "language": "python",
+  "validationIdentity": "ba8d10e759ecdd7d128430f22f48a0fb49bf1b6e964de5f37bf68e50163c847b",
+  "suiteHash": "d7a4fb49af6702514b98918eeb26ef5553fb38c569127a9a2875ed475df1ee0e",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T10:28:23.371Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 63,
+      "executed": 63,
+      "passed": 63,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "allowed": [
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "fixed": [
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "expected": [
+          [
+            1,
+            3,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            3,
+            1
+          ]
+        ],
+        "actual": [
+          [
+            1,
+            3,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            3,
+            1
+          ]
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "allowed": [
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "fixed": [
+            0,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "expected": [],
+        "actual": [],
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "allowed": [],
+          "fixed": []
+        },
+        "expected": [
+          []
+        ],
+        "actual": [
+          []
+        ],
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.017",
+          "wallSeconds": "0.017",
+          "memoryKb": "9980"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.037",
+          "wallSeconds": "0.036",
+          "memoryKb": "10124"
+        }
+      ]
+    }
+  }
+}

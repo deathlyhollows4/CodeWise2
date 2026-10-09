@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": 24,
+      "b": 18
+    },
+    "expected": 6,
+    "explanation": "6 divides both numbers and no larger integer does."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": -35,
+      "b": 0
+    },
+    "expected": 35,
+    "explanation": "One zero leaves the absolute value of the other input."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": 0,
+      "b": 0
+    },
+    "expected": 0,
+    "explanation": "The task explicitly defines this case as zero."
+  }
+]

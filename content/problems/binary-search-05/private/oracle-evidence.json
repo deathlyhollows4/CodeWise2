@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "17bdfbaafc335faa3bdaa164b52eb951166bee9d7e5a621278ed4b27823a930f",
+  "suiteHash": "c0fc0f683111f0495413f79da94d8f4e66b07a3f05632569d4bc97ab750bb7cb",
+  "oracleChecks": 765,
+  "hiddenUnique": 762,
+  "mutations": [
+    {
+      "name": "round-instead-of-floor",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "strict-feasibility",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

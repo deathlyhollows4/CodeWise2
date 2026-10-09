@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "33fdc31008d47fef0775032aed4c026c23634c0627a2cab09bd7d37df30fbc64",
+  "suiteHash": "b2472abc2a7c93033a07f4f459262f787555b861eca5508cd0e2ed4ee95e49ad",
+  "oracleChecks": 726,
+  "hiddenUnique": 723,
+  "mutations": [
+    {
+      "name": "narrow-distance",
+      "detected": true,
+      "caseId": "hidden-1"
+    },
+    {
+      "name": "drop-coordinate-ties",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

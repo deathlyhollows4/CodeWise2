@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "2bfe43d8b72be99c60aa3ec35b2a166558ed2a430159e601f81f840b56834c12",
+  "suiteHash": "846c379eadb2bf99054f1186e7cd01933816fa32f13e6ce3b488167d86ddaceb",
+  "oracleChecks": 1139,
+  "hiddenUnique": 1136,
+  "mutations": [
+    {
+      "name": "include-boundary-leaves-twice",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "right-boundary-top-down",
+      "detected": true,
+      "caseId": "hidden-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

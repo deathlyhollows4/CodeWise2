@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "contentIdentity": "9429675daf1d80fbb35496b59824e60dc69024671a488b6677f011b61dac2774",
+  "reviewIdentityVersion": 2,
+  "reviewer": "dp2d-graphs-thread-coordinator",
+  "reviewerType": "automated-independent",
+  "reviewedAt": "2026-10-08T11:38:53.658Z",
+  "rationale": "Actual statement, exactly3 explained examples, current hidden generator/independent method, all9 language assets and original asset-level provenance were inspected independently from the author. All materialized assets match current original author sources; no imported material is declared or detected in this bounded source inspection.",
+  "evidence": "docs/release-evidence/dp2d-thread/independent-materialized-review.json",
+  "limitations": [
+    "Global243 task-map synthesis and exhaustive learner histories are separate.",
+    "Native receipt matching is read-only reconciliation; no native dispatch or publication is performed here.",
+    "Original-asset source review is automated independent technical evidence, not human legal approval."
+  ],
+  "nativeValidation": "separate-gate",
+  "publication": "not-implied"
+}

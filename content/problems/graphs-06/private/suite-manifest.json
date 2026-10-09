@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A06",
+  "hiddenCount": 60,
+  "suiteHash": "d8f369e76d752a1a6a80288cf11ca09b2c74a62965d5c4766b285db87c42827b",
+  "categories": [
+    "curated-boundary-empty-grid",
+    "curated-boundary-empty-rows-preserved",
+    "curated-boundary-wall-sentinel",
+    "curated-boundary-source-distance-zero",
+    "curated-boundary-two-source-midpoint",
+    "max-Manhattan-certificate",
+    "max-no-sources-unreachable",
+    "max-long-winding-corridor",
+    "seeded-obstacle-source-frontiers"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

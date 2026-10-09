@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-gap.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a03",
+  "hiddenCount": 60,
+  "suiteHash": "39ef772a70cbe7e7ca26fe2a58f0923ce4dcee592b01cfa2ad22c2bc0ecc7f9c",
+  "categories": [
+    "maximum-exact-gap-certificate",
+    "maximum-overlap-chain-full-block",
+    "wide-full-window-appointment",
+    "empty-window-point-blocker",
+    "curated-gap-feasibility-and-earliest-choice",
+    "curated-clipped-overlapping-blockers"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

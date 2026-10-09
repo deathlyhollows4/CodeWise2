@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "tasks": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "cooldown": 2
+    },
+    "expected": 8,
+    "explanation": "One optimal schedule is 1,2,idle,1,2,idle,1,2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "tasks": [
+        7,
+        7,
+        9
+      ],
+      "cooldown": 0
+    },
+    "expected": 3,
+    "explanation": "With no cooldown, all three tasks execute consecutively."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "tasks": [],
+      "cooldown": 5
+    },
+    "expected": 0,
+    "explanation": "An empty workload needs no intervals."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "75630dc5ed83fa8a9d3a24a3234458abfe1030a815dfdba4e21954b8f6c9952f",
+  "suiteHash": "4b83097425c94aba04980c5ced07b538c4ad92861bf4fb26938356ca3b87c86f",
+  "oracleChecks": 719,
+  "hiddenUnique": 716,
+  "mutations": [
+    {
+      "name": "never-wrap",
+      "detected": true,
+      "caseId": "hidden-2"
+    },
+    {
+      "name": "accept-equality-around-ring",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        9,
+        9,
+        9,
+        9,
+        9
+      ],
+      "k": 2
+    },
+    "expected": [
+      3,
+      4,
+      0,
+      1,
+      2
+    ],
+    "explanation": "The final two original nodes become the first two, despite equal values."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        1,
+        2,
+        3
+      ],
+      "k": 6
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Two complete rotations leave the chain unchanged."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [],
+      "k": 1000000000
+    },
+    "expected": [],
+    "explanation": "Do not take a modulo by zero for empty input."
+  }
+]

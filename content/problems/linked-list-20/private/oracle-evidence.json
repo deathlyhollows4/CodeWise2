@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "1acd14fe41a7ccbe92b0b724810b328673cd9af242e2d7ceca6f291a3d092bc0",
+  "suiteHash": "d73378363caeefc62b4bcc7cf313b518860e55fa39b1e4636751d78b5d166139",
+  "oracleChecks": 710,
+  "hiddenUnique": 707,
+  "mutations": [
+    {
+      "name": "leave-original-zero-sum-blocks",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "remove-nonzero-whole-chain",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "int32-prefix-wrap",
+      "detected": true,
+      "caseId": "hidden-704"
+    }
+  ],
+  "languageExecution": "not-run"
+}

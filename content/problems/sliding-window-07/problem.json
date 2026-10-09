@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "sliding-window-07",
+  "version": "1.0.0",
+  "slug": "find-rearranged-pattern-starts",
+  "title": "Find rearranged pattern starts",
+  "primaryTopic": "sliding-window",
+  "skillIds": [
+    "windows.fixed-frequency-equality",
+    "windows.frequency-removal"
+  ],
+  "prerequisites": [
+    "windows.frequency-removal",
+    "hashing.counts"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Compare a fixed window letter multiset with a pattern and report overlapping matches.",
+  "constraints": [
+    "0 ≤ text.length and pattern.length ≤ 2,000",
+    "Both strings contain lowercase ASCII letters a..z."
+  ],
+  "interface": "Solution.solve(text,pattern) returns an integer index array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "ascii": true,
+        "maxLength": 2000
+      },
+      "pattern": {
+        "kind": "string",
+        "ascii": true,
+        "maxLength": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "sliding-window-06",
+    "sliding-window-10",
+    "sliding-window-11"
+  ],
+  "remedialIds": [
+    "sliding-window-02",
+    "sliding-window-03"
+  ],
+  "nextIds": [
+    "sliding-window-08"
+  ],
+  "rationale": "Reuse frequency state at each position instead of rebuilding a pattern comparison.",
+  "commonMistakes": [
+    "match-only-exact-order",
+    "discard-overlap"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "text",
+      "alphabet": "lowercase"
+    },
+    {
+      "kind": "alphabet",
+      "field": "pattern",
+      "alphabet": "lowercase"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Return the shortest contiguous part of `text` containing every letter from `pattern` with at least the same multiplicity. Extra letters are allowed. If several shortest parts exist, choose the earliest starting position. If no cover exists, return the empty string. An empty pattern also returns the empty string.

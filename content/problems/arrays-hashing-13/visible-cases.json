@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    "expected": [
+      2
+    ],
+    "explanation": "2 appears3 out of4 times."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No majority exists."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    "expected": [],
+    "explanation": "Both labels occur exactly half the time."
+  }
+]

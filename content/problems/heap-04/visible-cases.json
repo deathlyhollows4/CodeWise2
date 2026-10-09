@@ -1,0 +1,47 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "costs": [
+        17,
+        12,
+        10,
+        2,
+        7,
+        2,
+        11,
+        20,
+        8
+      ],
+      "k": 3,
+      "candidates": 4
+    },
+    "expected": 11,
+    "explanation": "Hire original indices 3, 5 and 4, paying 2 + 2 + 7."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "costs": [
+        7,
+        1,
+        5,
+        7
+      ],
+      "k": 2,
+      "candidates": 1
+    },
+    "expected": 8,
+    "explanation": "The initial 7-cost tie selects index 0, exposing index 1 at cost 1."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "costs": [],
+      "k": 0,
+      "candidates": 1
+    },
+    "expected": 0,
+    "explanation": "No worker is hired from an empty array."
+  }
+]

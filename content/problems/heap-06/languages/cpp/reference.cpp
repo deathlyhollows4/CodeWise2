@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> weights){priority_queue<int> q;for(int v:weights)q.push(v);while(q.size()>1){int a=q.top();q.pop();int b=q.top();q.pop();if(a!=b)q.push(a-b);}return q.empty()?0:q.top();}};

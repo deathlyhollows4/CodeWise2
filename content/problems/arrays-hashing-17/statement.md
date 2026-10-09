@@ -1,0 +1,1 @@
+For each zero in the original rectangular grid, replace its whole row and whole column with zeros. Return the resulting grid. Other cells retain their original values. Newly produced zeros do not trigger additional propagation. Empty grids and rows with no columns are valid.

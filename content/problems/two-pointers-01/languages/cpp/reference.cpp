@@ -1,0 +1,1 @@
+class Solution { public: string solve(string text){int left=0,right=(int)text.size()-1;while(left<right){swap(text[left],text[right]);left++;right--;}return text;} };

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        5,
+        2,
+        -3
+      ]
+    },
+    "expected": [
+      5
+    ],
+    "explanation": "The left-moving size 3 removes size 2, then loses to size 5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No objects exist."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        4,
+        -4,
+        0,
+        -2
+      ]
+    },
+    "expected": [
+      -2
+    ],
+    "explanation": "Equal sizes vanish; zero is ignored; the final left-moving object remains."
+  }
+]

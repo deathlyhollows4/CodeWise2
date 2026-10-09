@@ -1,0 +1,88 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "graph": {
+        "values": [
+          0,
+          0
+        ],
+        "neighbors": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "root": 0
+      }
+    },
+    "expected": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "explanation": "Root discovers the second node once, but two neighbor occurrences produce matrix count 2. The second node points back and to itself."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "graph": {
+        "values": [],
+        "neighbors": [],
+        "root": null
+      }
+    },
+    "expected": [],
+    "explanation": "A null root gives no discovered nodes and an empty matrix."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "graph": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "neighbors": [
+          [
+            2,
+            1
+          ],
+          [],
+          [
+            1
+          ]
+        ],
+        "root": 0
+      }
+    },
+    "expected": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "explanation": "Input-table node 2 is discovered before node 1. Matrix indices follow discovery, not table positions or equal values."
+  }
+]

@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] initial,int[] arrivals,int k){PriorityQueue<Integer> q=new PriorityQueue<>();for(int v:initial){q.offer(v);if(q.size()>k)q.poll();}int[] out=new int[arrivals.length];for(int i=0;i<arrivals.length;i++){q.offer(arrivals[i]);if(q.size()>k)q.poll();out[i]=q.peek();}return out;}}

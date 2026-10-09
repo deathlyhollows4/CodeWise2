@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "two-pointers-08",
+  "version": "1.0.0",
+  "slug": "largest-wall-span",
+  "title": "Largest wall span",
+  "primaryTopic": "two-pointers",
+  "skillIds": [
+    "pointers.eliminate-shorter-boundary"
+  ],
+  "prerequisites": [
+    "pointers.opposing"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Justify eliminating the shorter boundary while optimizing height times distance.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "0 ≤ each height ≤ 1,000,000.",
+    "Use a 64-bit integer for capacity."
+  ],
+  "interface": "Solution.solve(values) returns a 64-bit capacity.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "two-pointers-07"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "two-pointers-09"
+  ],
+  "rationale": "Moving a pointer is now a choice that must preserve the possibility of a better answer.",
+  "commonMistakes": [
+    "use-taller-boundary",
+    "adjacent-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

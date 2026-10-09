@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 36
+    },
+    "expected": 6,
+    "explanation": "6*6 is exactly 36; 7*7 would exceed n."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0
+    },
+    "expected": 0,
+    "explanation": "Zero is the largest feasible integer."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 15
+    },
+    "expected": 3,
+    "explanation": "3*3 <=15 but 4*4 >15; rounding upward is incorrect."
+  }
+]

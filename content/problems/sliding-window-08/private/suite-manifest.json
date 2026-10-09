@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/sliding-window-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 695,
+  "suiteHash": "450712a94ad7ec56d2f840d7261aa038cfb34dc4ce5d8b578964f7a7f0efc5cc",
+  "categories": [
+    "fixed-window-extrema",
+    "retained-declared-max-sliding-window-08-1",
+    "retained-declared-max-sliding-window-08-2",
+    "retained-declared-max-sliding-window-08-3",
+    "retained-declared-max-sliding-window-08-4"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

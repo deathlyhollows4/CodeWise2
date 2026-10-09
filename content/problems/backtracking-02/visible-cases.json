@@ -1,0 +1,59 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        2,
+        2
+      ],
+      "k": 2,
+      "target": 4
+    },
+    "expected": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "explanation": "Three distinct original-position pairs have equal value totals; do not collapse them by value."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        4,
+        -3
+      ],
+      "k": 2,
+      "target": 1
+    },
+    "expected": [
+      [
+        0,
+        1
+      ]
+    ],
+    "explanation": "The first selected value overshoots target, but the later negative value completes the required total."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [],
+      "k": 0,
+      "target": 0
+    },
+    "expected": [
+      []
+    ],
+    "explanation": "One empty index set has cardinality zero and total zero."
+  }
+]

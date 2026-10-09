@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-12",
+  "version": "1.0.0",
+  "slug": "count-longest-strict-subsequence-choices",
+  "title": "Count longest increasing subsequences",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.sequence-extension",
+    "dp.optimal-count-ties"
+  ],
+  "prerequisites": [
+    "dp.sequence-extension",
+    "dp.counting-recurrence"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Count all indexed subsequences tied for the maximum strict increasing length, merging and replacing counts correctly.",
+  "constraints": [
+    "0 <= values.length <= 2000",
+    "-1000000000 <= values[i] <= 1000000000",
+    "Return an integer in 0..1000000006"
+  ],
+  "interface": "Solution.solve(values) returns the modular count of longest strict indexed subsequences.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 1000000006
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-11"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-11",
+    "binary-search-01",
+    "binary-search-02"
+  ],
+  "nextIds": [
+    "dp-1d-21",
+    "dp-1d-23"
+  ],
+  "rationale": "A better predecessor replaces the old count; a tied predecessor adds distinct optimal choices.",
+  "commonMistakes": [
+    "count-only-one-optimum",
+    "allow-equal-value-extension"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

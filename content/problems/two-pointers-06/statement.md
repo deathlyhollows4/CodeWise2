@@ -1,0 +1,1 @@
+Given sorted `values` and integer `target`, return the number of index pairs `(i,j)` for which `i < j` and `values[i] + values[j] == target`. Count positions, not merely different value pairs. Never use a position twice. An empty array or a single value has zero pairs.

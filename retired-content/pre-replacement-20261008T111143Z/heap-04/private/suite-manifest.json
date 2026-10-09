@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdea1",
+  "hiddenCount": 723,
+  "suiteHash": "b2472abc2a7c93033a07f4f459262f787555b861eca5508cd0e2ed4ee95e49ad",
+  "categories": [
+    "signed-distance-and-coordinate-ties",
+    "maximum-point-cloud-and-selection",
+    "exact-coordinate-extrema-tie-cloud",
+    "wide-distance-ordering"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

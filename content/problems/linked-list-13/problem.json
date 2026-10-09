@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-13",
+  "version": "1.0.0",
+  "slug": "stable-original-node-partition",
+  "title": "Make two stable buckets of original nodes",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.stable-bucket-relink",
+    "list.two-output-tails"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Relink original nodes into less-than-pivot and at-least-pivot buckets while preserving order inside each bucket.",
+  "constraints": [
+    "0 ≤ node count ≤ 2,000.",
+    "Node values and pivot lie in [-1,000,000,1,000,000].",
+    "Every original node appears once, and values remain unchanged.",
+    "Relative order inside each bucket is stable; the result must be finite."
+  ],
+  "interface": "Solution.solve(head,pivot) returns ListNode; the wrapper reports ListNodeIdentitySequence.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "pivot": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-14",
+    "linked-list-16",
+    "linked-list-06"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-02"
+  ],
+  "nextIds": [
+    "linked-list-15"
+  ],
+  "rationale": "The tails of two temporary chains let each original node keep its place within its bucket.",
+  "commonMistakes": [
+    "equal-pivot-in-first-bucket",
+    "reverse-first-bucket"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

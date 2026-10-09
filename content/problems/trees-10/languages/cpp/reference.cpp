@@ -1,0 +1,1 @@
+class Solution {public:bool solve(TreeNode* root){if(!root)return true;vector<TreeNode*> queue{root};bool missing=false;for(size_t i=0;i<queue.size();i++){auto n=queue[i];if(!n){missing=true;continue;}if(missing)return false;queue.push_back(n->left);queue.push_back(n->right);}return true;}};

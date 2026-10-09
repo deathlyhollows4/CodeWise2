@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D10",
+  "hiddenCount": 60,
+  "suiteHash": "9b94fc6021a8bde110e68873af8880f9a84f5de578fa51aac0d732897ae1f9b5",
+  "categories": [
+    "curated-boundary-empty-grid",
+    "curated-boundary-zero-columns",
+    "curated-boundary-zero-singleton",
+    "curated-boundary-shared-start-wide-value",
+    "curated-boundary-one-row-fixed-starts",
+    "curated-boundary-one-column-shared",
+    "curated-boundary-meet-then-separate",
+    "max-two-agent-wide-total",
+    "max-single-column-overlap",
+    "max-edge-route-optimal-witness",
+    "seeded-paired-route-enumeration"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

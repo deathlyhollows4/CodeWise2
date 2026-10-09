@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "65d8fd95e38efb94dc77df1ad29b0126a7d15687eec5fedc67eec476cd0e3ed8",
+  "suiteHash": "0e2c7629d712d3cacce77ebd5f272c38c7a1552fdd8f9f52238cfdc4e35d6b42",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "minimize-total-additive-cost",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "consider-only-direct-offers",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

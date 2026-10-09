@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){int l=0,r=values.length-1;long best=0;while(l<r){best=Math.max(best,(long)(r-l)*Math.min(values[l],values[r]));if(values[l]<=values[r])l++;else r--;}return best;}}

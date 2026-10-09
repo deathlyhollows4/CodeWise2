@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        10,
+        5,
+        25,
+        2,
+        8
+      ]
+    },
+    "expected": 28,
+    "explanation": "5 XOR 25 equals 28, the largest available result."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        7,
+        7
+      ]
+    },
+    "expected": 0,
+    "explanation": "Different positions can hold equal values."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        2147483646
+      ]
+    },
+    "expected": 2147483647,
+    "explanation": "The complementary words differ in every allowed bit."
+  }
+]

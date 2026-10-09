@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head){ListNode dummy(0,head);unordered_map<long long,ListNode*> last;long long sum=0;for(auto p=&dummy;p;p=p->next){sum+=p->val;last[sum]=p;}sum=0;for(auto p=&dummy;p;p=p->next){sum+=p->val;p->next=last.at(sum)->next;}return dummy.next;}};

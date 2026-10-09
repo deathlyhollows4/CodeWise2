@@ -1,0 +1,5 @@
+#include <bits/stdc++.h>
+#include <nlohmann/json.hpp>
+using namespace std;using json=nlohmann::json;
+{{USER_CODE}}
+int main(){string line;while(getline(cin,line)){auto input=json::parse(line);unique_ptr<CoverageSet> object;json out=json::array();for(auto operation:input.at("operations")){string name=operation.at("op").get<string>();if(name=="constructor"){if(object)throw runtime_error("Repeated constructor");object=make_unique<CoverageSet>();out.push_back(nullptr);}else if(name=="put"){if(!object)throw runtime_error("Constructor required");object->put(operation.at("args").at(0).get<int>(),operation.at("args").at(1).get<int>(),operation.at("args").at(2).get<int>());out.push_back(nullptr);}else if(name=="remove"){if(!object)throw runtime_error("Constructor required");object->remove(operation.at("args").at(0).get<int>());out.push_back(nullptr);}else if(name=="covered"){if(!object)throw runtime_error("Constructor required");out.push_back(json(object->covered()));}else throw runtime_error("Unapproved operation");}cout<<out.dump()<<"\n";}}

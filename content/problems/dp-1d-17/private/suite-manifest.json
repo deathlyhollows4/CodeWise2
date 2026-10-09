@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-seventh.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC217",
+  "hiddenCount": 677,
+  "suiteHash": "efc9e721a8cf8af6d84a1a6f2e1e1e8f374e8773c6ff10b5dfb6c70222ec3ff5",
+  "categories": [
+    "direct-interval-palindrome-enumeration",
+    "empty-even-odd-repeated-and-literal-ascii",
+    "upper-bound-closed-form-palindrome-family"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head,int value){ListNode node=new ListNode(value);if(head==null||value<=head.val){node.next=head;return node;}ListNode p=head;while(p.next!=null&&p.next.val<value)p=p.next;node.next=p.next;p.next=node;return head;}}

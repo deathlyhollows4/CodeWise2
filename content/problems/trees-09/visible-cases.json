@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": [
+        1,
+        2,
+        3
+      ],
+      "b": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": true,
+    "explanation": "All corresponding values and both child positions agree."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": [
+        1,
+        7
+      ],
+      "b": [
+        1,
+        null,
+        7
+      ]
+    },
+    "expected": false,
+    "explanation": "The equal-valued child occupies different sides."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": [],
+      "b": []
+    },
+    "expected": true,
+    "explanation": "Two null roots describe the same empty tree."
+  }
+]

@@ -1,0 +1,1 @@
+class Solution { public: vector<int> solve(vector<int> values){unordered_set<int> seen;vector<int> result;for(int v:values)if(seen.insert(v).second)result.push_back(v);return result;} };

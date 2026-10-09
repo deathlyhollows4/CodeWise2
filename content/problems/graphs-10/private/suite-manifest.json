@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A10",
+  "hiddenCount": 60,
+  "suiteHash": "d66467f7d31cd0dc672573f8a7ec2ddfe88e77da9bed9aa0923d7a3d560470d8",
+  "categories": [
+    "curated-boundary-single-loop",
+    "curated-boundary-unbalanced-degree",
+    "curated-boundary-disconnected-circuits",
+    "max-long-open-Euler-trail",
+    "max-closed-Euler-cycle",
+    "max-parallel-self-loop-edge-identities",
+    "max-balanced-disconnected-impossible",
+    "seeded-directed-edge-use-witnesses"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

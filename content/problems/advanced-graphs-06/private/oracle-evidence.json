@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "fa4fce6207a319a4d91bca1df1621bd307c22830ea581311d2f363e40ec5b81d",
+  "suiteHash": "c39c693b3633f69d2900621340d54604b0d19e1c17eb0b2f219bf96014984ce7",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "targets-are-winning-for-player-to-move",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "all-unresolved-cycles-are-losses",
+      "detected": true,
+      "caseId": "hidden-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

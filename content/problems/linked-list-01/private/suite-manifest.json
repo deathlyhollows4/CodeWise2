@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 721,
+  "suiteHash": "8ec330a331c5c4b8849d0c007b0e79b3c344bbfaf2cd4e18df6762f72d85af34",
+  "categories": [
+    "matching-duplicate-value",
+    "signed-values-and-boundaries",
+    "empty-singleton-duplicates-and-large"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

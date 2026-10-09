@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 621,
+  "suiteHash": "1c3ecb164f3a3751735601ee761185f511d2fd1000527dea86e687079f2d9ed8",
+  "categories": [
+    "mirrored-even",
+    "asymmetric-or-coincidental",
+    "late-mismatch-long",
+    "case-sensitive-pair",
+    "inner-mismatch"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

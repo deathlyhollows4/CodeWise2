@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-03",
+  "version": "1.0.0",
+  "slug": "reverse-thirty-two-bits",
+  "title": "Reverse all 32 bits",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.fixed-width-reversal",
+    "bits.unsigned-shift"
+  ],
+  "prerequisites": [
+    "bits.unsigned32"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Reverse a complete 32 bit pattern while retaining its leading zeros.",
+  "constraints": [
+    "value is an integer from 0 through 4294967295 inclusive.",
+    "Interpret it as an unsigned sequence of exactly 32 bits."
+  ],
+  "interface": "Solution.solve(value) receives a signed 64 bit integer holding an unsigned 32 bit value.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 4294967295
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 4294967295
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-10",
+    "bit-manipulation-11"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "bit-manipulation-05"
+  ],
+  "rationale": "The width is part of the task. Reversing only the written binary digits loses leading zero positions.",
+  "commonMistakes": [
+    "drop-leading-zeros",
+    "signed-result"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

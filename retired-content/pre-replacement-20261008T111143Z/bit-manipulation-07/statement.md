@@ -1,0 +1,1 @@
+Exactly one distinct label occurs once; every other distinct label occurs exactly three times. Return the singleton label. Labels are signed integers, and negative values use a two’s complement representation of 32 bits. Aim for constant auxiliary space.

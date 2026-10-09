@@ -1,0 +1,64 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "blocked": [
+        [
+          1,
+          4
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "lo": 0,
+      "hi": 10,
+      "duration": 2
+    },
+    "expected": [
+      4,
+      6
+    ],
+    "explanation": "The first free gap [0,1) is too short. [4,6) fits exactly."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "blocked": [
+        [
+          0,
+          10
+        ]
+      ],
+      "lo": 0,
+      "hi": 10,
+      "duration": 1
+    },
+    "expected": [],
+    "explanation": "The entire scheduling window is blocked."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "blocked": [
+        [
+          -9,
+          -2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "lo": -2,
+      "hi": 5,
+      "duration": 3
+    },
+    "expected": [
+      -2,
+      1
+    ],
+    "explanation": "The earlier blocker ends at the window start; the point blocker occupies no time."
+  }
+]

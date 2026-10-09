@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(IdentityList data){ListNode a=data.heads[0],b=data.heads[1];int x=0,y=0;for(ListNode p=a;p!=null;p=p.next)x++;for(ListNode p=b;p!=null;p=p.next)y++;while(x>y){a=a.next;x--;}while(y>x){b=b.next;y--;}while(a!=b){a=a.next;b=b.next;}return a;}}

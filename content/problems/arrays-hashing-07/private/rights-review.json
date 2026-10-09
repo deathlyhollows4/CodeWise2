@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "0fd7784580652c97117d252293bb7d2a7c3e9b8a814abea26bd5c4e9b864e4b1",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:52:21.850Z",
+  "rationale": "Full independently inspected author source and native algorithms for Earliest matching pair. The objective is: Find a target-sum index pair with explicit deterministic tie-breaking. Exact reconciliation covers the current statement, three examples, 477 hidden cases, all three references and original or project-template starters/wrappers. No imported prose, tests or code assets occur in the source; common algorithmic ideas are expressed as original project assets.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/arrays-second.mjs",
+    "authorSourceSha256": "e0a0a60ed61f06def3deb03b9600414486f982ed6bb7121f68a13548377481fc",
+    "reconciliation": "docs/release-evidence/coordinator-arrays-original-assets.json",
+    "wrapperReview": "Read all actual wrappers for Arrays10/16: only the optional blank line before USER_CODE and earlier Java Gson constructor differ from factory. Starters are exact original author strings, not placeholders."
+  },
+  "limitations": [
+    "Rights only; not diversity, progression, publication or execution approval.",
+    "Changed bound assets invalidate the review."
+  ]
+}

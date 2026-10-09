@@ -1,0 +1,1 @@
+class Solution {public long solve(int lo,int hi){boolean[] composite=new boolean[hi+1];for(int d=2;d*d<=hi;d++)if(!composite[d])for(int p=d*d;p<=hi;p+=d)composite[p]=true;long answer=0;for(int n=Math.max(2,lo);n<=hi;n++)if(!composite[n])answer++;return answer;}}

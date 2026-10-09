@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-advanced.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 728,
+  "suiteHash": "ff6c43c5a2487e44217bb9552ad63c55ca7fbbebf24c04d29cbd42c55ead6357",
+  "categories": [
+    "updates-get-refresh-and-eviction",
+    "zero-capacity-history",
+    "large-command-history"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

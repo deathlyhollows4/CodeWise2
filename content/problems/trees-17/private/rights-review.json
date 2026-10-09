@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "7a7ef4449ceee576ab01ca24b7f2fe22e534e38b69d8f1309f7858a4dfa283ff",
+  "reviewer": "CodeWise2 judge/content independent of the Tree problem author",
+  "reviewedAt": "2026-10-08T13:11:12.578Z",
+  "evidence": [
+    "docs/release-evidence/judge-tree-review/native-update-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/native-update-route-evidence.json",
+    "docs/release-evidence/judge-tree-review/assets-review-bundle.json"
+  ],
+  "assessmentScope": {
+    "sourceModule": "content/authoring/trees-native-ancestor.mjs",
+    "sourceHash": "7b91a2384a05989c516907812012772bd12a6d0b97c52545d68f69756b1e4684",
+    "allNineCurrentLanguageAssets": {
+      "java": {
+        "starter": "5a994029973791243272b6c3856c90a8a72a362c766018bd09c3ebabd76b346f",
+        "wrapper": "bb6da8d3de874ad3fabdc8a71b27ef46f123efdd718a4b67c163dcccefc6e9b1",
+        "reference": "10fc635adfea84f6b6370701451c78bed34d127813c74e112d2acd87f86f2735"
+      },
+      "cpp": {
+        "starter": "0375d93461f4ebb5d658135abe8cb661817396dac48e7e03a0ec2288fec35897",
+        "wrapper": "d26fac0a2d00ae606a848f7e7aaef63a3e6c4b9a1405ae049852d4fdd2ec78b7",
+        "reference": "f58037c98b4c150f59e77f1195d10c4db1e16332023d7e2866267e0ca53b47e3"
+      },
+      "python": {
+        "starter": "02923635f508d4d42f417ffb96b3b2bbd7734eef9e3364b3b40c45940f191516",
+        "wrapper": "ff8521d46b6c2eb129d18b8593475ec956c0a56b577615442b712793d046dddd",
+        "reference": "aec8e8e039258c12e47542c41fa0fa4e9fa75dd153434169a8224b12c67e0736"
+      }
+    },
+    "reviewedCommonPrefixGroups": {
+      "java": "java-2",
+      "cpp": "cpp-2",
+      "python": "python-2"
+    },
+    "actualSchemaAndWrapperContractReviewed": true,
+    "graphQualification": "New source not_tracked in generation2026-10-07T22:57:49; full direct source and actual native asset fallback used."
+  },
+  "limitations": [
+    "Content review is independent of author oracle and historical execution receipts; this is not publication or containment approval.",
+    "Conditional route checks assume genuinely eligible source and explicit independent teacher completions, without universal-history or mastery claims.",
+    "Final current243 global distinctness, all729 current-runtime references and public/private separation remain separate."
+  ],
+  "reviewType": "rights",
+  "rationale": "Full original author statement/examples/generator/independent models/mutations and all nine current starter/wrapper/reference assets were reconciled. Project-original provenance has no imported problem assets; reviewed common prefixes use separately installed Gson/nlohmann libraries whose notices are retained separately. Native object contracts, read-only identity enforcement for17 and permitted value/topology mutation for18–20 match the actual wrappers. No author pending-review string is treated as independent approval."
+}

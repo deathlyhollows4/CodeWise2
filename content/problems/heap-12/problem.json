@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-12",
+  "version": "1.0.0",
+  "slug": "cartesian-pair-frontier",
+  "title": "The first pairs in sum order",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.multistream-frontier",
+    "arrays.cartesian-ranking"
+  ],
+  "prerequisites": [
+    "heap.bounded-frontier",
+    "sorted.order"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Enumerate the leading Cartesian index pairs by a stable sum ranking without constructing every pair.",
+  "constraints": [
+    "0 <= left.length, right.length <= 2000",
+    "0 <= k <= 1000",
+    "Readings lie in [-1000000000, 1000000000].",
+    "Both arrays are sorted; duplicate readings retain their separate positions."
+  ],
+  "interface": "Solution.solve(left, right, k) receives two native integer arrays and returns a native matrix of index pairs.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "left": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "right": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 1000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1999
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-09"
+  ],
+  "remedialIds": [
+    "heap-01",
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "heap-11",
+    "heap-13"
+  ],
+  "rationale": "Each left position defines a sorted row of pair sums. A heap merges the row frontiers, advancing only the row whose next pair was selected.",
+  "commonMistakes": [
+    "reverse-equal-sum-indices",
+    "discard-equal-reading-positions",
+    "largest-first"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "left"
+    },
+    {
+      "kind": "sorted",
+      "field": "right"
+    }
+  ]
+}

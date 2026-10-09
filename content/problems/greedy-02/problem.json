@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "greedy-02",
+  "version": "1.0.0",
+  "slug": "smallest-start-completing-a-circular-fuel-route",
+  "title": "Smallest feasible circular fuel start",
+  "primaryTopic": "greedy",
+  "skillIds": [
+    "greedy.safe-prefix-commitment",
+    "greedy.failed-prefix-reset",
+    "numbers.signed-accumulation"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "numbers.signed-accumulation"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Discard an entire failed prefix when selecting the smallest start that can complete a circular route.",
+  "constraints": [
+    "0 <= gas.length = cost.length <= 90000",
+    "Every fuel amount and cost is in 0..1000000000",
+    "Running totals may reach 90000000000000; use signed 64-bit accumulation"
+  ],
+  "interface": "Solution.solve(gas, cost) returns the smallest feasible start index or -1.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "gas": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "cost": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1,
+    "maximum": 89999
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "greedy-01"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "greedy-03",
+    "greedy-04"
+  ],
+  "rationale": "If a candidate runs out of fuel at a station, every start inside that failed segment is also impossible; keep a separate total to check global feasibility.",
+  "commonMistakes": [
+    "total-nonnegative-means-start-zero",
+    "narrow-global-balance-to-int32"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "gas",
+      "right": "cost"
+    }
+  ]
+}

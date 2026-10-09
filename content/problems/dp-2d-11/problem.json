@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-2d-11",
+  "version": "1.0.0",
+  "slug": "least-directed-visit-cycle",
+  "title": "Least directed cycle visiting every stop",
+  "primaryTopic": "dp-2d",
+  "skillIds": [
+    "bits.assigned-subset-state",
+    "dp.subset-last-vertex-cost"
+  ],
+  "prerequisites": [
+    "bits.assigned-subset-state",
+    "dp.two-coordinate-state"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Minimize an edge-order-dependent directed Hamiltonian cycle using a visited subset and last vertex.",
+  "constraints": [
+    "0 <= n <= 12",
+    "costs is an n by n matrix",
+    "0 <= costs[i][j] <= 1000000000",
+    "0 <= result <= 12000000000"
+  ],
+  "interface": "Solution.solve(costs) receives int[][] / vector<vector<int>> / list[list[int]] and returns long / long long / int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "costs": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 12,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 12,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 12000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-2d-09",
+    "dp-2d-10"
+  ],
+  "remedialIds": [
+    "bit-manipulation-13",
+    "dp-2d-02",
+    "dp-2d-07"
+  ],
+  "nextIds": [],
+  "rationale": "A subset records visited stops, as in assignment state. Add the last stop because the cost of the next edge depends on it. This is the final step of this finite path.",
+  "commonMistakes": [
+    "omit-return-to-zero",
+    "pretend-edges-undirected",
+    "narrow-signed32-cycle"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "matrix-square",
+      "field": "costs"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-queens.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "d7a4fb49af6702514b98918eeb26ef5553fb38c569127a9a2875ed475df1ee0e",
+  "categories": [
+    "full-domain-by-board-size",
+    "single-blocked",
+    "single-fixed",
+    "maximum-fully-fixed-valid",
+    "maximum-fixed-column-conflict",
+    "maximum-fixed-diagonal-conflict",
+    "each-maximum-row-entirely-blocked",
+    "each-original-row-single-fixed-valid",
+    "fixed-queen-on-blocked-square",
+    "blocked-board-with-fixed-constraints",
+    "guaranteed-feasible-through-blocking",
+    "blocked-board-search"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public:int solve(TreeNode* root){if(!root)return 0;vector<TreeNode*> stack{root};int count=0;while(!stack.empty()){auto node=stack.back();stack.pop_back();count++;if(node->left)stack.push_back(node->left);if(node->right)stack.push_back(node->right);}return count;}};

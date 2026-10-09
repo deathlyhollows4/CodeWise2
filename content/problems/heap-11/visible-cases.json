@@ -1,0 +1,53 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "capital": [
+        0,
+        1,
+        1
+      ],
+      "profits": [
+        1,
+        2,
+        3
+      ],
+      "initial": 0,
+      "k": 2
+    },
+    "expected": 4,
+    "explanation": "Complete project 0 to reach 1, then project 2 to reach 4."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "capital": [
+        5
+      ],
+      "profits": [
+        100
+      ],
+      "initial": 2,
+      "k": 3
+    },
+    "expected": 2,
+    "explanation": "The only project is unaffordable, so the balance remains 2."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "capital": [
+        0,
+        0
+      ],
+      "profits": [
+        4,
+        8
+      ],
+      "initial": 3,
+      "k": 0
+    },
+    "expected": 3,
+    "explanation": "No projects may be selected when the limit is zero."
+  }
+]

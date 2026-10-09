@@ -1,0 +1,83 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "explanation": "1 and 2 can reach each other. Vertex 0 reaches them but cannot be reached back; 3 is isolated."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "There are no vertices or groups."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "explanation": "The edge from 1 to 2 is one-way. It does not merge the two internally strongly connected groups."
+  }
+]

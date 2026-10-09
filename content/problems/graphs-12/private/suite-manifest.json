@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-fifth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A12",
+  "hiddenCount": 60,
+  "suiteHash": "5c5165bc418f2a281f1d7b9ae862613d1a95b3641a71c835ad11d595c6810f60",
+  "categories": [
+    "curated-boundary-one-strong-component",
+    "curated-boundary-self-loop-singleton",
+    "curated-boundary-one-way-chain-not-strong",
+    "max-three-hundred-isolated-strong-components",
+    "max-one-directed-cycle-component",
+    "max-five-thousand-acyclic-edges",
+    "max-five-thousand-strongly-connected-edges",
+    "seeded-directed-cycle-components"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

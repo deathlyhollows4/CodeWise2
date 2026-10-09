@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          2,
+          9
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          5
+        ]
+      ]
+    },
+    "expected": 5,
+    "explanation": "The two-edge route has worst risk 5, beating the direct risk 9. Its sum 9 is not the route score."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 1,
+      "edges": []
+    },
+    "expected": 0,
+    "explanation": "Start and finish coincide, so the empty route has risk 0."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "Only the route from 0 to 3 matters; the disconnected other component does not need to be connected."
+  }
+]

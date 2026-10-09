@@ -1,0 +1,40 @@
+{
+  "origin": "adapted",
+  "author": "CodeWise2 content worker",
+  "reviewDate": "2026-10-08",
+  "reviewerType": "automated asset-fit author review",
+  "rightsStatus": "MIT-canonical-tests-adapted; other assets original",
+  "independentReview": "pending",
+  "assets": {
+    "statement": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "examples": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "references": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "explanation": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "tests": {
+      "origin": "adapted",
+      "sourceId": "exercism-rational-numbers-9943fd751b684ba1a6a8673c3700a6e79c10a808",
+      "license": "MIT",
+      "revision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+      "sourceUrl": "https://github.com/exercism/problem-specifications/blob/9943fd751b684ba1a6a8673c3700a6e79c10a808/exercises/rational-numbers/canonical-data.json",
+      "noticePath": "content/sources/exercism-MIT.txt",
+      "selectedAsset": "18 add/sub/mul/div canonical cases",
+      "modifications": "Typed numerator/denominator fields replace source pairs; operation names map to symbols. UUIDs and exact expected pairs remain private. Original expanded cases are added."
+    }
+  }
+}

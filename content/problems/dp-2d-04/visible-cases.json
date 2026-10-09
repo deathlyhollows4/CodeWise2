@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": "cab",
+      "b": "abz"
+    },
+    "expected": 2,
+    "explanation": "Delete the initial c, then insert z at the end."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": "",
+      "b": "abc"
+    },
+    "expected": 3,
+    "explanation": "Three insertions build the three-character target."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": "ab",
+      "b": "ba"
+    },
+    "expected": 2,
+    "explanation": "Swapping is not a one-edit operation. Replace both characters, or delete one and insert it elsewhere."
+  }
+]

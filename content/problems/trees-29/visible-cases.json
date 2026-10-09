@@ -1,0 +1,42 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        3,
+        2,
+        3,
+        null,
+        3,
+        null,
+        1
+      ]
+    },
+    "expected": 7,
+    "explanation": "Select the root and the two grandchildren with values 3 and 1. Their total is 7 and no selected pair shares an edge."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        4,
+        5,
+        6
+      ]
+    },
+    "expected": 11,
+    "explanation": "Selecting the two children gives 11, more than selecting their parent."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [
+        -3,
+        -2,
+        -5
+      ]
+    },
+    "expected": 0,
+    "explanation": "The empty selection is allowed and beats every negative selection."
+  }
+]

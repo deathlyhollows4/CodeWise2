@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-final.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 647,
+  "suiteHash": "f2a8cfe01778957ed986b31024e1bd33e8effa25e8af9d91499e22cbf2cc788e",
+  "categories": [
+    "sorted-weighted-keys",
+    "wide-counts",
+    "maximum-disjoint-sparse-output",
+    "maximum-overlap-count-addition",
+    "near-maximum-interleaved-sparse-keys"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

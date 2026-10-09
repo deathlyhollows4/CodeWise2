@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-eighth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC220",
+  "hiddenCount": 859,
+  "suiteHash": "c6a5726d37b1e6bc57e0b3d6f119521ffd38a5442ee320a106d669ca2601b101",
+  "categories": [
+    "independent-travel-position-shortest-path",
+    "all365-travel-days-and-cost-upper-bound",
+    "empty-first-last-and-inclusive-pass-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

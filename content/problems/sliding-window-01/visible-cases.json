@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        -2,
+        5,
+        1
+      ],
+      "k": 2
+    },
+    "expected": 6,
+    "explanation": "Totals are 1, 3, and 6; the final pair is best."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -4
+      ],
+      "k": 1
+    },
+    "expected": -4,
+    "explanation": "The only batch is negative and must be returned."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -8,
+        -3,
+        -5
+      ],
+      "k": 2
+    },
+    "expected": -8,
+    "explanation": "Choose -3 + -5 = -8, rather than incorrectly starting the answer at zero."
+  }
+]

@@ -1,0 +1,1 @@
+Consider the nonnegative integers represented with 31 bits. Return the smallest integer strictly greater than value that has exactly the same number of one bits. Return -1 if no such integer fits in the interval [0,2147483647]. In particular, zero has no larger word with zero one bits.

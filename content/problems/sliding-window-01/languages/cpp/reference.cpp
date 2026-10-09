@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values,int k){long long total=0;for(int i=0;i<k;i++)total+=values[i];long long best=total;for(int right=k;right<(int)values.size();right++){total+=(long long)values[right]-values[right-k];best=max(best,total);}return best;}};

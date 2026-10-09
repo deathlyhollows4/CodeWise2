@@ -1,0 +1,164 @@
+{
+  "id": "linked-list-15",
+  "version": "1.0.0",
+  "language": "java",
+  "validationIdentity": "a6030d4038b51afa305d69f97ec0d4e2c30f8d7e75e428697dc9a9822a1031af",
+  "suiteHash": "d9bc3b6ad29c00845d81f455eb075360155cc8952dee6140108e338568a8da22",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T12:15:28.793Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 718,
+      "executed": 718,
+      "passed": 718,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "data": {
+            "values": [
+              7,
+              7,
+              7,
+              8
+            ],
+            "next": [
+              2,
+              2,
+              3,
+              null
+            ],
+            "heads": [
+              0,
+              1
+            ]
+          }
+        },
+        "expected": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "actual": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "data": {
+            "values": [
+              1,
+              3,
+              2,
+              4
+            ],
+            "next": [
+              1,
+              null,
+              3,
+              null
+            ],
+            "heads": [
+              0,
+              2
+            ]
+          }
+        },
+        "expected": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "actual": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "data": {
+            "values": [],
+            "next": [],
+            "heads": [
+              null,
+              null
+            ]
+          }
+        },
+        "expected": [],
+        "actual": [],
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.109",
+          "wallSeconds": "0.075",
+          "memoryKb": "44760"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.227",
+          "wallSeconds": "0.138",
+          "memoryKb": "55876"
+        }
+      ]
+    }
+  }
+}

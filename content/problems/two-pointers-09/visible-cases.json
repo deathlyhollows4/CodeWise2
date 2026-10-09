@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        1,
+        4,
+        1,
+        3
+      ],
+      "target": 5
+    },
+    "expected": 2,
+    "explanation": "Remove the left 2 and right 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 0
+    },
+    "expected": 0,
+    "explanation": "No removal is necessary."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        2,
+        0
+      ],
+      "target": 2
+    },
+    "expected": 2,
+    "explanation": "Remove a boundary zero and the 2; leaving the other zero uses fewer removals than deleting all entries."
+  }
+]

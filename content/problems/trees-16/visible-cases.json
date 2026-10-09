@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        5,
+        2,
+        6,
+        4
+      ]
+    },
+    "expected": 2,
+    "explanation": "The root 5 and its right child 6 qualify. Node 4 beats its parent 2 but remains below ancestor 5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        -2,
+        -2,
+        -3
+      ]
+    },
+    "expected": 2,
+    "explanation": "The root and equal-valued left child count; the lower-valued right child does not."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "There is no node to count."
+  }
+]

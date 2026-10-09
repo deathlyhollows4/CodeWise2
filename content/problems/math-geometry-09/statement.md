@@ -1,0 +1,1 @@
+corners contains two opposite corners of an axis-aligned rectangle. Return its area as a nonnegative integer. The corners may be in either order, and equal x or y coordinates describe a zero-area rectangle. Use a wide integer type for the product.

@@ -1,0 +1,1 @@
+class Solution { public long solve(int[][] grid) { int m=grid.length,n=m==0?0:grid[0].length;if(n==0)return 0;long[] dp=new long[n];Arrays.fill(dp,Long.MAX_VALUE/4);for(int r=0;r<m;r++)for(int c=0;c<n;c++)dp[c]=grid[r][c]+(r==0&&c==0?0:Math.min(dp[c],c>0?dp[c-1]:Long.MAX_VALUE/4));return dp[n-1]; } }

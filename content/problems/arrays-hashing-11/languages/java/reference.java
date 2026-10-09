@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values){HashSet<Integer> s=new HashSet<>();for(int v:values)s.add(v);int best=0;for(int v:s)if(!s.contains(v-1)){int count=1;while(s.contains(v+count))count++;best=Math.max(best,count);}return best;}}

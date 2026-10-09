@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> a,int w){for(int v:a)if(v>w)return -1;int n=a.size();vector<long long> dp(n+1,LLONG_MAX/4);dp[n]=0;for(int i=n-1;i>=0;i--){long long used=0;for(int j=i;j<n;j++){used+=a[j]+(j==i?0:1);if(used>w)break;long long gap=w-used,cost=j==n-1?0:gap*gap;dp[i]=min(dp[i],cost+dp[j+1]);}}return dp[0];}};

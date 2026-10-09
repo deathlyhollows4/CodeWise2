@@ -1,0 +1,1 @@
+polygon lists the vertices of a simple polygon in boundary order, either clockwise or counterclockwise. Its final vertex connects back to its first; the first vertex is not repeated at the end. Return true if point lies inside the polygon or on its boundary, and false otherwise. The polygon may be concave. Use exact integer comparisons.

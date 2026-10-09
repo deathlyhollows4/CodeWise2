@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){long long previous=0,best=0;for(int v:values){long long next=max(best,previous+v);previous=best;best=next;}return best;}};

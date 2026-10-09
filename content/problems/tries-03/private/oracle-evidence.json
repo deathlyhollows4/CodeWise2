@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "168dbf9d260dd9b067f4e95eae6623d994e0877bf28e592447952adfea15fa53",
+  "suiteHash": "8ecccb4ad326f1dcfbd936593f6a9ffd09bd1070ff7bedf77391628ba07e8860",
+  "oracleChecks": 298,
+  "hiddenUnique": 295,
+  "mutations": [
+    {
+      "name": "deduplicate-dictionary-occurrences",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "count-only-terminal-prefixes",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "use-only-last-prefix-count",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "include-empty-root-count",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "stop-at-first-terminal",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "use-boolean-prefix-presence",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "carry-score-between-queries",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "sum-substring-instead-of-initial-agreement",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

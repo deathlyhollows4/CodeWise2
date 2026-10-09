@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-14",
+  "version": "1.0.0",
+  "slug": "rank-in-implicit-multiplication-table",
+  "title": "A ranked multiplication-table value",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.rank-count-predicate",
+    "numbers.multiplicity-rank"
+  ],
+  "prerequisites": [
+    "binary-search.implicit-predicate",
+    "binary-search.lower-bound"
+  ],
+  "step": 7,
+  "status": "published",
+  "objective": "Select a ranked product in an implicit multiplication table by counting cells below a candidate value, including duplicates.",
+  "constraints": [
+    "1 <= rows,columns <= 100000",
+    "1 <= k <= rows*columns <= 10000000000",
+    "Repeated cell values count separately",
+    "Use a signed 64-bit type for k, counts and products"
+  ],
+  "interface": "Solution.solve(rows,columns,k) returns a long/integer product value.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "rows": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 100000
+      },
+      "columns": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 100000
+      },
+      "k": {
+        "kind": "safe-integer",
+        "minimum": 1,
+        "maximum": 10000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 1,
+    "maximum": 10000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-13"
+  ],
+  "remedialIds": [
+    "binary-search-02",
+    "binary-search-04",
+    "binary-search-05",
+    "binary-search-10"
+  ],
+  "nextIds": [],
+  "rationale": "The table is too large to construct; each row contributes a bounded count of products at most the proposed value.",
+  "commonMistakes": [
+    "treat-rank-as-value",
+    "exclude-equal-products-from-count"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "field-product-bound",
+      "field": "k",
+      "left": "rows",
+      "right": "columns"
+    }
+  ]
+}

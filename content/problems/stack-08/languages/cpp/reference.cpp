@@ -1,0 +1,1 @@
+class Solution {public:bool solve(vector<int> pushes,vector<int> pops){if(pushes.size()!=pops.size())return false;vector<int> stack;int next=0;for(int value:pushes){stack.push_back(value);while(!stack.empty()&&next<(int)pops.size()&&stack.back()==pops[next]){stack.pop_back();next++;}}return next==(int)pops.size()&&stack.empty();}};

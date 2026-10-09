@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "a8ac4a358ef983f8a9cb775d6be7e479733a60ffea258c8e2f56eab45350d2e5",
+  "suiteHash": "94aa66beee4a298a1f89c23b6d1816afed1a745f7aa7818e78c922f2f358c05e",
+  "oracleChecks": 764,
+  "hiddenUnique": 761,
+  "mutations": [
+    {
+      "name": "accept-any-dictionary-substring",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "greedy-longest-next-token",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

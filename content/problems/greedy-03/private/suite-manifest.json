@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC303",
+  "hiddenCount": 60,
+  "suiteHash": "f42f77d0436baddb9fbf3b7f5becbbe422a1b473c06caf20a7480e652046d46b",
+  "categories": [
+    "adjacent-constraints-plateaus-valleys-and-signs",
+    "upper-bound-all-equal-one-candy-each",
+    "upper-bound-increasing-5000050000-int64-total",
+    "upper-bound-decreasing-5000050000-int64-total",
+    "upper-bound-independent-alternating-low-high-certificate",
+    "enumerate-valid-candy-allocations-with-every-adjacency-constraint"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

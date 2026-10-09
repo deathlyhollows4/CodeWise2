@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bit-replacements.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xb707",
+  "hiddenCount": 200,
+  "suiteHash": "48ab705286ad197611aaac339a90f07a91c1b0d431f7021301cd6636c245d56c",
+  "categories": [
+    "maximum-exact-all-bit-cross-group-total",
+    "maximum-equal-values-zero-total",
+    "near-maximum-unbalanced-multi-bit-count-certificate",
+    "maximum-four-label-grouped-pair-certificate",
+    "singleton-zero-no-self-pair",
+    "singleton-maximum-no-self-pair",
+    "all-20-bit-duplicate-cross-group-contributions",
+    "all-20-bit-adjacent-value-transitions",
+    "mixed-bit-field-carry-boundaries",
+    "curated-small-independent-all-pair-enumeration"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "39c5994221c133b8fe6b3731fbb6847a62e5118719b72dc43e06efa476567345",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Enumerates row-indexed queen placements under blocked/fixed cells and column/diagonal conflicts. This is spatial attack feasibility, distinct from the cell-symbol row/column/box constraints of07. Independent permutation filtering and maximum8-board cases cover fixed/blocked conflict and92 unconstrained solutions.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-queens.mjs",
+    "sourceHash": "e407c0e5ec3d5682105c4ed39d72643dc7246dfe8cee459a6d6fc7512ddb6680",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

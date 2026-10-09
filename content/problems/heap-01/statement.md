@@ -1,0 +1,1 @@
+Return the k largest entries of values in descending numeric order. Treat equal entries at different positions as separate readings, so duplicates can appear in the result. k may be zero; then return an empty array.

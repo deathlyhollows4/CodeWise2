@@ -1,0 +1,1 @@
+class Solution {public long solve(int[][] corners){long width=Math.abs((long)corners[0][0]-corners[1][0]),height=Math.abs((long)corners[0][1]-corners[1][1]);return width*height;}}

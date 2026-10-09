@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values,long target){HashMap<Long,Long> count=new HashMap<>();count.put(0L,1L);long prefix=0,result=0;for(int v:values){prefix+=v;result+=count.getOrDefault(prefix-target,0L);count.put(prefix,count.getOrDefault(prefix,0L)+1);}return result;}}

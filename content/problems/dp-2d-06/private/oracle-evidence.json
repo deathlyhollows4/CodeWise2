@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "9429675daf1d80fbb35496b59824e60dc69024671a488b6677f011b61dac2774",
+  "suiteHash": "8874ec213c81839bb4e26f88abfbfa07d8b4bc9565ba9873cbf41b64a7f2d44a",
+  "oracleChecks": 882,
+  "hiddenUnique": 879,
+  "mutations": [
+    {
+      "name": "greedily-prefer-source-a",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "frequencies-are-enough",
+      "detected": true,
+      "caseId": "hidden-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d14e6c25a5b942bb11c1b067d64383a9f552205006e7456b6255022923a516d4",
+  "suiteHash": "0890fd19ec01045ee6ee065e89d818e9aa7aee36232dd97bb718ea829ae2370f",
+  "oracleChecks": 728,
+  "hiddenUnique": 725,
+  "mutations": [
+    {
+      "name": "return-meeting-without-reset",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "first-equal-value-node",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

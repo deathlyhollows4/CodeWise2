@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A05",
+  "hiddenCount": 60,
+  "suiteHash": "de7718e780f212e478ec3c503488e9915da4063cb2021a14c0a83819fb06d9fc",
+  "categories": [
+    "curated-boundary-empty-grid",
+    "curated-boundary-empty-columns",
+    "curated-boundary-no-flip-needed",
+    "curated-boundary-join-two-components",
+    "curated-boundary-neighbor-dedup",
+    "max-all-land",
+    "max-all-water",
+    "max-checkerboard-component-dedup",
+    "max-one-hole",
+    "seeded-coupled-component-flips"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

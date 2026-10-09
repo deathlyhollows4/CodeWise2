@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "25c0c95e053cd999fdd77bcaf031b2f7d94f13a361c2de5bf210e3c6680a68df",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:01:28.986Z",
+  "rationale": "Independently read all source algorithms, generator and native references for A rank threshold after each arrival. Objective: Track the kth-largest multiset reading after each new stream arrival. Current statement, examples, all753hidden cases and nine language assets reconcile to original author source/project typed harness templates. No imported assets occur. Explicit source review of wide arithmetic, ordering, multiplicity or stateful handle semantics is recorded separately from this rights conclusion.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-first.mjs",
+    "sourceHash": "3812ed4a84efddb24c1b81efbb5c0a45a0242e7b6fab67953c2f3ca07a1a571f",
+    "reconciliation": "docs/release-evidence/coordinator-heap-original-assets.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Rights only; native execution, progression and global diversity remain separate gates.",
+    "Later bound changes invalidate this review."
+  ]
+}

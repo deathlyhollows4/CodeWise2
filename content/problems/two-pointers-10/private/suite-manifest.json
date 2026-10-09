@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 704,
+  "suiteHash": "d32c5b4b1efc590f31deadd6f068c877a04d50a501fca8d583c60318347a9487",
+  "categories": [
+    "equivalent-split-runs",
+    "different-compressed-texts",
+    "wide-run-length-mismatch",
+    "both-maximum-100-runs-wide-equal",
+    "both-maximum-100-runs-final-symbol-mismatch",
+    "both-maximum-100-runs-final-residual",
+    "maximum-adjacent-wide-run-redistribution-equal",
+    "maximum-100-runs-equivalent-split-wide-residual"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

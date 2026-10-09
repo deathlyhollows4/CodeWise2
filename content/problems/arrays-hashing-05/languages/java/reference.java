@@ -1,0 +1,1 @@
+class Solution { public int[] solve(int[] values){LinkedHashSet<Integer> set=new LinkedHashSet<>();for(int v:values)set.add(v);int[] result=new int[set.size()];int i=0;for(int v:set)result[i++]=v;return result;} }

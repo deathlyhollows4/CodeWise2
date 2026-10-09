@@ -1,0 +1,34 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        10,
+        3,
+        -4,
+        null,
+        2
+      ]
+    },
+    "expected": -2,
+    "explanation": "The leaves contain 2 and -4; internal values 10 and 3 are excluded."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        -7
+      ]
+    },
+    "expected": -7,
+    "explanation": "A negative singleton is a leaf and contributes its value."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "No leaf means a zero total."
+  }
+]

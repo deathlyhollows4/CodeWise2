@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-capital.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdefb",
+  "hiddenCount": 709,
+  "suiteHash": "27635a1404262b549639a43819aafe09c1a13e2c1ab271e03f5bbb13423f2281",
+  "categories": [
+    "exhaustive-changing-eligibility",
+    "maximum-all-affordable-wide-total",
+    "exact-boundaries-and-maximum-profit-sum",
+    "maximum-wholly-blocked-frontier",
+    "zero-profit-and-excess-selection-limit"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

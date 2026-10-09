@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 629,
+  "suiteHash": "2814f0b5d1b2f8ba4259216aab38bf9b572e6d57255619a25149b9b1c1d341b6",
+  "categories": [
+    "seeded-small",
+    "wide-intermediate",
+    "long-scan",
+    "maximum-consecutive-run-at-positive-boundary",
+    "maximum-consecutive-run-at-negative-boundary",
+    "near-maximum-duplicate-run-smoke"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

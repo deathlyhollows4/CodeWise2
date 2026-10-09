@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){long result=0;for(int bit=0;bit<32;bit++){int count=0;for(int v:values)count+=(v>>>bit)&1;if(count%3!=0)result|=1L<<bit;}return result>=2147483648L?result-4294967296L:result;}}

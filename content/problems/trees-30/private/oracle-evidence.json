@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "0f870bfc8bf52ac00c44676960d5a4035789335aea671e359e49529f836fb03b",
+  "suiteHash": "fb74e33bb4fce9918cde7a0c499a36981c852342b5269dcae6559445a9344346",
+  "oracleChecks": 1142,
+  "hiddenUnique": 1139,
+  "mutations": [
+    {
+      "name": "miss-double-subtree-distance-change",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "copy-root-total-to-every-node",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

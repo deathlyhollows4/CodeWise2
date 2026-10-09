@@ -1,0 +1,1 @@
+Process integers in `commands` from left to right. A value of -1 means undo the most recent stored reading, if any. Any nonnegative value means store that reading on top. After each command, report the top stored reading, or -1 if the stack is empty. Undoing an empty stack does nothing. Return the entire top history in command order.

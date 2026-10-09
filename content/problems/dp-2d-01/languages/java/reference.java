@@ -1,0 +1,1 @@
+class Solution { public int solve(int[][] grid) { int m=grid.length,n=m==0?0:grid[0].length; if(n==0)return 0; int[] dp=new int[n]; dp[0]=1; for(int[] row:grid)for(int c=0;c<n;c++)dp[c]=row[c]==1?0:(dp[c]+(c>0?dp[c-1]:0))%1000000007; return dp[n-1]; } }

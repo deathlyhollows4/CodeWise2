@@ -1,0 +1,34 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "aaaa",
+      "words": [
+        "aaa",
+        "aa"
+      ]
+    },
+    "expected": true,
+    "explanation": "Choose aa followed by aa; greedily taking aaa would leave one uncovered character."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "a!a",
+      "words": [
+        "a"
+      ]
+    },
+    "expected": false,
+    "explanation": "The exclamation mark cannot be covered by a dictionary word."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "",
+      "words": []
+    },
+    "expected": true,
+    "explanation": "The empty sequence of tokens covers the empty text."
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-09",
+  "version": "1.0.0",
+  "slug": "enumerate-blocked-and-fixed-queen-arrangements",
+  "title": "Place queens around blocked and fixed squares",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state",
+    "backtracking.multi-constraint-state",
+    "backtracking.diagonal-constraints"
+  ],
+  "prerequisites": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Enumerate nonattacking placements with blocked squares and immutable row-specific queen constraints.",
+  "constraints": [
+    "0 ≤ n ≤ 8.",
+    "allowed is an n×n matrix with entries 0 or 1.",
+    "fixed has length n and each entry is −1 or a column in [0,n−1].",
+    "Queens must occupy available squares and obey every nonnegative fixed entry.",
+    "Columns and both diagonals must be distinct; all answers use one queen per row.",
+    "At most 92 arrangements exist on any supported unrestricted board."
+  ],
+  "interface": "Solution.solve(allowed:int[][],fixed:int[]) returns ordered int[][] column arrangements.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "allowed": {
+        "kind": "array",
+        "maxLength": 8,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "maxLength": 8,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "fixed": {
+        "kind": "array",
+        "maxLength": 8,
+        "items": {
+          "kind": "integer",
+          "minimum": -1,
+          "maximum": 7
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 92,
+    "items": {
+      "kind": "array",
+      "maxLength": 8,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 7
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-10"
+  ],
+  "remedialIds": [
+    "backtracking-04",
+    "backtracking-07"
+  ],
+  "nextIds": [],
+  "rationale": "Diagonal attack scopes and blocked/fixed squares create a substantive constrained-board domain; distinct inputs are not renamed unconstrained n-only queens instances.",
+  "commonMistakes": [
+    "ignore-diagonal-attacks",
+    "ignore-fixed-queens",
+    "ignore-blocked-squares"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "matrix-square",
+      "field": "allowed"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "allowed",
+      "right": "fixed"
+    },
+    {
+      "kind": "range-by-length",
+      "field": "fixed",
+      "array": "allowed",
+      "minimum": -1,
+      "maxOffset": -1
+    }
+  ]
+}

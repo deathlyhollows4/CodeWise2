@@ -1,0 +1,1 @@
+Choose two different positions in values and return the largest possible bitwise XOR of their nonnegative integers. Equal values may occur at different positions. Do not return the larger input value unless that is actually the maximum XOR.

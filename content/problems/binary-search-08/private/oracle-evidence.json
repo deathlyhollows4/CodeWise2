@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "4f2a7f3dfec504549a31f95ec1f6bea8937f3ba1ed6d9f7d10410bf2ce0c5646",
+  "suiteHash": "f4a4fe3b5051fc20f79935e06bdc0ef5de9fbe26073b01a7a044b48d6f8cf002",
+  "oracleChecks": 771,
+  "hiddenUnique": 768,
+  "mutations": [
+    {
+      "name": "return-valley",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "always-left-endpoint",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

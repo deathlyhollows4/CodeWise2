@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-deviation.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdefd",
+  "hiddenCount": 755,
+  "suiteHash": "bd36012a4dda061d7b1237e5a09eb0bfb3dfe682b6f43afc624e72ef86519326",
+  "categories": [
+    "distinct-parity-reachability-domains",
+    "maximum-distinct-odd-domain-certificate",
+    "maximum-equal-value-boundary",
+    "exact-minimum-and-maximum-input-values",
+    "shared-power-of-two-reachable-value",
+    "singleton-minimum-boundary",
+    "singleton-even-power-boundary",
+    "repeated-position-parity-smoke"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

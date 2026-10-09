@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "89e4835a344db045a204ff3349a73adca3c9308cc9dccbcac8586b03948aa820",
+  "suiteHash": "8a6646c0042dc04657421b5c71e00df11379d3e64568fb4079d9906790c79af4",
+  "oracleChecks": 701,
+  "hiddenUnique": 698,
+  "mutations": [
+    {
+      "name": "erase-delimiter-types",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "count-empty-pairs-only",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

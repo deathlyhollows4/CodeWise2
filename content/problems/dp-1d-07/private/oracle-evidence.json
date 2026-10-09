@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "4e3b2891fb4d807d228d20aa79310b4f5a54d52f9093d1b1cb9bbddc6d906bda",
+  "suiteHash": "6952337ab4eecf05775ade70f4d58f51dab15e166345c374cc08866404f7a700",
+  "oracleChecks": 711,
+  "hiddenUnique": 708,
+  "mutations": [
+    {
+      "name": "count-ordered-sequences",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "use-each-coin-once",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "left": [
+        1,
+        2
+      ],
+      "right": [
+        2,
+        3
+      ]
+    },
+    "expected": 2,
+    "explanation": "Match 1 with 3 for cost 2, and 2 with 2 for cost 0."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "left": [
+        7
+      ],
+      "right": [
+        7
+      ]
+    },
+    "expected": 0,
+    "explanation": "Equal labels have XOR cost zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        5,
+        5
+      ]
+    },
+    "expected": 10,
+    "explanation": "Both right positions must be used, each at cost 5."
+  }
+]

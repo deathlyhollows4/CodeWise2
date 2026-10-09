@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "parents": [
+        2,
+        0,
+        -1,
+        2
+      ]
+    },
+    "expected": true,
+    "explanation": "Node 2 is the root; its children are 0 and 3, and node 0 has child 1. Every node reaches 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "parents": [
+        -1,
+        2,
+        1
+      ]
+    },
+    "expected": false,
+    "explanation": "Nodes 1 and 2 form a disconnected cycle even though node 0 is the only declared root."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "parents": [
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": false,
+    "explanation": "Root 0 has three children, exceeding binary capacity."
+  }
+]

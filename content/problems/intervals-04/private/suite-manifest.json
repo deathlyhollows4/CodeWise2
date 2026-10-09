@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-containment.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a04",
+  "hiddenCount": 60,
+  "suiteHash": "c92c4ae297874c368f8acd53be2d7230000c58034c72c5e970b256cf4c408ea1",
+  "categories": [
+    "maximum-duplicate-record-count-certificate",
+    "maximum-strict-nesting-rank-certificate",
+    "extreme-shared-endpoints-and-point",
+    "same-start-same-end-duplicate-group",
+    "curated-duplicate-and-shared-endpoint-records",
+    "curated-original-order-dominance-counts"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

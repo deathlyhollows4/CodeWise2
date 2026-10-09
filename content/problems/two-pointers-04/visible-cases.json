@@ -1,0 +1,52 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "left": [
+        1,
+        4,
+        8
+      ],
+      "right": [
+        2,
+        4,
+        7
+      ]
+    },
+    "expected": [
+      1,
+      2,
+      4,
+      4,
+      7,
+      8
+    ],
+    "explanation": "Each 4 is retained as a separate entry."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "left": [],
+      "right": []
+    },
+    "expected": [],
+    "explanation": "There are no readings in either timeline."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "left": [],
+      "right": [
+        -3,
+        -3,
+        5
+      ]
+    },
+    "expected": [
+      -3,
+      -3,
+      5
+    ],
+    "explanation": "Copy the entire nonempty remainder."
+  }
+]

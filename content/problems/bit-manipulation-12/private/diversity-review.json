@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "7712b8348aa69ca8f53f1b55224137a33122845e12536d1a6688a52f25a780f2",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:42:44.562Z",
+  "rationale": "Maximizes XOR over two distinct positions, testing high-bit prefix feasibility. It neither finds a frequency exception nor matches all entries; duplicates remain separate positions and maximum-size certificates are retained.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/bits-final.mjs",
+    "sourceHash": "bfc6da70eb2012f0127c469c0bb7d8a3550379a496e30529965b45a186bfbd1c",
+    "reconciliation": "docs/release-evidence/coordinator-bit-nine-curriculum-diversity.json"
+  },
+  "limitations": [
+    "Effective materialized learning overrides were inspected, not raw author step numbers alone.",
+    "Per-pack review only; final243 synthesis and current language execution remain separate."
+  ]
+}

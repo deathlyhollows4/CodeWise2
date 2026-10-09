@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "tries-03",
+  "version": "2.0.0",
+  "slug": "dictionary-prefix-agreement-scores",
+  "title": "Score dictionary prefix agreement",
+  "primaryTopic": "tries",
+  "skillIds": [
+    "tries.prefix-navigation",
+    "tries.prefix-count-accumulation",
+    "tries.dictionary-multiplicity"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "For each literal query, sum dictionary-occurrence counts over its nonempty prefixes, equivalently summing longest-common-prefix lengths with every dictionary occurrence.",
+  "constraints": [
+    "0 <= dictionary.length, queries.length <= 2000",
+    "Each dictionary word contains 1 to 32 lowercase ASCII letters",
+    "Each query contains 0 to 32 lowercase ASCII letters",
+    "Dictionary occurrences count separately; query order and duplicates are preserved",
+    "Each score lies in [0,64000]; return exactly one integer per query"
+  ],
+  "interface": "Solution.solve(dictionary,queries) receives string[],string[]; returns int[] / vector<int> / list[int].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "dictionary": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 2000,
+        "unordered": true,
+        "items": {
+          "kind": "string",
+          "minLength": 1,
+          "maxLength": 32,
+          "ascii": true
+        }
+      },
+      "queries": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 2000,
+        "items": {
+          "kind": "string",
+          "minLength": 0,
+          "maxLength": 32,
+          "ascii": true
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 64000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "tries-01",
+    "tries-02"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "tries-01"
+  ],
+  "nextIds": [],
+  "rationale": "A Trie visit already identifies one prefix. Store how many dictionary occurrences pass through each prefix node and add those counters while following a query.",
+  "commonMistakes": [
+    "deduplicate-dictionary-occurrences",
+    "count-only-terminal-prefixes",
+    "use-only-last-prefix-count",
+    "include-empty-root-count",
+    "stop-at-first-terminal",
+    "use-boolean-prefix-presence",
+    "carry-score-between-queries",
+    "sum-substring-instead-of-initial-agreement"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "dictionary",
+      "alphabet": "lowercase",
+      "each": true
+    },
+    {
+      "kind": "alphabet",
+      "field": "queries",
+      "alphabet": "lowercase",
+      "each": true
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        0,
+        4,
+        -2,
+        0,
+        4
+      ]
+    },
+    "expected": [
+      4,
+      -2,
+      4,
+      0,
+      0
+    ],
+    "explanation": "Keep 4, -2, 4 in that order and append both zeros."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No readings need to move."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": [
+      0,
+      0,
+      0
+    ],
+    "explanation": "All three zero readings stay in the output."
+  }
+]

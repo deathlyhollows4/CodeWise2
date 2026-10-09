@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] a){int n=Math.max(0,a.length-1);if(n<2)return 0;long[][] d=new long[n][n];for(int length=2;length<=n;length++)for(int l=0;l+length<=n;l++){int r=l+length-1;d[l][r]=Long.MAX_VALUE;for(int k=l;k<r;k++)d[l][r]=Math.min(d[l][r],d[l][k]+d[k+1][r]+(long)a[l]*a[k+1]*a[r+1]);}return d[0][n-1];}}

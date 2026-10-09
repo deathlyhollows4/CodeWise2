@@ -1,0 +1,1 @@
+class Solution {public int solve(TreeNode root){if(root==null)return 0;ArrayDeque<TreeNode> queue=new ArrayDeque<>();queue.add(root);int depth=0;while(!queue.isEmpty()){int count=queue.size();depth++;for(int i=0;i<count;i++){TreeNode node=queue.remove();if(node.left!=null)queue.add(node.left);if(node.right!=null)queue.add(node.right);}}return depth;}}

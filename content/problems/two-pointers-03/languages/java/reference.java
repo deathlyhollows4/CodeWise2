@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values){int[] result=new int[values.length];int write=0;for(int read=0;read<values.length;read++){if(values[read]!=0)result[write++]=values[read];}return result;}}

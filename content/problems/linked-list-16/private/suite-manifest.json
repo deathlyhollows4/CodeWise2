@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-middle.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 697,
+  "suiteHash": "980e1fb818f9e802582afea5d0d12218d781b20deedefa4c3e04f2c58db3e1de",
+  "categories": [
+    "all-unique-or-all-repeated-edges",
+    "repeated-runs-and-signed-labels",
+    "entire-large-run-removed",
+    "large-all-unique-chain"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

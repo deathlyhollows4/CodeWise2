@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/tries.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 713,
+  "suiteHash": "39b43deb4f981520778cc1be5dabaf57be995087f3242da4d4788ad8f0f2a2de",
+  "categories": [
+    "fixed-length-branching-dictionary-query",
+    "nonterminal-prefix-rejection",
+    "empty-pattern-exact-terminal-and-wildcard-length",
+    "empty-dictionary",
+    "maximum-branch-pattern-length",
+    "maximum-dictionary-all-branches-fail-at-final-letter",
+    "maximum-dictionary-wildcard-success"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+Return true if a single straight line can contain every point, and false otherwise. Duplicate points are allowed. Zero, one, or two points always satisfy the condition. If all points are equal, return true. Use exact integer comparisons rather than rounded slopes.

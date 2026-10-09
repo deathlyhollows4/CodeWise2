@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "aaa"
+    },
+    "expected": 6,
+    "explanation": "Three single characters, two length-2 intervals and one length-3 interval count."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "abba"
+    },
+    "expected": 6,
+    "explanation": "The four singles, bb and abba are palindromes."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": ""
+    },
+    "expected": 0,
+    "explanation": "There are no nonempty intervals."
+  }
+]

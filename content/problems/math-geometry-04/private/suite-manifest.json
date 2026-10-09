@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca72",
+  "hiddenCount": 753,
+  "suiteHash": "cded4b996519f4b2fd36c17528de194731a137bc4f4fad401f67fdc3c39634e1",
+  "categories": [
+    "composite-and-prime-bands",
+    "maximum-or-unit-band"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

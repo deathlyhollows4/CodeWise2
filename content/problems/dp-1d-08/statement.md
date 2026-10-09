@@ -1,0 +1,1 @@
+Values describe separate nonnegative items. Decide whether some subset totals exactly target. Each indexed item may be chosen at most once. Equal values at different indices are separate items, so two copies may both be chosen. Choosing nothing forms target 0. Return a boolean; you do not need to return the chosen indices. These items are not unlimited reusable denominations.

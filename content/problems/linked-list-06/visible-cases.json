@@ -1,0 +1,57 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "left": [
+        9,
+        9
+      ],
+      "right": [
+        1
+      ]
+    },
+    "expected": [
+      0,
+      0,
+      1
+    ],
+    "explanation": "99+1=100; carry extends the result chain."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0
+      ]
+    },
+    "expected": [
+      0
+    ],
+    "explanation": "Leading zero input nodes are allowed; output zero is canonical."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "left": [
+        2,
+        4,
+        3
+      ],
+      "right": [
+        5,
+        6,
+        4
+      ]
+    },
+    "expected": [
+      7,
+      0,
+      8
+    ],
+    "explanation": "342+465=807 in least-significant-first order."
+  }
+]

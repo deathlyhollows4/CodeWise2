@@ -1,0 +1,3 @@
+The available window is [lo, hi). Each blocked row [start, end) occupies its start and excludes its end. Find the earliest appointment of exactly duration time units that lies entirely inside the window and does not overlap any blocker. Return [appointmentStart, appointmentEnd], or an empty array if no appointment fits.
+
+Blockers may overlap, arrive out of order, extend outside the window, or have zero length. Zero-length blockers occupy no time. Touching an occupied endpoint is allowed when the half-open ranges do not overlap. The appointment duration is positive; do not return a shorter gap.

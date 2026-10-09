@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "571c1980aea52efb2a1d891480d4dba36c0bed218bef0e95c136c00bb6b3e467",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:45:42.033Z",
+  "rationale": "Returns skyline changes from maximum active building height and expiry, not additive weighted coverage or static interval union. Coincident starts/ends, duplicate leaders, buried spans, one-building boundary and maximum60000-point output are explicit.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-skyline.mjs",
+    "sourceHash": "6c55d4c0881daefbf42a0133e476b6dfca23d382f5bf06bdca0912c41deb8b16",
+    "reconciliation": "docs/release-evidence/coordinator-final-three-heap-review.json",
+    "sourceReview": "docs/release-evidence/coordinator-final-heap-source-review.json"
+  },
+  "limitations": [
+    "Per-pack review only; isolated language execution and global243 synthesis remain required.",
+    "Changed bound content invalidates this record."
+  ]
+}

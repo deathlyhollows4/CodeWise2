@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "1fecf5d2373b8a9116b6abf8fd43e486ab4304fb4de39e88dbdffbd6e36207a7",
+  "suiteHash": "546700a7dbe7e885d1be278df78fd8be01ac729a2198946e8c74f70e0052f501",
+  "oracleChecks": 203,
+  "hiddenUnique": 200,
+  "mutations": [
+    {
+      "name": "global-cheapest-original-k",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "reverse-original-index-tie",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "narrow-paid-total",
+      "detected": true,
+      "caseId": "hidden-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

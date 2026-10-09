@@ -1,0 +1,1 @@
+class Solution {int[]p;int find(int u){while(p[u]!=u){p[u]=p[p[u]];u=p[u];}return u;}public int solve(int n,int[][]edges){if(n==0)return -1;if(n==1)return 0;p=new int[n];for(int i=0;i<n;i++)p[i]=i;Arrays.sort(edges,(a,b)->Integer.compare(a[2],b[2]));for(int[]e:edges){p[find(e[0])]=find(e[1]);if(find(0)==find(n-1))return e[2];}return -1;}}

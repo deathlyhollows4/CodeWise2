@@ -1,0 +1,85 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": {
+        "values": [
+          10,
+          20,
+          30,
+          40
+        ],
+        "next": [
+          1,
+          2,
+          null,
+          null
+        ],
+        "child": [
+          3,
+          null,
+          null,
+          null
+        ],
+        "head": 0
+      }
+    },
+    "expected": [
+      0,
+      3,
+      1,
+      2
+    ],
+    "explanation": "Visit original head 0, its child 3, then deferred next siblings 1 and 2. Repair prev links and clear every child."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": {
+        "values": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "next": [
+          3,
+          null,
+          4,
+          null,
+          null
+        ],
+        "child": [
+          null,
+          null,
+          0,
+          null,
+          1
+        ],
+        "head": 2
+      }
+    },
+    "expected": [
+      2,
+      0,
+      3,
+      4,
+      1
+    ],
+    "explanation": "All values match, so identity matters: root 2 visits child 0 and its next 3 before next 4 and child 1."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": {
+        "values": [],
+        "next": [],
+        "child": [],
+        "head": null
+      }
+    },
+    "expected": [],
+    "explanation": "A null native head has no original node to flatten."
+  }
+]

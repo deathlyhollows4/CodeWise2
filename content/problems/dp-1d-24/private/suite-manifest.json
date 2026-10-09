@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-tenth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC224",
+  "hiddenCount": 60,
+  "suiteHash": "f1420b8e2f01f1941c15b10903a256faee9eff1194de101701f0e85446fc1181",
+  "categories": [
+    "zero-differences-equal-plateaus-signs-and-extrema",
+    "upper-bound-all-equal-singleton-optimum",
+    "upper-bound-strict-increase-only-two-terms",
+    "upper-bound-strict-decrease-only-two-terms",
+    "upper-bound-every-term-alternates",
+    "all-index-subsets-independent-alternating-sign-optimum"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

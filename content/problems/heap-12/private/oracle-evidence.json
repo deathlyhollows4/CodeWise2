@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "7cc35e5a33f8c13991ac8d23c3da39f730ef655e8f2fedf7f24ede1e32b36515",
+  "suiteHash": "e10f0e673a8b447696327a931527b831fcb26f631e15e6504b3b7eb6dbc73bf4",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "reverse-equal-sum-indices",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "discard-equal-reading-positions",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "largest-first",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

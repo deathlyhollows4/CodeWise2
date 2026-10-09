@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 699,
+  "suiteHash": "675a4e9c02167efed92d46b4f77c32e8f5942de527894e15fddf39dfa65e4a80",
+  "categories": [
+    "push-and-underflow-events",
+    "retained-declared-max-stack-02-1",
+    "retained-declared-max-stack-02-2",
+    "retained-declared-max-stack-02-3",
+    "retained-declared-max-stack-02-4"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

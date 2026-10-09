@@ -1,0 +1,60 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "explanation": "Tasks 0 and 1 both precede 2, then 2 precedes 3. [1,0,2,3] is equally valid."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "There are no tasks to order."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 3,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "expected": [],
+    "explanation": "The cycle would require every task to occur before itself indirectly."
+  }
+]

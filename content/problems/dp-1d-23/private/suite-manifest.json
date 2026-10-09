@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-tenth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC223",
+  "hiddenCount": 60,
+  "suiteHash": "83d4eba1e775114e1eaa8b28426e9b2765a501610c078dd92129f4c0c8dcf8a8",
+  "categories": [
+    "zero-reward-real-job",
+    "time-and-reward-upper-bound",
+    "touching-half-open-jobs-compatible",
+    "large-middle-job-versus-two-short-jobs",
+    "upper-bound-50000-independent-jobs-int64-certificate",
+    "upper-bound-50000-all-overlap-max-reward-certificate",
+    "all-index-subsets-independent-schedule-optimum"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

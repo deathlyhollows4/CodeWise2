@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "amendment": "2026-10-08-half-unstarted-topics-and-leftover-hidden60",
+  "originalQuestionTarget": 300,
+  "questionTarget": 243,
+  "visibleCasesPerQuestion": 3,
+  "minimumHiddenCasesPerQuestion": 200,
+  "languages": [
+    "java",
+    "cpp",
+    "python"
+  ],
+  "topics": [
+    [
+      "arrays-hashing",
+      "Arrays & Hashing",
+      18
+    ],
+    [
+      "two-pointers",
+      "Two Pointers",
+      10
+    ],
+    [
+      "sliding-window",
+      "Sliding Window",
+      12
+    ],
+    [
+      "stack",
+      "Stack",
+      12
+    ],
+    [
+      "binary-search",
+      "Binary Search",
+      14
+    ],
+    [
+      "linked-list",
+      "Linked List",
+      22
+    ],
+    [
+      "trees",
+      "Trees",
+      30
+    ],
+    [
+      "heap",
+      "Heap / Priority Queue",
+      14
+    ],
+    [
+      "backtracking",
+      "Backtracking",
+      10
+    ],
+    [
+      "tries",
+      "Tries",
+      3
+    ],
+    [
+      "graphs",
+      "Graphs",
+      13
+    ],
+    [
+      "advanced-graphs",
+      "Advanced Graphs",
+      6
+    ],
+    [
+      "dp-1d",
+      "1-D Dynamic Programming",
+      24
+    ],
+    [
+      "dp-2d",
+      "2-D Dynamic Programming",
+      11
+    ],
+    [
+      "greedy",
+      "Greedy",
+      8
+    ],
+    [
+      "intervals",
+      "Intervals",
+      6
+    ],
+    [
+      "math-geometry",
+      "Math & Geometry",
+      16
+    ],
+    [
+      "bit-manipulation",
+      "Bit Manipulation",
+      14
+    ]
+  ],
+  "hiddenCaseOverrides": [
+    {
+      "problemId": "heap-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "heap-10",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "heap-12",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "heap-14",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-04",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-05",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-06",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-07",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-08",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-09",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "backtracking-10",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-01",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-02",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-04",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-05",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-06",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-07",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-08",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-09",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-10",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-11",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-12",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "graphs-13",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-01",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-02",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-04",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-05",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "advanced-graphs-06",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-1d-23",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-1d-24",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-2d-07",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-2d-08",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-2d-09",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-2d-10",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "dp-2d-11",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-01",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-02",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-04",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-05",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-06",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-07",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "greedy-08",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-01",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-02",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-03",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-04",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-05",
+      "requiredHiddenCases": 60,
+      "exact": true
+    },
+    {
+      "problemId": "intervals-06",
+      "requiredHiddenCases": 60,
+      "exact": true
+    }
+  ]
+}

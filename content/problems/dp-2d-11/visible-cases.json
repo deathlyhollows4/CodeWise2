@@ -1,0 +1,62 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "costs": [
+        [
+          0,
+          4,
+          9
+        ],
+        [
+          7,
+          0,
+          2
+        ],
+        [
+          3,
+          8,
+          0
+        ]
+      ]
+    },
+    "expected": 9,
+    "explanation": "The directed cycle 0 -> 1 -> 2 -> 0 costs 4+2+3=9; its reverse costs 9+8+7=24."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "costs": [
+        [
+          8
+        ]
+      ]
+    },
+    "expected": 0,
+    "explanation": "A single stop needs no travel. Its diagonal value is ignored."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "costs": [
+        [
+          0,
+          0,
+          6
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ]
+    },
+    "expected": 0,
+    "explanation": "The cycle 0 -> 1 -> 2 -> 0 uses three free directed edges."
+  }
+]

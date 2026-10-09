@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-2d-08",
+  "version": "1.0.0",
+  "slug": "whole-text-star-question-pattern",
+  "title": "Match a whole text with star and question mark",
+  "primaryTopic": "dp-2d",
+  "skillIds": [
+    "dp.two-prefix-state",
+    "dp.wildcard-consumption"
+  ],
+  "prerequisites": [
+    "dp.two-prefix-state"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Match the entire text using zero-or-more star consumption and exactly-one question-mark consumption.",
+  "constraints": [
+    "0 <= text.length,pattern.length <= 500",
+    "ASCII characters only, code points 0..127",
+    "? consumes exactly one; * consumes zero or more",
+    "No escape syntax or substring-only match"
+  ],
+  "interface": "Solution.solve(text,pattern) receives two strings and returns boolean / bool.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 500,
+        "ascii": true
+      },
+      "pattern": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 500,
+        "ascii": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-2d-07"
+  ],
+  "remedialIds": [
+    "dp-2d-03",
+    "dp-2d-04"
+  ],
+  "nextIds": [
+    "dp-2d-09",
+    "dp-2d-10"
+  ],
+  "rationale": "Two prefixes still define the state, but a star can either consume no character or extend the consumed text.",
+  "commonMistakes": [
+    "star-consumes-exactly-one",
+    "ignore-whole-text-ending"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

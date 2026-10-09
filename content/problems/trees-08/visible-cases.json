@@ -1,0 +1,53 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        4,
+        null,
+        5,
+        6
+      ]
+    },
+    "expected": [
+      1,
+      3,
+      2,
+      6,
+      5,
+      null,
+      4
+    ],
+    "explanation": "Exchange children at the root and again inside both subtrees."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        1,
+        null,
+        2,
+        null,
+        3
+      ]
+    },
+    "expected": [
+      1,
+      2,
+      null,
+      3
+    ],
+    "explanation": "The rightward chain becomes a leftward chain, preserving missing child slots."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": [],
+    "explanation": "A null root remains null in the displayed result."
+  }
+]

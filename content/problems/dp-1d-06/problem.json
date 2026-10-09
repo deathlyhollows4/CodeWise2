@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-06",
+  "version": "1.0.0",
+  "slug": "fewest-coins-for-an-exact-total",
+  "title": "Fewest coins for an exact total",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.minimum-count-recurrence",
+    "dp.unbounded-choice"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Minimize the number of reusable positive denominations forming an exact amount, preserving unreachable states.",
+  "constraints": [
+    "0 <= coins.length <= 30; denominations are distinct",
+    "1 <= coins[i] <= 1000",
+    "0 <= amount <= 10000",
+    "Return -1 for impossible totals, otherwise an integer coin count"
+  ],
+  "interface": "Solution.solve(coins,amount) returns the minimum integer coin count or -1.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "coins": {
+        "kind": "array",
+        "unordered": true,
+        "minLength": 0,
+        "maxLength": 30,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        }
+      },
+      "amount": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 10000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1,
+    "maximum": 10000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-05"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-07",
+    "dp-1d-08"
+  ],
+  "rationale": "Every denomination can be reused; unreachable smaller totals must not become free predecessors.",
+  "commonMistakes": [
+    "greedy-largest-first",
+    "use-each-denomination-once"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "unique",
+      "field": "coins"
+    }
+  ]
+}

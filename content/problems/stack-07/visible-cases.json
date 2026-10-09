@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "tokens": [
+        "2",
+        "3",
+        "+",
+        "4",
+        "*"
+      ]
+    },
+    "expected": 20,
+    "explanation": "Add 2 and 3, then multiply the resulting 5 by 4."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "tokens": [
+        "-5"
+      ]
+    },
+    "expected": -5,
+    "explanation": "A single integer is already a complete expression."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "tokens": [
+        "8",
+        "3",
+        "-",
+        "2",
+        "*"
+      ]
+    },
+    "expected": 10,
+    "explanation": "The subtraction is 8 minus 3, not 3 minus 8."
+  }
+]

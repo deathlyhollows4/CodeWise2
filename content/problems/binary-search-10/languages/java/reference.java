@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] a,int p,long d){if(a.length==0)return 0;long wait=(long)p*(a.length-1);if(wait+a.length>d)return -1;int l=1,h=1;for(int x:a)h=Math.max(h,x);while(l<h){int m=l+(h-l)/2;long t=wait;for(int x:a)t+=(x+(long)m-1)/m;if(t<=d)h=m;else l=m+1;}return l;}}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "target": 2
+    },
+    "expected": true,
+    "explanation": "Target2 occurs in the second row; the flattened values are not sorted."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          8
+        ]
+      ],
+      "target": 6
+    },
+    "expected": false,
+    "explanation": "The target lies between present values but is absent."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [],
+        []
+      ],
+      "target": 0
+    },
+    "expected": false,
+    "explanation": "Two empty rows contain no readings."
+  }
+]

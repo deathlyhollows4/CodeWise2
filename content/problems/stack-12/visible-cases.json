@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "2[ab]c"
+    },
+    "expected": "ababc",
+    "explanation": "Repeat ab twice, then append c."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": "",
+    "explanation": "Empty encoded text decodes to empty text."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "2[a3[b]]"
+    },
+    "expected": "abbbabbb",
+    "explanation": "Decode a3[b] as abbb, then repeat that entire block twice."
+  }
+]

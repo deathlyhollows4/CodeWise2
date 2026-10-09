@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-10",
+  "version": "1.0.0",
+  "slug": "count-indexed-plus-minus-assignments",
+  "title": "Count plus/minus assignments",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.indexed-assignment-count",
+    "dp.zero-choice-multiplicity"
+  ],
+  "prerequisites": [
+    "dp.reachable-sums",
+    "dp.counting-recurrence"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Count mandatory sign choices for every indexed item, including distinct plus/minus choices on zero.",
+  "constraints": [
+    "0 <= values.length <= 100",
+    "0 <= values[i] <= 1000",
+    "-10000 <= target <= 10000",
+    "Return an integer in 0..1000000006"
+  ],
+  "interface": "Solution.solve(values,target) returns the modular number of indexed sign assignments.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -10000,
+        "maximum": 10000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 1000000006
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-09"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02",
+    "dp-1d-08"
+  ],
+  "nextIds": [
+    "dp-1d-11",
+    "dp-1d-12"
+  ],
+  "rationale": "Each item must receive one sign, and different indexed sign vectors count even when equal or zero values produce the same numeric terms.",
+  "commonMistakes": [
+    "discard-zero-sign-choices",
+    "collapse-equal-indexed-items"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

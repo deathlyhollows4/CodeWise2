@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D11",
+  "hiddenCount": 60,
+  "suiteHash": "25dbf3ebf0879ca143793bf26dd3a2e759fc119734c17382e2064977e609d06c",
+  "categories": [
+    "curated-boundary-empty-routing",
+    "curated-boundary-two-directed-edges",
+    "curated-boundary-free-cycle",
+    "curated-boundary-max-edge-values",
+    "curated-boundary-order-dependent-cost",
+    "max-directed-wide-cycle",
+    "max-unique-cheap-cycle-certificate",
+    "max-zero-cost-cycle",
+    "seeded-directed-permutation-cost"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

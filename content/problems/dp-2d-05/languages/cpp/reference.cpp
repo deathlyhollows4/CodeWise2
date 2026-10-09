@@ -1,0 +1,1 @@
+class Solution {public:int solve(string source,string target){vector<int>d(target.size()+1);d[0]=1;for(char c:source)for(int j=target.size();j>=1;j--)if(c==target[j-1])d[j]=(d[j]+d[j-1])%1000000007;return d[target.size()];}};

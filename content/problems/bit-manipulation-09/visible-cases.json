@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 6
+    },
+    "expected": 9,
+    "explanation": "6 is 110; the next larger word with two one bits is 1001."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 1
+    },
+    "expected": 2,
+    "explanation": "The next single-one word is 10."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 2147483647
+    },
+    "expected": -1,
+    "explanation": "All 31 bits are already one; no larger allowed word exists."
+  }
+]

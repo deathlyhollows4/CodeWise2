@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "id": "greedy-06",
+  "version": "1.0.0",
+  "slug": "fewest-refuels-from-reachable-passed-stations",
+  "title": "Minimum refueling stops",
+  "primaryTopic": "greedy",
+  "skillIds": [
+    "greedy.maximum-passed-option",
+    "greedy.deferred-refueling-choice"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "heap.max-extraction"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Minimize refueling stops by selecting the largest refill among already reachable stations only when reach must increase.",
+  "constraints": [
+    "0 <= target,startFuel <= 1000000000",
+    "0 <= stations.length <= 60000",
+    "Each pair has position and fuelAvailable in 0..1000000000; positions are strictly increasing",
+    "Each station can contribute fuel at most once"
+  ],
+  "interface": "Solution.solve(target, startFuel, stations) returns the minimum stop count or -1.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "target": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      },
+      "startFuel": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      },
+      "stations": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 60000,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1,
+    "maximum": 60000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "greedy-07"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "heap-06",
+    "greedy-05",
+    "stack-02"
+  ],
+  "nextIds": [],
+  "rationale": "When the current range cannot reach the goal, taking the largest available passed refill dominates a smaller refill for the same extra stop.",
+  "commonMistakes": [
+    "fuel-every-passed-station",
+    "ignore-station-reachability"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted-pairs",
+      "field": "stations"
+    },
+    {
+      "kind": "pair-ranges",
+      "field": "stations",
+      "firstMin": 0,
+      "firstMax": 1000000000,
+      "secondMin": 0,
+      "secondMax": 1000000000
+    }
+  ]
+}

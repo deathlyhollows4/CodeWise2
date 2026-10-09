@@ -1,0 +1,45 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "pushes": [
+        1,
+        2,
+        3
+      ],
+      "pops": [
+        2,
+        3,
+        1
+      ]
+    },
+    "expected": true,
+    "explanation": "Push 1, push and pop 2, push and pop 3, then pop 1."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "pushes": [],
+      "pops": []
+    },
+    "expected": true,
+    "explanation": "The empty schedule needs no operation."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "pushes": [
+        1,
+        2,
+        3
+      ],
+      "pops": [
+        3,
+        1,
+        2
+      ]
+    },
+    "expected": false,
+    "explanation": "After 3 is popped, 2 is above 1 and cannot be skipped."
+  }
+]

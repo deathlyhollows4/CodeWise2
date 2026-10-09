@@ -1,0 +1,62 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "dictionary": [
+        "a",
+        "ab",
+        "ab",
+        "b"
+      ],
+      "queries": [
+        "ab",
+        "ac",
+        "b",
+        ""
+      ]
+    },
+    "expected": [
+      5,
+      3,
+      1,
+      0
+    ],
+    "explanation": "For ab, prefix a has three dictionary occurrences and prefix ab has two, giving 5. For ac only a contributes, giving 3. Prefix b contributes 1. The empty query has no nonempty prefix and scores 0."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "dictionary": [
+        "aa",
+        "aa",
+        "aaa"
+      ],
+      "queries": [
+        "a",
+        "aa",
+        "aaaa"
+      ]
+    },
+    "expected": [
+      3,
+      6,
+      7
+    ],
+    "explanation": "The two aa entries count separately. Prefix counts for aaaa are 3,3,1,0, giving 7. Shorter queries stop earlier: a scores 3 and aa scores 6."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "dictionary": [],
+      "queries": [
+        "a",
+        ""
+      ]
+    },
+    "expected": [
+      0,
+      0
+    ],
+    "explanation": "No dictionary occurrence begins with any query prefix. Both the nonempty query and the empty query therefore score 0."
+  }
+]

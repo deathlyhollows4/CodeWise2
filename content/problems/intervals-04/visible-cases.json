@@ -1,0 +1,60 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "intervals": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          5
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      2,
+      1
+    ],
+    "explanation": "Each outer record is enclosed by its duplicate. The inner record is enclosed by both."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "intervals": []
+    },
+    "expected": [],
+    "explanation": "No original records need answers."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "intervals": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      0,
+      0
+    ],
+    "explanation": "Only the central point is enclosed by another record."
+  }
+]

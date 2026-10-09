@@ -1,0 +1,63 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Traverse 0->1, then 1->0, then the self-loop at 0. [2,0,1] is another valid edge-ID trail."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "No edge needs to be used."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 2,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "expected": [
+      0,
+      2,
+      1
+    ],
+    "explanation": "The two 0->1 edges have different IDs, 0 and 1. Use each once, with edge 2 between them."
+  }
+]

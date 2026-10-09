@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "sliding-window-08",
+  "version": "1.0.0",
+  "slug": "maximum-for-every-batch",
+  "title": "Maximum for every batch",
+  "primaryTopic": "sliding-window",
+  "skillIds": [
+    "windows.monotonic-deque",
+    "windows.expiring-candidates"
+  ],
+  "prerequisites": [
+    "windows.fixed-boundaries",
+    "stack.monotonic-candidates"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Retain decreasing candidate maxima and remove expired positions.",
+  "constraints": [
+    "1 ≤ values.length ≤ 2,000",
+    "1 ≤ k ≤ values.length",
+    "Each value is in [-1,000,000,1,000,000]."
+  ],
+  "interface": "Solution.solve(values,k) returns an integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "minLength": 1
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    },
+    "minLength": 1
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "sliding-window-12"
+  ],
+  "remedialIds": [
+    "sliding-window-01",
+    "stack-04"
+  ],
+  "nextIds": [],
+  "rationale": "A moving maximum needs more information than a total: old candidates can expire.",
+  "commonMistakes": [
+    "minimum-instead-of-maximum",
+    "global-maximum-for-all"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "values",
+      "minimum": 1,
+      "maxOffset": 0
+    }
+  ]
+}

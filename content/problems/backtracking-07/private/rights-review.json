@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "9830c542e3b355146c50d4bd4bb45be97833eafbf061c8542ab8b89e2201eaa2",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Complete source, statement/examples, independent model and all native references read by coordinator. All60hidden cases and nine materialized language assets reconcile to original author/project templates; no imported assets. Completes a fixed4x4 grid under row, column and2x2 constraints, preserving clues and accepting contradictory clues as a valid no-solution instance. Independent enumeration of all row permutations and the288 all-empty completions checks a genuine multi-constraint state task.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-mini-grid.mjs",
+    "sourceHash": "a73f188bbbcd08f9f1913a4c4fd3ba43292848ec5827d562ec6503439d9b9584",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

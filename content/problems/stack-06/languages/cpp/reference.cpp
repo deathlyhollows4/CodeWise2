@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){vector<int> stack;long long best=0;for(int i=0;i<=(int)values.size();i++){int height=i==(int)values.size()?0:values[i];while(!stack.empty()&&values[stack.back()]>height){int h=values[stack.back()];stack.pop_back();int left=stack.empty()?-1:stack.back();best=max(best,1LL*h*(i-left-1));}stack.push_back(i);}return best;}};

@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values){vector<int> out;for(int value:values){if(value==0)continue;bool alive=true;while(alive&&value<0&&!out.empty()&&out.back()>0){int old=out.back();if(old<-value)out.pop_back();else if(old==-value){out.pop_back();alive=false;}else alive=false;}if(alive)out.push_back(value);}return out;}};

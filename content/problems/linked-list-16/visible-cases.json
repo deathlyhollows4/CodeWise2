@@ -1,0 +1,48 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        1,
+        1,
+        2,
+        3,
+        3,
+        4
+      ]
+    },
+    "expected": [
+      2,
+      5
+    ],
+    "explanation": "Both nodes containing 1 and both nodes containing 3 are discarded; original nodes 2 and 5 remain."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        7,
+        7,
+        7
+      ]
+    },
+    "expected": [],
+    "explanation": "A wholly repeated list has no retained node."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [
+        -2,
+        0,
+        4
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Every value occurs once, so all original nodes are retained."
+  }
+]

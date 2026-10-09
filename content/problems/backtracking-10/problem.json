@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-10",
+  "version": "1.0.0",
+  "slug": "enumerate-release-deadline-single-resource-orders",
+  "title": "Find every feasible order on one resource",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state",
+    "numbers.signed-accumulation",
+    "backtracking.schedule-prefix-pruning"
+  ],
+  "prerequisites": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state",
+    "numbers.signed-accumulation"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Enumerate all original-task orders feasible under release times, durations and inclusive deadlines, pruning failed prefixes.",
+  "constraints": [
+    "0 ≤ release.length = duration.length = deadline.length ≤ 7.",
+    "Release times lie in [0,1,000,000,000].",
+    "Durations lie in [1,1,000,000,000].",
+    "Deadlines lie in [0,8,000,000,000]; impossible deadlines are valid input.",
+    "No preemption or parallel execution is allowed.",
+    "At most 7! = 5,040 task orders exist; all answer rows include every original ID once."
+  ],
+  "interface": "Solution.solve(release:long[],duration:long[],deadline:long[]) returns lexicographically ordered int[][].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "release": {
+        "kind": "array",
+        "maxLength": 7,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "duration": {
+        "kind": "array",
+        "maxLength": 7,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      },
+      "deadline": {
+        "kind": "array",
+        "maxLength": 7,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 8000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 5040,
+    "items": {
+      "kind": "array",
+      "maxLength": 7,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 6
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-09"
+  ],
+  "remedialIds": [
+    "backtracking-02",
+    "backtracking-04"
+  ],
+  "nextIds": [],
+  "rationale": "All tasks must execute; this is not selecting maximum reward, optimizing one ordering, or enumerating arbitrary idle times. Release times and nonpreemption make a fixed order’s earliest schedule the correct feasibility certificate.",
+  "commonMistakes": [
+    "ignore-release-times",
+    "treat-deadline-as-exclusive",
+    "ignore-deadline-failures"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "release",
+      "right": "duration"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "release",
+      "right": "deadline"
+    }
+  ]
+}

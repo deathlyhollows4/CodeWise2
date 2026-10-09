@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-ninth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC222",
+  "hiddenCount": 603,
+  "suiteHash": "6c65072f87c29259a2d99841115da5759be754dc49f8de469f6749864302047c",
+  "categories": [
+    "distinct-size-independent-inclusion-exclusion",
+    "upper-bound-modular-factorial-certificate"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

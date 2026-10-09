@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-05",
+  "version": "1.0.0",
+  "slug": "first-shared-original-list-node",
+  "title": "Find the shared original node",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.shared-tail-identity",
+    "list.align-chain-lengths"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.original-identity"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Return the first shared original node of two acyclic chains, distinguishing equal values from shared pointer identity.",
+  "constraints": [
+    "0 ≤ data.values.length ≤ 2,000; values lie in [-1,000,000,1,000,000].",
+    "next has one nullable bounded index per node; heads contains exactly two nullable bounded indexes.",
+    "Both next chains are finite and acyclic; every original node is reachable from at least one head.",
+    "Chains may be identical, disjoint, share a suffix, or have a null head."
+  ],
+  "interface": "Solution.solve(data) receives IdentityList and returns an original ListNode or null.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "data": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "next": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "heads": {
+            "kind": "array",
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "nullable",
+    "value": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-06"
+  ],
+  "remedialIds": [
+    "linked-list-03",
+    "linked-list-02"
+  ],
+  "nextIds": [
+    "linked-list-07"
+  ],
+  "rationale": "Equal values never imply shared nodes. Aligning native chain lengths identifies the first common object in the shared suffix.",
+  "commonMistakes": [
+    "equal-value-as-sharing",
+    "last-shared-node"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "node-table",
+      "field": "data",
+      "links": [
+        "next"
+      ],
+      "heads": "heads",
+      "requireReachable": true,
+      "acyclicLinks": [
+        "next"
+      ]
+    }
+  ]
+}

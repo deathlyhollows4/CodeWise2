@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "The center is closed. Only the route along the top then right edge and the route along the left then bottom edge survive."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          0
+        ]
+      ]
+    },
+    "expected": 1,
+    "explanation": "The start is already the finish; no move is needed."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "expected": 0,
+    "explanation": "A route cannot begin on a closed starting cell."
+  }
+]

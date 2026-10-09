@@ -1,0 +1,1 @@
+class Solution {public TreeNode solve(TreeNode root,int k){ArrayDeque<TreeNode> stack=new ArrayDeque<>();TreeNode n=root;while(n!=null||!stack.isEmpty()){while(n!=null){stack.push(n);n=n.left;}n=stack.pop();if(--k==0)return n;n=n.right;}return null;}}

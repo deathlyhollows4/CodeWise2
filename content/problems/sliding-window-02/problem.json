@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "sliding-window-02",
+  "version": "1.0.0",
+  "slug": "fixed-batch-variety",
+  "title": "Most variety in a fixed batch",
+  "primaryTopic": "sliding-window",
+  "skillIds": [
+    "windows.frequency-removal",
+    "hashing.counts",
+    "windows.fixed-boundaries"
+  ],
+  "prerequisites": [
+    "windows.fixed-boundaries",
+    "hashing.membership"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Maintain distinct-value count while duplicate readings enter and leave a window.",
+  "constraints": [
+    "1 ≤ values.length ≤ 2,000",
+    "1 ≤ k ≤ values.length",
+    "Every integer is in [-1,000,000, 1,000,000]."
+  ],
+  "interface": "Solution.solve(values,k) returns an integer distinct-value count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 1,
+    "maximum": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "sliding-window-01"
+  ],
+  "remedialIds": [
+    "sliding-window-01",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "sliding-window-03"
+  ],
+  "rationale": "The window boundary is familiar. Keep counts so removing one copy does not remove a value still present.",
+  "commonMistakes": [
+    "count-whole-array",
+    "treat-duplicates-as-new"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "values",
+      "minimum": 1,
+      "maxOffset": 0
+    }
+  ]
+}

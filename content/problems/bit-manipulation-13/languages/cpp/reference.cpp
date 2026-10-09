@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> left,vector<int> right){int n=left.size();vector<long long> dp(1<<n,LLONG_MAX/4);dp[0]=0;for(int mask=0;mask<(int)dp.size();mask++){int i=__builtin_popcount((unsigned)mask);for(int j=0;j<n;j++)if(!(mask&(1<<j))){int next=mask|(1<<j);dp[next]=min(dp[next],dp[mask]+(left[i]^right[j]));}}return dp.back();}};

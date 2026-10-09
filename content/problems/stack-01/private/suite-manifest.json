@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 704,
+  "suiteHash": "b80df1ff9db1ef42102c6f5ab949a6227cf0e9cc0373910c4b9fde8df22ff518",
+  "categories": [
+    "valid-nested",
+    "mixed-bracket-order",
+    "crossed-types",
+    "deep-valid-nesting"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

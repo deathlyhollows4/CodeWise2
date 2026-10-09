@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){long long total=0,left=0;for(int v:values)total+=v;for(int k=1;k<(int)values.size();k++){left+=values[k-1];if(left==total-left)return k;}return -1;}};

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 5
+    },
+    "expected": 1,
+    "explanation": "5 factorial is 120."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 25
+    },
+    "expected": 6,
+    "explanation": "Multiples of 5 contribute five factors, and 25 contributes one more."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 0
+    },
+    "expected": 0,
+    "explanation": "0 factorial is 1, with no trailing zeros."
+  }
+]

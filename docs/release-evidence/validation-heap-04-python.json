@@ -1,0 +1,124 @@
+{
+  "id": "heap-04",
+  "version": "2.0.0",
+  "language": "python",
+  "validationIdentity": "0c2378c6bd03193d7b38205cb99463a4eeb3f46d83df80a51ebb93c8951b2ebf",
+  "suiteHash": "546700a7dbe7e885d1be278df78fd8be01ac729a2198946e8c74f70e0052f501",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T12:46:11.806Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 203,
+      "executed": 203,
+      "passed": 203,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "costs": [
+            17,
+            12,
+            10,
+            2,
+            7,
+            2,
+            11,
+            20,
+            8
+          ],
+          "k": 3,
+          "candidates": 4
+        },
+        "expected": 11,
+        "actual": 11,
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "costs": [
+            7,
+            1,
+            5,
+            7
+          ],
+          "k": 2,
+          "candidates": 1
+        },
+        "expected": 8,
+        "actual": 8,
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "costs": [],
+          "k": 0,
+          "candidates": 1
+        },
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.017",
+          "wallSeconds": "0.018",
+          "memoryKb": "10224"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.174",
+          "wallSeconds": "0.167",
+          "memoryKb": "24040"
+        }
+      ]
+    }
+  }
+}

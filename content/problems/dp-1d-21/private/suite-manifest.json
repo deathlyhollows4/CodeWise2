@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-ninth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC221",
+  "hiddenCount": 755,
+  "suiteHash": "eb976d8b6253c3a9bacee5e627f2b7931ee2b72f9207d8e35ac4aee0f913713e",
+  "categories": [
+    "all-buy-sell-pair-plans-with-explicit-sale-plus-two-next-buy",
+    "empty-single-day-and-mandatory-rest-day",
+    "upper-bound-monotone-or-separated-profitable-block-certificate"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

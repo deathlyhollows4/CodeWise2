@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "expected": 2,
+    "explanation": "Cameras at nodes 2 and 3 cover the root, both internal nodes, and all four leaves."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        7
+      ]
+    },
+    "expected": 1,
+    "explanation": "A singleton must cover itself."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "There is no node requiring coverage."
+  }
+]

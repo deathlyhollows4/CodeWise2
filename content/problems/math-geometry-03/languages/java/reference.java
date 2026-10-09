@@ -1,0 +1,1 @@
+class Solution {public long solve(long value,long exponent,long modulus){long x=(value%modulus+modulus)%modulus,answer=1%modulus;while(exponent>0){if((exponent&1)!=0)answer=answer*x%modulus;x=x*x%modulus;exponent>>=1;}return answer;}}

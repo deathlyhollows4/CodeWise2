@@ -1,0 +1,68 @@
+{
+  "name": "codewise2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "tsx apps/server/src/index.ts",
+    "start": "node dist/server/index.mjs",
+    "build": "vite build && esbuild apps/server/src/index.ts --bundle --platform=node --format=esm --packages=external --outfile=dist/server/index.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test --test-concurrency=2 tests/unit/*.test.ts tests/integration/*.test.ts tests/frontend/*.test.ts tests/security/*.test.ts tests/runner/*.test.mjs tests/content/*.test.mjs",
+    "doctor": "tsx scripts/doctor.ts",
+    "setup": "npm ci",
+    "audit:content": "node scripts/audit-content.mjs",
+    "validate:bank": "node scripts/validate-bank.mjs",
+    "lint": "eslint apps packages tests scripts",
+    "fixture:ui": "tsx scripts/fixture-ui.ts",
+    "test:backend": "node --import tsx --test --test-concurrency=2 tests/unit/*.test.ts tests/integration/*.test.ts",
+    "test:renderer": "tsx --test tests/frontend/*.test.ts",
+    "test:security": "tsx --test tests/security/*.test.ts",
+    "test:runner": "node --test tests/runner/*.test.mjs",
+    "test:content": "node --test tests/content/*.test.mjs",
+    "test:e2e": "node tests/frontend/final-catalogue-browser.mjs",
+    "test:e2e:historical": "node tests/frontend/visual-qa.mjs",
+    "doctor:runner": "tsx scripts/runner-doctor.ts",
+    "publish:content": "node scripts/publish-content.mjs",
+    "audit:curriculum": "node --import tsx scripts/audit-authored-curriculum.ts --release"
+  },
+  "dependencies": {
+    "@js-temporal/polyfill": "0.5.1",
+    "@monaco-editor/react": "4.7.0",
+    "katex": "0.19.0",
+    "lucide-react": "0.468.0",
+    "monaco-editor": "0.57.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-markdown": "10.1.0",
+    "react-router-dom": "7.18.4",
+    "rehype-highlight": "7.0.2",
+    "rehype-katex": "7.0.1",
+    "remark-gfm": "4.0.1",
+    "remark-math": "6.0.0",
+    "remark-parse": "11.0.0",
+    "unified": "11.0.5",
+    "vite": "7.3.7",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
+    "eslint": "10.12.0",
+    "playwright": "1.64.0",
+    "prettier": "3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1"
+  },
+  "overrides": {
+    "dompurify": "3.4.16",
+    "katex": "0.19.0"
+  }
+}

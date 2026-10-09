@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(string text,string pattern){if(pattern.empty())return {};vector<int> want(26),have(26),out;for(char c:pattern)want[c-'a']++;for(int r=0;r<(int)text.size();r++){have[text[r]-'a']++;if(r>=(int)pattern.size())have[text[r-pattern.size()]-'a']--;if(r>=(int)pattern.size()-1&&have==want)out.push_back(r-pattern.size()+1);}return out;}};

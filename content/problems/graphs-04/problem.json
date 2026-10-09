@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-04",
+  "version": "1.0.0",
+  "slug": "different-island-shapes-under-translation",
+  "title": "Different island shapes under translation",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.component-partition",
+    "graphs.grid-four-neighbors",
+    "graphs.translation-shape"
+  ],
+  "prerequisites": [
+    "graphs.identity-discovery"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Count distinct orthogonally connected land shapes after removing translation, while preserving rotations and reflections as different shapes.",
+  "constraints": [
+    "0 <= rows,columns <= 100",
+    "Every row has the same length",
+    "Each cell is 0 or 1",
+    "Only translation is removed; rotations/reflections stay distinct"
+  ],
+  "interface": "Solution.solve(grid) receives int[][] / vector<vector<int>> / list[list[int]] and returns an int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 100,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 10000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-02"
+  ],
+  "remedialIds": [
+    "graphs-01",
+    "graphs-03"
+  ],
+  "nextIds": [
+    "graphs-05",
+    "graphs-06"
+  ],
+  "rationale": "A component traversal now collects relative coordinates, so identical translated islands share one signature.",
+  "commonMistakes": [
+    "count-islands-not-shapes",
+    "identify-shapes-by-area"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

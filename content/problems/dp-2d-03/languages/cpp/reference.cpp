@@ -1,0 +1,1 @@
+class Solution { public: int solve(vector<int> a,vector<int> b) { vector<int> dp(b.size()+1);for(int x:a){int diagonal=0;for(int j=1;j<=(int)b.size();j++){int old=dp[j];dp[j]=x==b[j-1]?diagonal+1:max(dp[j],dp[j-1]);diagonal=old;}}return dp[b.size()]; } };

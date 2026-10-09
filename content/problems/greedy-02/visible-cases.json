@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "gas": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "cost": [
+        3,
+        4,
+        5,
+        1,
+        2
+      ]
+    },
+    "expected": 3,
+    "explanation": "Starting at station 3 maintains enough fuel throughout all five circular legs; lower starts fail."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "gas": [
+        2,
+        3,
+        4
+      ],
+      "cost": [
+        3,
+        4,
+        3
+      ]
+    },
+    "expected": -1,
+    "explanation": "Total fuel 9 is below total cost 10, so no start can complete the route."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "gas": [
+        0,
+        0
+      ],
+      "cost": [
+        0,
+        0
+      ]
+    },
+    "expected": 0,
+    "explanation": "Both starts work with zero fuel and zero cost; choose the smaller index 0."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "4f084c96cc1b496102d433fc50bb195b7c707f2c34a116f404630f4a113c7c04",
+  "suiteHash": "52d30903c8e047b735c6d82941a8897f1ef98e53045906d6936ac51ed929b08a",
+  "oracleChecks": 570,
+  "hiddenUnique": 567,
+  "mutations": [
+    {
+      "name": "keep-input-order",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "32-bit-multiplication",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

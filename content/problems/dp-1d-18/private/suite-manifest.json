@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-seventh.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC218",
+  "hiddenCount": 548,
+  "suiteHash": "164b2c3bad60e1b84026c38d60302f68ddb424d8b265b5ad1b34cd01cb388822",
+  "categories": [
+    "all-cut-masks-independent-partitions",
+    "empty-cuts-versus-pieces-and-multiple-palindromes",
+    "upper-bound-certified-block-partitions"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

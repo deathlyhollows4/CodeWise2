@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-15",
+  "version": "1.0.0",
+  "slug": "exact-dictionary-segmentation-feasibility",
+  "title": "Can the dictionary cover the whole text?",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.text-position-state",
+    "strings.word-boundary-reachability"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Determine whether consecutive dictionary words cover every character exactly, without greedy boundary choices.",
+  "constraints": [
+    "0 <= text.length <= 500",
+    "0 <= words.length <= 100; dictionary words are distinct",
+    "1 <= words[i].length <= 20",
+    "Text and dictionary contain ASCII characters; matching is literal and case-sensitive",
+    "Dictionary order has no meaning; every word may be reused"
+  ],
+  "interface": "Solution.solve(text,words) returns a boolean for complete dictionary coverage.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "text": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 500,
+        "ascii": true
+      },
+      "words": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100,
+        "unordered": true,
+        "items": {
+          "kind": "string",
+          "minLength": 1,
+          "maxLength": 20,
+          "ascii": true
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-07",
+    "dp-1d-08"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-16",
+    "dp-1d-09",
+    "dp-1d-10"
+  ],
+  "rationale": "A reachable character boundary can open several matching next words; every character must belong to one chosen token.",
+  "commonMistakes": [
+    "accept-any-dictionary-substring",
+    "greedy-longest-next-token"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "unique",
+      "field": "words"
+    }
+  ]
+}

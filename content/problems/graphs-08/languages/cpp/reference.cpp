@@ -1,0 +1,1 @@
+class Solution {public:vector<int>solve(int n,vector<vector<int>>edges){vector<vector<int>>a(n);vector<int>degree(n),q;for(auto e:edges){a[e[0]].push_back(e[1]);degree[e[1]]++;}for(int i=0;i<n;i++)if(!degree[i])q.push_back(i);for(int i=0;i<(int)q.size();i++)for(int v:a[q[i]])if(--degree[v]==0)q.push_back(v);return q.size()==n?q:vector<int>{};}};

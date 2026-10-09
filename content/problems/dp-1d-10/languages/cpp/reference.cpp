@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> a,int t){int s=accumulate(a.begin(),a.end(),0);if(abs(t)>s||(s+t)%2)return 0;int w=(s+t)/2;vector<int> dp(w+1);dp[0]=1;for(int v:a)for(int n=w;n>=v;n--)dp[n]=(dp[n]+dp[n-v])%1000000007;return dp[w];}};

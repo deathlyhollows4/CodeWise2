@@ -1,0 +1,83 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "homepage": "home",
+      "commands": [
+        "visit",
+        "visit",
+        "back",
+        "visit",
+        "forward",
+        "back"
+      ],
+      "pages": [
+        "alpha",
+        "beta",
+        "unused",
+        "gamma",
+        "unused",
+        "unused"
+      ],
+      "steps": [
+        0,
+        0,
+        1,
+        0,
+        10,
+        1
+      ]
+    },
+    "expected": [
+      "alpha",
+      "beta",
+      "alpha",
+      "gamma",
+      "gamma",
+      "alpha"
+    ],
+    "explanation": "Visiting gamma from alpha discards beta, so forward cannot recover beta."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "homepage": "home",
+      "commands": [
+        "back",
+        "visit",
+        "back",
+        "forward"
+      ],
+      "pages": [
+        "unused",
+        "alpha",
+        "unused",
+        "unused"
+      ],
+      "steps": [
+        1000000000,
+        0,
+        1000000000,
+        1000000000
+      ]
+    },
+    "expected": [
+      "home",
+      "alpha",
+      "home",
+      "alpha"
+    ],
+    "explanation": "Navigation clamps to the available ends instead of walking beyond history."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "homepage": "home",
+      "commands": [],
+      "pages": [],
+      "steps": []
+    },
+    "expected": [],
+    "explanation": "No command means no reported current-page result."
+  }
+]

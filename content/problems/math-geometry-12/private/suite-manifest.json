@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-polygon.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca12",
+  "hiddenCount": 854,
+  "suiteHash": "f2345ef5c168f0f54ecfa8a4ac018454ee36c8851df6d01bb67158caf175f97d",
+  "categories": [
+    "convex-concave-and-boundary-queries",
+    "sloped-triangle-interior",
+    "diagonal-triangle-edge",
+    "maximum-vertices-and-wide-coordinates",
+    "maximum-vertices-sloped-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

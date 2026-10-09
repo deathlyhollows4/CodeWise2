@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-01",
+  "version": "1.0.0",
+  "slug": "splice-into-sorted-native-list",
+  "title": "Add one value to a sorted native list",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.walk",
+    "list.link-splice"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "sorted.order"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Return a sorted native linked list with exactly one additional occurrence of the supplied value.",
+  "constraints": [
+    "0 ≤ head.length ≤ 2,000",
+    "head is nondecreasing; duplicate and negative values are allowed.",
+    "Node values and value lie in [-1,000,000,1,000,000]."
+  ],
+  "interface": "Solution.solve(head, value) receives ListNode and int, and returns ListNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2001,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-02"
+  ],
+  "remedialIds": [
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "linked-list-03"
+  ],
+  "rationale": "A value sequence describes input construction, but the function receives actual node links and must handle changing the head.",
+  "commonMistakes": [
+    "append-without-order",
+    "drop-equal-value"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "head"
+    }
+  ]
+}

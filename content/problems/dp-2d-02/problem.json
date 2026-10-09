@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-2d-02",
+  "version": "1.0.0",
+  "slug": "least-cost-right-down-route",
+  "title": "Least cost of a right-down route",
+  "primaryTopic": "dp-2d",
+  "skillIds": [
+    "dp.two-coordinate-state",
+    "dp.grid-minimum-cost"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Minimize a monotone grid route using the cheaper incoming state and include both endpoints.",
+  "constraints": [
+    "0 <= rows <= 200; 0 <= columns <= 200",
+    "All rows have equal length",
+    "0 <= grid[r][c] <= 1000000000",
+    "0 <= result <= 399000000000"
+  ],
+  "interface": "Solution.solve(grid) receives an integer matrix and returns long / long long / int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 200,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 200,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 399000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-2d-01"
+  ],
+  "remedialIds": [
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-2d-03",
+    "dp-2d-04"
+  ],
+  "rationale": "Use familiar two-predecessor states to minimize a cost; a grid adds row and column boundaries.",
+  "commonMistakes": [
+    "omit-starting-cost",
+    "narrow-signed32-total",
+    "local-cheapest-neighbor"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -3,
+        -10,
+        5
+      ],
+      "k": 2
+    },
+    "expected": [
+      5,
+      -3
+    ],
+    "explanation": "The negative reading -3 still ranks above -10."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "k": 0
+    },
+    "expected": [],
+    "explanation": "Selecting zero readings returns an empty result."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        4,
+        4,
+        1
+      ],
+      "k": 2
+    },
+    "expected": [
+      4,
+      4
+    ],
+    "explanation": "Both positions holding 4 are selected."
+  }
+]

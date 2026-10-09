@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "3f67e2cac3a0503e66a46a7f308da4bea1e1c0c5f65f9f7fb310afc68e9647f2",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Complete source, statement/examples, independent model and all native references read by coordinator. All60hidden cases and nine materialized language assets reconcile to original author/project templates; no imported assets. Enumerates digit boundaries and operators while respecting multiplication precedence and canonical zero operands. Independent partition/operator expression evaluation differs from incremental last-term DFS; it is not merely evaluating an already supplied expression. Wide target and maximum9-digit output are retained.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-expressions.mjs",
+    "sourceHash": "2e433ed85903b7c4d78d64e335e7c6bdfbd9a1eac5e77d28ba1d24ef17c7937a",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

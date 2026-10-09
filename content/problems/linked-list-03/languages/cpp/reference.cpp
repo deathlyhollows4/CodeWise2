@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head,int k){auto lead=head;for(int i=0;i<k;i++){if(!lead)return nullptr;lead=lead->next;}auto follow=head;while(lead){lead=lead->next;follow=follow->next;}return follow;}};

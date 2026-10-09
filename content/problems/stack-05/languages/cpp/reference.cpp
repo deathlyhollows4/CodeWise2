@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values){int n=values.size();vector<int> out(n,-1),stack;for(int i=0;i<2*n;i++){int index=i%n;while(!stack.empty()&&values[index]>values[stack.back()]){out[stack.back()]=values[index];stack.pop_back();}if(i<n)stack.push_back(index);}return out;}};

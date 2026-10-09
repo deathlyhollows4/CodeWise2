@@ -1,0 +1,79 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      3
+    ],
+    "explanation": "The triangle has alternate routes. Only edge 3 separates vertex 3 when removed."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "There are no edges to remove."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 6,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      3
+    ],
+    "explanation": "Edge 3 joins two triangles. Neither endpoint is a leaf, but removing this edge separates the components."
+  }
+]

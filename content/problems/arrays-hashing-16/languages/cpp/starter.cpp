@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values){return 0;}};

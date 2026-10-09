@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 587,
+  "suiteHash": "bcd347500e1fa402f480941546c50af7c6273ddee1e59be6e0225496062d6332",
+  "categories": [
+    "stable-zero-partition",
+    "long-scattered-zeros"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

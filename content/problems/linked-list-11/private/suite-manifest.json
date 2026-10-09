@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-advanced.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 693,
+  "suiteHash": "d4733270a123864f9ed3e74e9c77f65806530ba6c5518984c9ea9ba726a9eff3",
+  "categories": [
+    "signed-value-and-length-boundaries",
+    "duplicate-key-identities",
+    "large-duplicate-key-chain",
+    "large-all-equal-identities"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

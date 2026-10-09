@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -2,
+        1,
+        -2
+      ]
+    },
+    "expected": 4,
+    "explanation": "The entire segment has product 4; its negative intermediate product becomes useful."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -2,
+        0,
+        -2
+      ]
+    },
+    "expected": 0,
+    "explanation": "Choose the zero. The two -2 values cannot form one segment without the interior zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -2
+      ]
+    },
+    "expected": -2,
+    "explanation": "The only nonempty segment is the single negative value."
+  }
+]

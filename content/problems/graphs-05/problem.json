@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-05",
+  "version": "1.0.0",
+  "slug": "largest-land-component-after-one-flip",
+  "title": "Largest land component after one flip",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.grid-four-neighbors",
+    "graphs.component-merge-dedup"
+  ],
+  "prerequisites": [
+    "graphs.grid-four-neighbors"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Maximize island area after at most one water-to-land flip without counting a neighboring component more than once.",
+  "constraints": [
+    "0 <= rows,columns <= 100",
+    "All rows have equal length",
+    "Every cell is 0 or 1",
+    "At most one flip; orthogonal adjacency only"
+  ],
+  "interface": "Solution.solve(grid) receives an integer matrix and returns an int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 100,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 10000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-06"
+  ],
+  "remedialIds": [
+    "graphs-03",
+    "graphs-04"
+  ],
+  "nextIds": [
+    "graphs-07",
+    "graphs-08"
+  ],
+  "rationale": "A flip can join several previously labelled components; unique neighbor component IDs prevent double counting.",
+  "commonMistakes": [
+    "count-neighbor-component-more-than-once",
+    "ignore-possible-flip",
+    "allow-all-water-to-flip"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

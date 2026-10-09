@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "40de64fd1a3e5011095fe825d6c6bdf0f8b438534c847f7c27f87e69f96a1150",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:12:58.210Z",
+  "rationale": "Computes one axis-aligned rectangle area from opposite corners, including corner order and degenerate widths. Union14 combines many overlapping regions and is not a renamed single-rectangle calculation.",
+  "evidence": [
+    "docs/release-evidence/coordinator-math-curriculum-diversity-review.json",
+    "docs/release-evidence/coordinator-math-original-assets.json",
+    "docs/release-evidence/independent-reviewed-curriculum-current.json"
+  ],
+  "limitations": [
+    "Independent source and actual per-task teaching/objective review; representative curriculum audit does not cover every learner history.",
+    "Pending final243 global synthesis/current native receipts are separate."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-permissions.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "96964f9771e66815fa3cd072d2d28016e461d67e006aaa566820a25179cbfa4d",
+  "categories": [
+    "single-blocked",
+    "single-allowed",
+    "complete-two-item-permission-domain",
+    "maximum-all-permutations-5040",
+    "all-permutations-720",
+    "maximum-one-identity-permutation",
+    "maximum-one-reversed-permutation",
+    "maximum-derangements",
+    "maximum-Hall-obstruction",
+    "maximum-empty-position",
+    "maximum-unused-item-column",
+    "maximum-cycle-two-perfect-assignments",
+    "independent-block-permutations",
+    "sparse-asymmetric-position-permissions",
+    "guaranteed-shifted-assignment",
+    "explicit-empty-position",
+    "multi-position-Hall-obstruction"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

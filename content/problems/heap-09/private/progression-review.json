@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "progression",
+  "contentIdentity": "2b8b99b62d326ba024ae1f8c0a5c7045109b4492aefd8035120eae23ca46cb14",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:33:02.211Z",
+  "rationale": "Step4 stale-entry versioning combines Heap06 max extraction and Arrays03 membership. Cooldown08 is a same-step checkpoint; capital11 and parity13 are step5 advancement.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-handles.mjs",
+    "sourceHash": "60f37a825bab4e3d15dd0cbf6659571fac2987b936f4acbf8e2113f8bc832788",
+    "reconciliation": "docs/release-evidence/coordinator-heap-six-curriculum-diversity.json",
+    "priorSourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Per-pack source, rights and curriculum conclusion only; isolated reference execution and final243 global synthesis remain separate.",
+    "Changing bound content invalidates this review."
+  ]
+}

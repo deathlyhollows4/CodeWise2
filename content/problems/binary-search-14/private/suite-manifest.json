@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-final.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC1401",
+  "hiddenCount": 727,
+  "suiteHash": "fecc8e1184871f99b9747837f3fd4ed3c24091137d4ebab5245495d60465a5d8",
+  "categories": [
+    "small-complete-multiplicity",
+    "large-single-row-formula",
+    "large-single-column-formula",
+    "large-wide-product-extremes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

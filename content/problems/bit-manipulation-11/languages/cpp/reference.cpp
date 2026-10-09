@@ -1,0 +1,1 @@
+class Solution {public:long long solve(long long value){return value^(value>>1);}};

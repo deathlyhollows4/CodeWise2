@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A04",
+  "hiddenCount": 60,
+  "suiteHash": "483851e9ee511090342c2cdda4fec1fd9c096e2b376aac7355f6094fbf0e9900",
+  "categories": [
+    "curated-boundary-singleton-shape",
+    "curated-boundary-rotation-not-translation",
+    "max-solid-island-shape",
+    "max-many-islands-three-shape-types",
+    "seeded-island-shape-sets",
+    "structured-distinct-comb-teeth-shapes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

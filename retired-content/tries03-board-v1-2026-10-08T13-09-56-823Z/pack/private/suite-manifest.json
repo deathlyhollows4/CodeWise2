@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/tries-board.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 564,
+  "suiteHash": "a6bd1350b277e77fec37c4933e077960170167e018a953325cff5b11a3beb393",
+  "categories": [
+    "rectangular-feasible-and-missing-dictionary-paths",
+    "empty-reuse-prefix-and-diagonal-counterexample",
+    "maximum-distinct-found-dictionary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "1d9e8204175adecd01d64ac0ce97af48f3cc7d211d72c8f6af739bce7c129e7e",
+  "suiteHash": "74536d904a7786db9cc99babf36c8508bbfdb1a93c00225ffebdff4b8ae2ef97",
+  "oracleChecks": 733,
+  "hiddenUnique": 730,
+  "mutations": [
+    {
+      "name": "forget-wraparound-conflict",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "take-fixed-parity",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

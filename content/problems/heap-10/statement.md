@@ -1,0 +1,3 @@
+Each building is [left, right, height]. It has height at every real position x with left <= x < right. Return the visible skyline as [x, newHeight] change points in increasing x order. The visible height is the maximum active building height, or zero when no building is active.
+
+Emit a point only when that height changes. Begin with the first rise from zero and include the final drop back to zero. Return an empty matrix when there are no buildings. At a shared coordinate, buildings ending there are inactive and buildings starting there are active; compute one combined result rather than temporary rises or drops. Identical repeated buildings do not change the skyline.

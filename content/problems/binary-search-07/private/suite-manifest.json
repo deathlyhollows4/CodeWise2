@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC701",
+  "hiddenCount": 796,
+  "suiteHash": "0b39a93467adc3c76a575b2ead9d14a109296753085a8ce33bcbc2c5a87cfafc",
+  "categories": [
+    "present-across-rotation",
+    "absent-boundary",
+    "small-complete-boundaries",
+    "large-rotated-search"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

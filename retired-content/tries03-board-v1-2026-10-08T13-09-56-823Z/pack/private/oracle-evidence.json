@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "ffe9e7562b51c1a1dc9d9dfc83d3628e398b733730efe345e95196d7dcafae27",
+  "suiteHash": "a6bd1350b277e77fec37c4933e077960170167e018a953325cff5b11a3beb393",
+  "oracleChecks": 567,
+  "hiddenUnique": 564,
+  "mutations": [
+    {
+      "name": "reuse-board-cells-in-one-path",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "stop-after-short-terminal-word",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "return-duplicates-in-dictionary-order",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

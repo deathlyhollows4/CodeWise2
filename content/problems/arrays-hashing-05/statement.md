@@ -1,0 +1,1 @@
+Return the labels from a log with repeated appearances removed. Keep each label exactly once, at the position determined by its first appearance. Do not sort the labels. An empty log returns an empty list.

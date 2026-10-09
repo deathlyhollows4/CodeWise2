@@ -1,0 +1,1 @@
+class Solution {public boolean solve(int[] a,int t){boolean[] dp=new boolean[t+1];dp[0]=true;for(int v:a)for(int n=t;n>=v;n--)dp[n]=dp[n]||dp[n-v];return dp[t];}}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        -4,
+        8,
+        8
+      ]
+    },
+    "expected": 8,
+    "explanation": "The largest reading is 8, even when repeated."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -6
+      ]
+    },
+    "expected": -6,
+    "explanation": "The only reading is the maximum."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -9,
+        -2,
+        -7
+      ]
+    },
+    "expected": -2,
+    "explanation": "Zero is not an input value and must not be returned."
+  }
+]

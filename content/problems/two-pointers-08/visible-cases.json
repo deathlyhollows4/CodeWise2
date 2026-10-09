@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        1,
+        4,
+        2
+      ]
+    },
+    "expected": 6,
+    "explanation": "Positions 0 and 3 give distance 3 times shorter height 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        7
+      ]
+    },
+    "expected": 0,
+    "explanation": "A pair requires two positions."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        5,
+        0,
+        0,
+        5
+      ]
+    },
+    "expected": 15,
+    "explanation": "Interior heights do not limit the chosen boundary pair."
+  }
+]

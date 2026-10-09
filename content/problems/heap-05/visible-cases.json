@@ -1,0 +1,49 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        4,
+        4,
+        2,
+        2,
+        9
+      ],
+      "k": 2
+    },
+    "expected": [
+      2,
+      4
+    ],
+    "explanation": "Labels 2 and 4 both occur twice; the smaller label ranks first."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -3,
+        -3,
+        7
+      ],
+      "k": 5
+    },
+    "expected": [
+      -3,
+      7
+    ],
+    "explanation": "Only two distinct labels exist, so both are returned."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        1,
+        2
+      ],
+      "k": 0
+    },
+    "expected": [],
+    "explanation": "A zero limit selects no labels."
+  }
+]

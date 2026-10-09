@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values){unordered_map<int,int> first;first[0]=-1;int diff=0,best=0;for(int i=0;i<(int)values.size();i++){diff+=values[i]==0?-1:1;if(first.count(diff))best=max(best,i-first[diff]);else first[diff]=i;}return best;}};

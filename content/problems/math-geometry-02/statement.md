@@ -1,0 +1,1 @@
+Return the greatest common divisor of the absolute values of a and b. The answer is nonnegative. If exactly one input is zero, return the absolute value of the other. For this task, gcd(0,0) is defined as 0.

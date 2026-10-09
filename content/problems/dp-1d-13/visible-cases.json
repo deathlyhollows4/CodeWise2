@@ -1,0 +1,40 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -2,
+        3,
+        -1,
+        4,
+        -5
+      ]
+    },
+    "expected": 6,
+    "explanation": "The contiguous segment 3,-1,4 sums to 6."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        -5,
+        -1,
+        -7
+      ]
+    },
+    "expected": -1,
+    "explanation": "Choose the single value -1. An empty segment is not allowed."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        5,
+        -100,
+        6
+      ]
+    },
+    "expected": 6,
+    "explanation": "Choose the final 6; choosing 5 and 6 together would skip an interior position."
+  }
+]

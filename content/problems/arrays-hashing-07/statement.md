@@ -1,0 +1,1 @@
+Return indices [i,j] with i<j and values[i]+values[j]=target. Among all matching pairs, choose the smallest i; if tied, choose the smallest j. If no pair matches, return [-1,-1]. One position cannot be used twice. Input is not necessarily sorted.

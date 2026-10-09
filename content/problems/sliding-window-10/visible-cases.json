@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        2,
+        1,
+        3,
+        3
+      ],
+      "k": 2
+    },
+    "expected": 3,
+    "explanation": "[1,2,1] is one longest batch with two types."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "k": 2
+    },
+    "expected": 0,
+    "explanation": "There is no batch."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        1
+      ],
+      "k": 0
+    },
+    "expected": 0,
+    "explanation": "Zero types allows no nonempty batch."
+  }
+]

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "cbe127ed203326d3e2d99242d9f8650ce88f73859a9972f28911e98ac2fc447e",
+  "reviewer": "CodeWise2 judge/content independent of the Tree problem author",
+  "reviewedAt": "2026-10-08T12:49:16.158Z",
+  "evidence": [
+    "docs/release-evidence/judge-tree-review/assets-review-bundle.json",
+    "docs/release-evidence/judge-tree-review/first-four-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/subtree-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/first-eight-route-evidence.json"
+  ],
+  "assessmentScope": {
+    "authorSource": "content/authoring/trees-subtree-summary.mjs",
+    "sourceHash": "dae83ea1a15e5e4051650dcaf9d918640cdd455078cc15c9ec00e834642b0a73",
+    "actualAllNineLanguageAssets": {
+      "java": {
+        "starter": "cb9ce93580dcbb84405c078fcf106079a7ce4f45fbed0a5c0e3fc5d10c5432b4",
+        "wrapper": "0c545c21e48ca3831a9e644855b3d77c40d2b2f4df27844bad59ec231e8a4737",
+        "reference": "e1d0d0ed27e3595de9b6bc2a6fbba452a3454cffc9446532a246c620a50901ae"
+      },
+      "cpp": {
+        "starter": "86c1f23ca9bfc59e88ee90b1b4fb1bb53bdbd1ef5dbd3f08d66a7ce3283b74bd",
+        "wrapper": "43057934d616d1ec488b4b5e3c6704b7397d87ab1623f60c62a0084891e7fe83",
+        "reference": "89b730e9e2a2eea0152dd84a1af127256bd3d040019cf15fefe5d2d33fb64709"
+      },
+      "python": {
+        "starter": "fe21e41f98d0be82da58edc19b920ee7d0e6c82d7d30c6c18da2a9f829050c36",
+        "wrapper": "86de144a0c34c5616ad78728a4cfe041580d32f26602941eeb9ce42e6b602215",
+        "reference": "c92cb3f5846c8be1d507d4f08b11aa4ea0385dd0350e1f0e5ea63fa575843521"
+      }
+    },
+    "actualSchemaAndReadonlyWrapperReviewed": true,
+    "graphQualification": "Generation2026-10-07T22:57:49 marked all relevant sources not_tracked; full direct source/actual asset fallback used."
+  },
+  "limitations": [
+    "These are content rights/progression/diversity assessments, not publication or containment approval.",
+    "Route evidence is conditional on a genuinely eligible source and explicit independent teacher demonstrations; it does not claim every possible history or learner mastery.",
+    "Native reference receipts and final243 global distinctness/runtime gates remain separate."
+  ],
+  "reviewType": "progression",
+  "rationale": "Step3 introduces a branch-local ancestor maximum after child links, with no unstated depth/DP prerequisite. Related same-step route/balance/pruning peers use explicit teachers;14/15 are4 and their new summary/membership requirements are remediated.",
+  "conditionalRouteAssessment": {
+    "id": "trees-16",
+    "step": 3,
+    "routes": [
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-05",
+        "targetStep": 3,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [
+          "trees-02",
+          "trees-04"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-06",
+        "targetStep": 3,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [
+          "trees-02",
+          "trees-04"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-11",
+        "targetStep": 3,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [
+          "arrays-hashing-01",
+          "trees-02"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-13",
+        "targetStep": 3,
+        "practiceAccessOnly": [
+          "trees.child-links"
+        ],
+        "simulatedIndependentTeachers": [
+          "trees-03"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "nextIds",
+        "targetId": "trees-14",
+        "targetStep": 4,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [
+          "trees-03",
+          "trees-13"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "nextIds",
+        "targetId": "trees-15",
+        "targetStep": 4,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [
+          "arrays-hashing-01",
+          "arrays-hashing-03"
+        ],
+        "unresolved": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bit-replacements.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "explicit-32-field-boundaries",
+  "hiddenCount": 200,
+  "suiteHash": "f8d698250bde398028fb2e35b99843803eda9c83864ec9a24ca88b9ae923f36c",
+  "categories": [
+    "all-32-single-bit-field-positions",
+    "all-32-prefix-widths-with-mixed-high-bits",
+    "interior-straddling-and-full-word-fields",
+    "maximum-unsigned-full32-field"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

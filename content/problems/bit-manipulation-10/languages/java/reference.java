@@ -1,0 +1,1 @@
+class Solution {public long solve(long initial,int[] positions){for(int p:positions)initial^=1L<<p;return initial;}}

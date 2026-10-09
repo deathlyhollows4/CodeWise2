@@ -1,0 +1,50 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": [
+        4,
+        9,
+        4,
+        2
+      ],
+      "b": [
+        9,
+        4,
+        2,
+        8
+      ]
+    },
+    "expected": 3,
+    "explanation": "The shared subsequence [9,4,2] has length 3; the sequences cannot share four positions in order."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": [],
+      "b": [
+        3,
+        4
+      ]
+    },
+    "expected": 0,
+    "explanation": "An empty sequence has no nonempty subsequence."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": [
+        1,
+        2,
+        1
+      ],
+      "b": [
+        1,
+        1,
+        2
+      ]
+    },
+    "expected": 2,
+    "explanation": "Either [1,1] or [1,2] works. Reordering to obtain three matches is forbidden."
+  }
+]

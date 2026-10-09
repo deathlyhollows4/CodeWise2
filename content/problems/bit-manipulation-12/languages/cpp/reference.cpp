@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){int answer=0,mask=0;for(int bit=30;bit>=0;bit--){mask|=1<<bit;unordered_set<int> prefixes;for(int v:values)prefixes.insert(v&mask);int candidate=answer|(1<<bit);for(int p:prefixes)if(prefixes.count(p^candidate)){answer=candidate;break;}}return answer;}};

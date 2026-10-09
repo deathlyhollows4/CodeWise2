@@ -1,0 +1,1 @@
+Repeatedly remove an adjacent pair of identical ASCII letters until no such pair remains. Return the remaining text. Pairs are removed as the text is processed from left to right, and cancellations can expose new pairs. Letter case matters. Empty text stays empty.

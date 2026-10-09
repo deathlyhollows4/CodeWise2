@@ -1,0 +1,1 @@
+class Solution {public TreeNode solve(TreeNode root,int value){if(root==null)return new TreeNode(value);TreeNode n=root;while(n.val!=value){if(value<n.val){if(n.left==null){n.left=new TreeNode(value);break;}n=n.left;}else{if(n.right==null){n.right=new TreeNode(value);break;}n=n.right;}}return root;}}

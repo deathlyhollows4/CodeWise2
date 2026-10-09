@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "ab583365c63c901e881fec1912264e3a32d5d75bf23b8030f80ac171fcd98b07",
+  "suiteHash": "d2fe3f67e84c42658149f0282d9e0b87094f645064ebce79335d559ae9302d54",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "return-vertex-index-order",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "return-empty-for-every-graph",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

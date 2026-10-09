@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "d2795c14175086c19a2c0a8289592441129014e4dd58975f53029bd1d1a12091",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:12:58.210Z",
+  "rationale": "Classifies a query against a simple polygon including boundary; ray crossings and exact segment membership differ from segment-intersection11 and construction of an entire convex hull13. Concavity and edge/vertex cases are substantive.",
+  "evidence": [
+    "docs/release-evidence/coordinator-math-curriculum-diversity-review.json",
+    "docs/release-evidence/coordinator-math-original-assets.json",
+    "docs/release-evidence/independent-reviewed-curriculum-current.json"
+  ],
+  "limitations": [
+    "Independent source and actual per-task teaching/objective review; representative curriculum audit does not cover every learner history.",
+    "Pending final243 global synthesis/current native receipts are separate."
+  ]
+}

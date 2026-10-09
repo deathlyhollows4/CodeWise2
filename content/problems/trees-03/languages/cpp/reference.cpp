@@ -1,0 +1,1 @@
+class Solution {public:int solve(TreeNode* root){if(!root)return 0;queue<TreeNode*> nodes;nodes.push(root);int depth=0;while(!nodes.empty()){int count=nodes.size();depth++;for(int i=0;i<count;i++){auto node=nodes.front();nodes.pop();if(node->left)nodes.push(node->left);if(node->right)nodes.push(node->right);}}return depth;}};

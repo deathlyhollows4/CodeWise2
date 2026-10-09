@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "89b4c60669d16f25e14c9845b735528001186de97c2214fe91e235795647ad7a",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:52:21.850Z",
+  "rationale": "Full independently inspected author source and native algorithms for Consecutive label run. The objective is: Find the longest consecutive-value run while ignoring duplicates and original positions. Exact reconciliation covers the current statement, three examples, 629 hidden cases, all three references and original or project-template starters/wrappers. No imported prose, tests or code assets occur in the source; common algorithmic ideas are expressed as original project assets.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/arrays-third.mjs",
+    "authorSourceSha256": "bf02d010ce927d11f231a9b9f064c1ea0eb508bc48299e60efca5315bea71d46",
+    "reconciliation": "docs/release-evidence/coordinator-arrays-original-assets.json",
+    "wrapperReview": "Read all actual wrappers for Arrays10/16: only the optional blank line before USER_CODE and earlier Java Gson constructor differ from factory. Starters are exact original author strings, not placeholders."
+  },
+  "limitations": [
+    "Rights only; not diversity, progression, publication or execution approval.",
+    "Changed bound assets invalidate the review."
+  ]
+}

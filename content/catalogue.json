@@ -1,0 +1,1315 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "expectedTotal": 243,
+  "scopeAmendment": "2026-10-08-half-unstarted-topics-and-leftover-hidden60",
+  "topics": [
+    {
+      "id": "arrays-hashing",
+      "title": "Arrays & Hashing",
+      "quota": 18
+    },
+    {
+      "id": "two-pointers",
+      "title": "Two Pointers",
+      "quota": 10
+    },
+    {
+      "id": "sliding-window",
+      "title": "Sliding Window",
+      "quota": 12
+    },
+    {
+      "id": "stack",
+      "title": "Stack",
+      "quota": 12
+    },
+    {
+      "id": "binary-search",
+      "title": "Binary Search",
+      "quota": 14
+    },
+    {
+      "id": "linked-list",
+      "title": "Linked List",
+      "quota": 22
+    },
+    {
+      "id": "trees",
+      "title": "Trees",
+      "quota": 30
+    },
+    {
+      "id": "heap",
+      "title": "Heap / Priority Queue",
+      "quota": 14
+    },
+    {
+      "id": "backtracking",
+      "title": "Backtracking",
+      "quota": 10
+    },
+    {
+      "id": "tries",
+      "title": "Tries",
+      "quota": 3
+    },
+    {
+      "id": "graphs",
+      "title": "Graphs",
+      "quota": 13
+    },
+    {
+      "id": "advanced-graphs",
+      "title": "Advanced Graphs",
+      "quota": 6
+    },
+    {
+      "id": "dp-1d",
+      "title": "1-D Dynamic Programming",
+      "quota": 24
+    },
+    {
+      "id": "dp-2d",
+      "title": "2-D Dynamic Programming",
+      "quota": 11
+    },
+    {
+      "id": "greedy",
+      "title": "Greedy",
+      "quota": 8
+    },
+    {
+      "id": "intervals",
+      "title": "Intervals",
+      "quota": 6
+    },
+    {
+      "id": "math-geometry",
+      "title": "Math & Geometry",
+      "quota": 16
+    },
+    {
+      "id": "bit-manipulation",
+      "title": "Bit Manipulation",
+      "quota": 14
+    }
+  ],
+  "problems": [
+    {
+      "id": "arrays-hashing-01",
+      "path": "problems/arrays-hashing-01",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-02",
+      "path": "problems/arrays-hashing-02",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-03",
+      "path": "problems/arrays-hashing-03",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-01",
+      "path": "problems/advanced-graphs-01",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-02",
+      "path": "problems/advanced-graphs-02",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-03",
+      "path": "problems/advanced-graphs-03",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-04",
+      "path": "problems/advanced-graphs-04",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-05",
+      "path": "problems/advanced-graphs-05",
+      "status": "published"
+    },
+    {
+      "id": "advanced-graphs-06",
+      "path": "problems/advanced-graphs-06",
+      "status": "published"
+    },
+    {
+      "id": "heap-03",
+      "path": "problems/heap-03",
+      "status": "published"
+    },
+    {
+      "id": "heap-10",
+      "path": "problems/heap-10",
+      "status": "published"
+    },
+    {
+      "id": "heap-14",
+      "path": "problems/heap-14",
+      "status": "published"
+    },
+    {
+      "id": "graphs-01",
+      "path": "problems/graphs-01",
+      "status": "published"
+    },
+    {
+      "id": "graphs-02",
+      "path": "problems/graphs-02",
+      "status": "published"
+    },
+    {
+      "id": "graphs-03",
+      "path": "problems/graphs-03",
+      "status": "published"
+    },
+    {
+      "id": "graphs-04",
+      "path": "problems/graphs-04",
+      "status": "published"
+    },
+    {
+      "id": "graphs-05",
+      "path": "problems/graphs-05",
+      "status": "published"
+    },
+    {
+      "id": "graphs-06",
+      "path": "problems/graphs-06",
+      "status": "published"
+    },
+    {
+      "id": "graphs-07",
+      "path": "problems/graphs-07",
+      "status": "published"
+    },
+    {
+      "id": "graphs-08",
+      "path": "problems/graphs-08",
+      "status": "published"
+    },
+    {
+      "id": "graphs-09",
+      "path": "problems/graphs-09",
+      "status": "published"
+    },
+    {
+      "id": "graphs-10",
+      "path": "problems/graphs-10",
+      "status": "published"
+    },
+    {
+      "id": "graphs-11",
+      "path": "problems/graphs-11",
+      "status": "published"
+    },
+    {
+      "id": "graphs-12",
+      "path": "problems/graphs-12",
+      "status": "published"
+    },
+    {
+      "id": "graphs-13",
+      "path": "problems/graphs-13",
+      "status": "published"
+    },
+    {
+      "id": "intervals-05",
+      "path": "problems/intervals-05",
+      "status": "published"
+    },
+    {
+      "id": "intervals-06",
+      "path": "problems/intervals-06",
+      "status": "published"
+    },
+    {
+      "id": "intervals-04",
+      "path": "problems/intervals-04",
+      "status": "published"
+    },
+    {
+      "id": "intervals-02",
+      "path": "problems/intervals-02",
+      "status": "published"
+    },
+    {
+      "id": "intervals-03",
+      "path": "problems/intervals-03",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-19",
+      "path": "problems/dp-1d-19",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-20",
+      "path": "problems/dp-1d-20",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-21",
+      "path": "problems/dp-1d-21",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-22",
+      "path": "problems/dp-1d-22",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-23",
+      "path": "problems/dp-1d-23",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-24",
+      "path": "problems/dp-1d-24",
+      "status": "published"
+    },
+    {
+      "id": "greedy-01",
+      "path": "problems/greedy-01",
+      "status": "published"
+    },
+    {
+      "id": "greedy-02",
+      "path": "problems/greedy-02",
+      "status": "published"
+    },
+    {
+      "id": "greedy-03",
+      "path": "problems/greedy-03",
+      "status": "published"
+    },
+    {
+      "id": "greedy-04",
+      "path": "problems/greedy-04",
+      "status": "published"
+    },
+    {
+      "id": "greedy-05",
+      "path": "problems/greedy-05",
+      "status": "published"
+    },
+    {
+      "id": "greedy-08",
+      "path": "problems/greedy-08",
+      "status": "published"
+    },
+    {
+      "id": "greedy-06",
+      "path": "problems/greedy-06",
+      "status": "published"
+    },
+    {
+      "id": "greedy-07",
+      "path": "problems/greedy-07",
+      "status": "published"
+    },
+    {
+      "id": "heap-09",
+      "path": "problems/heap-09",
+      "status": "published"
+    },
+    {
+      "id": "heap-12",
+      "path": "problems/heap-12",
+      "status": "published"
+    },
+    {
+      "id": "tries-03",
+      "path": "problems/tries-03",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-01",
+      "path": "problems/dp-2d-01",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-02",
+      "path": "problems/dp-2d-02",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-03",
+      "path": "problems/dp-2d-03",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-04",
+      "path": "problems/dp-2d-04",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-05",
+      "path": "problems/dp-2d-05",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-06",
+      "path": "problems/dp-2d-06",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-07",
+      "path": "problems/dp-2d-07",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-08",
+      "path": "problems/dp-2d-08",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-09",
+      "path": "problems/dp-2d-09",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-10",
+      "path": "problems/dp-2d-10",
+      "status": "published"
+    },
+    {
+      "id": "dp-2d-11",
+      "path": "problems/dp-2d-11",
+      "status": "published"
+    },
+    {
+      "id": "intervals-01",
+      "path": "problems/intervals-01",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-03",
+      "path": "problems/backtracking-03",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-04",
+      "path": "problems/backtracking-04",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-05",
+      "path": "problems/backtracking-05",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-06",
+      "path": "problems/backtracking-06",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-07",
+      "path": "problems/backtracking-07",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-08",
+      "path": "problems/backtracking-08",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-09",
+      "path": "problems/backtracking-09",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-10",
+      "path": "problems/backtracking-10",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-04",
+      "path": "problems/arrays-hashing-04",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-05",
+      "path": "problems/arrays-hashing-05",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-06",
+      "path": "problems/arrays-hashing-06",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-07",
+      "path": "problems/arrays-hashing-07",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-08",
+      "path": "problems/arrays-hashing-08",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-09",
+      "path": "problems/arrays-hashing-09",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-10",
+      "path": "problems/arrays-hashing-10",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-11",
+      "path": "problems/arrays-hashing-11",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-12",
+      "path": "problems/arrays-hashing-12",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-13",
+      "path": "problems/arrays-hashing-13",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-14",
+      "path": "problems/arrays-hashing-14",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-15",
+      "path": "problems/arrays-hashing-15",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-16",
+      "path": "problems/arrays-hashing-16",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-17",
+      "path": "problems/arrays-hashing-17",
+      "status": "published"
+    },
+    {
+      "id": "arrays-hashing-18",
+      "path": "problems/arrays-hashing-18",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-01",
+      "path": "problems/two-pointers-01",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-02",
+      "path": "problems/two-pointers-02",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-03",
+      "path": "problems/two-pointers-03",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-04",
+      "path": "problems/two-pointers-04",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-05",
+      "path": "problems/two-pointers-05",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-06",
+      "path": "problems/two-pointers-06",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-07",
+      "path": "problems/two-pointers-07",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-08",
+      "path": "problems/two-pointers-08",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-09",
+      "path": "problems/two-pointers-09",
+      "status": "published"
+    },
+    {
+      "id": "two-pointers-10",
+      "path": "problems/two-pointers-10",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-01",
+      "path": "problems/sliding-window-01",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-02",
+      "path": "problems/sliding-window-02",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-03",
+      "path": "problems/sliding-window-03",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-04",
+      "path": "problems/sliding-window-04",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-05",
+      "path": "problems/sliding-window-05",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-06",
+      "path": "problems/sliding-window-06",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-07",
+      "path": "problems/sliding-window-07",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-08",
+      "path": "problems/sliding-window-08",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-09",
+      "path": "problems/sliding-window-09",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-10",
+      "path": "problems/sliding-window-10",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-11",
+      "path": "problems/sliding-window-11",
+      "status": "published"
+    },
+    {
+      "id": "sliding-window-12",
+      "path": "problems/sliding-window-12",
+      "status": "published"
+    },
+    {
+      "id": "stack-01",
+      "path": "problems/stack-01",
+      "status": "published"
+    },
+    {
+      "id": "stack-02",
+      "path": "problems/stack-02",
+      "status": "published"
+    },
+    {
+      "id": "stack-03",
+      "path": "problems/stack-03",
+      "status": "published"
+    },
+    {
+      "id": "stack-04",
+      "path": "problems/stack-04",
+      "status": "published"
+    },
+    {
+      "id": "stack-05",
+      "path": "problems/stack-05",
+      "status": "published"
+    },
+    {
+      "id": "stack-06",
+      "path": "problems/stack-06",
+      "status": "published"
+    },
+    {
+      "id": "stack-07",
+      "path": "problems/stack-07",
+      "status": "published"
+    },
+    {
+      "id": "stack-08",
+      "path": "problems/stack-08",
+      "status": "published"
+    },
+    {
+      "id": "stack-09",
+      "path": "problems/stack-09",
+      "status": "published"
+    },
+    {
+      "id": "stack-11",
+      "path": "problems/stack-11",
+      "status": "published"
+    },
+    {
+      "id": "stack-10",
+      "path": "problems/stack-10",
+      "status": "published"
+    },
+    {
+      "id": "stack-12",
+      "path": "problems/stack-12",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-01",
+      "path": "problems/binary-search-01",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-02",
+      "path": "problems/binary-search-02",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-03",
+      "path": "problems/binary-search-03",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-01",
+      "path": "problems/dp-1d-01",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-02",
+      "path": "problems/dp-1d-02",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-03",
+      "path": "problems/dp-1d-03",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-04",
+      "path": "problems/dp-1d-04",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-05",
+      "path": "problems/dp-1d-05",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-06",
+      "path": "problems/dp-1d-06",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-07",
+      "path": "problems/dp-1d-07",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-08",
+      "path": "problems/dp-1d-08",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-09",
+      "path": "problems/dp-1d-09",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-04",
+      "path": "problems/binary-search-04",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-05",
+      "path": "problems/binary-search-05",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-06",
+      "path": "problems/binary-search-06",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-07",
+      "path": "problems/binary-search-07",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-08",
+      "path": "problems/binary-search-08",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-09",
+      "path": "problems/binary-search-09",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-10",
+      "path": "problems/binary-search-10",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-11",
+      "path": "problems/binary-search-11",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-12",
+      "path": "problems/binary-search-12",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-13",
+      "path": "problems/binary-search-13",
+      "status": "published"
+    },
+    {
+      "id": "binary-search-14",
+      "path": "problems/binary-search-14",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-01",
+      "path": "problems/bit-manipulation-01",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-02",
+      "path": "problems/bit-manipulation-02",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-03",
+      "path": "problems/bit-manipulation-03",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-04",
+      "path": "problems/bit-manipulation-04",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-05",
+      "path": "problems/bit-manipulation-05",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-06",
+      "path": "problems/bit-manipulation-06",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-07",
+      "path": "problems/bit-manipulation-07",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-08",
+      "path": "problems/bit-manipulation-08",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-10",
+      "path": "problems/bit-manipulation-10",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-09",
+      "path": "problems/bit-manipulation-09",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-11",
+      "path": "problems/bit-manipulation-11",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-12",
+      "path": "problems/bit-manipulation-12",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-13",
+      "path": "problems/bit-manipulation-13",
+      "status": "published"
+    },
+    {
+      "id": "bit-manipulation-14",
+      "path": "problems/bit-manipulation-14",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-01",
+      "path": "problems/linked-list-01",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-02",
+      "path": "problems/linked-list-02",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-03",
+      "path": "problems/linked-list-03",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-04",
+      "path": "problems/linked-list-04",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-05",
+      "path": "problems/linked-list-05",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-06",
+      "path": "problems/linked-list-06",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-07",
+      "path": "problems/linked-list-07",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-08",
+      "path": "problems/linked-list-08",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-09",
+      "path": "problems/linked-list-09",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-10",
+      "path": "problems/linked-list-10",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-11",
+      "path": "problems/linked-list-11",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-12",
+      "path": "problems/linked-list-12",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-13",
+      "path": "problems/linked-list-13",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-14",
+      "path": "problems/linked-list-14",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-15",
+      "path": "problems/linked-list-15",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-16",
+      "path": "problems/linked-list-16",
+      "status": "published"
+    },
+    {
+      "id": "trees-01",
+      "path": "problems/trees-01",
+      "status": "published"
+    },
+    {
+      "id": "trees-02",
+      "path": "problems/trees-02",
+      "status": "published"
+    },
+    {
+      "id": "trees-03",
+      "path": "problems/trees-03",
+      "status": "published"
+    },
+    {
+      "id": "trees-04",
+      "path": "problems/trees-04",
+      "status": "published"
+    },
+    {
+      "id": "heap-01",
+      "path": "problems/heap-01",
+      "status": "published"
+    },
+    {
+      "id": "heap-02",
+      "path": "problems/heap-02",
+      "status": "published"
+    },
+    {
+      "id": "heap-04",
+      "path": "problems/heap-04",
+      "status": "published"
+    },
+    {
+      "id": "heap-06",
+      "path": "problems/heap-06",
+      "status": "published"
+    },
+    {
+      "id": "heap-05",
+      "path": "problems/heap-05",
+      "status": "published"
+    },
+    {
+      "id": "heap-07",
+      "path": "problems/heap-07",
+      "status": "published"
+    },
+    {
+      "id": "heap-08",
+      "path": "problems/heap-08",
+      "status": "published"
+    },
+    {
+      "id": "heap-11",
+      "path": "problems/heap-11",
+      "status": "published"
+    },
+    {
+      "id": "trees-22",
+      "path": "problems/trees-22",
+      "status": "published"
+    },
+    {
+      "id": "trees-23",
+      "path": "problems/trees-23",
+      "status": "published"
+    },
+    {
+      "id": "trees-17",
+      "path": "problems/trees-17",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-22",
+      "path": "problems/linked-list-22",
+      "status": "published"
+    },
+    {
+      "id": "tries-01",
+      "path": "problems/tries-01",
+      "status": "published"
+    },
+    {
+      "id": "tries-02",
+      "path": "problems/tries-02",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-01",
+      "path": "problems/backtracking-01",
+      "status": "published"
+    },
+    {
+      "id": "backtracking-02",
+      "path": "problems/backtracking-02",
+      "status": "published"
+    },
+    {
+      "id": "heap-13",
+      "path": "problems/heap-13",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-17",
+      "path": "problems/dp-1d-17",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-18",
+      "path": "problems/dp-1d-18",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-10",
+      "path": "problems/dp-1d-10",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-11",
+      "path": "problems/dp-1d-11",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-12",
+      "path": "problems/dp-1d-12",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-13",
+      "path": "problems/dp-1d-13",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-14",
+      "path": "problems/dp-1d-14",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-15",
+      "path": "problems/dp-1d-15",
+      "status": "published"
+    },
+    {
+      "id": "dp-1d-16",
+      "path": "problems/dp-1d-16",
+      "status": "published"
+    },
+    {
+      "id": "trees-05",
+      "path": "problems/trees-05",
+      "status": "published"
+    },
+    {
+      "id": "trees-06",
+      "path": "problems/trees-06",
+      "status": "published"
+    },
+    {
+      "id": "trees-07",
+      "path": "problems/trees-07",
+      "status": "published"
+    },
+    {
+      "id": "trees-08",
+      "path": "problems/trees-08",
+      "status": "published"
+    },
+    {
+      "id": "trees-09",
+      "path": "problems/trees-09",
+      "status": "published"
+    },
+    {
+      "id": "trees-10",
+      "path": "problems/trees-10",
+      "status": "published"
+    },
+    {
+      "id": "trees-11",
+      "path": "problems/trees-11",
+      "status": "published"
+    },
+    {
+      "id": "trees-12",
+      "path": "problems/trees-12",
+      "status": "published"
+    },
+    {
+      "id": "trees-13",
+      "path": "problems/trees-13",
+      "status": "published"
+    },
+    {
+      "id": "trees-14",
+      "path": "problems/trees-14",
+      "status": "published"
+    },
+    {
+      "id": "trees-15",
+      "path": "problems/trees-15",
+      "status": "published"
+    },
+    {
+      "id": "trees-16",
+      "path": "problems/trees-16",
+      "status": "published"
+    },
+    {
+      "id": "trees-25",
+      "path": "problems/trees-25",
+      "status": "published"
+    },
+    {
+      "id": "trees-26",
+      "path": "problems/trees-26",
+      "status": "published"
+    },
+    {
+      "id": "trees-27",
+      "path": "problems/trees-27",
+      "status": "published"
+    },
+    {
+      "id": "trees-28",
+      "path": "problems/trees-28",
+      "status": "published"
+    },
+    {
+      "id": "trees-29",
+      "path": "problems/trees-29",
+      "status": "published"
+    },
+    {
+      "id": "trees-30",
+      "path": "problems/trees-30",
+      "status": "published"
+    },
+    {
+      "id": "trees-18",
+      "path": "problems/trees-18",
+      "status": "published"
+    },
+    {
+      "id": "trees-19",
+      "path": "problems/trees-19",
+      "status": "published"
+    },
+    {
+      "id": "trees-20",
+      "path": "problems/trees-20",
+      "status": "published"
+    },
+    {
+      "id": "trees-21",
+      "path": "problems/trees-21",
+      "status": "published"
+    },
+    {
+      "id": "trees-24",
+      "path": "problems/trees-24",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-17",
+      "path": "problems/linked-list-17",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-18",
+      "path": "problems/linked-list-18",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-19",
+      "path": "problems/linked-list-19",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-20",
+      "path": "problems/linked-list-20",
+      "status": "published"
+    },
+    {
+      "id": "linked-list-21",
+      "path": "problems/linked-list-21",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-01",
+      "path": "problems/math-geometry-01",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-02",
+      "path": "problems/math-geometry-02",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-03",
+      "path": "problems/math-geometry-03",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-04",
+      "path": "problems/math-geometry-04",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-05",
+      "path": "problems/math-geometry-05",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-06",
+      "path": "problems/math-geometry-06",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-07",
+      "path": "problems/math-geometry-07",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-08",
+      "path": "problems/math-geometry-08",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-15",
+      "path": "problems/math-geometry-15",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-09",
+      "path": "problems/math-geometry-09",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-10",
+      "path": "problems/math-geometry-10",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-11",
+      "path": "problems/math-geometry-11",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-16",
+      "path": "problems/math-geometry-16",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-12",
+      "path": "problems/math-geometry-12",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-13",
+      "path": "problems/math-geometry-13",
+      "status": "published"
+    },
+    {
+      "id": "math-geometry-14",
+      "path": "problems/math-geometry-14",
+      "status": "published"
+    }
+  ]
+}

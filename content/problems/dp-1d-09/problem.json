@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-09",
+  "version": "1.0.0",
+  "slug": "minimum-line-break-raggedness",
+  "title": "Minimum line-break raggedness",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.ordered-segmentation-cost",
+    "dp.last-segment-exemption"
+  ],
+  "prerequisites": [
+    "dp.minimum-cost-recurrence"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Choose ordered line boundaries minimizing squared unused width, with a free last line and indivisible words.",
+  "constraints": [
+    "0 <= lengths.length <= 1000",
+    "1 <= lengths[i] <= 1000000",
+    "1 <= width <= 1000000",
+    "Words cannot be split or reordered",
+    "Return -1 for impossible layouts; other results fit a signed 64-bit and JavaScript-safe integer"
+  ],
+  "interface": "Solution.solve(lengths,width) returns the minimum long/integer cost, or -1.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "lengths": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 1000,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        }
+      },
+      "width": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 1000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": -1,
+    "maximum": 1000000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-10"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02",
+    "dp-1d-08"
+  ],
+  "nextIds": [
+    "dp-1d-11",
+    "dp-1d-12"
+  ],
+  "rationale": "The best next line can end at several different words; the cost of its remaining suffix matters more than filling the current line greedily.",
+  "commonMistakes": [
+    "charge-the-last-line",
+    "greedily-fill-every-line"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

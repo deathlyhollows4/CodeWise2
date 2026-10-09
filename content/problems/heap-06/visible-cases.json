@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "weights": [
+        2,
+        7,
+        4,
+        1,
+        8,
+        1
+      ]
+    },
+    "expected": 1,
+    "explanation": "The prescribed largest-pair subtractions leave a stone of weight one."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "weights": [
+        5,
+        5
+      ]
+    },
+    "expected": 0,
+    "explanation": "Equal stones are both discarded."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "weights": []
+    },
+    "expected": 0,
+    "explanation": "No stones remain from an empty collection."
+  }
+]

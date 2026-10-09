@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "90da71d3f441c37d5b6b2696f5df580e79451405ac2082f7f4b1a032f8fb8389",
+  "suiteHash": "1c5a445dbd8cfad2279beec48dab517407999d69134873d8dd15a4f35cf8ab9e",
+  "oracleChecks": 730,
+  "hiddenUnique": 727,
+  "mutations": [
+    {
+      "name": "omit-starting-cost",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "narrow-signed32-total",
+      "detected": true,
+      "caseId": "hidden-4"
+    },
+    {
+      "name": "local-cheapest-neighbor",
+      "detected": true,
+      "caseId": "hidden-12"
+    }
+  ],
+  "languageExecution": "not-run"
+}

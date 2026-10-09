@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca71",
+  "hiddenCount": 752,
+  "suiteHash": "9b3e7eb7f03b771b4780c1c57032811c02d8a565687ef2a4711b42ce2dd1453f",
+  "categories": [
+    "signed-numeric-boundaries",
+    "exact-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

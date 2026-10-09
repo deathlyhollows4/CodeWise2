@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "61f5886c8249cb5162b5352b2e0b700a0cf84ea40047322cf8fbfb422376583a",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T07:38:26.981Z",
+  "rationale": "Reviewed content/authoring/batches/bits-final.mjs in full and reconciled the materialized statement, three visible examples, all 733 deterministic hidden cases, three reference sources, and starters with the original author definitions. The task is Minimize the number of selected people whose combined skill masks contain every required skill. No imported statement, example, reference or test assets occur in this source. Common algorithmic ideas are expressed in project-authored prose and implementation.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/bits-final.mjs",
+    "authorSourceSha256": "bfc6da70eb2012f0127c469c0bb7d8a3550379a496e30529965b45a186bfbd1c",
+    "reconciliation": "docs/release-evidence/coordinator-bit-original-assets.json",
+    "wrapperReview": "C++ and Python equal the project template. Java equals the project template or its inspected older Gson-construction line without serializeNulls; scalar/nonnullable results here make that difference irrelevant to provenance. Library imports are dependencies, not copied library sources in these packs."
+  },
+  "limitations": [
+    "Rights review only; no publication, global diversity, progression or runtime-health approval.",
+    "Application dependency-license packaging remains a separate release review.",
+    "Any change to bound assets invalidates this review."
+  ]
+}

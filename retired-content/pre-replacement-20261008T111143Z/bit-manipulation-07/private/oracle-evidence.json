@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d045e1ef6ac671dc31f66400f9245d597afb643ea58effca2b2bbefa19143483",
+  "suiteHash": "14658c8e0737456d98e2a4bf6f54c9ecf53318533718df65769edbbb99dada6a",
+  "oracleChecks": 754,
+  "hiddenUnique": 751,
+  "mutations": [
+    {
+      "name": "xor-pairs-rule",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "forget-signed-decoding",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

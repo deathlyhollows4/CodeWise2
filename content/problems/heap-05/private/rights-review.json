@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "a615029f758e39674bffd0a78be1654a6ddc3187d8d61ac6bb432309d7ddac43",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:01:28.986Z",
+  "rationale": "Independently read all source algorithms, generator and native references for Rank the most frequent labels. Objective: Select distinct labels by descending occurrence count with ascending numeric tie order. Current statement, examples, all729hidden cases and nine language assets reconcile to original author source/project typed harness templates. No imported assets occur. Explicit source review of wide arithmetic, ordering, multiplicity or stateful handle semantics is recorded separately from this rights conclusion.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-ranking-medians.mjs",
+    "sourceHash": "2875d0e909b78aa382fa4a9633ad23a0e0a498c3328006b4aafd68e15d01b907",
+    "reconciliation": "docs/release-evidence/coordinator-heap-original-assets.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Rights only; native execution, progression and global diversity remain separate gates.",
+    "Later bound changes invalidate this review."
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-14",
+  "version": "1.0.0",
+  "slug": "target-segment-count",
+  "title": "Count target segments",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "prefix.difference",
+    "hashing.prefix-multiplicity"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "prefix.accumulation",
+    "hashing.counts",
+    "numbers.signed-accumulation"
+  ],
+  "step": 7,
+  "status": "published",
+  "objective": "Count nonempty contiguous segments whose signed sum matches a target.",
+  "constraints": [
+    "0 <= values.length <=100000",
+    "Each value and target is an integer in[-1000000000,1000000000].",
+    "A contiguous segment uses every position between its endpoints."
+  ],
+  "interface": "Solution.solve(values, target) returns a signed 64-bit count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-16"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-03",
+    "arrays-hashing-04",
+    "arrays-hashing-09"
+  ],
+  "nextIds": [
+    "arrays-hashing-17"
+  ],
+  "rationale": "Two prefix totals differ by a segment sum. Count how many earlier prefixes supply the required difference.",
+  "commonMistakes": [
+    "distinct-prefixes-only",
+    "32-bit-count",
+    "32-bit-prefix"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

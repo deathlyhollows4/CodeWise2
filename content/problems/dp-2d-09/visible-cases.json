@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "dimensions": [
+        5,
+        20,
+        4,
+        10
+      ]
+    },
+    "expected": 600,
+    "explanation": "First multiply the 5 by 20 and 20 by 4 matrices, costing 400; multiply the result by the 4 by 10 matrix, costing 200."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "dimensions": [
+        7,
+        3
+      ]
+    },
+    "expected": 0,
+    "explanation": "Only one matrix exists, so there is no multiplication."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "dimensions": [
+        20,
+        2,
+        30,
+        3
+      ]
+    },
+    "expected": 300,
+    "explanation": "Multiply the final two matrices first for 2*30*3=180; then multiply the first matrix by their 2 by 3 result for 20*2*3=120."
+  }
+]

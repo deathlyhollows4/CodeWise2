@@ -1,0 +1,1 @@
+class Solution {public:int solve(string text){vector<int> last(26,-1);int left=0,best=0;for(int right=0;right<(int)text.size();right++){int c=text[right]-'a';left=max(left,last[c]+1);last[c]=right;best=max(best,right-left+1);}return best;}};

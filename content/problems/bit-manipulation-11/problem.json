@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-11",
+  "version": "1.0.0",
+  "slug": "reflected-gray-codeword",
+  "title": "A reflected Gray codeword",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.adjacent-xor",
+    "bits.gray-ordinal"
+  ],
+  "prerequisites": [
+    "bits.unsigned32"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Map a binary ordinal to its reflected Gray codeword with one-bit transitions between consecutive ordinals.",
+  "constraints": [
+    "0 <= value <= 2147483647",
+    "Use the reflected ordering definition and a zero-based ordinal."
+  ],
+  "interface": "Solution.solve(value) receives a nonnegative long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-03"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "bit-manipulation-06"
+  ],
+  "rationale": "Compare each ordinal bit with the bit immediately above it; the reflected ordering changes only one code bit between neighboring ordinals.",
+  "commonMistakes": [
+    "return-ordinal",
+    "shift-left-instead"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

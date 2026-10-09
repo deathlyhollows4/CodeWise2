@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A08",
+  "hiddenCount": 60,
+  "suiteHash": "d2fe3f67e84c42658149f0282d9e0b87094f645064ebce79335d559ae9302d54",
+  "categories": [
+    "curated-boundary-one-task",
+    "curated-boundary-self-dependency",
+    "curated-boundary-index-order-is-wrong",
+    "curated-boundary-independent-tasks",
+    "max-unique-dependency-chain",
+    "max-five-thousand-dependencies",
+    "max-directed-cycle-impossibility",
+    "seeded-directed-cycle-components",
+    "structured-acyclic-partial-orders"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

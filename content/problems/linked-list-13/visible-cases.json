@@ -1,0 +1,47 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        3,
+        1,
+        3,
+        2
+      ],
+      "pivot": 3
+    },
+    "expected": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "explanation": "The less-than bucket keeps nodes 1 and 3; the other bucket keeps nodes 0 and 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        7,
+        7,
+        7
+      ],
+      "pivot": 7
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "Equal values all stay in the second bucket without changing identity order."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [],
+      "pivot": 0
+    },
+    "expected": [],
+    "explanation": "A null head produces an empty original-node sequence."
+  }
+]

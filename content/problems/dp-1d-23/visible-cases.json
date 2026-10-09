@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "starts": [
+        0,
+        2,
+        4
+      ],
+      "durations": [
+        2,
+        2,
+        2
+      ],
+      "rewards": [
+        5,
+        6,
+        7
+      ]
+    },
+    "expected": 18,
+    "explanation": "All three jobs touch at endpoints without overlapping, so their rewards add."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "starts": [
+        0,
+        1,
+        3
+      ],
+      "durations": [
+        4,
+        1,
+        2
+      ],
+      "rewards": [
+        20,
+        7,
+        8
+      ]
+    },
+    "expected": 20,
+    "explanation": "The long first job earns 20, beating the compatible second and third jobs totaling 15."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "starts": [],
+      "durations": [],
+      "rewards": []
+    },
+    "expected": 0,
+    "explanation": "The empty schedule earns no reward."
+  }
+]

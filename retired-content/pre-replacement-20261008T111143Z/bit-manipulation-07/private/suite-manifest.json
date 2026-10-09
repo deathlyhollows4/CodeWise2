@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 751,
+  "suiteHash": "14658c8e0737456d98e2a4bf6f54c9ecf53318533718df65769edbbb99dada6a",
+  "categories": [
+    "signed-count-structure",
+    "maximum-valid-count-structure"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

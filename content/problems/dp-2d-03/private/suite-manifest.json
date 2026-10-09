@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D03",
+  "hiddenCount": 721,
+  "suiteHash": "ae2f77d8b2b03dc2b895f68c090ed7aa5d6a1ea7a2c175b4b00df3b25b2734dd",
+  "categories": [
+    "empty",
+    "one-empty",
+    "unequal-singletons",
+    "equal-singletons",
+    "seeded-equality-pattern",
+    "max-identical-sequences",
+    "max-disjoint-sequences",
+    "max-repeated-length-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

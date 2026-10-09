@@ -1,0 +1,20 @@
+import {definitions as third} from '../../content/authoring/batches/backend-binary-third.mjs';
+import {definitions as fourth} from '../../content/authoring/batches/backend-binary-fourth.mjs';
+import {getPrivatePack} from '../../packages/judge-adapter/src/content.mjs';
+import {customCheck} from '../../packages/judge-adapter/src/custom-checkers.mjs';
+import {packIdentity} from '../../packages/judge-adapter/src/pack-validation.mjs';
+import {inputKey} from '../../packages/judge-adapter/src/canonical.mjs';
+import {writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const peak=third.find(d=>d.id==='binary-search-08');let checked=0,alternativeWitnesses=0;
+function extend(values,length){if(values.length===length){const input={values},a=peak.oracle(input),b=peak.independent(input);assert.equal(customCheck('strict-local-peak',input,a),true);assert.equal(customCheck('strict-local-peak',input,b),true);if(a!==b)alternativeWitnesses++;for(const bad of [-1,length,0.5])assert.equal(customCheck('strict-local-peak',input,bad),false);checked++;return;}for(const v of [-1,0,1])if(values.at(-1)!==v)extend([...values,v],length);}
+for(let n=1;n<=7;n++)extend([],n);
+const peakPack=await getPrivatePack(peak.id),product=await getPrivatePack('binary-search-14'),median=await getPrivatePack('binary-search-13'),service=await getPrivatePack('binary-search-10');
+const normalizedProductKeys=new Set(product.hiddenCases.map(c=>JSON.stringify({small:Math.min(c.input.rows,c.input.columns),large:Math.max(c.input.rows,c.input.columns),k:c.input.k})));
+const normalizedMedianKeys=new Set(median.hiddenCases.map(c=>JSON.stringify([c.input.left,c.input.right].sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b))))));
+const peakTrendKeys=new Set(peakPack.hiddenCases.map(c=>c.input.values.slice(1).map((v,i)=>v>c.input.values[i]?'+':'-').join('')));
+const unorderedServiceKeys=new Set(service.hiddenCases.map(c=>JSON.stringify({...c.input,jobs:[...c.input.jobs].sort((a,b)=>a-b)})));
+assert.ok(normalizedProductKeys.size>=200);assert.ok(normalizedMedianKeys.size>=200);assert.ok(peakTrendKeys.size>=200);assert.ok(unorderedServiceKeys.size>=200);
+const d=fourth.find(d=>d.id==='binary-search-10'),a={jobs:[3,6],pause:1,deadline:4},b={...a,jobs:[6,3]},c={...a,jobs:[3,3,6]};assert.equal(d.oracle(a),d.oracle(b));assert.notEqual(d.oracle(a),d.oracle(c));
+const report={timestamp:new Date().toISOString(),scope:'Non-counted trusted structural/query and checker checks; no native execution',status:'passed',peak:{contentIdentity:packIdentity(peakPack),exhaustiveUnequalAdjacentInputs:checked,differentValidWitnesses:alternativeWitnesses,hidden:peakPack.hiddenCases.length,distinctValueErasedAdjacentComparisonShapes:peakTrendKeys.size},symmetricDomains:[{id:product.manifest.id,contentIdentity:packIdentity(product),hidden:product.hiddenCases.length,distinctAfterRowColumnSwap:normalizedProductKeys.size},{id:median.manifest.id,contentIdentity:packIdentity(median),hidden:median.hiddenCases.length,distinctAfterExchangingInputLists:normalizedMedianKeys.size}],serviceCanonicalFinding:{id:service.manifest.id,contentIdentity:packIdentity(service),hidden:service.hiddenCases.length,distinctAfterSortingJobsWithMultiplicity:unorderedServiceKeys.size,sameAnswerForPermutedJobs:true,multiplicityAffectsAnswer:true,currentlyDifferentCanonicalKeys:inputKey(service.manifest.inputSchema,a)!==inputKey(service.manifest.inputSchema,b),requestedRepair:'jobs.unordered:true, preserve multiplicity (no deduplicate)'}};
+writeFileSync('docs/release-evidence/independent-binary-distinctness.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));

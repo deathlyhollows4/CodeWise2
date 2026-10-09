@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "0dff14dc5f756fa04cbecbc551c01a24b42eec1ba7dc5858623cecf9cf3dc6cc",
+  "suiteHash": "bea0f4e3a6638d2826b83e11c433acb60db2df7e59e199e6b65f08bffa8af981",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "always-delete-from-tail",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "skip-canonical-zero-formatting",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

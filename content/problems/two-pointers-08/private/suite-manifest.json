@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 661,
+  "suiteHash": "126d50531341359663b3ee91ba8347183890b4d996a44f3d2c6e598e2090a36d",
+  "categories": [
+    "varying-wall-heights",
+    "large-wide-product"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

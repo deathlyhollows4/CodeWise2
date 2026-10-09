@@ -1,0 +1,53 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        3
+      ],
+      "stock": [
+        3,
+        2
+      ],
+      "target": 6
+    },
+    "expected": [
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "explanation": "Either two units of value 3 or three units of value 2 reach the target. The rows are quantity vectors, not selection orders."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        5
+      ],
+      "stock": [
+        1
+      ],
+      "target": 10
+    },
+    "expected": [],
+    "explanation": "Two units would reach 10, but only one is in stock."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [],
+      "stock": [],
+      "target": 0
+    },
+    "expected": [
+      []
+    ],
+    "explanation": "The empty quantity vector has total zero."
+  }
+]

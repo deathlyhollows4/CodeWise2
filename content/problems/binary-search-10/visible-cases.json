@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "jobs": [
+        3,
+        3
+      ],
+      "pause": 1,
+      "deadline": 4
+    },
+    "expected": 3,
+    "explanation": "Rate 2 needs 2+1+2=5 slots. Rate 3 needs 1+1+1=3 slots, so the minimum rate is 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "jobs": [
+        1,
+        1
+      ],
+      "pause": 2,
+      "deadline": 3
+    },
+    "expected": -1,
+    "explanation": "Even unlimited rate needs two job slots and two pause slots: 4 slots."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "jobs": [],
+      "pause": 9,
+      "deadline": 0
+    },
+    "expected": 0,
+    "explanation": "No work and no interjob pause are needed."
+  }
+]

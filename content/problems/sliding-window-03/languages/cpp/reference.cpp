@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values,long long target){int left=0,best=values.size()+1;long long total=0;for(int right=0;right<(int)values.size();right++){total+=values[right];while(total>=target){best=min(best,right-left+1);total-=values[left++];}}return best>(int)values.size()?0:best;}};

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        4,
+        null,
+        null,
+        5
+      ]
+    },
+    "expected": [
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "explanation": "Capture each whole level before traversing the children enqueued for the next level."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        7,
+        7,
+        7
+      ]
+    },
+    "expected": [
+      [
+        7
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "explanation": "Equal-valued nodes still occupy separate places in the level."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": [],
+    "explanation": "A null root has no level."
+  }
+]

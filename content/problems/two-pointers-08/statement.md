@@ -1,0 +1,1 @@
+At each integer position i stands a wall of height `values[i]`. Choosing two positions i<j gives capacity `(j-i) * min(values[i],values[j])`. Return the largest capacity among all pairs. Walls have zero thickness; the distance is the difference of indices. With fewer than two walls, return zero.

@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "two-pointers-04",
+  "version": "1.0.0",
+  "slug": "merge-timeline-readings",
+  "title": "Merge two reading timelines",
+  "primaryTopic": "two-pointers",
+  "skillIds": [
+    "pointers.merge-cursors",
+    "sorted.order"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Advance the cursor pointing to the smaller next value and retain all remaining values.",
+  "constraints": [
+    "Each input contains 0..2,000 integers in [-1,000,000,1,000,000].",
+    "Both inputs are already sorted.",
+    "The output contains left.length + right.length entries."
+  ],
+  "interface": "Solution.solve(left,right) returns an integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "left": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "right": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 4000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "two-pointers-03"
+  ],
+  "remedialIds": [
+    "two-pointers-01"
+  ],
+  "nextIds": [
+    "two-pointers-05"
+  ],
+  "rationale": "Each cursor now tracks a different sorted input. Only one needs to advance at each step.",
+  "commonMistakes": [
+    "deduplicate-inputs",
+    "drop-remainder"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "left"
+    },
+    {
+      "kind": "sorted",
+      "field": "right"
+    }
+  ]
+}

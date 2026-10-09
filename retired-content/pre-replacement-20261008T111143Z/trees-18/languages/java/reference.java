@@ -1,0 +1,1 @@
+class Solution {public boolean solve(TreeNode root,int value){TreeNode n=root;while(n!=null){if(n.val==value)return true;n=value<n.val?n.left:n.right;}return false;}}

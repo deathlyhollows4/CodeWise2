@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values,int k){PriorityQueue<Integer> q=new PriorityQueue<>();for(int v:values){q.offer(v);if(q.size()>k)q.poll();}int[] out=new int[k];for(int i=k-1;i>=0;i--)out[i]=q.poll();return out;}}

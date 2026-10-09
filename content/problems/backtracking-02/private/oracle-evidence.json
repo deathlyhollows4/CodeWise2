@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "ee133ef55bb4fe1de6c49d80b97d88759e79506feea84f28c6f9449661f3e0c8",
+  "suiteHash": "8e32de43bd5d8ebf0f21b889c654fa017d92be1103be3e3b19dc1a58b895dbab",
+  "oracleChecks": 664,
+  "hiddenUnique": 661,
+  "mutations": [
+    {
+      "name": "positive-only-overshoot-prune",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "ignore-exact-cardinality",
+      "detected": true,
+      "caseId": "hidden-2"
+    },
+    {
+      "name": "collapse-equal-valued-position-choices",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

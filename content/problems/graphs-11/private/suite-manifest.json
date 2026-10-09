@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A11",
+  "hiddenCount": 60,
+  "suiteHash": "7d6c55508a3d8cd089f1a6b0ca2c54be56409ea1e9b2cbaca297d8016a4a9cc1",
+  "categories": [
+    "curated-boundary-single-bridge",
+    "curated-boundary-disconnected-bridges",
+    "curated-boundary-endpoint-orientation-not-a-cut",
+    "max-all-chain-edges-bridges",
+    "max-no-cycle-edge-bridge",
+    "max-five-thousand-edges-each-in-triangle",
+    "seeded-edge-removal-component-cuts",
+    "structured-connected-chain-and-chord-topologies"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

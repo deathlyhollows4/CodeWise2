@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "cfb1df6b703e42bf87c744f4b11e25a4c97eb2431eced25e29a1783f25c52d93",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Initialize from the first actual fixed batch, then subtract its departed value and add the incoming one. Negative-only inputs cannot use an initial answer of0.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "progression",
+  "rationale": "Step1 teaches windows.fixed-boundaries, windows.rolling-sum. Prerequisites remain arrays.traversal; explicit teachers arrays-hashing-01 preserve independently demonstrated eligibility. Same-step related checkpoints sliding-window-02 and actual step+1 targets sliding-window-03 were checked against current manifests. The explicit Array01 foundation bridge was repaired and actual18-topic empty-evidence probe selects a qualified teacher; the original focus remains at step1 and no mastery is granted on selection. Initialize from the first actual fixed batch, then subtract its departed value and add the incoming one. Negative-only inputs cannot use an initial answer of0."
+}

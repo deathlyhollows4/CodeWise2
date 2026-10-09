@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "expected": 1,
+    "explanation": "Both islands are the same three-cell L shape, shifted three columns."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": []
+    },
+    "expected": 0,
+    "explanation": "There are no land cells or shapes."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "The right island is a reflection of the left. Translation alone cannot make their cells coincide."
+  }
+]

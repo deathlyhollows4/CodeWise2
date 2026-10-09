@@ -1,0 +1,1 @@
+class Solution {public int solve(String text){int[] last=new int[26];Arrays.fill(last,-1);int left=0,best=0;for(int right=0;right<text.length();right++){int c=text.charAt(right)-'a';left=Math.max(left,last[c]+1);last[c]=right;best=Math.max(best,right-left+1);}return best;}}

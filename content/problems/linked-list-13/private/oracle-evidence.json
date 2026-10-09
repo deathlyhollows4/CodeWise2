@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "89c4f4a06550c1d7a247a7fb5e95f6d1fe81b21a985ab59556c7cf006fe3c6d2",
+  "suiteHash": "36995375e46607f526dbde48940886fdede9b292f48fd3429368a6a42c22954f",
+  "oracleChecks": 712,
+  "hiddenUnique": 709,
+  "mutations": [
+    {
+      "name": "equal-pivot-in-first-bucket",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "reverse-first-bucket",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

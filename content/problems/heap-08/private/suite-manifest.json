@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-cooldown.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdef8",
+  "hiddenCount": 350,
+  "suiteHash": "3bb689c9337343c0c95c0ba88b75da2560943d51e44ac515c0190cef294ccf24",
+  "categories": [
+    "maximum-wide-single-label",
+    "maximum-balanced-no-idle-cycle",
+    "opposite-label-extrema-wide-spacing",
+    "maximum-distinct-labels-no-repeat",
+    "small-exhaustive-label-spacing"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

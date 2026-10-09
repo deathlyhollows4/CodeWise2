@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-03",
+  "version": "1.0.0",
+  "slug": "readings-in-a-band",
+  "title": "Readings inside a value band",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.paired-boundaries",
+    "binary-search.inclusive-intervals"
+  ],
+  "prerequisites": [
+    "binary-search.lower-bound"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Combine lower and upper boundaries to count sorted readings in a closed value interval.",
+  "constraints": [
+    "0 ≤ values.length ≤ 100000",
+    "Values, lo and hi are in [-1000000000,1000000000]",
+    "lo ≤ hi; values is sorted in nondecreasing order"
+  ],
+  "interface": "Solution.solve(values, lo, hi) returns an integer count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "lo": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      },
+      "hi": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1000000000,
+    "maximum": 1000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-06"
+  ],
+  "remedialIds": [
+    "binary-search-02"
+  ],
+  "nextIds": [
+    "binary-search-07",
+    "binary-search-08"
+  ],
+  "rationale": "Two searches delimit the inclusive band, so no scan through matching readings is needed.",
+  "commonMistakes": [
+    "exclude-upper-endpoint",
+    "collapse-duplicates"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "values"
+    },
+    {
+      "kind": "field-order",
+      "lower": "lo",
+      "upper": "hi"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "b0d87c57924b6b07d4ebde1dd153efe8615c5e7012b4eeeaabf0d486e1112432",
+  "suiteHash": "7d1b74a30dedd46df3edc1393706b5cc738bb9f0f0559df43772dfdcd4af396d",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "total-nonnegative-means-start-zero",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "narrow-global-balance-to-int32",
+      "detected": true,
+      "caseId": "hidden-6"
+    }
+  ],
+  "languageExecution": "not-run"
+}

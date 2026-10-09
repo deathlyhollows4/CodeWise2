@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values,long target){long keep=-target;for(int x:values)keep+=x;if(keep<0)return -1;int l=0,best=keep==0?0:-1;long sum=0;for(int r=0;r<values.length;r++){sum+=values[r];while(l<=r&&sum>keep)sum-=values[l++];if(sum==keep)best=Math.max(best,r-l+1);}return best<0?-1:values.length-best;}}

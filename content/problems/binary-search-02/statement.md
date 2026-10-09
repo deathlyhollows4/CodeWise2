@@ -1,0 +1,1 @@
+Readings are sorted in nondecreasing order; duplicate values are allowed. Return the first index whose reading is at least target. If all readings are smaller, return values.length. The returned index may therefore be one position beyond the last reading. Use O(log n) comparisons. Local decoded input arrays may be modified; only the returned result is graded.

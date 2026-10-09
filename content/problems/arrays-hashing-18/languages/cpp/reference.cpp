@@ -1,0 +1,1 @@
+class Solution {public:vector<vector<int>> solve(vector<vector<int>> a,vector<vector<int>> b){map<int,int> counts;for(auto&p:a)counts[p[0]]+=p[1];for(auto&p:b)counts[p[0]]+=p[1];vector<vector<int>> out;for(auto [v,c]:counts)out.push_back({v,c});return out;}};

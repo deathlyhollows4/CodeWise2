@@ -1,0 +1,47 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "digits": [
+        0,
+        1
+      ],
+      "length": 2,
+      "target": 1
+    },
+    "expected": [
+      "01",
+      "10"
+    ],
+    "explanation": "Leading zeroes are kept, and both orders meet the same sum."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "digits": [
+        1,
+        1,
+        2
+      ],
+      "length": 2,
+      "target": 3
+    },
+    "expected": [
+      "12",
+      "21"
+    ],
+    "explanation": "The duplicated allowed digit 1 does not duplicate answers."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "digits": [],
+      "length": 0,
+      "target": 0
+    },
+    "expected": [
+      ""
+    ],
+    "explanation": "There is exactly one empty sequence with sum zero."
+  }
+]

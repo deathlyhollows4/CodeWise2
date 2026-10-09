@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "initial": 0,
+      "positions": [
+        1,
+        3
+      ]
+    },
+    "expected": 10,
+    "explanation": "Switches 1 and 3 end on, giving 2 + 8."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "initial": 5,
+      "positions": [
+        0,
+        0
+      ]
+    },
+    "expected": 5,
+    "explanation": "Two toggles restore switch 0."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "initial": 7,
+      "positions": []
+    },
+    "expected": 7,
+    "explanation": "The empty history leaves all starting switches unchanged."
+  }
+]

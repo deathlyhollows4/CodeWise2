@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-02",
+  "version": "1.0.0",
+  "slug": "signed-target-exact-cardinality-index-combinations",
+  "title": "Choose an exact-size index combination with a signed total",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "arrays.traversal",
+    "numbers.signed-accumulation",
+    "backtracking.branch-restoration",
+    "backtracking.exact-cardinality-combination",
+    "backtracking.original-index-choice"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "numbers.signed-accumulation"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Enumerate original-position subsets of exactly k entries having the target signed total, keeping equal-valued positions distinct.",
+  "constraints": [
+    "0 ≤ values.length ≤ 14.",
+    "Each value lies in [-1,000,000,000,1,000,000,000].",
+    "0 ≤ k ≤ values.length.",
+    "-14,000,000,000 ≤ target ≤ 14,000,000,000.",
+    "At most 3,432 combinations exist; preserve original positions and deterministic index ordering."
+  ],
+  "interface": "Solution.solve(values,k,target) receives int[],int,long / long long and returns sorted int[][].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 14,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 14
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -14000000000,
+        "maximum": 14000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 3432,
+    "items": {
+      "kind": "array",
+      "maxLength": 14,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 13
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-01"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "backtracking-03",
+    "backtracking-04"
+  ],
+  "rationale": "Increasing index choices prevent repeated positions/permutations, while signed values make a positive-only overshoot prune invalid.",
+  "commonMistakes": [
+    "positive-only-overshoot-prune",
+    "ignore-exact-cardinality",
+    "collapse-equal-valued-position-choices"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "values",
+      "minimum": 0,
+      "maxOffset": 0
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values){int lo=0,hi=values.length-1;while(lo<hi){int m=lo+(hi-lo)/2;if(values[m]>values[hi])lo=m+1;else hi=m;}return values[lo];}}

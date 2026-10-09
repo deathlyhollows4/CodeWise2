@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-10",
+  "version": "1.0.0",
+  "slug": "one-directed-trail-using-every-original-edge",
+  "title": "One directed trail using every original edge",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.original-edge-trail",
+    "graphs.directed-degree-balance"
+  ],
+  "prerequisites": [
+    "graphs.directed-cycle-consequences"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Construct a directed Euler trail using every original edge occurrence exactly once, or certify impossibility.",
+  "constraints": [
+    "0 <= n <= 500",
+    "0 <= edges.length <= 5000",
+    "Every endpoint lies in 0..n-1",
+    "Output every original edge ID once, or exactly [-1] for impossibility"
+  ],
+  "interface": "Solution.solve(n,edges) returns int[] / vector<int> / list[int].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "n": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 500
+      },
+      "edges": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 5000,
+        "unordered": false,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 499
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 5000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1,
+      "maximum": 4999
+    }
+  },
+  "checker": {
+    "kind": "custom",
+    "name": "directed-euler-edge-use"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-09"
+  ],
+  "remedialIds": [
+    "graphs-01",
+    "graphs-08"
+  ],
+  "nextIds": [
+    "graphs-11",
+    "graphs-12"
+  ],
+  "rationale": "Track edge identities through cycles and use degree balance to choose a possible start. Parallel edges remain different work items.",
+  "commonMistakes": [
+    "return-input-edge-order",
+    "always-claim-impossible"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "graph-edges",
+      "field": "edges",
+      "vertices": "n",
+      "directed": true,
+      "allowSelfLoops": true,
+      "allowDuplicates": true
+    }
+  ]
+}

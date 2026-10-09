@@ -1,0 +1,49 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        null,
+        4
+      ]
+    },
+    "expected": [
+      [
+        4,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "explanation": "Leaves 4 and 3 disappear together despite different root depths; node 2 waits for the next round, then root 1 follows."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        -7
+      ]
+    },
+    "expected": [
+      [
+        -7
+      ]
+    ],
+    "explanation": "The only node is already a leaf in round 0."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": [],
+    "explanation": "There is no removal round for a null root."
+  }
+]

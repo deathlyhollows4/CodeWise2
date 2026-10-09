@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        7,
+        7,
+        7
+      ],
+      "k": 1
+    },
+    "expected": 2,
+    "explanation": "The tail is node2, even though all node values are identical."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        5,
+        -2,
+        8,
+        3
+      ],
+      "k": 3
+    },
+    "expected": 1,
+    "explanation": "Counting back from node3 gives node1 as the third node."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [],
+      "k": 1
+    },
+    "expected": null,
+    "explanation": "There is no node to select."
+  }
+]

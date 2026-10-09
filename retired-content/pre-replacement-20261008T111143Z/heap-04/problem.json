@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-04",
+  "version": "1.0.0",
+  "slug": "closest-origin-points",
+  "title": "The closest k points to the origin",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.bounded-frontier",
+    "heap.distance-frontier",
+    "geometry.squared-distance"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "numbers.wide-intermediates"
+  ],
+  "step": 2,
+  "status": "draft",
+  "objective": "Select the closest k point positions by exact squared Euclidean distance with deterministic coordinate ties.",
+  "constraints": [
+    "0 <= points.length <= 30000",
+    "0 <= k <= points.length",
+    "Each coordinate is an integer in [-1000000,1000000].",
+    "Squared distances can exceed signed 32 bit range."
+  ],
+  "interface": "Solution.solve(points, k) receives a typed point matrix and selection count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "points": {
+        "kind": "array",
+        "maxLength": 30000,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 30000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 30000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-02"
+  ],
+  "remedialIds": [
+    "heap-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "math-geometry-01",
+    "math-geometry-09"
+  ],
+  "nextIds": [
+    "heap-05",
+    "heap-07"
+  ],
+  "rationale": "A bounded max-heap exposes the farthest currently retained point and avoids square roots.",
+  "commonMistakes": [
+    "narrow-distance",
+    "drop-coordinate-ties"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "points",
+      "minimum": 0
+    }
+  ]
+}

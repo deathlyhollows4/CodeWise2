@@ -1,0 +1,75 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "next": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    "expected": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "explanation": "Vertices 1 and 2 form a two-cycle. Vertices 0 and 3 each take one edge to reach it."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "next": []
+    },
+    "expected": [],
+    "explanation": "There are no vertices to classify."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "next": [
+        0,
+        2,
+        3,
+        2,
+        4
+      ]
+    },
+    "expected": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "explanation": "0 and 4 are separate self-loops. Vertices 2 and 3 form a two-cycle reached from tail vertex 1."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "aNum": 1,
+      "aDen": 2,
+      "bNum": 1,
+      "bDen": 3,
+      "operation": "+"
+    },
+    "expected": [
+      5,
+      6
+    ],
+    "explanation": "The common denominator is 6, giving 3/6 + 2/6."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "aNum": 2,
+      "aDen": 3,
+      "bNum": -4,
+      "bDen": 5,
+      "operation": "/"
+    },
+    "expected": [
+      -5,
+      6
+    ],
+    "explanation": "Multiply by the reciprocal, then normalize the negative sign."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "aNum": 7,
+      "aDen": 9,
+      "bNum": 7,
+      "bDen": 9,
+      "operation": "-"
+    },
+    "expected": [
+      0,
+      1
+    ],
+    "explanation": "Equal rationals subtract to the canonical zero representation."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA606",
+  "hiddenCount": 60,
+  "suiteHash": "c39c693b3633f69d2900621340d54604b0d19e1c17eb0b2f219bf96014984ce7",
+  "categories": [
+    "curated-boundary-non-target-sink",
+    "curated-boundary-already-target-loses",
+    "curated-boundary-infinite-self-loop-draw",
+    "curated-boundary-forced-two-cycle-draw",
+    "curated-boundary-win-by-moving-to-sink",
+    "max-alternating-terminal-chain",
+    "max-cyclic-draw",
+    "max-dense-direct-target-wins",
+    "seeded-memoryless-strategy-games"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

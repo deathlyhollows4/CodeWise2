@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-14",
+  "version": "1.0.0",
+  "slug": "axis-rectangle-union-area",
+  "title": "Area covered by a rectangle union",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.coordinate-sweep",
+    "intervals.union-length"
+  ],
+  "prerequisites": [
+    "numbers.wide-intermediates",
+    "geometry.coordinate-difference",
+    "arrays.traversal",
+    "sorted.order"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Compute the total area covered by possibly overlapping axis-aligned integer rectangles without double counting.",
+  "constraints": [
+    "0 <= rectangles.length <= 100",
+    "Every coordinate is an integer in [-1000000,1000000].",
+    "Each row satisfies x1 <= x2 and y1 <= y2.",
+    "The result can be as large as 4000000000000 and requires a long integer."
+  ],
+  "interface": "Solution.solve(rectangles) receives a typed matrix of four-coordinate rectangles.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "rectangles": {
+        "kind": "array",
+        "maxLength": 100,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "array",
+          "minLength": 4,
+          "maxLength": 4,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-13"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "two-pointers-04"
+  ],
+  "nextIds": [],
+  "rationale": "Partition the x axis at rectangle boundaries, then merge the active y intervals in each strip.",
+  "commonMistakes": [
+    "sum-overlapping-areas",
+    "last-rectangle-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "ordered-rectangles",
+      "field": "rectangles"
+    }
+  ]
+}

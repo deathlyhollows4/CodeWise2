@@ -1,0 +1,1 @@
+class Solution {public:long long solve(long long a,long long b){a=llabs(a);b=llabs(b);while(b){long long remainder=a%b;a=b;b=remainder;}return a;}};

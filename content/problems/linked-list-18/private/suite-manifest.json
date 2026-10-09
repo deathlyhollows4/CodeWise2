@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-relink.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 715,
+  "suiteHash": "0aecbd668d877537398b7e232d7011c3ec06883454717fd5fbe65ac9012c0a10",
+  "categories": [
+    "large-count-wraps",
+    "modulo-right-rotation",
+    "large-chain-and-exact-multiple",
+    "large-chain-nonzero-modulo-reconnect"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,21 @@
+[Unit]
+Description=CodeWise2 dedicated isolated execution controller
+After=isolate.service var-local-lib-isolate.mount
+Requires=isolate.service var-local-lib-isolate.mount
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/codewise2-runner/broker.py
+WorkingDirectory=/opt/codewise2-runner
+Environment=PATH=/usr/bin:/bin
+Restart=on-failure
+PrivateTmp=true
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectClock=true
+UMask=0077
+TasksMax=128
+MemoryMax=1G
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "7591162604fd3499e359f74008228b5ca8b8fcfc069b81061135ca0f7c49e166",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Use key multiplicities and shrink until at most k distinct types remain. Maximize span; k=0 explicitly permits no nonempty batch.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "diversity",
+  "rationale": "Maximum at-most-variety span and minimum at-least-variety cover are not same-domain affine/complement outputs. Multiplicity changes when a type disappears and maximal feasible boundaries are required. Actual723 canonical hidden inputs and categories repeated-variety-budget, retained-declared-max-sliding-window-10-1, retained-declared-max-sliding-window-10-2, retained-declared-max-sliding-window-10-3, retained-declared-max-sliding-window-10-4 were reconciled; these counts are input uniqueness, not a fabricated count of independent algorithms."
+}

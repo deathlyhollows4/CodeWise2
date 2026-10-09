@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "progression",
+  "contentIdentity": "4c499e89d0eb43cbb94bae016e79cd195ba67deadd6fc27ecb9eb250d7532bdb",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Step2 builds branch restoration from01/02 into grammar/remaining-length pruning. Assignment04 is same-step; bounded stock05 and delimiter06 are one step higher.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-addresses.mjs",
+    "sourceHash": "21d11f97d9c8a475e7086ae97845a8df0dba6c6ef841670dd21ff16e5834870b",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

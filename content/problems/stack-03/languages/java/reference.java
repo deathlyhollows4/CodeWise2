@@ -1,0 +1,1 @@
+class Solution {public String solve(String text){StringBuilder out=new StringBuilder();for(char c:text.toCharArray()){if(out.length()>0&&out.charAt(out.length()-1)==c)out.setLength(out.length()-1);else out.append(c);}return out.toString();}}

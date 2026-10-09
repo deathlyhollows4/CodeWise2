@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 628,
+  "suiteHash": "13735242eb99ba0702c5a3ff5782112e886ff7c9aa4df0cb03deefd91e39357d",
+  "categories": [
+    "seeded-small",
+    "wide-intermediate",
+    "long-scan",
+    "maximum-wide-positive-prefixes",
+    "near-maximum-wide-negative-prefixes"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

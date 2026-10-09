@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A01",
+  "hiddenCount": 60,
+  "suiteHash": "7c116e3df7419e9ebfb1a823d3fbfb118ca8ccaf5235e2c7ecc643246c5c6ceb",
+  "categories": [
+    "curated-boundary-singleton",
+    "curated-boundary-repeated-self-loops",
+    "curated-boundary-two-node-cycle",
+    "curated-boundary-shared-neighbor-identity",
+    "max-dense-count-matrix",
+    "max-parallel-edge-ring",
+    "max-chain-discovery",
+    "seeded-reachable-identity-topologies"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

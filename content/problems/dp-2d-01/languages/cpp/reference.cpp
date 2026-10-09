@@ -1,0 +1,1 @@
+class Solution { public: int solve(vector<vector<int>> grid) { int n=grid.empty()?0:grid[0].size(); if(!n)return 0; vector<int> dp(n);dp[0]=1;for(auto& row:grid)for(int c=0;c<n;c++)dp[c]=row[c]?0:(dp[c]+(c?dp[c-1]:0))%1000000007;return dp[n-1]; } };

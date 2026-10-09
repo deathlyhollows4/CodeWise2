@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "k": 1
+    },
+    "expected": 4,
+    "explanation": "Repair the zero in the first four positions."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "k": 0
+    },
+    "expected": 0,
+    "explanation": "There is no batch."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "k": 0
+    },
+    "expected": 0,
+    "explanation": "Without repairs, a zero cannot join an all-one batch."
+  }
+]

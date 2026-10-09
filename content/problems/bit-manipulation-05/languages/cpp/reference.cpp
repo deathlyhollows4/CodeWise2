@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){int result=0;for(int value:values)result^=value;return result;}};

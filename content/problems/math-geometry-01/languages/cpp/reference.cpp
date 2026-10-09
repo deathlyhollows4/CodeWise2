@@ -1,0 +1,1 @@
+class Solution {public:long long solve(long long value){long long n=llabs(value),answer=0;while(n){answer=answer*10+n%10;n/=10;}if(value<0)answer=-answer;return answer<INT_MIN||answer>INT_MAX?0:answer;}};

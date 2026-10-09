@@ -1,0 +1,1 @@
+class Solution {public:TreeNode* solve(TreeNode* root,int k){vector<TreeNode*> stack;auto n=root;while(n||!stack.empty()){while(n){stack.push_back(n);n=n->left;}n=stack.back();stack.pop_back();if(--k==0)return n;n=n->right;}return nullptr;}};

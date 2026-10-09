@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-parent-target-routes.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 789,
+  "suiteHash": "d0624694d8d5fafd945886bc2dcde2c5775bdbfa91891aba4ded6930a3ab9bf8",
+  "categories": [
+    "permuted-valid-binary-tree",
+    "invalid-parent-table",
+    "connectivity-capacity-and-maximal-depth"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

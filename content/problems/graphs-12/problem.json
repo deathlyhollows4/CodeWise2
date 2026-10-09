@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-12",
+  "version": "1.0.0",
+  "slug": "groups-with-mutual-directed-reachability",
+  "title": "Groups with mutual directed reachability",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.strong-components",
+    "graphs.finish-order-reversal"
+  ],
+  "prerequisites": [
+    "graphs.component-partition"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Partition every directed vertex into maximal mutually reachable groups, distinguishing one-way reachability from strong connectivity.",
+  "constraints": [
+    "0 <= n <= 300",
+    "0 <= edges.length <= 5000",
+    "Every endpoint is in 0..n-1",
+    "Return sorted disjoint groups covering every vertex"
+  ],
+  "interface": "Solution.solve(n,edges) returns int[][] / vector<vector<int>> / list[list[int]].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "n": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 300
+      },
+      "edges": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 5000,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 299
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 300,
+    "items": {
+      "kind": "array",
+      "minLength": 1,
+      "maxLength": 300,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 299
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-11",
+    "graphs-13"
+  ],
+  "remedialIds": [
+    "graphs-03",
+    "graphs-08",
+    "graphs-09"
+  ],
+  "nextIds": [],
+  "rationale": "A completed traversal order and reversed edges separate mutually reachable regions even when one-way edges connect them.",
+  "commonMistakes": [
+    "ignore-edge-directions",
+    "omit-singleton-components"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "graph-edges",
+      "field": "edges",
+      "vertices": "n",
+      "directed": true,
+      "allowSelfLoops": true,
+      "allowDuplicates": false
+    }
+  ]
+}

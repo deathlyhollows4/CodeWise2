@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "9495abbefe7673dd725461c927bad2cd24f94e404ab97e259d4dca6357485a06",
+  "suiteHash": "29f9a2421e831772de614c73995b5c877aae8630294de69c2634506b81105298",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "narrow-completion-time",
+      "detected": true,
+      "caseId": "hidden-1"
+    },
+    {
+      "name": "reverse-index-ties",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "reuse-busy-best-weight",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

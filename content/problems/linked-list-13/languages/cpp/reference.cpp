@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head,int pivot){ListNode low(0),high(0);auto a=&low;auto b=&high;while(head){auto next=head->next;head->next=nullptr;if(head->val<pivot){a->next=head;a=head;}else{b->next=head;b=head;}head=next;}a->next=high.next;return low.next;}};

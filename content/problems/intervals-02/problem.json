@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "intervals-02",
+  "version": "1.0.0",
+  "slug": "shared-closed-calendar",
+  "title": "Shared coverage of two calendars",
+  "primaryTopic": "intervals",
+  "skillIds": [
+    "intervals.paired-endpoint-sweep",
+    "intervals.endpoint-contact"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Compute all closed real-line ranges covered by two individually disjoint sorted calendars.",
+  "constraints": [
+    "0 <= left.length, right.length <= 10000",
+    "Each [start, end] has integer endpoints in [-1000000000, 1000000000] and start <= end.",
+    "Within each input, every previous end is strictly less than the next start."
+  ],
+  "interface": "Solution.solve(left, right) receives two native matrices of endpoint pairs and returns their shared closed ranges.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "left": {
+        "kind": "array",
+        "maxLength": 10000,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "right": {
+        "kind": "array",
+        "maxLength": 10000,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 20000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "intervals-01"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "intervals-03"
+  ],
+  "rationale": "Compare the two current ranges. Once the earlier endpoint is passed, that range cannot contribute to any later intersection.",
+  "commonMistakes": [
+    "discard-point-intersections",
+    "advance-both-every-time",
+    "use-outer-endpoints"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "disjoint-closed-pairs",
+      "field": "left"
+    },
+    {
+      "kind": "disjoint-closed-pairs",
+      "field": "right"
+    }
+  ]
+}

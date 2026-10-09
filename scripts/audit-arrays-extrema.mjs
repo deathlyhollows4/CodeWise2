@@ -1,0 +1,7 @@
+import {writeFile,readFile} from 'node:fs/promises';
+import {definitions} from '../content/authoring/batches/arrays-final.mjs';
+import {logicalCases,hash} from '../content/authoring/pack-builder.mjs';
+import {canonicalJson} from '../packages/judge-adapter/src/canonical.mjs';
+import {validateInput} from '../packages/judge-adapter/src/schema-validator.mjs';
+const rows=[];for(const d of definitions.filter(d=>['arrays-hashing-15','arrays-hashing-17'].includes(d.id))){const cases=logicalCases(d),failures=[];for(const c of [...d.visible,...cases])if(!validateInput(d.outputSchema,c.expected)||canonicalJson(d.independent(c.input))!==canonicalJson(c.expected))failures.push(c.id??'visible');rows.push({id:d.id,hidden:cases.length,comparisons:cases.length+3,extremeCases:cases.filter(c=>c.category.startsWith('maximum-signed')||c.category==='signed-extrema-and-duplicate-repair-boundary').map(c=>({category:c.category,inputHash:c.inputHash})),failures});}
+const r={kind:'source-only-boundary-author-audit',generatedAt:new Date().toISOString(),sourceHash:hash(await readFile('content/authoring/batches/arrays-final.mjs','utf8')),rows,nativeReferenceExecution:'not-run',materialized:false,passed:rows.every(r=>!r.failures.length)};await writeFile('docs/release-evidence/arrays-15-17-extrema-author-audit.json',JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify(r));if(!r.passed)process.exitCode=1;

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-02",
+  "version": "1.0.0",
+  "slug": "unlink-every-matching-node",
+  "title": "Remove every matching node",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.walk",
+    "list.unlink"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Unlink every matching node, including repeated matches at the head, while preserving the order of remaining values.",
+  "constraints": [
+    "0 ≤ head.length ≤ 2,000",
+    "Values lie in [-1,000,000,1,000,000].",
+    "The input is finite and acyclic; duplicate values are allowed."
+  ],
+  "interface": "Solution.solve(head, value) receives ListNode and int, and returns ListNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-01"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "linked-list-03"
+  ],
+  "rationale": "Deletion changes links rather than an array length; the first retained node may differ from the supplied head.",
+  "commonMistakes": [
+    "remove-first-match-only",
+    "keep-head-unconditionally"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

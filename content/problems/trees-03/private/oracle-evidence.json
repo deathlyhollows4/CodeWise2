@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d2ec730483bf117dbab4b9cd887d600705a2a0fab8f625e958103ecc6406b94c",
+  "suiteHash": "18b6396418d98118502ee7c1840d88c3cfc748d9bb6153335fbf4ae6b081c678",
+  "oracleChecks": 1137,
+  "hiddenUnique": 1134,
+  "mutations": [
+    {
+      "name": "count-edges-instead-of-nodes",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "only-leftward-depth",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

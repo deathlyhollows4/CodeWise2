@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "eea68a73d2bc60018f35086b0796b909a80763a055f16cede8905fcf0de1cde9",
+  "suiteHash": "a58733de4d3898e06a5632eeaeb4ca054248c45b9c37abb8e88b718b1cb8f759",
+  "oracleChecks": 1041,
+  "hiddenUnique": 1038,
+  "mutations": [
+    {
+      "name": "forbid-replacements",
+      "detected": true,
+      "caseId": "hidden-2"
+    },
+    {
+      "name": "use-length-difference-only",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "corners": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          6
+        ]
+      ]
+    },
+    "expected": 12,
+    "explanation": "The side lengths are 3 and 4."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "corners": [
+        [
+          5,
+          8
+        ],
+        [
+          -2,
+          8
+        ]
+      ]
+    },
+    "expected": 0,
+    "explanation": "Equal y coordinates give height zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "corners": [
+        [
+          1000000,
+          1000000
+        ],
+        [
+          -1000000,
+          -1000000
+        ]
+      ]
+    },
+    "expected": 4000000000000,
+    "explanation": "Both side lengths are 2000000; the product needs a wide integer."
+  }
+]

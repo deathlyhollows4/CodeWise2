@@ -1,0 +1,83 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "first": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "second": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ]
+      ]
+    },
+    "expected": true,
+    "explanation": "The segments cross at [2,2]."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "first": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "second": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ]
+    },
+    "expected": false,
+    "explanation": "The collinear segments have a gap."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "first": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "second": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": true,
+    "explanation": "The shared endpoint counts as an intersection."
+  }
+]

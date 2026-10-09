@@ -1,0 +1,1 @@
+class Solution {public boolean solve(int[][] g,int t){if(g.length==0||g[0].length==0)return false;int r=0,c=g[0].length-1;while(r<g.length&&c>=0){if(g[r][c]==t)return true;if(g[r][c]>t)c--;else r++;}return false;}}

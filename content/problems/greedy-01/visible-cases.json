@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        3,
+        1,
+        1,
+        4
+      ]
+    },
+    "expected": 2,
+    "explanation": "Jump from index 0 to 1, then from 1 to 4."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        1,
+        0,
+        2
+      ]
+    },
+    "expected": -1,
+    "explanation": "The first jump reaches the zero at index1 and cannot continue."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": []
+    },
+    "expected": 0,
+    "explanation": "No positions require a move."
+  }
+]

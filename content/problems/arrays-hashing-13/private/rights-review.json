@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "64edf277f08ee0da1b1085bfb9d8ed92dc300b75b00108d43e1831050fa31e43",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:52:21.850Z",
+  "rationale": "Full independently inspected author source and native algorithms for Verified majority label. The objective is: Verify whether a label appears strictly more than half the time. Exact reconciliation covers the current statement, three examples, 690 hidden cases, all three references and original or project-template starters/wrappers. No imported prose, tests or code assets occur in the source; common algorithmic ideas are expressed as original project assets.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/arrays-fourth.mjs",
+    "authorSourceSha256": "84c6a87cb43e853701ede94ae7672e2ddd7dc49b5a4b5aedfe79c09257aa5906",
+    "reconciliation": "docs/release-evidence/coordinator-arrays-original-assets.json",
+    "wrapperReview": "Read all actual wrappers for Arrays10/16: only the optional blank line before USER_CODE and earlier Java Gson constructor differ from factory. Starters are exact original author strings, not placeholders."
+  },
+  "limitations": [
+    "Rights only; not diversity, progression, publication or execution approval.",
+    "Changed bound assets invalidate the review."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "tries-03",
+  "version": "1.0.0",
+  "slug": "all-dictionary-words-on-native-letter-board",
+  "title": "Find the dictionary words on a letter board",
+  "primaryTopic": "tries",
+  "skillIds": [
+    "tries.prefix-navigation",
+    "tries.board-prefix-pruning",
+    "backtracking.branch-restoration",
+    "tries.nonreused-word-path"
+  ],
+  "prerequisites": [
+    "tries.prefix-navigation",
+    "backtracking.branch-restoration"
+  ],
+  "step": 2,
+  "status": "draft",
+  "objective": "Find every distinct dictionary word formed by a nonrepeating orthogonal board path, sharing Trie prefix search across dictionary entries.",
+  "constraints": [
+    "The board has 0 to 4 rows; a nonempty board has 1 to 4 columns, with equal-length rows.",
+    "0 ≤ words.length ≤ 2,000. Every dictionary word has 1 to 8 lowercase ASCII letters.",
+    "Each word path uses distinct cells and only orthogonal neighboring positions.",
+    "Return distinct found words in lexicographic order; input dictionary order does not matter."
+  ],
+  "interface": "Solution.solve(board,words) receives string[] row strings and dictionary, returns sorted string[].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "board": {
+        "kind": "array",
+        "maxLength": 4,
+        "items": {
+          "kind": "string",
+          "minLength": 1,
+          "maxLength": 4,
+          "ascii": true
+        }
+      },
+      "words": {
+        "kind": "array",
+        "maxLength": 2000,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "string",
+          "minLength": 1,
+          "maxLength": 8,
+          "ascii": true
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "ascii": true
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [],
+  "remedialIds": [
+    "tries-01",
+    "tries-02",
+    "backtracking-01"
+  ],
+  "nextIds": [],
+  "rationale": "Prefix branches constrain the next letter while visited cells are local to one path; a found word can be a prefix of another and must not stop deeper exploration.",
+  "commonMistakes": [
+    "reuse-board-cells-in-one-path",
+    "stop-after-short-terminal-word",
+    "return-duplicates-in-dictionary-order"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "rectangular-strings",
+      "field": "board",
+      "minColumns": 1,
+      "maxColumns": 4,
+      "maxRows": 4
+    },
+    {
+      "kind": "alphabet",
+      "field": "board",
+      "alphabet": "lowercase",
+      "each": true
+    },
+    {
+      "kind": "alphabet",
+      "field": "words",
+      "alphabet": "lowercase",
+      "each": true
+    }
+  ]
+}

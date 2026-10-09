@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "c6c07efffe78909e4c17b77a2bf20f112c5a3aa50a15c37b55ffb8112c9f3121",
+  "suiteHash": "7d1c7ab4ab122d26366632cf5dddd88e7957edf4d8f4c6a1904163d2086b5f09",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "omit-negative-cycle-impact",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "discard-negative-costs",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

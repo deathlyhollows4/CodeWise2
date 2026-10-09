@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "a2fb28e8b8fdb170b2e8780712c7f8c1cea968d8d3666212cef85d0d2ae562b6",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:46:33.539Z",
+  "rationale": "Retains the largest k original multiset entries in descending order, including duplicate readings. k=0/full selection and signed extrema make the contract different from extrema-only, frequency ranking or repeated pair subtraction.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-first.mjs",
+    "sourceHash": "88b77d3f7e4daefa0f67c25744d59b1b399f75c22b7fc1b408cabf4168c7ec4f",
+    "reconciliation": "docs/release-evidence/coordinator-early-heap-effective-review.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Effective learningOverrides inspected; raw author nextIds are not the shipped route contract.",
+    "Per-pack conclusion only; final243 diversity synthesis and current execution gates remain separate.",
+    "Heap04 comparator-variation judgment remains independently pending."
+  ]
+}

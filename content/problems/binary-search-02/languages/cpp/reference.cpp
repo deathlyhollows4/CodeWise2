@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values,int target){int lo=0,hi=values.size();while(lo<hi){int mid=lo+(hi-lo)/2;if(values[mid]<target)lo=mid+1;else hi=mid;}return lo;}};

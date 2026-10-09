@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "5fd32fe711fdbb168b786be4800ce4f49eed84b451cb9d493a06c995e04b623e",
+  "suiteHash": "a01303c353eb7ffd63f4391467c3e8366e731849cd7ffc675f6fe22a8c5dab1c",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "reuse-items-forward-capacity",
+      "detected": true,
+      "caseId": "hidden-8"
+    },
+    {
+      "name": "discard-zero-weight",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "narrow-signed32-value",
+      "detected": true,
+      "caseId": "hidden-9"
+    }
+  ],
+  "languageExecution": "not-run"
+}

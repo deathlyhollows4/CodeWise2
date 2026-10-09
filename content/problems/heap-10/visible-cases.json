@@ -1,0 +1,79 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "buildings": [
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          4,
+          6,
+          2
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        6,
+        0
+      ]
+    ],
+    "explanation": "The taller middle building hides the others until it ends at 5."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "buildings": [
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ]
+    },
+    "expected": [
+      [
+        0,
+        5
+      ],
+      [
+        4,
+        0
+      ]
+    ],
+    "explanation": "A shared endpoint causes no height change when the new building has the same height."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "buildings": []
+    },
+    "expected": [],
+    "explanation": "The skyline stays at height zero everywhere."
+  }
+]

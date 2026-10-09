@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "f3e9413d07f93de504adbee2537f24bbc87b0813ff2c37e63d93236304096ffb",
+  "suiteHash": "ae2f77d8b2b03dc2b895f68c090ed7aa5d6a1ea7a2c175b4b00df3b25b2734dd",
+  "oracleChecks": 724,
+  "hiddenUnique": 721,
+  "mutations": [
+    {
+      "name": "multiset-intersection",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "require-contiguous-match",
+      "detected": true,
+      "caseId": "hidden-5"
+    }
+  ],
+  "languageExecution": "not-run"
+}

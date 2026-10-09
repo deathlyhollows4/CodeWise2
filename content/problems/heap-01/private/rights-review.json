@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "a2fb28e8b8fdb170b2e8780712c7f8c1cea968d8d3666212cef85d0d2ae562b6",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:01:28.986Z",
+  "rationale": "Independently read all source algorithms, generator and native references for The largest k readings. Objective: Retain the k largest multiset readings and return them in descending order. Current statement, examples, all726hidden cases and nine language assets reconcile to original author source/project typed harness templates. No imported assets occur. Explicit source review of wide arithmetic, ordering, multiplicity or stateful handle semantics is recorded separately from this rights conclusion.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-first.mjs",
+    "sourceHash": "3812ed4a84efddb24c1b81efbb5c0a45a0242e7b6fab67953c2f3ca07a1a571f",
+    "reconciliation": "docs/release-evidence/coordinator-heap-original-assets.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Rights only; native execution, progression and global diversity remain separate gates.",
+    "Later bound changes invalidate this review."
+  ]
+}

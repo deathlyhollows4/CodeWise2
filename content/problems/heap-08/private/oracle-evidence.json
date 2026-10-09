@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "f313e72758765cf21e7a17142b26a4ceeaab9e20aab27e9b635184d2c98190ec",
+  "suiteHash": "3bb689c9337343c0c95c0ba88b75da2560943d51e44ac515c0190cef294ccf24",
+  "oracleChecks": 353,
+  "hiddenUnique": 350,
+  "mutations": [
+    {
+      "name": "missing-plus-one-spacing",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "idle-after-last",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

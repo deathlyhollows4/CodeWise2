@@ -1,0 +1,1 @@
+class Solution {long long prefix(long long n){if(n<0)return 0;switch(n%4){case 0:return n;case 1:return 1;case 2:return n+1;default:return 0;}}public:long long solve(long long left,long long right){return prefix(right)^prefix(left-1);}};

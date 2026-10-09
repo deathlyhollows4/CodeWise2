@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){ArrayDeque<Integer> stack=new ArrayDeque<>();long best=0;for(int i=0;i<=values.length;i++){int height=i==values.length?0:values[i];while(!stack.isEmpty()&&values[stack.peekLast()]>height){int h=values[stack.removeLast()],left=stack.isEmpty()?-1:stack.peekLast();best=Math.max(best,(long)h*(i-left-1));}stack.addLast(i);}return best;}}

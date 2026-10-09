@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "a": "ac",
+      "b": "bd",
+      "target": "abcd"
+    },
+    "expected": true,
+    "explanation": "Take a, then b, then c, then d, preserving a before c and b before d."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "a": "",
+      "b": "",
+      "target": ""
+    },
+    "expected": true,
+    "explanation": "The empty merge uses every source character."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "a": "ab",
+      "b": "ac",
+      "target": "acab"
+    },
+    "expected": true,
+    "explanation": "Take the first two characters from b, then both from a. Taking the first a from a greedily would get stuck at c."
+  }
+]

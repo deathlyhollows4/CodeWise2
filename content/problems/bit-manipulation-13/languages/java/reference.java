@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] left,int[] right){int n=left.length;long[] dp=new long[1<<n];Arrays.fill(dp,Long.MAX_VALUE/4);dp[0]=0;for(int mask=0;mask<dp.length;mask++){int i=Integer.bitCount(mask);for(int j=0;j<n;j++)if((mask&(1<<j))==0){int next=mask|(1<<j);dp[next]=Math.min(dp[next],dp[mask]+(left[i]^right[j]));}}return dp[dp.length-1];}}

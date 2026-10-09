@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA602",
+  "hiddenCount": 60,
+  "suiteHash": "0e6bc27677f5efe1c1b80cf885fa4a3380b548d8e09b6d358b95907494f4a448",
+  "categories": [
+    "curated-boundary-free-single-potential",
+    "curated-boundary-impossible-self-equation",
+    "curated-boundary-disconnected-offset-components",
+    "curated-boundary-reversed-consistent-equation",
+    "max-wide-component-potentials",
+    "max-five-thousand-consistent-equations",
+    "max-one-contradictory-equation",
+    "seeded-signed-potential-equations"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

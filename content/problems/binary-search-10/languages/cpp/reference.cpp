@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> a,int p,long long d){if(a.empty())return 0;long long wait=1LL*p*((int)a.size()-1);if(wait+(int)a.size()>d)return -1;int l=1,h=*max_element(a.begin(),a.end());while(l<h){int m=l+(h-l)/2;long long t=wait;for(int x:a)t+=(x+1LL*m-1)/m;if(t<=d)h=m;else l=m+1;}return l;}};

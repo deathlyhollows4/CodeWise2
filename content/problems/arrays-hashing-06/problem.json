@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-06",
+  "version": "1.0.0",
+  "slug": "range-gap",
+  "title": "One gap in a range",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "hashing.membership",
+    "numbers.range-invariant"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "hashing.membership"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Find the one missing label from a complete0..n range with distinct inputs.",
+  "constraints": [
+    "0 <= n <= 100000",
+    "values contains n distinct integers in 0..n."
+  ],
+  "interface": "Solution.solve(values) returns the missing integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        },
+        "unordered": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-05"
+  ],
+  "remedialIds": [
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "arrays-hashing-07"
+  ],
+  "rationale": "Membership is familiar; use the known range to account for an absent value.",
+  "commonMistakes": [
+    "never-check-upper",
+    "assume-sorted"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "unique",
+      "field": "values"
+    },
+    {
+      "kind": "range-by-length",
+      "field": "values",
+      "minimum": 0,
+      "maxOffset": 0
+    }
+  ]
+}

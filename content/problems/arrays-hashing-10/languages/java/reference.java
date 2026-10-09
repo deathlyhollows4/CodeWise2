@@ -1,0 +1,1 @@
+class Solution {public long[] solve(int[] values){long[] out=new long[values.length];Arrays.fill(out,1);long left=1,right=1;for(int i=0;i<values.length;i++){out[i]*=left;left*=values[i];}for(int i=values.length-1;i>=0;i--){out[i]*=right;right*=values[i];}return out;}}

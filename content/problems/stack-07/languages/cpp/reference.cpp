@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<string> tokens){vector<long long> stack;for(string token:tokens){if(token=="+"||token=="-"||token=="*"){long long b=stack.back();stack.pop_back();long long a=stack.back();stack.pop_back();stack.push_back(token=="+"?a+b:token=="-"?a-b:a*b);}else stack.push_back(stoll(token));}return stack.back();}};

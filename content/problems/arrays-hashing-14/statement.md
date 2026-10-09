@@ -1,0 +1,1 @@
+Return how many nonempty contiguous segments of values sum exactly to target. Segments with different boundaries count separately, even if their values are equal. Negative numbers and zeros are allowed. Empty input has result0. Return a wide integer count.

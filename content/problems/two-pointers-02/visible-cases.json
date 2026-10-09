@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "abccba"
+    },
+    "expected": true,
+    "explanation": "Each opposing pair matches."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": true,
+    "explanation": "No opposing pair disagrees."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "Aa"
+    },
+    "expected": false,
+    "explanation": "Uppercase A and lowercase a are different."
+  }
+]

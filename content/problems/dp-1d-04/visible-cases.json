@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        6,
+        1,
+        7
+      ]
+    },
+    "expected": 7,
+    "explanation": "The rewards 6 and 7 touch around the circle, so only the larger one can be chosen."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        4,
+        1,
+        1,
+        4
+      ]
+    },
+    "expected": 5,
+    "explanation": "Choose one endpoint and the opposite inner reward; both endpoints cannot coexist."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        7
+      ]
+    },
+    "expected": 7,
+    "explanation": "The sole reward has no different neighbor."
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "weights": [
+        1,
+        9,
+        1,
+        9
+      ],
+      "days": 2
+    },
+    "expected": 10,
+    "explanation": "Ship [1,9] on each day. Capacity 9 would need four groups."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "weights": [
+        9,
+        9,
+        1,
+        1
+      ],
+      "days": 2
+    },
+    "expected": 11,
+    "explanation": "The order allows [9] and [9,1,1], whose larger group weighs 11."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "weights": [],
+      "days": 3
+    },
+    "expected": 0,
+    "explanation": "No capacity is needed for no items."
+  }
+]

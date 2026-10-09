@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-07",
+  "version": "1.0.0",
+  "slug": "evaluate-postfix-readings",
+  "title": "Evaluate a postfix calculation",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.operand-order"
+  ],
+  "prerequisites": [
+    "stack.push-pop-history"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Pop the right operand before the left operand when evaluating postfix arithmetic.",
+  "constraints": [
+    "1 ≤ tokens.length ≤ 31",
+    "Integer tokens are canonical decimal integers in [-100,100], with no leading plus or redundant leading zero.",
+    "Operators are exactly +, -, or *.",
+    "Every operator has two operands, and one final value remains."
+  ],
+  "interface": "Solution.solve(tokens) returns a 64-bit integer result.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "tokens": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 31,
+        "items": {
+          "kind": "string",
+          "ascii": true,
+          "minLength": 1,
+          "maxLength": 5
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1000000000,
+    "maximum": 1000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-10"
+  ],
+  "remedialIds": [
+    "stack-02",
+    "stack-01"
+  ],
+  "nextIds": [
+    "stack-04"
+  ],
+  "rationale": "The stack stores intermediate answers, and subtraction makes operand order visible.",
+  "commonMistakes": [
+    "reverse-subtraction-operands",
+    "sum-literal-tokens-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "postfix-bounded",
+      "field": "tokens",
+      "operations": [
+        "+",
+        "-",
+        "*"
+      ],
+      "minLiteral": -100,
+      "maxLiteral": 100,
+      "maxAbs": 1000000000
+    }
+  ]
+}

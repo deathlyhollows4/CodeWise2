@@ -1,0 +1,1 @@
+class Solution {public long solve(int[][] items,int capacity){long[] d=new long[capacity+1];for(int[] item:items)for(int c=capacity;c>=item[0];c--)d[c]=Math.max(d[c],d[c-item[0]]+item[1]);return d[capacity];}}

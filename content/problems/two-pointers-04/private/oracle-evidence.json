@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "922611311c0aafdd3f8a9bffaeec6819066523a677a26f083e29a4abebf87354",
+  "suiteHash": "cb42704697c84773e6f87c6d8223a1a9fd44244af50478572f5429fdffbed6fd",
+  "oracleChecks": 654,
+  "hiddenUnique": 651,
+  "mutations": [
+    {
+      "name": "deduplicate-inputs",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "drop-remainder",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

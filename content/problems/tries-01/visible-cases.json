@@ -1,0 +1,61 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "roots": [
+        "cat",
+        "ca",
+        "dog"
+      ],
+      "words": [
+        "cattle",
+        "dogma",
+        "scatter",
+        "cat"
+      ]
+    },
+    "expected": [
+      "ca",
+      "dog",
+      "scatter",
+      "ca"
+    ],
+    "explanation": "ca is the shortest prefix of cattle and cat; dog prefixes dogma; cat inside scatter is not a prefix."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "roots": [
+        "ab",
+        "a",
+        "ab"
+      ],
+      "words": [
+        "abc",
+        "",
+        "b"
+      ]
+    },
+    "expected": [
+      "a",
+      "",
+      "b"
+    ],
+    "explanation": "The shortest root a wins; duplicate roots do not change the result, and empty/unmatched words stay unchanged."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "roots": [],
+      "words": [
+        "alpha",
+        "beta"
+      ]
+    },
+    "expected": [
+      "alpha",
+      "beta"
+    ],
+    "explanation": "No dictionary entry exists to replace either word."
+  }
+]

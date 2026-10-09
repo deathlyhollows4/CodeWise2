@@ -1,0 +1,1 @@
+class Solution {public:int solve(string s){if(s.empty())return 0;int a=1,b=s[0]=='0'?0:1;for(int i=1;i<(int)s.size();i++){int n=s[i]=='0'?0:b,p=(s[i-1]-'0')*10+s[i]-'0';if(p>=10&&p<=26)n=(n+a)%1000000007;a=b;b=n;}return b;}};

@@ -1,0 +1,1 @@
+Return the unique integer r with 0 <= r < modulus that is congruent to value raised to exponent. exponent is nonnegative, modulus is positive, and value may be negative. Define a zero exponent as producing 1 before the modulus is applied, including when value is zero.

@@ -1,0 +1,1 @@
+Distinct positive coin denominations are available in unlimited quantity. Return the fewest coins whose values sum exactly to amount. Return -1 if the amount cannot be formed. Amount 0 needs no coins, even if the denomination list is empty. Coin order does not matter and greedy selection of the largest coin is not always correct. Each denomination may be used repeatedly.

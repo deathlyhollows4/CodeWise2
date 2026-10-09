@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        2,
+        1,
+        3
+      ]
+    },
+    "expected": 2,
+    "explanation": "[2,1] and[3] both total3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        0
+      ]
+    },
+    "expected": -1,
+    "explanation": "Two nonempty parts are impossible."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": 1,
+    "explanation": "Both possible cuts work; choose the first."
+  }
+]

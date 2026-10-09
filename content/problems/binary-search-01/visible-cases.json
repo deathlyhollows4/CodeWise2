@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -4,
+        0,
+        3,
+        9
+      ],
+      "target": 3
+    },
+    "expected": 2,
+    "explanation": "3 is at zero-based position 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 5
+    },
+    "expected": -1,
+    "explanation": "An empty list contains no target."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        1,
+        5,
+        8
+      ],
+      "target": 8
+    },
+    "expected": 2,
+    "explanation": "The last position must remain searchable."
+  }
+]

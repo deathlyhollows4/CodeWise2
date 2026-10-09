@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){long long result=0;for(int bit=0;bit<32;bit++){int count=0;for(int v:values)count+=((uint32_t)v>>bit)&1U;if(count%3)result|=1LL<<bit;}return result>=2147483648LL?result-4294967296LL:result;}};

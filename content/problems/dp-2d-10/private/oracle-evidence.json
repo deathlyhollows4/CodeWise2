@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "afb39e9cc6bc178a50b4e11909d192ad80de7e757fc8a622c00feba45d40a5a9",
+  "suiteHash": "9b94fc6021a8bde110e68873af8880f9a84f5de578fa51aac0d732897ae1f9b5",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "double-count-overlap",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "never-leave-starting-columns",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "narrow-signed32-reward",
+      "detected": true,
+      "caseId": "hidden-8"
+    }
+  ],
+  "languageExecution": "not-run"
+}

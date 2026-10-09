@@ -1,0 +1,45 @@
+{
+  "origin": "adapted",
+  "author": "CodeWise2 development worker and Exercism canonical test contributors",
+  "reviewDate": "2026-10-08",
+  "reviewerType": "automated-author",
+  "rightsStatus": "MIT-evidence-reviewed-automatically",
+  "independentReview": "pending",
+  "assets": {
+    "statement": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "examples": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "references": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "explanation": {
+      "origin": "original",
+      "sourceId": "codewise2-original",
+      "license": "project-owned"
+    },
+    "tests": {
+      "origin": "adapted",
+      "sourceId": "exercism-binary-search",
+      "sourceUrl": "https://github.com/exercism/problem-specifications/blob/9943fd751b684ba1a6a8673c3700a6e79c10a808/exercises/binary-search/canonical-data.json",
+      "revision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+      "license": "MIT",
+      "licenseEvidence": "content/sources/exercism-MIT.txt",
+      "attribution": "Exercism problem-specifications; Copyright (c) 2014, 2019, 2021 Exercism",
+      "modifications": "Map array to values, value to target and not-found errors to -1. Preserve canonical UUID as sourceCaseId. Independently verify canonical expectations and supplement with original generated cases.",
+      "originalExpansion": true
+    }
+  },
+  "excludedAssets": [
+    "No Exercism or Wikipedia statement copied",
+    "No imported reference code"
+  ]
+}

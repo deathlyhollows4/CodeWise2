@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-hiring-replacement.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xde42",
+  "hiddenCount": 200,
+  "suiteHash": "546700a7dbe7e885d1be278df78fd8be01ac729a2198946e8c74f70e0052f501",
+  "categories": [
+    "maximum-signed64-all-worker-total-certificate",
+    "maximum-monotone-left-reveal-certificate",
+    "maximum-monotone-right-reveal-certificate",
+    "maximum-fully-overlapping-windows-global-boundary",
+    "curated-zero-full-overlap-index-tie-and-hidden-middle-boundaries",
+    "tie-choice-changes-next-visible-candidate",
+    "curated-overlap-and-original-index-cost-ties",
+    "curated-moving-window-admission-sequences"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

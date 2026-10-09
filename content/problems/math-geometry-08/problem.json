@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-08",
+  "version": "1.0.0",
+  "slug": "clockwise-spiral-readout",
+  "title": "Read a rectangular grid in spiral order",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.shrinking-boundaries",
+    "geometry.grid-walk"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Read every cell exactly once while winding clockwise from the top-left corner inward.",
+  "constraints": [
+    "0 <= grid.length <= 100",
+    "Rows have the same length, from 0 through 100.",
+    "Every cell is an integer in [-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(grid) receives a typed integer matrix.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "maxLength": 100,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "maxLength": 100,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 10000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-07"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "math-geometry-01",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "math-geometry-13"
+  ],
+  "rationale": "Shrink four boundaries after consuming their sides, taking care not to duplicate a final row or column.",
+  "commonMistakes": [
+    "row-major",
+    "drop-final-cell"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

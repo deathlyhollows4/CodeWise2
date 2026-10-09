@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "bcabc"
+    },
+    "expected": "abc",
+    "explanation": "Choose a,b,c in order from the later part of the text; every required letter appears once."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "cbacdcbc"
+    },
+    "expected": "acdb",
+    "explanation": "Discard an early c and b only when later copies remain; d must stay before the final b."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": ""
+    },
+    "expected": "",
+    "explanation": "No letters are required."
+  }
+]

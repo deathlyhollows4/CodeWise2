@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        2,
+        3
+      ]
+    },
+    "expected": [
+      6,
+      3,
+      2
+    ],
+    "explanation": "Each result leaves out its own position."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        2
+      ]
+    },
+    "expected": [
+      1
+    ],
+    "explanation": "The remaining empty product is1."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -2,
+        0,
+        3
+      ]
+    },
+    "expected": [
+      0,
+      -6,
+      0
+    ],
+    "explanation": "Only the zero’s position leaves a nonzero product."
+  }
+]

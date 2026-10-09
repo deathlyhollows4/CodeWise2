@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-07",
+  "version": "1.0.0",
+  "slug": "enumerate-four-by-four-block-constrained-grid-completions",
+  "title": "Complete a four-by-four constraint grid",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state",
+    "backtracking.multi-constraint-state"
+  ],
+  "prerequisites": [
+    "backtracking.branch-restoration",
+    "backtracking.used-item-state"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Enumerate complete grids under intersecting row, column and block constraints while respecting all fixed clues.",
+  "constraints": [
+    "clues has exactly 4 rows and 4 columns.",
+    "Every entry lies in [0,4]; 0 means empty.",
+    "The four blocks occupy rows 0–1 or 2–3 and columns 0–1 or 2–3.",
+    "At most 288 completed grids exist, attained by the entirely empty grid.",
+    "Preserve every nonzero clue; contradictions produce no solution."
+  ],
+  "interface": "Solution.solve(clues:int[][]) returns string[][]; each solution is four row strings.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "clues": {
+        "kind": "array",
+        "minLength": 4,
+        "maxLength": 4,
+        "items": {
+          "kind": "array",
+          "minLength": 4,
+          "maxLength": 4,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 4
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 288,
+    "items": {
+      "kind": "array",
+      "minLength": 4,
+      "maxLength": 4,
+      "items": {
+        "kind": "string",
+        "minLength": 4,
+        "maxLength": 4,
+        "ascii": true
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-08"
+  ],
+  "remedialIds": [
+    "backtracking-04"
+  ],
+  "nextIds": [
+    "backtracking-09",
+    "backtracking-10"
+  ],
+  "rationale": "Each choice updates several shared constraint scopes. Distinct clue-location masks exercise propagation, ambiguity and contradiction rather than renaming an unconstrained puzzle.",
+  "commonMistakes": [
+    "ignore-two-by-two-blocks",
+    "discard-fixed-clues",
+    "return-only-first-solution"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

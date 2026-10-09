@@ -1,0 +1,1 @@
+class Solution {public long solve(long lo,long hi){int shifts=0;while(lo!=hi){lo>>=1;hi>>=1;shifts++;}return lo<<shifts;}}

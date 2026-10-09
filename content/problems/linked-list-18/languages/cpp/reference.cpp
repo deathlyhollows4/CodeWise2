@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head,int k){if(!head)return nullptr;int n=1;auto tail=head;while(tail->next){tail=tail->next;n++;}int amount=k%n;if(amount==0)return head;auto newTail=head;for(int i=0;i<n-amount-1;i++)newTail=newTail->next;auto newHead=newTail->next;tail->next=head;newTail->next=nullptr;return newHead;}};

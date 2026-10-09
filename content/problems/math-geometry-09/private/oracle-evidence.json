@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "40de64fd1a3e5011095fe825d6c6bdf0f8b438534c847f7c27f87e69f96a1150",
+  "suiteHash": "5a859e3f5de9dbb337f9179dedd7a6b3d5f888c49a47f8ba1545c7aa98ea2058",
+  "oracleChecks": 753,
+  "hiddenUnique": 750,
+  "mutations": [
+    {
+      "name": "signed-area",
+      "detected": true,
+      "caseId": "hidden-3"
+    },
+    {
+      "name": "narrow-product",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

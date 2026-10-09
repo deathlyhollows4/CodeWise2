@@ -1,0 +1,1 @@
+class Solution {public:long long solve(TreeNode* root){if(!root)return 0;vector<TreeNode*> stack{root};long long total=0;while(!stack.empty()){auto node=stack.back();stack.pop_back();if(!node->left&&!node->right)total+=node->val;if(node->left)stack.push_back(node->left);if(node->right)stack.push_back(node->right);}return total;}};

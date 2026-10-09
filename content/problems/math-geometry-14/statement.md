@@ -1,0 +1,1 @@
+Each rectangle is [x1,y1,x2,y2], where x1 <= x2 and y1 <= y2. Return the area covered by at least one rectangle. Count overlap only once. Rectangles may touch, contain one another, repeat, or have zero width or height; a zero-area rectangle adds no area. An empty collection has area zero.

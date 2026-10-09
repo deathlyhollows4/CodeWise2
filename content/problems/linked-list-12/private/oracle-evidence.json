@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "77c807fcc8be247e30529848680aa3752e99674d90f990874b5456883af9954a",
+  "suiteHash": "ff6c43c5a2487e44217bb9552ad63c55ca7fbbebf24c04d29cbd42c55ead6357",
+  "oracleChecks": 731,
+  "hiddenUnique": 728,
+  "mutations": [
+    {
+      "name": "get-does-not-refresh",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "evict-when-updating-existing",
+      "detected": true,
+      "caseId": "hidden-11"
+    }
+  ],
+  "languageExecution": "not-run"
+}

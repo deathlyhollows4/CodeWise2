@@ -1,0 +1,1 @@
+class Solution {public long[] solve(int[] values){return new long[0];}}

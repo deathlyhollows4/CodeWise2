@@ -1,0 +1,1 @@
+class Solution {public TreeNode solve(TreeNode root,String direction){if(root==null)return null;if(direction.equals("LEFT")){TreeNode pivot=root.right;if(pivot==null)return root;root.right=pivot.left;pivot.left=root;return pivot;}TreeNode pivot=root.left;if(pivot==null)return root;root.left=pivot.right;pivot.right=root;return pivot;}}

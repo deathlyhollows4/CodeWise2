@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "425171d89b713c74372945fcbb6c18d54f6e9a56261422c6d0f70bf17f0aab71",
+  "suiteHash": "0aecbd668d877537398b7e232d7011c3ec06883454717fd5fbe65ac9012c0a10",
+  "oracleChecks": 718,
+  "hiddenUnique": 715,
+  "mutations": [
+    {
+      "name": "rotate-left-instead",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "omit-modulo-reduction",
+      "detected": true,
+      "caseId": "hidden-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "digits": [
+        1,
+        4,
+        3,
+        2,
+        2,
+        1,
+        9
+      ],
+      "k": 3
+    },
+    "expected": "1219",
+    "explanation": "Remove the digits 4,3 and the first 2; the remaining indexed sequence is 1,2,1,9."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "digits": [
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "k": 1
+    },
+    "expected": "200",
+    "explanation": "Delete the leading 1, keeping 0,2,0,0; canonical display removes the leading zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "digits": [],
+      "k": 0
+    },
+    "expected": "0",
+    "explanation": "The empty retained sequence is displayed as 0."
+  }
+]

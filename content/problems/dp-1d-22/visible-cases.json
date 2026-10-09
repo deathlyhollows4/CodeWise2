@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 0
+    },
+    "expected": 1,
+    "explanation": "The empty permutation violates no position constraint."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 2
+    },
+    "expected": 1,
+    "explanation": "Only swapping the two items moves both away from their original positions."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 3
+    },
+    "expected": 2,
+    "explanation": "The two directed three-cycles are the only permutations with no fixed position."
+  }
+]

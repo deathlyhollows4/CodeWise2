@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "7cc35e5a33f8c13991ac8d23c3da39f730ef655e8f2fedf7f24ede1e32b36515",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:01:28.986Z",
+  "rationale": "Independently read all source algorithms, generator and native references for The first pairs in sum order. Objective: Enumerate the leading Cartesian index pairs by a stable sum ranking without constructing every pair. Current statement, examples, all60hidden cases and nine language assets reconcile to original author source/project typed harness templates. No imported assets occur. Explicit source review of wide arithmetic, ordering, multiplicity or stateful handle semantics is recorded separately from this rights conclusion.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-pair-frontier.mjs",
+    "sourceHash": "9847261a3bd2e4def64afa8bbf10bc85c269a9c4132a1ecfe1f1dcd662c32678",
+    "reconciliation": "docs/release-evidence/coordinator-heap-original-assets.json",
+    "sourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Rights only; native execution, progression and global diversity remain separate gates.",
+    "Later bound changes invalidate this review."
+  ]
+}

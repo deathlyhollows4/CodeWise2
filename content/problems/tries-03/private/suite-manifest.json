@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/tries-thread-prefix-agreement.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "exhaustive-terminal-subsets-and-curated-branches-v1",
+  "hiddenCount": 295,
+  "suiteHash": "8ecccb4ad326f1dcfbd936593f6a9ffd09bd1070ff7bedf77391628ba07e8860",
+  "categories": [
+    "exhaustive-eight-depth-terminal-subsets",
+    "shared-trunk-terminal-and-branch-multiplicity",
+    "curated-boundary-ordered-queries-empty-divergence-and-multiplicity",
+    "max-joint-count-length-score-certificate",
+    "max-final-letter-divergence-certificate",
+    "max-empty-dictionary-query-array-certificate",
+    "max-distinct-dictionary-shared-three-letter-frontier"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

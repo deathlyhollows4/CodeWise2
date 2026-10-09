@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-01",
+  "version": "1.0.0",
+  "slug": "running-total",
+  "title": "Running total",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "arrays.traversal",
+    "numbers.signed-accumulation"
+  ],
+  "prerequisites": [],
+  "step": 1,
+  "status": "published",
+  "objective": "Accumulate signed values without losing negatives or overflowing a 32-bit result.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "-1000000000 <= values[i] <= 1000000000",
+    "Return an integer; total results fit a signed 64-bit integer and JSON safe integer."
+  ],
+  "interface": "Solution.solve(values): signed 64-bit integer. Input values are signed 32-bit integers.",
+  "inputSchema": {
+    "kind": "integer-array",
+    "field": "values",
+    "minLength": 0,
+    "maxLength": 100000,
+    "minValue": -1000000000,
+    "maxValue": 1000000000,
+    "unordered": true
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-02"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "arrays-hashing-03"
+  ],
+  "approachTags": [
+    "single-pass"
+  ],
+  "commonMistakes": [
+    "skip-first",
+    "absolute-values",
+    "32-bit-overflow"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 1048576,
+    "fileKb": 2048,
+    "inputBytes": 8388608
+  },
+  "rationale": "You practise visiting every value and updating one running result. Next, keep a record of values already visited."
+}

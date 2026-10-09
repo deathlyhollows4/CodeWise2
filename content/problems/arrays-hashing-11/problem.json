@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-11",
+  "version": "1.0.0",
+  "slug": "consecutive-label-run",
+  "title": "Consecutive label run",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "hashing.run-start",
+    "numbers.adjacency"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "hashing.membership"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Find the longest consecutive-value run while ignoring duplicates and original positions.",
+  "constraints": [
+    "0 <= values.length <=100000",
+    "Each value is in[-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(values), receiving a typed integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        },
+        "unordered": true,
+        "deduplicate": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-13"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-03",
+    "arrays-hashing-09"
+  ],
+  "nextIds": [
+    "arrays-hashing-16"
+  ],
+  "rationale": "Use membership to recognize a run start, then count consecutive values only once.",
+  "commonMistakes": [
+    "count-duplicates",
+    "original-adjacency"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

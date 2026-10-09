@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-10-08",
+  "reviewerType": "automated-development-source-audit",
+  "sources": [
+    {
+      "id": "codewise2-original",
+      "origin": "original",
+      "assetsUsed": [
+        "statements",
+        "examples",
+        "tests",
+        "references",
+        "wrappers"
+      ],
+      "author": "CodeWise2 development worker",
+      "license": "project-owned; no external assets imported",
+      "rightsStatus": "original",
+      "limits": "Source review is automated, not legal counsel. Independent algorithm/checker review and isolated execution remain separate gates."
+    },
+    {
+      "id": "exercism-problem-specifications",
+      "url": "https://github.com/exercism/problem-specifications",
+      "revision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+      "license": "MIT",
+      "licenseEvidence": "content/sources/exercism-MIT.txt",
+      "rightsStatus": "MIT repository license and selected canonical test metadata screened; preserved notice",
+      "assetsUsed": [
+        {
+          "statementReused": false,
+          "modifications": [
+            "array renamed values",
+            "value renamed target",
+            "missing-value error normalized to -1",
+            "source UUID retained",
+            "original expanded suite added"
+          ],
+          "asset": "exercises/binary-search/canonical-data.json",
+          "casesAdapted": 11,
+          "assetClass": "tests",
+          "revision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+          "problemId": "binary-search-01"
+        },
+        {
+          "caseCount": 18,
+          "revision": "9943fd751b684ba1a6a8673c3700a6e79c10a808",
+          "path": "exercises/rational-numbers/canonical-data.json",
+          "assetClass": "tests",
+          "problemId": "math-geometry-15"
+        }
+      ],
+      "candidatePaths": [
+        "exercises/binary-search",
+        "exercises/list-ops",
+        "exercises/flatten-array",
+        "exercises/knapsack",
+        "exercises/saddle-points",
+        "exercises/pascals-triangle",
+        "exercises/word-search",
+        "exercises/spiral-matrix",
+        "exercises/rational-numbers"
+      ],
+      "curriculumFit": "Binary-search01 reuses11 canonical test cases and MathGeometry15 reuses18 canonical rational arithmetic cases with pinned asset attribution. Other candidates have explicit fit decisions; no statement or reference reuse claimed."
+    },
+    {
+      "id": "codecontests",
+      "url": "https://github.com/google-deepmind/code_contests",
+      "rightsStatus": "not-cleared-for-assets",
+      "assetsUsed": [],
+      "reason": "Dataset documentation flags third-party material terms; no blanket republication assumption."
+    },
+    {
+      "id": "neetcode-baseline",
+      "url": "https://neetcode.io/practice/practice/neetcode150",
+      "rightsStatus": "curriculum topic-count reference only",
+      "assetsUsed": [],
+      "reason": "No statement/test/reference copying permission inferred."
+    }
+  ]
+}

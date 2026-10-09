@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A03",
+  "hiddenCount": 60,
+  "suiteHash": "e13afb07abb6a173cac52e36a7f18fa430f318638bdd978464d6b7c1475a9e0a",
+  "categories": [
+    "curated-boundary-single-isolate",
+    "curated-boundary-one-component",
+    "curated-boundary-two-cyclic-components",
+    "max-all-isolated",
+    "max-single-connected-chain",
+    "max-connected-star-plus-dense-extra-edges",
+    "seeded-component-topology"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "8460311740844ffde1a9f6f9ed367042cff4651eaba27cf04f4718a64c3746e3",
+  "suiteHash": "96964f9771e66815fa3cd072d2d28016e461d67e006aaa566820a25179cbfa4d",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "reuse-permitted-items",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "transpose-position-item-permissions",
+      "detected": true,
+      "caseId": "hidden-26"
+    },
+    {
+      "name": "reverse-enumeration-order",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

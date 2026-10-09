@@ -1,0 +1,1 @@
+Group lowercase ASCII words that use exactly the same letters with the same multiplicities. Keep duplicate words as separate entries. Sort words inside each group lexicographically, then sort groups by their first word. Empty words are allowed and form their own group. Empty input returns no groups.

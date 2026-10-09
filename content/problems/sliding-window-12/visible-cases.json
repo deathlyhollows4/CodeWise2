@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        4,
+        1,
+        2,
+        3
+      ],
+      "limit": 2
+    },
+    "expected": 3,
+    "explanation": "[1,2,3] spans values from 1 through 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "limit": 0
+    },
+    "expected": 0,
+    "explanation": "There are no readings."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        7,
+        7,
+        7
+      ],
+      "limit": 0
+    },
+    "expected": 3,
+    "explanation": "Equal values have zero spread regardless of length."
+  }
+]

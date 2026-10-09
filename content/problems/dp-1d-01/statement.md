@@ -1,0 +1,1 @@
+Start at position 0 and reach position n using moves of length 1 or 2. Count distinct ordered move sequences. Return the count modulo 1000000007. For n=0, the empty sequence is one valid route. A sequence [1,2] differs from [2,1]. Do not enumerate every sequence; reuse counts for smaller positions.

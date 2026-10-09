@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-08",
+  "version": "1.0.0",
+  "slug": "interval-common-bits",
+  "title": "Bits shared by an integer interval",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.interval-common-prefix"
+  ],
+  "prerequisites": [
+    "bits.unsigned32"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Find the bits retained by AND across every integer in an inclusive interval.",
+  "constraints": [
+    "0 <= lo <= hi <= 2147483647",
+    "Both endpoints are included."
+  ],
+  "interface": "Solution.solve(lo, hi) receives two long integers.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "lo": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "hi": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-04"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "bit-manipulation-06"
+  ],
+  "rationale": "Any varying low bit becomes zero somewhere in the interval; only its common high prefix survives.",
+  "commonMistakes": [
+    "endpoints-only",
+    "exclusive-upper"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "field-order",
+      "lower": "lo",
+      "upper": "hi"
+    }
+  ]
+}

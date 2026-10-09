@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values){HashMap<Integer,Integer> first=new HashMap<>();first.put(0,-1);int diff=0,best=0;for(int i=0;i<values.length;i++){diff+=values[i]==0?-1:1;if(first.containsKey(diff))best=Math.max(best,i-first.get(diff));else first.put(diff,i);}return best;}}

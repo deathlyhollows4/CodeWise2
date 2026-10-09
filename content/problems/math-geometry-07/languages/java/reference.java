@@ -1,0 +1,1 @@
+class Solution {public int[][] solve(int[][] grid){int n=grid.length;int[][] out=new int[n][n];for(int row=0;row<n;row++)for(int col=0;col<n;col++)out[col][n-1-row]=grid[row][col];return out;}}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        5,
+        4,
+        6,
+        6
+      ]
+    },
+    "expected": [
+      2,
+      1,
+      0,
+      0
+    ],
+    "explanation": "The first 6 resolves 5 and 4; equal 6 is not warmer."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No readings need answers."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        2,
+        2,
+        3
+      ]
+    },
+    "expected": [
+      2,
+      1,
+      0
+    ],
+    "explanation": "Equal readings wait until the 3."
+  }
+]

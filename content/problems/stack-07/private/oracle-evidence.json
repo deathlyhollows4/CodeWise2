@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "8672d017a89c4a92a35307c3a32940fe4bc5390baf06d830b2bcd7a1d0076da7",
+  "suiteHash": "dee4c3e4fdc4e5db8855011d67cbd980160537a7503768b489213338b933ed7c",
+  "oracleChecks": 559,
+  "hiddenUnique": 556,
+  "mutations": [
+    {
+      "name": "reverse-subtraction-operands",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "sum-literal-tokens-only",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

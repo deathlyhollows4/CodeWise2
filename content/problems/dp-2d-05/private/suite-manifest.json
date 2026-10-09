@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D05",
+  "hiddenCount": 815,
+  "suiteHash": "248e0ccab516ac807f7bdab7f94d87b48404dc15cc1372c8e0e9f21fecbbc678",
+  "categories": [
+    "seeded-index-subset-count",
+    "max-binomial-modulo",
+    "max-unique-index-selection",
+    "max-impossible-target",
+    "max-escaped-empty-target",
+    "target-longer-than-source"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

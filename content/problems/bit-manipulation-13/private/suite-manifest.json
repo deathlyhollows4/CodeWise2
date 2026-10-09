@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-final.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xbf12",
+  "hiddenCount": 719,
+  "suiteHash": "5ea5d0c0974eb2dc6c18f3acb1e0a6abaeaa2a376f6182a3cb8bd6d15692a1e8",
+  "categories": [
+    "exhaustively-oracled-small-bijection",
+    "maximum-size-wide-total",
+    "maximum-size-equal-multiset"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

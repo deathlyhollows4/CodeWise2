@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "c04e62e4970f83df4e5ae5c8b480af03a5bbfcd1c9368eb61e2566a8caae040d",
+  "suiteHash": "03f46efcfd6ce55226ca839b6ae65e1b986898f712bf785e39a2da1791ca87d8",
+  "oracleChecks": 735,
+  "hiddenUnique": 732,
+  "mutations": [
+    {
+      "name": "put-extra-nodes-in-last-parts",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "overlapping-unsevered-parts",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

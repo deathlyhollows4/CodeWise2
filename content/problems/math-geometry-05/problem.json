@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-05",
+  "version": "1.0.0",
+  "slug": "happy-digit-square-orbit",
+  "title": "A digit-square orbit",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "numbers.digit-square-transform",
+    "cycles.repeated-state"
+  ],
+  "prerequisites": [
+    "numbers.decimal-extraction"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Decide whether repeated decimal digit-square transformation reaches one or enters another cycle.",
+  "constraints": [
+    "1 <= value <= 2147483647",
+    "Use decimal digits, including zeros within the number."
+  ],
+  "interface": "Solution.solve(value) receives a long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2147483647
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-06"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-02",
+    "math-geometry-04",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "math-geometry-07"
+  ],
+  "rationale": "The transformed values rapidly enter a small finite range; repeated states identify a cycle.",
+  "commonMistakes": [
+    "digit-sum-not-squares",
+    "only-starting-one"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

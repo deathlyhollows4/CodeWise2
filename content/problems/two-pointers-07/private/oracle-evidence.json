@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "dcb731d96fcb72a8299156bbc3d4019330208835696a54123bd52b5c4cce06f1",
+  "suiteHash": "416b6b1de58f8d8a36665175076ddf6c9cdb45569921ab2b235eece1dd3e9317",
+  "oracleChecks": 693,
+  "hiddenUnique": 690,
+  "mutations": [
+    {
+      "name": "erase-repeated-input-values",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "duplicate-triple-output",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "821db0301256e20b27eb17097895e006d1c23b15f4bef4c642ec68670bc6b13d",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:57:29.235Z",
+  "reviewType": "diversity",
+  "rationale": "Computes the product excluding each position without division. Zero multiplicity, singleton/empty outputs and bounded signed products distinguish this bidirectional product task from prefix sums or generic multiplication.",
+  "evidence": [
+    "docs/release-evidence/coordinator-arrays-curriculum-diversity-review.json",
+    "docs/release-evidence/independent-reviewed-curriculum-current.json"
+  ],
+  "limitations": [
+    "Independently compared actual I/O objectives and source-generated suite structure with reviewed existing topic packs.",
+    "Final243 global distinctness review remains required; this record does not publish the pack."
+  ]
+}

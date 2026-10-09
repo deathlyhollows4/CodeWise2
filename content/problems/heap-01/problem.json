@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-01",
+  "version": "1.0.0",
+  "slug": "largest-k-readings",
+  "title": "The largest k readings",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.bounded-frontier",
+    "heap.min-cutoff"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Retain the k largest multiset readings and return them in descending order.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "0 <= k <= values.length",
+    "Every reading is an integer in [-1000000000,1000000000]."
+  ],
+  "interface": "Solution.solve(values, k) receives an integer array and a selection count.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 100000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 100000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-06"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "heap-02"
+  ],
+  "rationale": "A min-heap of retained readings exposes the weakest selection when the next reading arrives.",
+  "commonMistakes": [
+    "smallest-instead",
+    "discard-duplicates"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "values",
+      "minimum": 0
+    }
+  ]
+}

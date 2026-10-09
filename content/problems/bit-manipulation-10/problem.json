@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-10",
+  "version": "1.0.0",
+  "slug": "switch-mask-history",
+  "title": "Apply a switch-toggle history",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.position-mask",
+    "bits.toggle-state"
+  ],
+  "prerequisites": [
+    "bits.unsigned32",
+    "arrays.traversal"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Apply repeated indexed toggles to a fixed-width switch mask.",
+  "constraints": [
+    "0 <= initial <= 2147483647",
+    "0 <= positions.length <= 100000",
+    "Every position is an integer from 0 through 30."
+  ],
+  "interface": "Solution.solve(initial, positions) receives a long mask and typed integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "initial": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "positions": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 30
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-03"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "bit-manipulation-05"
+  ],
+  "rationale": "Each index identifies one independent switch; toggling a switch twice restores its prior state.",
+  "commonMistakes": [
+    "set-instead-of-toggle",
+    "drop-duplicates"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

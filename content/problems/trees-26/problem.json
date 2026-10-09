@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-26",
+  "version": "1.0.0",
+  "slug": "count-all-downward-signed-target-routes",
+  "title": "Count target-total routes starting anywhere",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "numbers.signed-accumulation",
+    "trees.branch-prefix-frequency",
+    "trees.all-downward-route-count"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "numbers.signed-accumulation"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Count every nonempty ancestor-to-descendant route with the target signed sum, including routes beginning below the root and overlapping routes.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links.",
+    "-2,000,000,000,000 ≤ target ≤ 2,000,000,000,000.",
+    "A route follows child links only; start and end are any original nodes."
+  ],
+  "interface": "Solution.solve(root,target) receives TreeNode and long / long long and returns int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -2000000000000,
+        "maximum": 2000000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2001000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-14",
+    "trees-15",
+    "trees-24"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "arrays-hashing-01",
+    "trees-11"
+  ],
+  "nextIds": [
+    "trees-12"
+  ],
+  "rationale": "Current-branch prefix frequencies count all start positions; removing a prefix on branch exit prevents sibling leakage.",
+  "commonMistakes": [
+    "leak-prefixes-between-sibling-branches",
+    "count-only-root-starts",
+    "signed-int32-prefix-accumulator"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

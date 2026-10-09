@@ -1,0 +1,1 @@
+class Solution {public:int solve(int n,vector<vector<int>>edges){if(!n)return -1;if(n==1)return 0;vector<int>p(n);iota(p.begin(),p.end(),0);function<int(int)>find=[&](int u){while(p[u]!=u){p[u]=p[p[u]];u=p[u];}return u;};sort(edges.begin(),edges.end(),[](auto&a,auto&b){return a[2]<b[2];});for(auto e:edges){p[find(e[0])]=find(e[1]);if(find(0)==find(n-1))return e[2];}return -1;}};

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC212",
+  "hiddenCount": 672,
+  "suiteHash": "81e93753b35fad17a17ea96414815d85f55cea90f29209d69cb65bc2d667a0b0",
+  "categories": [
+    "exhaustive-optimal-index-choices",
+    "strictness-empty-and-multiple-predecessors",
+    "large-group-product-and-tied-optima"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

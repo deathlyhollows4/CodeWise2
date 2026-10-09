@@ -1,0 +1,1 @@
+class Solution {long long best(const vector<int>& a,int l,int h){long long p=0,b=0;for(int i=l;i<h;i++){long long n=max(b,p+a[i]);p=b;b=n;}return b;}public:long long solve(vector<int> a){if(a.empty())return 0;if(a.size()==1)return a[0];return max(best(a,0,a.size()-1),best(a,1,a.size()));}};

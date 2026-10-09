@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-middle.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 712,
+  "suiteHash": "b49adc66503d681f8e1631e9c4f6d2ae4191bda7cc87dd696095a42bdb21edb7",
+  "categories": [
+    "duplicate-page-labels-and-zero-steps",
+    "branch-invalidation-and-clamped-navigation",
+    "large-history-clamps"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

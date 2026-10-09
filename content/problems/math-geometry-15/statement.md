@@ -1,0 +1,1 @@
+Each rational number is supplied as an integer numerator and a positive denominator. Apply operation, which is one of +, -, *, or /, to aNum/aDen and bNum/bDen. Return [numerator, denominator] in lowest terms, with a positive denominator. Represent zero as [0,1]. For division, bNum is guaranteed nonzero. Use exact integer arithmetic, not floating-point rounding.

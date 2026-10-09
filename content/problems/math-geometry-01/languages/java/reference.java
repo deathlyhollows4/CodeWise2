@@ -1,0 +1,1 @@
+class Solution {public long solve(long value){long n=Math.abs(value),answer=0;while(n>0){answer=answer*10+n%10;n/=10;}if(value<0)answer=-answer;return answer<Integer.MIN_VALUE||answer>Integer.MAX_VALUE?0:answer;}}

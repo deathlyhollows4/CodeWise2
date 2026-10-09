@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "word": 13,
+      "low": 1,
+      "high": 2
+    },
+    "expected": 2,
+    "explanation": "13 is binary 1101. Bits 2 through 1 form 10, whose unsigned value is 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "word": 3735928559,
+      "low": 0,
+      "high": 31
+    },
+    "expected": 3735928559,
+    "explanation": "Selecting all 32 bits preserves this unsigned word, which exceeds signed 32-bit range."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "word": 2147483648,
+      "low": 31,
+      "high": 31
+    },
+    "expected": 1,
+    "explanation": "The highest original bit becomes the only result bit."
+  }
+]

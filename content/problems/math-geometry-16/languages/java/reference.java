@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] point,String line,int offset){int a,b;if(line.equals("vertical")){a=1;b=0;}else if(line.equals("horizontal")){a=0;b=1;}else if(line.equals("rising")){a=-1;b=1;}else{a=1;b=1;}int factor=2*(a*point[0]+b*point[1]-offset)/(a*a+b*b);return new int[]{point[0]-a*factor,point[1]-b*factor};}}

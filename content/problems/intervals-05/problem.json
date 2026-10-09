@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "intervals-05",
+  "version": "1.0.0",
+  "slug": "maximum-weighted-coverage",
+  "title": "The greatest combined coverage weight",
+  "primaryTopic": "intervals",
+  "skillIds": [
+    "intervals.grouped-event-sum",
+    "prefix.accumulation"
+  ],
+  "prerequisites": [
+    "numbers.signed-accumulation",
+    "intervals.sorted-union"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Find the maximum signed weight simultaneously active on half-open intervals using grouped endpoint events.",
+  "constraints": [
+    "0 <= segments.length <= 49999",
+    "Every row contains exactly [start, end, weight], with start <= end.",
+    "Endpoints and weights are integers in [-1000000000, 1000000000].",
+    "The total weight may be as large as 49999000000000; use a signed 64-bit result."
+  ],
+  "interface": "Solution.solve(segments) receives a native integer matrix of weighted half-open ranges and returns a long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "segments": {
+        "kind": "array",
+        "maxLength": 49999,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 3,
+          "maxLength": 3,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 49999000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "intervals-03"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "intervals-01",
+    "two-pointers-04",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "intervals-04",
+    "intervals-06"
+  ],
+  "rationale": "Starts add weight and ends remove it. Apply every event at the same coordinate together before measuring the next active range, especially when weights are negative.",
+  "commonMistakes": [
+    "narrow-running-total",
+    "ignore-negative-weights",
+    "count-closed-contact"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "weighted-interval-rows",
+      "field": "segments"
+    }
+  ]
+}

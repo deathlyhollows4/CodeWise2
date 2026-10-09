@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values,long long target){unordered_map<long long,long long> count;count[0]=1;long long prefix=0,result=0;for(int v:values){prefix+=v;result+=count[prefix-target];count[prefix]++;}return result;}};

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC403",
+  "hiddenCount": 750,
+  "suiteHash": "4372216a7efa03640fb917c51ec791413d6185053d2c0e7536fd3a21da762853",
+  "categories": [
+    "rotated-pivot-position",
+    "unrotated",
+    "large-midpoint-pivot"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        -2,
+        3,
+        4,
+        null,
+        -5,
+        6
+      ],
+      "target": 3
+    },
+    "expected": true,
+    "explanation": "The complete route 1 → -2 → 4 totals 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        5,
+        1,
+        2
+      ],
+      "target": 5
+    },
+    "expected": false,
+    "explanation": "The root matches, but both complete routes continue to totals 6 and 7."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [],
+      "target": 0
+    },
+    "expected": false,
+    "explanation": "A null root is not a complete route."
+  }
+]

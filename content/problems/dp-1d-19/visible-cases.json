@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 0
+    },
+    "expected": 1,
+    "explanation": "The empty covering is the only covering of an empty board."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 2
+    },
+    "expected": 2,
+    "explanation": "Use two vertical dominoes or two horizontal dominoes; an L tile cannot complete this board."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 3
+    },
+    "expected": 5,
+    "explanation": "Three domino-only coverings and two mirrored pairs of L tiles cover the board."
+  }
+]

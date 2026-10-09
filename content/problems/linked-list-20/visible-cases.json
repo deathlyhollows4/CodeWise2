@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        1,
+        2,
+        -3,
+        3,
+        1
+      ]
+    },
+    "expected": [
+      3,
+      4
+    ],
+    "explanation": "Removing the first three nodes is valid; a different valid answer may retain nodes 0, 1 and 4 instead."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        0,
+        0
+      ]
+    },
+    "expected": [],
+    "explanation": "The entire zero-sum block can be removed; retaining either zero would not be terminal."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [
+        2,
+        5,
+        -1
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      2
+    ],
+    "explanation": "No nonempty block sums to zero, so every original node remains."
+  }
+]

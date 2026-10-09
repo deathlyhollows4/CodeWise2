@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-09",
+  "version": "1.0.0",
+  "slug": "original-josephus-survivor",
+  "title": "Return the Josephus survivor node",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.circular-elimination",
+    "list.modular-survivor-rank"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.original-identity"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Select the original surviving node in a circular elimination schedule without confusing its value with its identity.",
+  "constraints": [
+    "0 ≤ node count ≤ 2,000; values lie in [-1,000,000,1,000,000].",
+    "1 ≤ k ≤ 1,000,000,000.",
+    "There is exactly one nullable head; only an empty ring has a null head.",
+    "For a nonempty input, next is a non-null permutation of node indexes and all nodes are reachable from the head."
+  ],
+  "interface": "Solution.solve(data,k) receives IdentityList and int, and returns an original ListNode or null.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "data": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "next": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": 0,
+              "maximum": 1999
+            }
+          },
+          "heads": {
+            "kind": "array",
+            "minLength": 1,
+            "maxLength": 1,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          }
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "nullable",
+    "value": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-10",
+    "linked-list-11",
+    "linked-list-12"
+  ],
+  "remedialIds": [
+    "linked-list-03",
+    "linked-list-04"
+  ],
+  "nextIds": [],
+  "rationale": "The survivor rank follows a smaller-ring recurrence, but the returned result must still be the original object in the given ring order.",
+  "commonMistakes": [
+    "count-one-too-far",
+    "value-as-original-identity"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "node-table",
+      "field": "data",
+      "links": [
+        "next"
+      ],
+      "heads": "heads",
+      "requireReachable": true,
+      "uniqueLinks": [
+        "next"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/tries.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 706,
+  "suiteHash": "c436cae79448629ccc813d2a2ce284cf29b21bc947026c3a52f3170aa1a79dec",
+  "categories": [
+    "shortest-prefix-terminal-infix-and-unmatched",
+    "shortest-root-before-longer-terminal",
+    "empty-dictionary",
+    "both-arrays-empty",
+    "empty-output-word-array",
+    "maximum-word-and-exact-terminal",
+    "maximum-dictionary-and-word-count"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

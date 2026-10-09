@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "aabcc"
+    },
+    "expected": "b",
+    "explanation": "The aa and cc pairs disappear, leaving b."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": "",
+    "explanation": "There is no pair."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "abbac"
+    },
+    "expected": "c",
+    "explanation": "Removing bb exposes aa, so both pairs cancel."
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "suiteHash": "0ead42ee341d6a2b74c47bd9dc56d486bc69b1592a2ff6dc76d92c5486c0ba97",
+  "status": "references-passed-review-pending",
+  "languages": {
+    "java": {
+      "status": "passed",
+      "validationIdentity": "f3901b828bd0ebf886b4ba23b77469c47f21dc61acd86d8711b31bbdeb7f6447",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 667,
+      "passed": 667,
+      "executedAt": "2026-10-08T12:14:20.263Z",
+      "evidencePath": "docs/release-evidence/validation-bit-manipulation-01-java.json",
+      "outcome": "accepted"
+    },
+    "cpp": {
+      "status": "passed",
+      "validationIdentity": "533eeee66eb1216ab7e8fb670615330b5eec29ea87a4d0127c30749947585f3c",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 667,
+      "passed": 667,
+      "executedAt": "2026-10-08T12:14:25.955Z",
+      "evidencePath": "docs/release-evidence/validation-bit-manipulation-01-cpp.json",
+      "outcome": "accepted"
+    },
+    "python": {
+      "status": "passed",
+      "validationIdentity": "3675af2098674d152e17b8b5e376b3685595017dbecc2d70e58d6328479c6418",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 667,
+      "passed": 667,
+      "executedAt": "2026-10-08T12:14:26.161Z",
+      "evidencePath": "docs/release-evidence/validation-bit-manipulation-01-python.json",
+      "outcome": "accepted"
+    }
+  },
+  "independentReview": "passed"
+}

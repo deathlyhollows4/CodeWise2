@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-normalize-parts.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 707,
+  "suiteHash": "d73378363caeefc62b4bcc7cf313b518860e55fa39b1e4636751d78b5d166139",
+  "categories": [
+    "signed-prefix-collisions",
+    "overlapping-zero-sum-choices",
+    "int32-prefix-wrap-is-not-zero",
+    "large-whole-chain-zero",
+    "large-overlapping-normalizations",
+    "large-wide-prefix-sum-no-removal"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

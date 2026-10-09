@@ -1,0 +1,43 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "positions": [
+        1,
+        2,
+        4,
+        8,
+        9
+      ],
+      "k": 3
+    },
+    "expected": 3,
+    "explanation": "Choose 1,4,8. The gaps are 3 and 4, so the smallest is 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "positions": [
+        -5,
+        0,
+        7
+      ],
+      "k": 2
+    },
+    "expected": 12,
+    "explanation": "Choose both endpoints: 7-(-5)=12."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "positions": [
+        0,
+        3,
+        10
+      ],
+      "k": 3
+    },
+    "expected": 3,
+    "explanation": "All three positions must be chosen, so the smaller existing gap determines the result."
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        -10,
+        9,
+        20,
+        null,
+        null,
+        15,
+        7
+      ]
+    },
+    "expected": 42,
+    "explanation": "The best path 15 → 20 → 7 totals 42 and avoids the negative root."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        -3,
+        -2,
+        -5
+      ]
+    },
+    "expected": -2,
+    "explanation": "Selecting the single node -2 is better than any longer path; an empty path is not allowed."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "The empty-tree exception returns zero."
+  }
+]

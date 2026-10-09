@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "lo": 0,
+      "hi": 10
+    },
+    "expected": 4,
+    "explanation": "The primes are 2, 3, 5, and 7."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "lo": 11,
+      "hi": 11
+    },
+    "expected": 1,
+    "explanation": "The included endpoint 11 is prime."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "lo": 14,
+      "hi": 16
+    },
+    "expected": 0,
+    "explanation": "Every integer in this band is composite."
+  }
+]

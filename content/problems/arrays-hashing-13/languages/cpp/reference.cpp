@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values){int candidate=0,count=0;for(int v:values){if(count==0)candidate=v;count+=v==candidate?1:-1;}count=0;for(int v:values)if(v==candidate)count++;if(count>(int)values.size()/2)return {candidate};return {};}};

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 19
+    },
+    "expected": true,
+    "explanation": "19 → 82 → 68 → 100 → 1."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 2
+    },
+    "expected": false,
+    "explanation": "The orbit repeats without reaching 1."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 1
+    },
+    "expected": true,
+    "explanation": "The starting value already reaches the target."
+  }
+]

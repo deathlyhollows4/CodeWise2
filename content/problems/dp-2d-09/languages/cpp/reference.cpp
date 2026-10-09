@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> a){int n=max(0,(int)a.size()-1);if(n<2)return 0;vector<vector<long long>>d(n,vector<long long>(n));for(int length=2;length<=n;length++)for(int l=0;l+length<=n;l++){int r=l+length-1;d[l][r]=LLONG_MAX;for(int k=l;k<r;k++)d[l][r]=min(d[l][r],d[l][k]+d[k+1][r]+1LL*a[l]*a[k+1]*a[r+1]);}return d[0][n-1];}};

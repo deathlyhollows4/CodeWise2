@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "intervals-03",
+  "version": "1.0.0",
+  "slug": "earliest-free-duration",
+  "title": "The earliest free appointment",
+  "primaryTopic": "intervals",
+  "skillIds": [
+    "intervals.free-gap-frontier",
+    "scheduling.fixed-duration"
+  ],
+  "prerequisites": [
+    "intervals.sorted-union"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Find the earliest fixed-duration free interval inside a bounded half-open scheduling window.",
+  "constraints": [
+    "0 <= blocked.length <= 10000",
+    "Window and blocker endpoints are integers in [-1000000000, 1000000000]; every start is at most its end.",
+    "1 <= duration <= 2000000000",
+    "The window may be empty."
+  ],
+  "interface": "Solution.solve(blocked, lo, hi, duration) receives a native interval matrix and integers; return zero or two integer endpoints.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "blocked": {
+        "kind": "array",
+        "maxLength": 10000,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "lo": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      },
+      "hi": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      },
+      "duration": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "intervals-05"
+  ],
+  "remedialIds": [
+    "intervals-01",
+    "arrays-hashing-01",
+    "arrays-hashing-09",
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "intervals-04",
+    "intervals-06"
+  ],
+  "rationale": "Track the earliest possible appointment start while merging blockers. Only gaps long enough for the entire appointment are useful.",
+  "commonMistakes": [
+    "ignore-duration",
+    "start-after-all-blockers",
+    "closed-blocker-end"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "pair-ranges",
+      "field": "blocked",
+      "ordered": true,
+      "firstMin": -1000000000,
+      "firstMax": 1000000000,
+      "secondMin": -1000000000,
+      "secondMax": 1000000000
+    },
+    {
+      "kind": "field-order",
+      "lower": "lo",
+      "upper": "hi"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-dynamic.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a06",
+  "hiddenCount": 60,
+  "suiteHash": "7187e0f7147e0f7627d3c6ce8a8604015f93af50c99ad0bc6cf17e1250907836",
+  "categories": [
+    "maximum-2000-operations-disjoint-cell-certificate",
+    "full-domain-overlapping-owner-removal",
+    "maximum-handle-and-endpoint-replacement",
+    "empty-state-missing-handle-removal",
+    "curated-overlapping-cell-ownership",
+    "curated-handle-reuse-and-idempotent-removal"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

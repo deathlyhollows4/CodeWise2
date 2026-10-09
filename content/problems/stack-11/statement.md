@@ -1,0 +1,1 @@
+For every nonempty contiguous batch in nonnegative `values`, find its minimum. Return the sum of all those minima. Batches with different position boundaries count separately. Do not take a remainder or modulo; return the exact 64-bit total. Empty input returns zero.

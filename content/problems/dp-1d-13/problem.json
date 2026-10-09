@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-13",
+  "version": "1.0.0",
+  "slug": "maximum-nonempty-contiguous-sum",
+  "title": "Maximum contiguous sum",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.one-dimensional-state",
+    "dp.restart-or-extend"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Maximize a nonempty contiguous segment by deciding whether to restart or extend the ending state.",
+  "constraints": [
+    "1 <= values.length <= 100000",
+    "-1000000000 <= values[i] <= 1000000000",
+    "Every segment sum is within -100000000000000..100000000000000, a safe JSON integer"
+  ],
+  "interface": "Solution.solve(values) returns the maximum nonempty contiguous sum as long/integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": -100000000000000,
+    "maximum": 100000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-03",
+    "dp-1d-04"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-14",
+    "dp-1d-05",
+    "dp-1d-06"
+  ],
+  "rationale": "The ending segment may restart at the current value; a segment must remain nonempty even when every value is negative.",
+  "commonMistakes": [
+    "allow-empty-segment",
+    "skip-negative-interior-values"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

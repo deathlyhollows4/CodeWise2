@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-13",
+  "version": "1.0.0",
+  "slug": "cycle-length-and-depth-for-every-successor-vertex",
+  "title": "Cycle length and depth for every successor vertex",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.functional-cycle-basin",
+    "graphs.reverse-elimination-propagation"
+  ],
+  "prerequisites": [
+    "graphs.strong-components"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Compute each functional-graph vertex cycle length and distance to its eventual cycle in one global linear traversal.",
+  "constraints": [
+    "0 <= next.length <= 20000",
+    "0 <= next[i] < next.length",
+    "Return exactly n pairs [cycleLength,distanceToCycle]",
+    "For nonempty input:1 <= cycleLength <= n,0 <= distanceToCycle <= n-1"
+  ],
+  "interface": "Solution.solve(next) receives int[] / vector<int> / list[int] and returns an integer matrix with two columns.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "next": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 20000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 19999
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 20000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 20000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-11",
+    "graphs-12"
+  ],
+  "remedialIds": [
+    "graphs-09",
+    "graphs-12"
+  ],
+  "nextIds": [],
+  "rationale": "One outgoing edge per vertex permits peeling all tails, labeling the remaining cycles, and propagating each basin result backward. This finite path ends here.",
+  "commonMistakes": [
+    "give-all-vertices-distance-zero",
+    "assume-one-global-cycle-length"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "range-by-length",
+      "field": "next",
+      "minimum": 0,
+      "maxOffset": -1
+    }
+  ]
+}

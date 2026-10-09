@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/advanced-thread-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xA604",
+  "hiddenCount": 60,
+  "suiteHash": "7d1c7ab4ab122d26366632cf5dddd88e7957edf4d8f4c6a1904163d2086b5f09",
+  "categories": [
+    "curated-boundary-empty-source-walk",
+    "curated-boundary-source-negative-self-loop",
+    "curated-boundary-unreachable-negative-cycle",
+    "curated-boundary-zero-cycle-remains-finite",
+    "curated-boundary-negative-cycle-can-return-to-source",
+    "max-positive-wide-distance",
+    "max-negative-wide-distance",
+    "max-five-thousand-negative-DAG-edges",
+    "max-safe-integer-relaxation-and-impact-propagation",
+    "seeded-signed-potential-equations"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

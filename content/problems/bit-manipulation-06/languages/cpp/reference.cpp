@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values){long long mixed=0;for(int v:values)mixed^=v;long long mask=mixed&-mixed;int a=0,b=0;for(int v:values)if(((long long)v&mask)!=0)a^=v;else b^=v;return {min(a,b),max(a,b)};}};

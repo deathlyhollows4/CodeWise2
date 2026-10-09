@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "6e4477f8f38b7ce60359dde737e41875e5db051df9f58f6d46431c00fe5811b5",
+  "suiteHash": "b80df1ff9db1ef42102c6f5ab949a6227cf0e9cc0373910c4b9fde8df22ff518",
+  "oracleChecks": 707,
+  "hiddenUnique": 704,
+  "mutations": [
+    {
+      "name": "count-only-ignore-types",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "ignore-underflow",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

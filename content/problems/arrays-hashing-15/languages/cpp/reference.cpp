@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values){auto sorted=values;sort(sorted.begin(),sorted.end());int left=0,right=(int)values.size()-1;while(left<(int)values.size()&&values[left]==sorted[left])left++;while(right>=left&&values[right]==sorted[right])right--;return right<left?0:right-left+1;}};

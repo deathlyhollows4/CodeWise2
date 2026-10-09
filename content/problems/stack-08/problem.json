@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-08",
+  "version": "1.0.0",
+  "slug": "validate-interleaved-pop-order",
+  "title": "Can this pop order happen?",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.interleaved-schedule-validation"
+  ],
+  "prerequisites": [
+    "stack.push-pop-history"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Validate whether pushing unique labels in a fixed order can produce a proposed pop order by interleaving operations.",
+  "constraints": [
+    "0 ≤ pushes.length and pops.length ≤ 2,000",
+    "Labels are integers in [-1,000,000,1,000,000].",
+    "pushes contains no duplicate label."
+  ],
+  "interface": "Solution.solve(pushes,pops) returns a boolean.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "pushes": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "pops": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-07",
+    "stack-10"
+  ],
+  "remedialIds": [
+    "stack-02",
+    "stack-01"
+  ],
+  "nextIds": [
+    "stack-04"
+  ],
+  "rationale": "The operations are not given explicitly; simulate the next required pop while respecting the fixed push order.",
+  "commonMistakes": [
+    "same-labels-ignore-stack-order",
+    "push-everything-before-popping"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "unique",
+      "field": "pushes"
+    }
+  ]
+}

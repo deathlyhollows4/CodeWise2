@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "22beb7d987a5f29d925e1617a704f2c436948c7fcfbe526aa21fdeed7fbbcd5b",
+  "suiteHash": "cec4f71fd7655ccb69593db2362d0b3241bf756a845f64ebb168825554b27a0c",
+  "oracleChecks": 693,
+  "hiddenUnique": 690,
+  "mutations": [
+    {
+      "name": "single-cancellation-pass",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "case-insensitive-cancellation",
+      "detected": true,
+      "caseId": "hidden-686"
+    }
+  ],
+  "languageExecution": "not-run"
+}

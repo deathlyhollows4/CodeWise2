@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> left,vector<int> right){vector<int> out;int i=0,j=0;while(i<(int)left.size()&&j<(int)right.size())out.push_back(left[i]<=right[j]?left[i++]:right[j++]);while(i<(int)left.size())out.push_back(left[i++]);while(j<(int)right.size())out.push_back(right[j++]);return out;}};

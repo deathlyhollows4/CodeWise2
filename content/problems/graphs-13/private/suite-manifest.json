@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/graphs-thread-fifth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x6A13",
+  "hiddenCount": 60,
+  "suiteHash": "ca06eac037ffc700898a61c3831dfa00e301ab480cf26c5651b5be0f04431ee0",
+  "categories": [
+    "curated-boundary-self-cycle",
+    "curated-boundary-two-cycle",
+    "curated-boundary-tail-to-self-loop",
+    "curated-boundary-separate-cycle-lengths",
+    "max-twenty-thousand-tail-vertices",
+    "max-twenty-thousand-vertex-cycle",
+    "max-twenty-thousand-singleton-cycles",
+    "seeded-functional-cycle-basins"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

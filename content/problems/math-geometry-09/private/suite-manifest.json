@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-coordinates.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xcac0",
+  "hiddenCount": 750,
+  "suiteHash": "5a859e3f5de9dbb337f9179dedd7a6b3d5f888c49a47f8ba1545c7aa98ea2058",
+  "categories": [
+    "opposite-signed-corners"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

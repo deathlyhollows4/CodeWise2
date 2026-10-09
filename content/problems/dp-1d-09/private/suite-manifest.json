@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC209",
+  "hiddenCount": 763,
+  "suiteHash": "dcf3873776723ea852c69868619c7e6f198119dcf2539a12536a0e6f8fb9c068",
+  "categories": [
+    "exhaustive-ordered-line-breaks",
+    "last-line-space-and-greedy-boundaries",
+    "large-wide-cost-closed-form"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-14",
+  "version": "1.0.0",
+  "slug": "minimum-skill-cover",
+  "title": "The fewest people covering a skill mask",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.cover-union-state",
+    "dp.minimum-cardinality"
+  ],
+  "prerequisites": [
+    "bits.unsigned32",
+    "arrays.traversal"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Minimize the number of selected people whose combined skill masks contain every required skill.",
+  "constraints": [
+    "0 <= required <= 1048575",
+    "0 <= people.length <= 25",
+    "0 <= people[i] <= 1048575",
+    "Each person may be selected at most once."
+  ],
+  "interface": "Solution.solve(required, people) receives an integer mask and typed integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "required": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1048575
+      },
+      "people": {
+        "kind": "array",
+        "maxLength": 25,
+        "unordered": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1048575
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-13"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [],
+  "rationale": "A covered-skill mask describes what remains achievable; track the least number of people reaching each union.",
+  "commonMistakes": [
+    "count-required-bits",
+    "all-people-count"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

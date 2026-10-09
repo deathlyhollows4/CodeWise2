@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "53332f3a84cacf8033c11878cd922455a311345e511d1e12d6559c5f54f5a131",
+  "suiteHash": "dcf3873776723ea852c69868619c7e6f198119dcf2539a12536a0e6f8fb9c068",
+  "oracleChecks": 766,
+  "hiddenUnique": 763,
+  "mutations": [
+    {
+      "name": "charge-the-last-line",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "greedily-fill-every-line",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

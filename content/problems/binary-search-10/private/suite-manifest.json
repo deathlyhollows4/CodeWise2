@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC1001",
+  "hiddenCount": 741,
+  "suiteHash": "60a5a62c10855dd13838318f1f64fd0ad894cff641db2db1b9f4624ca240e36d",
+  "categories": [
+    "separate-rounded-jobs-and-pause",
+    "no-fractional-leftover-sharing",
+    "large-uniform-service-closed-form",
+    "wide-mandatory-pause-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

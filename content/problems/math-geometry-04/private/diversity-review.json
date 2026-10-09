@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "021a4a3460e64264a33cd1509e71c81a2f427f47b505dd4ffbe38ba12fd20093",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:12:58.210Z",
+  "rationale": "Counts primes in a closed band, not merely testing divisibility of one value. Marking, closed endpoints and small zero/one domains distinguish it from GCD and modular power.",
+  "evidence": [
+    "docs/release-evidence/coordinator-math-curriculum-diversity-review.json",
+    "docs/release-evidence/coordinator-math-original-assets.json",
+    "docs/release-evidence/independent-reviewed-curriculum-current.json"
+  ],
+  "limitations": [
+    "Independent source and actual per-task teaching/objective review; representative curriculum audit does not cover every learner history.",
+    "Pending final243 global synthesis/current native receipts are separate."
+  ]
+}

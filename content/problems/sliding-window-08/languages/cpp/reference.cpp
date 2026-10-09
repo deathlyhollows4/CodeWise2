@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> values,int k){deque<int> q;vector<int> out;for(int i=0;i<(int)values.size();i++){while(!q.empty()&&q.front()<=i-k)q.pop_front();while(!q.empty()&&values[q.back()]<=values[i])q.pop_back();q.push_back(i);if(i>=k-1)out.push_back(values[q.front()]);}return out;}};

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-17",
+  "version": "1.0.0",
+  "slug": "lowest-common-original-native-ancestor",
+  "title": "Find the lowest common ancestor by object identity",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.node-visitation",
+    "trees.original-query-identity",
+    "trees.common-ancestor-chain"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.node-visitation"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Return the deepest original node that is an ancestor of both native target objects, allowing repeated values and identical targets.",
+  "constraints": [
+    "The tree contains 1 to 2,000 native nodes.",
+    "Values lie in [-1,000,000,000,1,000,000,000] and may repeat.",
+    "Both targets are original non-null nodes in the same tree; the same node may be supplied twice.",
+    "The tree is finite and original values/links remain unchanged."
+  ],
+  "interface": "Solution.solve(data) receives IdentityTree and returns an original TreeNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "data": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 4001,
+            "trimTrailingNulls": true,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": -1000000000,
+                "maximum": 1000000000
+              }
+            },
+            "minLength": 1
+          },
+          "targetIndices": {
+            "kind": "array",
+            "unordered": true,
+            "minLength": 2,
+            "maxLength": 2,
+            "items": {
+              "kind": "integer",
+              "minimum": 0,
+              "maximum": 4000
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 4000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-14",
+    "trees-15",
+    "trees-24"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-12",
+    "trees-28",
+    "trees-29",
+    "trees-30"
+  ],
+  "rationale": "A parent map or subtree membership combines object identities rather than values; a target is its own ancestor.",
+  "commonMistakes": [
+    "locate-targets-by-value-not-identity",
+    "always-return-root"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "identity-tree",
+      "field": "data",
+      "maxNodes": 2000,
+      "targetCount": 2
+    }
+  ]
+}

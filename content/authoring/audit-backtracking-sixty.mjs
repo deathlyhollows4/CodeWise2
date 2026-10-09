@@ -1,0 +1,11 @@
+import {logicalCases} from './pack-builder.mjs';
+import {validateInput} from '../../packages/judge-adapter/src/schema-validator.mjs';
+import {validateSemantics} from '../../packages/judge-adapter/src/semantic.mjs';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const names=['addresses','permissions','stock','delimiters','mini-grid','expressions','queens','schedules'];
+const report={timestamp:new Date().toISOString(),scope:'Shared exact60 authored policy, trusted independent models and schemas; no native execution or publication claim',prepared:[],failures:[],runtimeGuardPending:[]};
+for(const name of names){const path=`content/authoring/backtracking-${name}.mjs`,{definitions}=await import(`./backtracking-${name}.mjs`);for(const d of definitions){const hidden=logicalCases(d);let outputBytes=0;for(const c of [...hidden,...d.visible]){const expected=d.oracle(c.input);if(JSON.stringify(expected)!==JSON.stringify(d.independent(c.input)))report.failures.push(d.id+': independent model mismatch');if(!validateInput(d.outputSchema,expected))report.failures.push(d.id+': output schema');if(!validateSemantics(d.semanticConstraints??[],c.input)){if(d.id==='backtracking-06'&&d.valid(c.input)){if(!report.runtimeGuardPending.includes('parentheses-wildcard'))report.runtimeGuardPending.push('parentheses-wildcard');}else report.failures.push(d.id+': runtime semantic rejection');}outputBytes+=Buffer.byteLength(JSON.stringify(expected)+'\n');}const mutants=Object.entries(d.mutations).map(([name,f])=>({name,detected:hidden.some(c=>JSON.stringify(f(c.input))!==JSON.stringify(c.expected))}));if(mutants.some(m=>!m.detected))report.failures.push(d.id+': mutation evidence');report.prepared.push({id:d.id,path,sourceHash:createHash('sha256').update(readFileSync(path)).digest('hex'),hidden:hidden.length,visible:d.visible.length,outputBytes,mutants});}}
+report.totalHidden=report.prepared.reduce((n,p)=>n+p.hidden,0);report.totalVisible=report.prepared.reduce((n,p)=>n+p.visible,0);report.status=report.failures.length?'failed':'passed';
+writeFileSync('docs/release-evidence/content-backtracking-sixty-policy-audit.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));if(report.failures.length)process.exitCode=1;
+

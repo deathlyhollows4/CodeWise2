@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-advanced.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 725,
+  "suiteHash": "42074b6fdfff8ef717efde06dec76fd2c6b267f062a2a39e9d815c5659af2f21",
+  "categories": [
+    "large-step-modulo-ring",
+    "permuted-storage-duplicate-values",
+    "large-ring-equal-values-and-offset-head"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

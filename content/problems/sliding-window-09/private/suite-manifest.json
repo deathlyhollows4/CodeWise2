@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/sliding-window-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 719,
+  "suiteHash": "872321d5ada0bcb3f6c1b05e7c20490f002c18319a186b6793cb6fd7ecb6b42e",
+  "categories": [
+    "sum-boundary-and-empty",
+    "quadratic-count-of-zero-batches"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

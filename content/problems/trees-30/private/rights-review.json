@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "contentIdentity": "0f870bfc8bf52ac00c44676960d5a4035789335aea671e359e49529f836fb03b",
+  "reviewer": "CodeWise2 coordinator, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T11:40:19.652Z",
+  "evidence": "docs/release-evidence/coordinator-tree23-30-decisions.json",
+  "reviewType": "rights",
+  "rationale": "Each reviewed statement, examples, tests, references and explanation is independently authored project content with original provenance. Native wrapper templates are project-owned helpers reviewed separately. No imported third-party assets appear in these eight sources; this is bounded source/provenance reconciliation, not a global plagiarism or legal-clearance claim.",
+  "algorithmReview": "Compute subtree sizes and the root distance sum, then transfer each child total by parentTotal+n-2*childSize. BFS existing-node indexing retains duplicate-valued node identities and left-before-right order. Independent BFS from every origin checks each distance sum. Each total is at most1999000 for2000 nodes.",
+  "coverageLimits": [
+    "Native execution remains an independent runner gate; no learner code executed by this review.",
+    "Curriculum decisions inspect actual taught skills and immediate links; final whole-bank actual-engine history audit remains separately required."
+  ]
+}

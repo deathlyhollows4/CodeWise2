@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-08",
+  "version": "1.0.0",
+  "slug": "rearrangement-groups",
+  "title": "Letter rearrangement groups",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "hashing.canonical-keys",
+    "strings.counts"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "hashing.membership"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Group words by letter multiplicities while retaining duplicates and deterministic output.",
+  "constraints": [
+    "0 <= words.length <=1000",
+    "Every word has0..20 lowercase ASCII letters a..z."
+  ],
+  "interface": "Solution.solve(words) returns a nested string array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "words": {
+        "kind": "array",
+        "maxLength": 1000,
+        "items": {
+          "kind": "string",
+          "maxLength": 20,
+          "ascii": true
+        },
+        "unordered": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 1000,
+    "items": {
+      "kind": "array",
+      "maxLength": 1000,
+      "items": {
+        "kind": "string",
+        "maxLength": 20,
+        "ascii": true
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-07"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-04"
+  ],
+  "nextIds": [
+    "arrays-hashing-09"
+  ],
+  "rationale": "Use a whole word’s letter counts as a key rather than one numeric label.",
+  "commonMistakes": [
+    "ignore-counts",
+    "remove-duplicates"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "words",
+      "alphabet": "lowercase",
+      "each": true
+    }
+  ]
+}

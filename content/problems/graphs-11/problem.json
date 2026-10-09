@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-11",
+  "version": "1.0.0",
+  "slug": "original-edge-ids-that-split-components",
+  "title": "Original edge IDs that split components",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.lowlink-return-state",
+    "graphs.bridge-edge-cut"
+  ],
+  "prerequisites": [
+    "graphs.component-partition"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Identify undirected original edges whose removal increases the graph component count, using alternate-route information.",
+  "constraints": [
+    "0 <= n <= 500",
+    "0 <= edges.length <= 5000",
+    "Every endpoint lies in 0..n-1",
+    "No self-loops or duplicate undirected edges",
+    "Return increasing original edge IDs"
+  ],
+  "interface": "Solution.solve(n,edges) returns int[] / vector<int> / list[int].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "n": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 500
+      },
+      "edges": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 5000,
+        "unordered": false,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 499
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 5000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 4999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-12",
+    "graphs-13"
+  ],
+  "remedialIds": [
+    "graphs-03",
+    "graphs-04"
+  ],
+  "nextIds": [],
+  "rationale": "An edge is essential only when its child region cannot reach an earlier vertex by another edge.",
+  "commonMistakes": [
+    "every-edge-is-a-bridge",
+    "only-leaf-incident-edges"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "graph-edges",
+      "field": "edges",
+      "vertices": "n",
+      "directed": false,
+      "allowSelfLoops": false,
+      "allowDuplicates": false
+    }
+  ]
+}

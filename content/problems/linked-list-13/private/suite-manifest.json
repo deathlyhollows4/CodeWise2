@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-middle.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 709,
+  "suiteHash": "36995375e46607f526dbde48940886fdede9b292f48fd3429368a6a42c22954f",
+  "categories": [
+    "equal-pivot-multiplicity",
+    "stable-two-buckets",
+    "large-stable-buckets"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

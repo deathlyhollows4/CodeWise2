@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "16707765de5bfe92c79d67ef7f5cc09a16dec3544674440fc4831b1bc7f425dd",
+  "suiteHash": "dbf47addad0473050caa2f8d234a4d9c9cb0cb4521b06b4eb88d16381e835e4e",
+  "oracleChecks": 760,
+  "hiddenUnique": 757,
+  "mutations": [
+    {
+      "name": "numeric-successor",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "forget-domain-limit",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

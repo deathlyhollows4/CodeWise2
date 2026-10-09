@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "d2b1c34227cff3c7ee4ef75c3c22c3f44b75acb64eb9a452dd6bb6576d231236",
+  "suiteHash": "7e9eb9b538d93d4f65924bcfd6868d441a7af62ca42046ef539935a961b5c276",
+  "oracleChecks": 690,
+  "hiddenUnique": 687,
+  "mutations": [
+    {
+      "name": "ignore-budget",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "exact-budget-only",
+      "detected": true,
+      "caseId": "hidden-4"
+    }
+  ],
+  "languageExecution": "not-run"
+}

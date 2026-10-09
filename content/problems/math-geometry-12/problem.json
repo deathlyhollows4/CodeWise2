@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-12",
+  "version": "1.0.0",
+  "slug": "closed-simple-polygon",
+  "title": "Inside a simple polygon, including its boundary",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.ray-crossings",
+    "geometry.boundary-membership",
+    "geometry.orientation",
+    "geometry.closed-segment-bounds",
+    "arrays.traversal"
+  ],
+  "prerequisites": [
+    "geometry.cross-product-collinearity",
+    "geometry.orientation",
+    "geometry.closed-segment-bounds",
+    "numbers.wide-intermediates",
+    "geometry.coordinate-difference",
+    "arrays.traversal"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Classify an integer query point against a simple polygon while including boundary points.",
+  "constraints": [
+    "3 <= polygon.length <= 200",
+    "Every vertex and query point has integer coordinates in [-1000000,1000000].",
+    "The polygon has nonzero area, no zero-length edge, and no self-intersection.",
+    "Straight consecutive edges are permitted if they do not double back."
+  ],
+  "interface": "Solution.solve(polygon, point) receives a typed vertex matrix and a coordinate array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "polygon": {
+        "kind": "array",
+        "minLength": 3,
+        "maxLength": 200,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      },
+      "point": {
+        "kind": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-08"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "math-geometry-11",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "two-pointers-04"
+  ],
+  "nextIds": [
+    "math-geometry-13"
+  ],
+  "rationale": "Boundary checks handle exact contacts; crossing parity handles concave interiors without assuming a convex shape.",
+  "commonMistakes": [
+    "axis-only-polygons",
+    "exclude-boundary",
+    "bounding-box-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "simple-polygon",
+      "field": "polygon"
+    }
+  ]
+}

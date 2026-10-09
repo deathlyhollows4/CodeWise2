@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-weighted.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a05",
+  "hiddenCount": 60,
+  "suiteHash": "f375d13196c39a06e8ced1efe823a63d2f3373157400d5b727dcc541c4cf44e5",
+  "categories": [
+    "maximum-signed64-overlap-total-certificate",
+    "maximum-negative-outside-zero-certificate",
+    "maximum-disjoint-active-weight-certificate",
+    "maximum-coincident-canceling-event-certificate",
+    "curated-coincident-endpoint-balance",
+    "curated-signed-overlap-events"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

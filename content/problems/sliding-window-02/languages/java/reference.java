@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values,int k){HashMap<Integer,Integer> counts=new HashMap<>();int best=0;for(int i=0;i<values.length;i++){counts.put(values[i],counts.getOrDefault(values[i],0)+1);if(i>=k){int old=values[i-k],next=counts.get(old)-1;if(next==0)counts.remove(old);else counts.put(old,next);}if(i>=k-1)best=Math.max(best,counts.size());}return best;}}

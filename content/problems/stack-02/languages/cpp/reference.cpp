@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> commands){vector<int> stack,out;for(int c:commands){if(c==-1){if(!stack.empty())stack.pop_back();}else stack.push_back(c);out.push_back(stack.empty()?-1:stack.back());}return out;}};

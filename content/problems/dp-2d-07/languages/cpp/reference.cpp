@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<vector<int>> items,int capacity){vector<long long>d(capacity+1);for(auto& item:items)for(int c=capacity;c>=item[0];c--)d[c]=max(d[c],d[c-item[0]]+item[1]);return d[capacity];}};

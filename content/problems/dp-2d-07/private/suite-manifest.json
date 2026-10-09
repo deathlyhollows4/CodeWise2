@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D07",
+  "hiddenCount": 60,
+  "suiteHash": "a01303c353eb7ffd63f4391467c3e8366e731849cd7ffc675f6fe22a8c5dab1c",
+  "categories": [
+    "curated-boundary-empty-positive-capacity",
+    "curated-boundary-free-singleton",
+    "curated-boundary-zero-capacity",
+    "curated-boundary-just-too-heavy",
+    "curated-boundary-exact-capacity",
+    "curated-boundary-duplicate-items-kept",
+    "curated-boundary-zero-values",
+    "curated-boundary-single-use-not-unbounded",
+    "max-zero-weight-wide-total",
+    "max-capacity-all-fit",
+    "max-capacity-one-fit",
+    "max-degenerate-zero-items",
+    "seeded-weight-value-subsets"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

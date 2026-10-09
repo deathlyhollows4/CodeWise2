@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> initial,vector<int> arrivals,int k){priority_queue<int,vector<int>,greater<int>> q;for(int v:initial){q.push(v);if((int)q.size()>k)q.pop();}vector<int> out;for(int v:arrivals){q.push(v);if((int)q.size()>k)q.pop();out.push_back(q.top());}return out;}};

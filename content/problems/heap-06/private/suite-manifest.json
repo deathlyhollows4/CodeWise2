@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdea1",
+  "hiddenCount": 711,
+  "suiteHash": "dae2e0eafd445166029b7191068d11ce8ca3afe4ac32b30a8a1468c4958a1a4d",
+  "categories": [
+    "deterministic-largest-pair-process",
+    "maximum-distinct-paired-weights",
+    "near-maximum-pairs-and-one-smallest",
+    "near-maximum-equal-heavy-weights"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

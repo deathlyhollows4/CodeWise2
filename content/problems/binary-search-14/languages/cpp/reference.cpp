@@ -1,0 +1,1 @@
+class Solution {public:long long solve(int r,int c,long long k){if(r>c)swap(r,c);long long l=1,h=1LL*r*c;while(l<h){long long m=l+(h-l)/2,n=0;for(int i=1;i<=r;i++){n+=min((long long)c,m/i);if(n>=k)break;}if(n>=k)h=m;else l=m+1;}return l;}};

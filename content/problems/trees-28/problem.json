@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-28",
+  "version": "1.0.0",
+  "slug": "maximum-signed-arbitrary-node-path-total",
+  "title": "Maximize a signed path total anywhere",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.two-arm-path-join",
+    "trees.positive-branch-gain",
+    "numbers.signed-accumulation"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.two-arm-path-join",
+    "numbers.signed-accumulation"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Find the maximum signed total of a nonempty simple path between any two nodes, discarding harmful child branches without allowing an empty result.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links.",
+    "A nonempty input requires a nonempty path; only an empty input returns the empty-tree value zero.",
+    "Return a signed wide integer; a 2,000-node positive chain can total 2,000,000,000,000."
+  ],
+  "interface": "Solution.solve(root) returns long / long long.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1000000000,
+    "maximum": 2000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-12"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-14",
+    "arrays-hashing-01"
+  ],
+  "nextIds": [],
+  "rationale": "A completed path can use two child gains, but the contribution passed upward can use at most one; negative gains must be dropped while an all-negative tree still selects one node.",
+  "commonMistakes": [
+    "allow-empty-path-in-nonempty-tree",
+    "force-path-through-root",
+    "signed-int32-path-accumulator"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

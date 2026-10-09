@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "a!a",
+      "words": [
+        "a"
+      ]
+    },
+    "expected": 1,
+    "explanation": "Cover both a characters using separate occurrences of a, leaving only !."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "abcde",
+      "words": [
+        "ab",
+        "bc",
+        "cde"
+      ]
+    },
+    "expected": 0,
+    "explanation": "Cover ab then cde without overlaps. Choosing bc alone would leave more characters unmatched."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "abc",
+      "words": []
+    },
+    "expected": 3,
+    "explanation": "No dictionary substring can cover a character."
+  }
+]

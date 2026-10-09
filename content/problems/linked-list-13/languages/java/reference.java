@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head,int pivot){ListNode low=new ListNode(0),high=new ListNode(0),a=low,b=high;while(head!=null){ListNode next=head.next;head.next=null;if(head.val<pivot){a.next=head;a=head;}else{b.next=head;b=head;}head=next;}a.next=high.next;return low.next;}}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-06",
+  "version": "1.0.0",
+  "slug": "anticlockwise-tree-boundary-values",
+  "title": "Trace the tree boundary without repeating leaves",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.boundary-paths",
+    "trees.nonduplicated-leaf-contour"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.leaf-predicate",
+    "trees.preorder-order"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Combine root, left boundary, ordered leaves, and reversed right boundary without repeating any node.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) returns int[] / vector<int> / Python list[int].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000000,
+      "maximum": 1000000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-05"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-02",
+    "trees-04"
+  ],
+  "nextIds": [
+    "trees-14",
+    "trees-15"
+  ],
+  "rationale": "Boundary paths exclude leaves because the leaf traversal already contributes them; one-child trees need explicit starting-side rules.",
+  "commonMistakes": [
+    "include-boundary-leaves-twice",
+    "right-boundary-top-down"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

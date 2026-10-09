@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-handles.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdef9",
+  "hiddenCount": 716,
+  "suiteHash": "2bc728c419648a39921b50c43f6dd0a21968b3bf342531b60299ed9a3bd36be5",
+  "categories": [
+    "mixed-generation-and-cancellation",
+    "maximum-cancelled-frontier-with-large-output",
+    "maximum-empty-extractions",
+    "exact-handle-and-priority-extrema"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

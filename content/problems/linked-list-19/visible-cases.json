@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "left": 1,
+      "right": 3
+    },
+    "expected": [
+      0,
+      3,
+      2,
+      1,
+      4
+    ],
+    "explanation": "Only original nodes 1 through 3 reverse; outer nodes stay fixed."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        4,
+        5,
+        6
+      ],
+      "left": 0,
+      "right": 2
+    },
+    "expected": [
+      2,
+      1,
+      0
+    ],
+    "explanation": "Reversing the full interval changes the original head."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [
+        8
+      ],
+      "left": 0,
+      "right": 0
+    },
+    "expected": [
+      0
+    ],
+    "explanation": "A one-node interval changes no link."
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "backtracking-03",
+  "version": "1.0.0",
+  "slug": "restore-valid-ipv4-segmentations",
+  "title": "Restore every valid four-part address",
+  "primaryTopic": "backtracking",
+  "skillIds": [
+    "backtracking.branch-restoration",
+    "backtracking.segment-grammar",
+    "backtracking.remaining-length-pruning"
+  ],
+  "prerequisites": [
+    "backtracking.branch-restoration"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Enumerate every valid segmentation under both segment grammar and remaining-length constraints.",
+  "constraints": [
+    "0 ≤ digits.length ≤ 12.",
+    "Every input character is an ASCII decimal digit.",
+    "Exactly four segments are required; each has length 1 through 3 and value 0 through 255.",
+    "A segment of length greater than 1 cannot start with zero.",
+    "At most 81 segment-width choices exist; return answers in lexicographic string order."
+  ],
+  "interface": "Solution.solve(digits: string) returns string[].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "digits": {
+        "kind": "string",
+        "maxLength": 12,
+        "ascii": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 81,
+    "items": {
+      "kind": "string",
+      "maxLength": 15,
+      "ascii": true
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "backtracking-04"
+  ],
+  "remedialIds": [
+    "backtracking-01",
+    "backtracking-02"
+  ],
+  "nextIds": [
+    "backtracking-05",
+    "backtracking-06"
+  ],
+  "rationale": "Choosing segment widths introduces grammar validation and admissible length pruning, rather than simply choosing a subset or arranging existing elements.",
+  "commonMistakes": [
+    "allow-leading-zero-octets",
+    "allow-octets-above-255",
+    "reverse-answer-order"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "digits",
+      "alphabet": "digits"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "id": "trees-17",
+  "version": "1.0.0",
+  "language": "java",
+  "validationIdentity": "7302a713ddb4617c6a280581c792027be142b9fea1e7aeefc5fef74e794ffe77",
+  "suiteHash": "05e206c32be40079e11071fb4c4672457562eb4ffa3e3f89941948b2942ee71d",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T07:52:22.928Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 1189,
+      "executed": 1189,
+      "passed": 1189,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "data": {
+            "values": [
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            "targetIndices": [
+              3,
+              4
+            ]
+          }
+        },
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "data": {
+            "values": [
+              1,
+              2,
+              3,
+              null,
+              4
+            ],
+            "targetIndices": [
+              1,
+              4
+            ]
+          }
+        },
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "data": {
+            "values": [
+              9,
+              9,
+              9
+            ],
+            "targetIndices": [
+              2,
+              2
+            ]
+          }
+        },
+        "expected": 2,
+        "actual": 2,
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.111",
+          "wallSeconds": "0.081",
+          "memoryKb": "44500"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.314",
+          "wallSeconds": "0.171",
+          "memoryKb": "78744"
+        }
+      ]
+    }
+  }
+}

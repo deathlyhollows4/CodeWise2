@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "coins": [
+        1,
+        2
+      ],
+      "amount": 3
+    },
+    "expected": 2,
+    "explanation": "The combinations are three coins of value 1, or one coin of each value. [1,2] and [2,1] are the same combination."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "coins": [],
+      "amount": 0
+    },
+    "expected": 1,
+    "explanation": "Choosing nothing is one valid combination for zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "coins": [
+        2,
+        4
+      ],
+      "amount": 7
+    },
+    "expected": 0,
+    "explanation": "No combination of even values totals an odd amount."
+  }
+]

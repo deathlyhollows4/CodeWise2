@@ -1,0 +1,1 @@
+Reverse the order of all 32 bits of value. Return the resulting unsigned integer. The original highest bit becomes the lowest bit, and the original lowest bit becomes the highest bit. Leading zeros are included in the reversal.

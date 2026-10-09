@@ -1,0 +1,54 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "target": 100,
+      "startFuel": 10,
+      "stations": [
+        [
+          10,
+          60
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          60,
+          40
+        ]
+      ]
+    },
+    "expected": 2,
+    "explanation": "Take 60 fuel at position 10 and 40 at position 60; the two stops extend total reach to 110."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "target": 100,
+      "startFuel": 1,
+      "stations": [
+        [
+          10,
+          100
+        ]
+      ]
+    },
+    "expected": -1,
+    "explanation": "Starting fuel cannot reach the first station, so its large refill is unavailable."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "target": 1,
+      "startFuel": 1,
+      "stations": []
+    },
+    "expected": 0,
+    "explanation": "Starting fuel already reaches the goal."
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-01",
+  "version": "1.0.0",
+  "slug": "native-neighbor-lists-to-count-matrix",
+  "title": "Native neighbor lists to a count matrix",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.identity-discovery",
+    "graphs.adjacency-multiplicity"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Convert a rooted native graph to a directed adjacency-count matrix using identity-based breadth-first discovery.",
+  "constraints": [
+    "0 <= reachable nodes <= 150",
+    "0 <= neighbors.length <= 150 per node",
+    "All val fields equal 0; node identity determines equality",
+    "Neighbor-list order determines first discovery; duplicates retain multiplicity"
+  ],
+  "interface": "Solution.solve(GraphNode graph) returns int[][] / vector<vector<int>> / list[list[int]]. The wrapper supplies GraphNode(val,neighbors) and verifies input immutability.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "graph": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "minLength": 0,
+            "maxLength": 150,
+            "items": {
+              "kind": "integer",
+              "minimum": 0,
+              "maximum": 0
+            }
+          },
+          "neighbors": {
+            "kind": "array",
+            "minLength": 0,
+            "maxLength": 150,
+            "items": {
+              "kind": "array",
+              "minLength": 0,
+              "maxLength": 150,
+              "items": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 149
+              }
+            }
+          },
+          "root": {
+            "kind": "nullable",
+            "value": {
+              "kind": "integer",
+              "minimum": 0,
+              "maximum": 149
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 150,
+    "rectangular": true,
+    "items": {
+      "kind": "array",
+      "minLength": 0,
+      "maxLength": 150,
+      "items": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 150
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-03"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "graphs-02",
+    "graphs-04"
+  ],
+  "rationale": "Visit native neighbor links and assign an index when a node identity first appears. Values are not identities.",
+  "commonMistakes": [
+    "boolean-edges",
+    "identify-nodes-by-value"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "node-table",
+      "field": "graph",
+      "neighbors": "neighbors",
+      "root": "root",
+      "requireReachable": true
+    }
+  ]
+}

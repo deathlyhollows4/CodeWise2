@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "coins": [
+        1,
+        3,
+        4
+      ],
+      "amount": 6
+    },
+    "expected": 2,
+    "explanation": "Two coins of value 3 beat the greedy choice 4+1+1."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "coins": [
+        2,
+        4
+      ],
+      "amount": 7
+    },
+    "expected": -1,
+    "explanation": "Even denominations cannot form an odd amount."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "coins": [],
+      "amount": 0
+    },
+    "expected": 0,
+    "explanation": "The empty selection already forms zero."
+  }
+]

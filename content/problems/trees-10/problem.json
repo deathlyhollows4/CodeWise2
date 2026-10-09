@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-10",
+  "version": "1.0.0",
+  "slug": "native-binary-tree-completeness",
+  "title": "Check whether the tree fills every earlier position",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.breadth-first-gap-invariant",
+    "trees.complete-shape"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Check the complete-tree shape rule: full earlier levels and a left-filled final level.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) receives TreeNode and returns boolean.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-07",
+    "trees-08",
+    "trees-09"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-05",
+    "trees-06",
+    "trees-11"
+  ],
+  "rationale": "After the first missing breadth-first child position, any later existing node proves an incomplete shape.",
+  "commonMistakes": [
+    "only-check-local-right-without-left",
+    "all-nonempty-trees-complete"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

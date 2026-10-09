@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] a,int w){for(int v:a)if(v>w)return -1;int n=a.length;long[] dp=new long[n+1];java.util.Arrays.fill(dp,Long.MAX_VALUE/4);dp[n]=0;for(int i=n-1;i>=0;i--){long used=0;for(int j=i;j<n;j++){used+=a[j]+(j==i?0:1);if(used>w)break;long gap=w-used,cost=j==n-1?0:gap*gap;dp[i]=Math.min(dp[i],cost+dp[j+1]);}}return dp[0];}}

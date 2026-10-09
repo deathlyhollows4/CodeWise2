@@ -1,0 +1,1 @@
+class Solution {public long solve(long value){return value^(value>>1);}}

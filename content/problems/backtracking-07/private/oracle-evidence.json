@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "9830c542e3b355146c50d4bd4bb45be97833eafbf061c8542ab8b89e2201eaa2",
+  "suiteHash": "d21d2e987e479b4be1afe182b4d59c970f751cc5ee1264ec8be928907de1fe98",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "ignore-two-by-two-blocks",
+      "detected": true,
+      "caseId": "hidden-1"
+    },
+    {
+      "name": "discard-fixed-clues",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "return-only-first-solution",
+      "detected": true,
+      "caseId": "hidden-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public:bool solve(string text){vector<char> expected;for(char c:text){if(c=='(')expected.push_back(')');else if(c=='[')expected.push_back(']');else if(c=='{')expected.push_back('}');else{if(expected.empty()||expected.back()!=c)return false;expected.pop_back();}}return expected.empty();}};

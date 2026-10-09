@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-30",
+  "version": "1.0.0",
+  "slug": "distance-total-from-every-native-node",
+  "title": "Compute distance totals from every node",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.node-visitation",
+    "trees.subtree-size-summary",
+    "trees.reroot-distance-transfer"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.node-visitation"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Return each native node’s total edge distance to every node, in breadth-first existing-node order.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) returns long[] / vector<long long> in breadth-first existing-node order.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-12",
+    "trees-28",
+    "trees-29"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [],
+  "rationale": "Moving the distance origin across one edge shortens routes to the child subtree and lengthens all others; subtree sizes transfer totals without repeating BFS for each origin.",
+  "commonMistakes": [
+    "miss-double-subtree-distance-change",
+    "copy-root-total-to-every-node"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

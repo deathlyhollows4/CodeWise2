@@ -1,0 +1,1 @@
+Return the smallest length of a nonempty contiguous batch containing at least `k` different integer values. Return zero when no such batch exists. Repeated entries contribute one type regardless of frequency. k is always positive.

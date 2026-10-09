@@ -1,0 +1,39 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "target": 6
+    },
+    "expected": 2,
+    "explanation": "7 is the first reading at least 6."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 2
+    },
+    "expected": 0,
+    "explanation": "The boundary equals the empty length, zero."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        2,
+        2,
+        2,
+        5
+      ],
+      "target": 2
+    },
+    "expected": 0,
+    "explanation": "Return the first duplicate, not any matching position."
+  }
+]

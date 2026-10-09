@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 2,
+      "exponent": 10,
+      "modulus": 1000
+    },
+    "expected": 24,
+    "explanation": "1024 leaves remainder 24 modulo 1000."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": -2,
+      "exponent": 3,
+      "modulus": 5
+    },
+    "expected": 2,
+    "explanation": "-8 is congruent to the nonnegative remainder 2."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 0,
+      "exponent": 0,
+      "modulus": 1
+    },
+    "expected": 0,
+    "explanation": "The defined power is 1, whose remainder modulo 1 is zero."
+  }
+]

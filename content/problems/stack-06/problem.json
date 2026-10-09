@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-06",
+  "version": "1.0.0",
+  "slug": "largest-histogram-rectangle",
+  "title": "Largest rectangle under readings",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.rectangle-boundaries"
+  ],
+  "prerequisites": [
+    "stack.monotonic-candidates"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Identify how far each bar height can extend before a shorter boundary stops it.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "0 ≤ each bar height ≤ 1,000,000.",
+    "Return a 64-bit integer area."
+  ],
+  "interface": "Solution.solve(values) returns a 64-bit area.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-11"
+  ],
+  "remedialIds": [
+    "stack-04"
+  ],
+  "nextIds": [],
+  "rationale": "A popped monotonic candidate now contributes an entire rectangle.",
+  "commonMistakes": [
+    "ignore-shorter-interior-bars",
+    "single-bar-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

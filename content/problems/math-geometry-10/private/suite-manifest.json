@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-coordinates.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xcac0",
+  "hiddenCount": 671,
+  "suiteHash": "0b30a2afd39c07455c977c35984447e8ef0d53f331ed09cd1ed882f792a4a211",
+  "categories": [
+    "line-with-duplicates",
+    "arbitrary-point-set",
+    "duplicate-anchor-with-off-line-point",
+    "maximum-collinear-set",
+    "maximum-set-one-off-line"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

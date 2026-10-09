@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 702,
+  "suiteHash": "abec997a71de0d28d59178c03d509942657aa1b66f71eec3ff977a93a3071cae",
+  "categories": [
+    "seeded-small",
+    "wide-cancellation",
+    "half-tie",
+    "even-half-tie",
+    "maximum-wide-equal-halves",
+    "near-maximum-odd-uniform-no-cut",
+    "maximum-cancellation-earliest-cut"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

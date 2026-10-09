@@ -1,0 +1,1 @@
+The integer array `values` is sorted in nondecreasing order. Return the square of every input value, sorted in nondecreasing order. Preserve duplicate squares. Use 64-bit integer values for the output in Java and C++, since a square can exceed a 32-bit integer.

@@ -1,0 +1,1 @@
+Return a ledger of length n + 1. Entry 0 must be 0. Entry k is the sum of the first k values for every k from 1 through n. Preserve the readings in their original order. Use a wide integer type for sums.

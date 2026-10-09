@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "suiteHash": "26ec398d37e97bde95398572787860f8f65fd2f2884da4b82d42662c889b3bd2",
+  "status": "references-passed-review-pending",
+  "languages": {
+    "java": {
+      "status": "passed",
+      "validationIdentity": "4630cfb62f4c529ba933106d2a074f69a37d9942481ae9643700aabeeb9cce8e",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 771,
+      "passed": 771,
+      "executedAt": "2026-10-08T10:30:20.432Z",
+      "evidencePath": "docs/release-evidence/validation-dp-1d-16-java.json",
+      "outcome": "accepted"
+    },
+    "cpp": {
+      "status": "passed",
+      "validationIdentity": "698a36d4a7f98186ba4cba6a2ba29a11aa07cebaa7470a4da0cee60fbadc966a",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 771,
+      "passed": 771,
+      "executedAt": "2026-10-08T10:30:26.622Z",
+      "evidencePath": "docs/release-evidence/validation-dp-1d-16-cpp.json",
+      "outcome": "accepted"
+    },
+    "python": {
+      "status": "passed",
+      "validationIdentity": "bb0503551be2f0ad512adc2c1b215f58280860591ffe56cda50a9f2042342fa4",
+      "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+      "executed": 771,
+      "passed": 771,
+      "executedAt": "2026-10-08T10:30:26.846Z",
+      "evidencePath": "docs/release-evidence/validation-dp-1d-16-python.json",
+      "outcome": "accepted"
+    }
+  },
+  "independentReview": "passed"
+}

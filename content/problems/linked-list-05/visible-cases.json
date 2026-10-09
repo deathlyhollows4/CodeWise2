@@ -1,0 +1,67 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "data": {
+        "values": [
+          7,
+          7,
+          7,
+          7
+        ],
+        "next": [
+          2,
+          2,
+          3,
+          null
+        ],
+        "heads": [
+          0,
+          1
+        ]
+      }
+    },
+    "expected": 2,
+    "explanation": "The two prefixes meet at node2; equal values do not make node0 and node1 identical."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "data": {
+        "values": [
+          5,
+          5
+        ],
+        "next": [
+          null,
+          null
+        ],
+        "heads": [
+          0,
+          1
+        ]
+      }
+    },
+    "expected": null,
+    "explanation": "Equal-valued nodes belong to disjoint chains."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "data": {
+        "values": [
+          9
+        ],
+        "next": [
+          null
+        ],
+        "heads": [
+          0,
+          0
+        ]
+      }
+    },
+    "expected": 0,
+    "explanation": "Both heads are already the same original node."
+  }
+]

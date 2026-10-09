@@ -1,0 +1,41 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "left": [
+        1,
+        3
+      ],
+      "right": [
+        2
+      ]
+    },
+    "expected": 4,
+    "explanation": "The combined list is [1,2,3]. Its median is 2, so return 4."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "left": [],
+      "right": [
+        1,
+        2
+      ]
+    },
+    "expected": 3,
+    "explanation": "The median is 1.5; twice that value is exactly 3."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "left": [
+        -5
+      ],
+      "right": [
+        -2
+      ]
+    },
+    "expected": -7,
+    "explanation": "The two middle values sum to -7. Integer rounding would lose information."
+  }
+]

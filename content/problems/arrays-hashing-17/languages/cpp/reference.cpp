@@ -1,0 +1,1 @@
+class Solution {public:vector<vector<int>> solve(vector<vector<int>> grid){int rows=grid.size(),cols=rows?grid[0].size():0;vector<bool> zr(rows),zc(cols);for(int i=0;i<rows;i++)for(int j=0;j<cols;j++)if(grid[i][j]==0)zr[i]=zc[j]=true;auto out=grid;for(int i=0;i<rows;i++)for(int j=0;j<cols;j++)if(zr[i]||zc[j])out[i][j]=0;return out;}};

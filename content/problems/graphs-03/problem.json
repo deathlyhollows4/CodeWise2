@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "graphs-03",
+  "version": "1.0.0",
+  "slug": "count-all-undirected-components",
+  "title": "Count all undirected components",
+  "primaryTopic": "graphs",
+  "skillIds": [
+    "graphs.identity-discovery",
+    "graphs.component-partition"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Partition every undirected vertex into one connected component, including isolated vertices.",
+  "constraints": [
+    "0 <= n <= 500",
+    "0 <= edges.length <= 5000",
+    "Every endpoint is in 0..n-1",
+    "No self-loops; no duplicate undirected edges"
+  ],
+  "interface": "Solution.solve(n,edges) receives int and int[][]; returns an int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "n": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 500
+      },
+      "edges": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 5000,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 499
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 500
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "graphs-01"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "graphs-02",
+    "graphs-04"
+  ],
+  "rationale": "A traversal covers one component. Restart at each vertex that has not yet been reached.",
+  "commonMistakes": [
+    "ignore-isolated-vertices",
+    "assume-acyclic-n-minus-edges"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "graph-edges",
+      "field": "edges",
+      "vertices": "n",
+      "directed": false,
+      "allowSelfLoops": false,
+      "allowDuplicates": false
+    }
+  ]
+}

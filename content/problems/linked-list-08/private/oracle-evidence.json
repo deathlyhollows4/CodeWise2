@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "96649445944afc982f0a5ea181172db041dd50a768527f8430cc3684438c6c9f",
+  "suiteHash": "d75260a7dd028b4ac6b381709d41004eb726c0a646231494702be6ae6d76fdfa",
+  "oracleChecks": 721,
+  "hiddenUnique": 718,
+  "mutations": [
+    {
+      "name": "reverse-incomplete-tail",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "reverse-whole-chain",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

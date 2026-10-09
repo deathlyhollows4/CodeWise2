@@ -1,0 +1,1 @@
+You may sort one contiguous region of values in nondecreasing order. Return the smallest region length that makes the entire array nondecreasing. Return0 if the array is already sorted, including empty and single-value inputs. Equal adjacent values are allowed.

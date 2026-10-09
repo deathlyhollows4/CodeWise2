@@ -1,0 +1,1 @@
+Return the smallest length of a contiguous nonempty batch whose total is at least `target`. Values are strictly positive. Return zero if no batch reaches the target. Empty input has no qualifying batch.

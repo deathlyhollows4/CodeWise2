@@ -1,0 +1,1 @@
+class Solution {long cross(int[] a,int[] b,int[] c){return ((long)b[0]-a[0])*((long)c[1]-a[1])-((long)b[1]-a[1])*((long)c[0]-a[0]);}public boolean solve(int[][] points){if(points.length<3)return true;int[] a=points[0],b=null;for(int[] p:points)if(p[0]!=a[0]||p[1]!=a[1]){b=p;break;}if(b==null)return true;for(int[] p:points)if(cross(a,b,p)!=0)return false;return true;}}

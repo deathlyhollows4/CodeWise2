@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "advanced-graphs-06",
+  "version": "1.0.0",
+  "slug": "winning-losing-and-drawn-target-games",
+  "title": "Winning, losing and drawn target games",
+  "primaryTopic": "advanced-graphs",
+  "skillIds": [
+    "graphs.alternating-game-attractor",
+    "graphs.cyclic-draw-region"
+  ],
+  "prerequisites": [
+    "graphs.directed-cycle-consequences"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Classify every position in an alternating-turn directed game as a forced win, forced loss or optimal draw, including cycles and terminal targets.",
+  "constraints": [
+    "0 <= n <= 150",
+    "moves is an n by n matrix of 0/1 values",
+    "targets has n entries, each 0 or 1",
+    "Target vertices and non-target sinks are terminal losing positions",
+    "Return exactly n strings WIN, LOSE or DRAW"
+  ],
+  "interface": "Solution.solve(moves,targets) receives int[][] and int[]; returns String[] / vector<string> / list[str].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "moves": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 150,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 150,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "targets": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 150,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 0,
+    "maxLength": 150,
+    "items": {
+      "kind": "enum",
+      "values": [
+        "WIN",
+        "LOSE",
+        "DRAW"
+      ]
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "advanced-graphs-05"
+  ],
+  "remedialIds": [
+    "graphs-08",
+    "graphs-09",
+    "advanced-graphs-04"
+  ],
+  "nextIds": [],
+  "rationale": "A losing successor makes a position winning; all winning successors make it losing. Positions not resolved by that alternating frontier are draws.",
+  "commonMistakes": [
+    "targets-are-winning-for-player-to-move",
+    "all-unresolved-cycles-are-losses"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "matrix-square",
+      "field": "moves"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "moves",
+      "right": "targets"
+    }
+  ]
+}

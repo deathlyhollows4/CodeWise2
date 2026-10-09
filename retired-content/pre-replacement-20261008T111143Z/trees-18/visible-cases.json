@@ -1,0 +1,41 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        5,
+        3,
+        8,
+        1,
+        4,
+        6,
+        9
+      ],
+      "value": 6
+    },
+    "expected": true,
+    "explanation": "The route goes right from 5, then left from 8, reaching 6."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        5,
+        3,
+        8
+      ],
+      "value": 4
+    },
+    "expected": false,
+    "explanation": "The route ends at a missing right child of 3."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [],
+      "value": 0
+    },
+    "expected": false,
+    "explanation": "An empty tree contains no key."
+  }
+]

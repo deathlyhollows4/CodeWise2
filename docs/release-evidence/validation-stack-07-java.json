@@ -1,0 +1,117 @@
+{
+  "id": "stack-07",
+  "version": "1.0.0",
+  "language": "java",
+  "validationIdentity": "606d1e5b685a28c7f458d6c5750f59de6fa5e031d0d2aeffc3922431b2d843d6",
+  "suiteHash": "dee4c3e4fdc4e5db8855011d67cbd980160537a7503768b489213338b933ed7c",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T12:13:02.080Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 559,
+      "executed": 559,
+      "passed": 559,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "tokens": [
+            "2",
+            "3",
+            "+",
+            "4",
+            "*"
+          ]
+        },
+        "expected": 20,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "tokens": [
+            "-5"
+          ]
+        },
+        "expected": -5,
+        "actual": -5,
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "tokens": [
+            "8",
+            "3",
+            "-",
+            "2",
+            "*"
+          ]
+        },
+        "expected": 10,
+        "actual": 10,
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.107",
+          "wallSeconds": "0.071",
+          "memoryKb": "43276"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.157",
+          "wallSeconds": "0.089",
+          "memoryKb": "50260"
+        }
+      ]
+    }
+  }
+}

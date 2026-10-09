@@ -1,0 +1,33 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        4,
+        null,
+        7,
+        9
+      ]
+    },
+    "expected": 3,
+    "explanation": "The root, its right child, and that child's left child are three nodes."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        5
+      ]
+    },
+    "expected": 1,
+    "explanation": "A singleton contains one existing node."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "An empty representation builds a null root."
+  }
+]

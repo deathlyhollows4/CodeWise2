@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values,long limit){int left=0;long total=0,count=0;for(int right=0;right<values.length;right++){total+=values[right];while(total>limit)total-=values[left++];count+=right-left+1;}return count;}}

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-02",
+  "version": "2.0.0",
+  "slug": "least-cost-daily-workstation-choices",
+  "title": "Least-cost workstation choices",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.one-dimensional-state",
+    "dp.minimum-cost-recurrence",
+    "dp.last-choice-state"
+  ],
+  "prerequisites": [],
+  "step": 1,
+  "status": "published",
+  "objective": "Minimize daily workstation costs while remembering the previous chosen workstation for switching charges.",
+  "constraints": [
+    "0 <= costsA.length = costsB.length <= 90000",
+    "Every daily cost and switchCost is in 0..1000000000",
+    "The minimum total is at most 90000000000000 and is JavaScript-safe"
+  ],
+  "interface": "Solution.solve(costsA, costsB, switchCost) returns the minimum long/integer total.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "costsA": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "costsB": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 90000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000000
+        }
+      },
+      "switchCost": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 90000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-01"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "dp-1d-03"
+  ],
+  "rationale": "For a prefix ending at a chosen workstation, compare staying with switching from the other workstation; the first day has no switching charge.",
+  "commonMistakes": [
+    "ignore-switch-charges",
+    "never-switch-workstation",
+    "narrow-total-to-int32"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "costsA",
+      "right": "costsB"
+    }
+  ]
+}

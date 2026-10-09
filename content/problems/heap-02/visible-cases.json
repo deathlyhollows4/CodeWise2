@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "initial": [
+        4,
+        5,
+        8,
+        2
+      ],
+      "arrivals": [
+        3,
+        5,
+        10
+      ],
+      "k": 3
+    },
+    "expected": [
+      4,
+      5,
+      5
+    ],
+    "explanation": "The third-largest threshold updates as the retained leading readings change."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "initial": [
+        -5
+      ],
+      "arrivals": [
+        -7,
+        -2
+      ],
+      "k": 1
+    },
+    "expected": [
+      -5,
+      -2
+    ],
+    "explanation": "For rank one, record the largest reading seen so far."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "initial": [
+        1,
+        1
+      ],
+      "arrivals": [],
+      "k": 2
+    },
+    "expected": [],
+    "explanation": "No arrivals means no requested thresholds."
+  }
+]

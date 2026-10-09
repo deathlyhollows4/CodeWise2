@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "lo": 5,
+      "hi": 7
+    },
+    "expected": 4,
+    "explanation": "101 AND 110 AND 111 leaves 100."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "lo": 0,
+      "hi": 8
+    },
+    "expected": 0,
+    "explanation": "Including zero clears every bit."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "lo": 13,
+      "hi": 13
+    },
+    "expected": 13,
+    "explanation": "A one-element interval retains that integer."
+  }
+]

@@ -1,0 +1,206 @@
+{
+  "id": "backtracking-07",
+  "version": "1.0.0",
+  "language": "java",
+  "validationIdentity": "46aa626582a3f26c719f80a8a3c3b2bda5d7eec6489b14bcd0c13959429c49d3",
+  "suiteHash": "d21d2e987e479b4be1afe182b4d59c970f751cc5ee1264ec8be928907de1fe98",
+  "runtimeIdentity": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+  "executedAt": "2026-10-08T10:28:01.187Z",
+  "result": {
+    "status": "accepted",
+    "counts": {
+      "total": 63,
+      "executed": 63,
+      "passed": 63,
+      "failed": 0,
+      "notRun": 0
+    },
+    "diagnostics": "All selected cases passed.",
+    "cases": [
+      {
+        "id": "visible-1",
+        "input": {
+          "clues": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              3,
+              4,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              4,
+              3
+            ],
+            [
+              4,
+              3,
+              2,
+              0
+            ]
+          ]
+        },
+        "expected": [
+          [
+            "1234",
+            "3412",
+            "2143",
+            "4321"
+          ]
+        ],
+        "actual": [
+          [
+            "1234",
+            "3412",
+            "2143",
+            "4321"
+          ]
+        ],
+        "passed": true
+      },
+      {
+        "id": "visible-2",
+        "input": {
+          "clues": [
+            [
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        "expected": [],
+        "actual": [],
+        "passed": true
+      },
+      {
+        "id": "visible-3",
+        "input": {
+          "clues": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              3,
+              4,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              4,
+              3
+            ],
+            [
+              4,
+              3,
+              2,
+              1
+            ]
+          ]
+        },
+        "expected": [
+          [
+            "1234",
+            "3412",
+            "2143",
+            "4321"
+          ]
+        ],
+        "actual": [
+          [
+            "1234",
+            "3412",
+            "2143",
+            "4321"
+          ]
+        ],
+        "passed": true
+      }
+    ],
+    "runtime": {
+      "phases": [
+        {
+          "name": "visible",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.106",
+          "wallSeconds": "0.075",
+          "memoryKb": "44052"
+        },
+        {
+          "name": "hidden",
+          "identityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "startIdentityHash": "3d76fe78d843d79d2f5bcd3732fb0ebd73c2279980ad2066da747414db79480c",
+          "bootId": "7e61619d-5a12-49c3-9243-8959eb8e243e",
+          "architecture": "aarch64",
+          "languages": [
+            {
+              "id": "cpp",
+              "version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+            },
+            {
+              "id": "java",
+              "version": "openjdk version \"21.0.12.1\" 2026-08-18"
+            },
+            {
+              "id": "python",
+              "version": "Python 3.12.3"
+            }
+          ],
+          "isolateRevision": "8f185bb37f3f23e29b33b0c7727c91c13429abe3",
+          "cpuSeconds": "0.140",
+          "wallSeconds": "0.091",
+          "memoryKb": "46864"
+        }
+      ]
+    }
+  }
+}

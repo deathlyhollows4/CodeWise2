@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-greedy-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC304",
+  "hiddenCount": 60,
+  "suiteHash": "b8aa63dda74af0933927d132ecca5c89b368bda218d6cfb853b2841fbe1d3f59",
+  "categories": [
+    "zero-reward-optional-job",
+    "profit-order-versus-earliest-deadline-only",
+    "duplicate-jobs-compete-for-one-slot",
+    "upper-bound-2000-jobs-capacity-and-int64-reward-certificate",
+    "all-job-subsets-and-sorted-deadline-feasibility"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

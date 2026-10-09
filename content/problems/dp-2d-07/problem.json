@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-2d-07",
+  "version": "1.0.0",
+  "slug": "best-value-with-single-use-items",
+  "title": "Best value with single-use items",
+  "primaryTopic": "dp-2d",
+  "skillIds": [
+    "dp.two-prefix-state",
+    "dp.bounded-selection",
+    "dp.weighted-capacity-value"
+  ],
+  "prerequisites": [
+    "dp.two-prefix-state"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Maximize total value under a capacity limit while consuming each indexed item at most once.",
+  "constraints": [
+    "0 <= items.length <= 200",
+    "Each row contains exactly two integers [weight,value]",
+    "0 <= weight <= 1000; 0 <= value <= 1000000000",
+    "0 <= capacity <= 1000",
+    "0 <= result <= 200000000000"
+  ],
+  "interface": "Solution.solve(items,capacity) receives an int matrix and int capacity; returns long / long long / int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "items": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 200,
+        "unordered": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "capacity": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 1000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 200000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-2d-08"
+  ],
+  "remedialIds": [
+    "dp-1d-08",
+    "dp-2d-03",
+    "dp-2d-04"
+  ],
+  "nextIds": [
+    "dp-2d-09",
+    "dp-2d-10"
+  ],
+  "rationale": "One state coordinate is the number of considered items and the other is remaining capacity; values make this different from exact-subset feasibility.",
+  "commonMistakes": [
+    "reuse-items-forward-capacity",
+    "discard-zero-weight",
+    "narrow-signed32-value"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "pair-ranges",
+      "field": "items",
+      "firstMin": 0,
+      "firstMax": 1000,
+      "secondMin": 0,
+      "secondMax": 1000000000
+    }
+  ]
+}

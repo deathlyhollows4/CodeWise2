@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "8460311740844ffde1a9f6f9ed367042cff4651eaba27cf04f4718a64c3746e3",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Complete source, statement/examples, independent model and all native references read by coordinator. All60hidden cases and nine materialized language assets reconcile to original author/project templates; no imported assets. Enumerates allowed bijections of original item IDs under a position-permission matrix, including the5040 maximum. This differs from minimizing a bijection cost in Bit13 or enumerating value permutations with duplicate labels. Independent permutation filtering checks the entire permission constraint.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-permissions.mjs",
+    "sourceHash": "77d38e9cbc955679509880e3c47069543181b2480e7a451e2728b72fd15fcb30",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

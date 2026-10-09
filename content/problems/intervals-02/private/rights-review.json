@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "cc41c82958cbd24ce27b36bb0ed14241517f31293a3c040c3737eda337c8cd83",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:36:11.829Z",
+  "rationale": "All statements, three examples,60 hidden cases and nine language assets reconcile to independently read original author source and project typed harness. No imported assets.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/intervals-intersection.mjs",
+    "sourceHash": "5a33113cd032ea2630ac4fdba98e83e6e1415bb156cf85843fa9fac1d11f7c1d",
+    "reconciliation": "docs/release-evidence/coordinator-intervals-first-four-review.json",
+    "sourceReview": "docs/release-evidence/coordinator-canonical-boundary-intervals-review.json"
+  },
+  "limitations": [
+    "Per-pack review only; fresh Java/C++/Python execution and global243 synthesis are separate release gates.",
+    "Changed bound content invalidates this record."
+  ]
+}

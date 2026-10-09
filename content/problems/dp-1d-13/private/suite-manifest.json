@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-fifth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC213",
+  "hiddenCount": 765,
+  "suiteHash": "5bcc3bbffbb1885ca09eb89efdf13dfb3f9fa1d52c3963b61f72dae09512b5fb",
+  "categories": [
+    "all-contiguous-segments-independent-enumeration",
+    "nonempty-negative-zero-and-disjoint-segments",
+    "upper-bound-closed-form-certificate"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

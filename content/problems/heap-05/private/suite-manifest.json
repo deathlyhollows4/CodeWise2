@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-ranking-medians.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdef5",
+  "hiddenCount": 729,
+  "suiteHash": "04619b7ec589c6ef899209f3780ba550db244464ac77fdfc113dbbfc2cbab34d",
+  "categories": [
+    "frequency-ties-and-selection-limits",
+    "maximum-distinct-labels",
+    "maximum-equal-frequency-groups",
+    "exact-label-extrema"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-expressions.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "cb48f0fc1acdda5b78e53c2470cbdcc112c0a671480f5f38498963d6d3781356",
+  "categories": [
+    "empty-zero-leading-zero-precedence-wide-and-maximum-length",
+    "all-single-digit-addition-witness",
+    "negative-term-witness",
+    "impossible-above-concatenation"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

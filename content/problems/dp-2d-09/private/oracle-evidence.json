@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "8279cb4e4c4a10982246019801cf045274404dbdcc8fe81a607b07c04ab7b966",
+  "suiteHash": "42b99a4c03b53082e24de458a6a8a89d8d7ac8b3a445b0198f026c5425652e9e",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "always-left-associate",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "greedily-smallest-immediate-product",
+      "detected": true,
+      "caseId": "hidden-9"
+    },
+    {
+      "name": "narrow-signed32-cost",
+      "detected": true,
+      "caseId": "hidden-6"
+    }
+  ],
+  "languageExecution": "not-run"
+}

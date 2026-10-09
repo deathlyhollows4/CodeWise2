@@ -1,0 +1,1 @@
+class Solution {public:ListNode* solve(ListNode* head,int left,int right){ListNode dummy(0,head);auto before=&dummy;for(int i=0;i<left;i++)before=before->next;auto first=before->next;for(int i=0;i<right-left;i++){auto moved=first->next;first->next=moved->next;moved->next=before->next;before->next=moved;}return dummy.next;}};

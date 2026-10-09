@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values,int k){ArrayDeque<Integer> q=new ArrayDeque<>();int[] out=new int[values.length-k+1];for(int i=0;i<values.length;i++){while(!q.isEmpty()&&q.peekFirst()<=i-k)q.removeFirst();while(!q.isEmpty()&&values[q.peekLast()]<=values[i])q.removeLast();q.addLast(i);if(i>=k-1)out[i-k+1]=values[q.peekFirst()];}return out;}}

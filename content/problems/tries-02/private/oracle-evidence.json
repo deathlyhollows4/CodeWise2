@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "bc51905bfe6a8b55cfd8a44042c38dc4b953daf85bb2952fb649b67398560da5",
+  "suiteHash": "39b43deb4f981520778cc1be5dabaf57be995087f3242da4d4788ad8f0f2a2de",
+  "oracleChecks": 716,
+  "hiddenUnique": 713,
+  "mutations": [
+    {
+      "name": "accept-nonterminal-prefix",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "treat-question-mark-as-zero-or-many",
+      "detected": true,
+      "caseId": "hidden-703"
+    }
+  ],
+  "languageExecution": "not-run"
+}

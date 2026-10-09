@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "heap-13",
+  "version": "1.0.0",
+  "slug": "parity-constrained-deviation",
+  "title": "Minimize deviation with parity operations",
+  "primaryTopic": "heap",
+  "skillIds": [
+    "heap.monotone-maximum",
+    "numbers.parity-reachability"
+  ],
+  "prerequisites": [
+    "heap.max-extraction"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Minimize the range of positive values using parity-dependent doubling and halving operations.",
+  "constraints": [
+    "1 <= values.length <= 100000",
+    "Every original value is an integer in [1,1000000000].",
+    "An odd value can reach its doubled value and return; it cannot keep doubling while even."
+  ],
+  "interface": "Solution.solve(values) receives a native positive integer array and returns a long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 1,
+        "maxLength": 100000,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "heap-11"
+  ],
+  "remedialIds": [
+    "heap-06"
+  ],
+  "nextIds": [],
+  "rationale": "Normalize each odd value to its largest reachable form, then reduce the current maximum while tracking the minimum. Reachable values are finite despite reversible odd/even operations.",
+  "commonMistakes": [
+    "original-range-only",
+    "odd-values-cannot-double"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

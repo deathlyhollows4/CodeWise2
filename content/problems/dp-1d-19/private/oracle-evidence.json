@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "5b67354e37ef08d3ed2ae9269e98b87341795315a5fc5f9dd3b012c7cc9d3e92",
+  "suiteHash": "c70b7694843b07411739662c7827a7188254ac048c43d0fbeefb8945b3309b4d",
+  "oracleChecks": 607,
+  "hiddenUnique": 604,
+  "mutations": [
+    {
+      "name": "omit-tromino-frontiers",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "empty-board-has-no-coverings",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

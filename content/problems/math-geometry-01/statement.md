@@ -1,0 +1,1 @@
+Reverse the decimal digits of the absolute value of value, then restore its original sign. Leading zeros in the reversed digits disappear. Return 0 if the result lies outside the signed 32 bit interval [-2147483648,2147483647]. Zero reverses to zero.

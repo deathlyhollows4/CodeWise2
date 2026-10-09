@@ -1,0 +1,1 @@
+For each entry in `values`, return how many positions forward you must move to reach the first strictly greater value. Return zero for an entry with no later greater value. Equal readings do not qualify, and searching does not wrap around the end.

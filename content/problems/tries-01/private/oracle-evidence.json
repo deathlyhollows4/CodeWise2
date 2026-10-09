@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "788f95cb833bdbd78757aee42978b19fffc832d7bff9597d932c2833d55fa1b1",
+  "suiteHash": "c436cae79448629ccc813d2a2ce284cf29b21bc947026c3a52f3170aa1a79dec",
+  "oracleChecks": 709,
+  "hiddenUnique": 706,
+  "mutations": [
+    {
+      "name": "choose-longest-terminal-root",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "replace-infix-as-if-prefix",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

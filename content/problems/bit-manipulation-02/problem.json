@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-02",
+  "version": "2.0.0",
+  "slug": "decode-packed-unsigned-field",
+  "title": "Decode a packed unsigned field",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.unsigned32",
+    "bits.inclusive-field-mask"
+  ],
+  "prerequisites": [],
+  "step": 1,
+  "status": "published",
+  "objective": "Extract the unsigned value stored in an inclusive range of a 32-bit packed word.",
+  "constraints": [
+    "0 <= word <= 4294967295",
+    "0 <= low <= high <= 31",
+    "The selected width is between 1 and 32 bits."
+  ],
+  "interface": "Solution.solve(word, low, high) receives a long unsigned-word value and two integer bit positions; return a long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "word": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 4294967295
+      },
+      "low": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 31
+      },
+      "high": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 31
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 4294967295
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-01"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "bit-manipulation-04"
+  ],
+  "rationale": "Shift the selected low bit to position zero, then retain exactly high-low+1 bits. The full 32-bit field needs a wide mask rather than a 32-bit shift count.",
+  "commonMistakes": [
+    "exclude-inclusive-high-bit",
+    "full-field-signed-result",
+    "forget-low-shift"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "field-order",
+      "lower": "low",
+      "upper": "high"
+    }
+  ]
+}

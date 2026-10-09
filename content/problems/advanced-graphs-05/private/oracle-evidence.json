@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "46783b5692a0400bfd4c0d72846a32026371a7951bf5de684eb7fe07ce225f4d",
+  "suiteHash": "35b749515026e23cf517c07e20d1b90dbaecf5c55b48ca027b5c94a459b7250e",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "never-cancel-prior-flow",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "reverse-edge-cost-positive",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "send-only-one-required-unit",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

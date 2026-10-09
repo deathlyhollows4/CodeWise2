@@ -1,0 +1,1 @@
+Bit p represents skill p. required marks every skill the team must cover. Each entry in people marks one person’s skills. Choose as few people as possible so their bitwise OR contains every required bit. Extra skills are harmless. Return the minimum number of people, or -1 if coverage is impossible. If required is zero, the empty team has size zero.

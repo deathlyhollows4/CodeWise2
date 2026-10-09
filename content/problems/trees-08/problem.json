@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-08",
+  "version": "1.0.0",
+  "slug": "return-mirrored-native-tree",
+  "title": "Return the mirrored tree",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-exchange",
+    "trees.mirrored-topology"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Exchange left and right structure at every node, preserving the corresponding node values and sparse topology.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "You may relink input child pointers or return a new native tree; the result must have mirrored topology and the corresponding original values. Original node identity is not required."
+  ],
+  "interface": "Solution.solve(root) receives TreeNode and returns TreeNode; the wrapper displays compact breadth-first result values.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 4001,
+    "trimTrailingNulls": true,
+    "items": {
+      "kind": "nullable",
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-07"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-05",
+    "trees-06"
+  ],
+  "rationale": "Mirroring applies throughout every subtree; swapping only the root children leaves deeper structure wrong.",
+  "commonMistakes": [
+    "exchange-root-only",
+    "reverse-flat-values"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

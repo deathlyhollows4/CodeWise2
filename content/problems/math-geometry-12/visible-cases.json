@@ -1,0 +1,97 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "point": [
+        2,
+        2
+      ]
+    },
+    "expected": true,
+    "explanation": "The point lies in the square interior."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "point": [
+        3,
+        3
+      ]
+    },
+    "expected": false,
+    "explanation": "The concave notch lies outside even though the point is inside the bounding box."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "polygon": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "point": [
+        0,
+        2
+      ]
+    },
+    "expected": true,
+    "explanation": "Boundary points count as contained."
+  }
+]

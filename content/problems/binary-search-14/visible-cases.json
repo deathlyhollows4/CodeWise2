@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "rows": 2,
+      "columns": 3,
+      "k": 3
+    },
+    "expected": 2,
+    "explanation": "The sorted values are [1,2,2,3,4,6]. Both cells with value 2 have their own ranks."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "rows": 1,
+      "columns": 5,
+      "k": 4
+    },
+    "expected": 4,
+    "explanation": "One row contains [1,2,3,4,5]."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "rows": 3,
+      "columns": 3,
+      "k": 8
+    },
+    "expected": 6,
+    "explanation": "The sorted values are [1,2,2,3,3,4,6,6,9]. Rank 8 is another 6."
+  }
+]

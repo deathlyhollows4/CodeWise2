@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/linked-list-relink.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 692,
+  "suiteHash": "643d50bb76bff77b7fb688d28a6fdff191b97a4ed35ce80cc6eaccbbf878809f",
+  "categories": [
+    "front-tail-self-and-adjacent-moves",
+    "original-identity-survives-repeated-moves",
+    "large-history-equal-valued-originals"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

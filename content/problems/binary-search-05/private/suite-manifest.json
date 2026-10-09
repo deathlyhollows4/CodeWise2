@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC402",
+  "hiddenCount": 762,
+  "suiteHash": "c0fc0f683111f0495413f79da94d8f4e66b07a3f05632569d4bc97ab750bb7cb",
+  "categories": [
+    "perfect-square",
+    "just-below-square",
+    "just-above-square",
+    "small-quotient-boundary",
+    "maximum-bound",
+    "maximum-neighbor"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

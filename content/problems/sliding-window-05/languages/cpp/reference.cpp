@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values,int k){int left=0,zeros=0,best=0;for(int right=0;right<(int)values.size();right++){if(values[right]==0)zeros++;while(zeros>k)if(values[left++]==0)zeros--;best=max(best,right-left+1);}return best;}};

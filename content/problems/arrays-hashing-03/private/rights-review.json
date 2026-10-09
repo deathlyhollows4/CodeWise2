@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "95221faa607d9d8dccf9aa60c0c94c743c05e37070db4ce2b30619fea1a2e170",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:58:54.983Z",
+  "rationale": "Read entire original scalar author source and all actual nine language assets for First repeated position. Statement, three visible cases, all448hidden cases and reference body interpolation exactly match original source. Directly inspected the short native typed-array templates: bounded count/length decoding, one Solution.solve call per case, scalar output. Starters are original empty project interfaces. No imported assets present; asset provenance declares project-owned code/prose/tests.",
+  "assetEvidence": {
+    "source": "content/authoring/slice.mjs",
+    "sourceSha256": "dc03ef3c0d51dba96072ac14f94662ff83c22ee11f8fa3c649bd915767372366",
+    "reconciliation": "docs/release-evidence/coordinator-legacy-arrays-rights.json"
+  },
+  "limitations": [
+    "Rights only; execution is proven separately by matching real native receipts.",
+    "No full-bank publication claim."
+  ]
+}

@@ -1,0 +1,1 @@
+Readings are sorted in nondecreasing order. Count the readings x satisfying lo ≤ x ≤ hi, including every duplicate. Return only the count. lo is never greater than hi. Use O(log n) comparisons even when many readings are inside the band. Local decoded input arrays may be modified; only the returned result is graded.

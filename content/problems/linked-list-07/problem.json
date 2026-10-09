@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-07",
+  "version": "1.0.0",
+  "slug": "clone-next-random-rooted-topology",
+  "title": "Clone linked nodes with random links",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.clone-identity-map",
+    "list.preserve-random-aliases"
+  ],
+  "prerequisites": [
+    "list.original-identity",
+    "list.walk",
+    "hashing.membership"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Allocate an independent clone preserving next/random topology, cycles, duplicate values and sharing without any original-node alias.",
+  "constraints": [
+    "0 ≤ data.values.length ≤ 2,000; values lie in [-1,000,000,1,000,000].",
+    "next and random each contain one nullable bounded index per node; heads contains exactly one nullable bounded index.",
+    "Every supplied node is reachable from the root across next/random; the empty table has a null root.",
+    "Cycles, self-links, duplicate values and shared next/random targets are allowed."
+  ],
+  "interface": "Solution.solve(data) receives IdentityList and returns a newly allocated native ListNode root or null; the wrapper serializes CloneList topology.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "data": {
+        "kind": "object",
+        "properties": {
+          "values": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "integer",
+              "minimum": -1000000,
+              "maximum": 1000000
+            }
+          },
+          "next": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "random": {
+            "kind": "array",
+            "maxLength": 2000,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          },
+          "heads": {
+            "kind": "array",
+            "minLength": 1,
+            "maxLength": 1,
+            "items": {
+              "kind": "nullable",
+              "value": {
+                "kind": "integer",
+                "minimum": 0,
+                "maximum": 1999
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "next": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1999
+          }
+        }
+      },
+      "random": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1999
+          }
+        }
+      },
+      "head": {
+        "kind": "nullable",
+        "value": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1999
+        }
+      },
+      "aliasesOriginal": {
+        "kind": "boolean"
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-08"
+  ],
+  "remedialIds": [
+    "linked-list-03",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "linked-list-09"
+  ],
+  "rationale": "A mapping from original objects to newly allocated objects preserves cycles and aliases without confusing equal-valued nodes.",
+  "commonMistakes": [
+    "return-original-as-clone",
+    "discard-random-links"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "node-table",
+      "field": "data",
+      "links": [
+        "next",
+        "random"
+      ],
+      "heads": "heads",
+      "requireReachable": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "f854d1a1dd2d2223fdb70b2d33b8a246ccf31c156355f93ca211f57da9f97dc8",
+  "reviewer": "CodeWise2 coordinator independent of author",
+  "reviewedAt": "2026-10-08T12:47:32.079Z",
+  "evidence": [
+    "docs/release-evidence/coordinator-v2-final-progression-review.md",
+    "docs/release-evidence/coordinator-integrated-v2-tree23-reconciliation.json"
+  ],
+  "limitations": [
+    "No native execution or publication performed by this review. Whole-bank synthesis remains separate."
+  ]
+}

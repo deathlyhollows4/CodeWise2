@@ -1,0 +1,32 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "pattern": "??"
+    },
+    "expected": [
+      "()"
+    ],
+    "explanation": "Each question mark becomes exactly one parenthesis; the only balanced completion is () ."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "pattern": "(?))"
+    },
+    "expected": [
+      "(())"
+    ],
+    "explanation": "The fixed first and final characters are preserved; the second position must become an opening parenthesis."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "pattern": ""
+    },
+    "expected": [
+      ""
+    ],
+    "explanation": "The empty string is balanced and has one empty completion."
+  }
+]

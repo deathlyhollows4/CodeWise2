@@ -1,0 +1,95 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "commands": [
+        "add",
+        "add",
+        "cancel",
+        "pop",
+        "pop"
+      ],
+      "ids": [
+        10,
+        11,
+        11,
+        0,
+        0
+      ],
+      "priorities": [
+        4,
+        8,
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": [
+      10,
+      -1
+    ],
+    "explanation": "Cancel handle 11 before extraction. Handle 10 is returned, then the queue is empty."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "commands": [
+        "add",
+        "add",
+        "cancel",
+        "add",
+        "pop",
+        "pop"
+      ],
+      "ids": [
+        7,
+        3,
+        7,
+        7,
+        0,
+        0
+      ],
+      "priorities": [
+        10,
+        5,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "expected": [
+      3,
+      7
+    ],
+    "explanation": "Reusing handle 7 starts a new task at priority 1; the old cancelled priority 10 must not return."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "commands": [
+        "add",
+        "add",
+        "pop",
+        "pop"
+      ],
+      "ids": [
+        9,
+        2,
+        0,
+        0
+      ],
+      "priorities": [
+        4,
+        4,
+        0,
+        0
+      ]
+    },
+    "expected": [
+      9,
+      2
+    ],
+    "explanation": "Equal priorities use successful-add order, so handle 9 comes first."
+  }
+]

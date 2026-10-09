@@ -1,0 +1,1 @@
+class Solution {public int[][] solve(int[][] grid){int rows=grid.length,cols=rows==0?0:grid[0].length;boolean[] zr=new boolean[rows],zc=new boolean[cols];for(int i=0;i<rows;i++)for(int j=0;j<cols;j++)if(grid[i][j]==0){zr[i]=true;zc[j]=true;}int[][] out=new int[rows][cols];for(int i=0;i<rows;i++)for(int j=0;j<cols;j++)out[i][j]=zr[i]||zc[j]?0:grid[i][j];return out;}}

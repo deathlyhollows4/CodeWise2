@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){int answer=0,mask=0;for(int bit=30;bit>=0;bit--){mask|=1<<bit;HashSet<Integer> prefixes=new HashSet<>();for(int v:values)prefixes.add(v&mask);int candidate=answer|(1<<bit);for(int p:prefixes)if(prefixes.contains(p^candidate)){answer=candidate;break;}}return answer;}}

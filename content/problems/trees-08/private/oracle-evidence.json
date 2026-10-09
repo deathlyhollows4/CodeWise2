@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "440952b91e23294e65a09c2ed364d043bf84568ac2a5f5af8483032106d5582a",
+  "suiteHash": "2c6c37d3cdd11230c659c4c53e06da51a106eac75ce7a805702cfdc63e103cbd",
+  "oracleChecks": 1138,
+  "hiddenUnique": 1135,
+  "mutations": [
+    {
+      "name": "exchange-root-only",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "reverse-flat-values",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

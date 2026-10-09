@@ -1,0 +1,44 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "expected": true,
+    "explanation": "Both child heights differ by at most one at every node."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        1,
+        2,
+        3,
+        4,
+        null,
+        null,
+        5,
+        6,
+        null,
+        null,
+        7
+      ]
+    },
+    "expected": false,
+    "explanation": "The root has equal child heights, but its two children each contain an imbalance."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": true,
+    "explanation": "There is no node violating the balance rule."
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-08",
+  "version": "1.0.0",
+  "slug": "reverse-complete-native-list-groups",
+  "title": "Reverse complete groups and preserve the tail",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.complete-group-boundary",
+    "list.group-link-reversal"
+  ],
+  "prerequisites": [
+    "list.walk",
+    "list.link-splice"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Reverse each complete group of k native linked-list values while preserving an incomplete trailing group in its original order.",
+  "constraints": [
+    "0 ≤ head.length ≤ 2,000; signed values lie in [-1,000,000,1,000,000].",
+    "1 ≤ k ≤ 2,001.",
+    "The input is finite and acyclic; duplicate values are allowed.",
+    "The returned sequence has exactly the original length, and incomplete trailing groups remain unchanged."
+  ],
+  "interface": "Solution.solve(head,k) receives ListNode and int and returns ListNode.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2001
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-07"
+  ],
+  "remedialIds": [
+    "linked-list-01",
+    "linked-list-02"
+  ],
+  "nextIds": [
+    "linked-list-10"
+  ],
+  "rationale": "Before reversing links, establish that a complete group exists; otherwise preserve the remaining tail.",
+  "commonMistakes": [
+    "reverse-incomplete-tail",
+    "reverse-whole-chain"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,1 @@
+class Solution {public int[][] solve(int[][] a,int[][] b){TreeMap<Integer,Integer> counts=new TreeMap<>();for(int[][] source:new int[][][]{a,b})for(int[] p:source)counts.put(p[0],counts.getOrDefault(p[0],0)+p[1]);int[][] out=new int[counts.size()][2];int i=0;for(Map.Entry<Integer,Integer> e:counts.entrySet()){out[i][0]=e.getKey();out[i++][1]=e.getValue();}return out;}}

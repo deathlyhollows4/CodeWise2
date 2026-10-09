@@ -1,0 +1,2762 @@
+{
+  "schemaVersion": 1,
+  "approachVocabulary": [
+    "alias-awareness",
+    "ancestor-bounds",
+    "ancestor-chain",
+    "answer-space-search",
+    "arithmetic",
+    "assignment-state",
+    "backtracking",
+    "balanced-partition",
+    "bellman-ford",
+    "bidirectional-constraints",
+    "binary-search",
+    "binary-search-tree-route",
+    "bitmask-dp",
+    "bitwise",
+    "bottom-up",
+    "boundary-contour",
+    "boundary-split",
+    "bounded-frontier",
+    "bounded-multiplicity",
+    "bounded-selection",
+    "branch-aggregate",
+    "breadth-first-search",
+    "cancellation-invariant",
+    "candidate-cancellation",
+    "canonical-key",
+    "cardinality-pruning",
+    "carry-boundary",
+    "circular-scan",
+    "closed-boundaries",
+    "collision-simulation",
+    "combinatorial-recurrence",
+    "common-prefix",
+    "compatible-predecessor",
+    "component-labeling",
+    "constraint-state",
+    "contribution-counting",
+    "cooldown-lower-bound",
+    "coordinate-compression",
+    "count-valid-endings",
+    "counting-recurrence",
+    "cover-optimization",
+    "cover-state",
+    "coverage-counter",
+    "coverage-state",
+    "cross-product",
+    "cursor-navigation",
+    "cycle-basin-propagation",
+    "cycle-detection",
+    "deduplicated-neighbor-union",
+    "depth-first-search",
+    "depth-tracking",
+    "digit-extraction",
+    "disjoint-set",
+    "divide-and-conquer",
+    "dynamic-eligibility",
+    "dynamic-programming",
+    "equal-run-counting",
+    "euclidean-reduction",
+    "euler-trail",
+    "event-sweep",
+    "exponent-decomposition",
+    "fenwick-tree",
+    "fifo-dispatch",
+    "fixed-width-transform",
+    "frequency-counting",
+    "future-feasibility",
+    "gap-invariant",
+    "geometry",
+    "graph-validation",
+    "greedy",
+    "greedy-prefix-feasibility",
+    "grid-state",
+    "hash-map",
+    "hash-set",
+    "heap",
+    "identity-map",
+    "inclusive-mask",
+    "indegree-peeling",
+    "inorder-traversal",
+    "interval-state",
+    "last-choice-state",
+    "last-vertex-state",
+    "lazy-invalidation",
+    "linear-scan",
+    "linked-construction",
+    "linked-rewiring",
+    "lowest-bit-removal",
+    "lowlink",
+    "matrix-frontier",
+    "matrix-transform",
+    "max-envelope",
+    "minimax-path",
+    "monotonic-deque",
+    "monotonic-stack",
+    "multi-source-frontier",
+    "multiset-simulation",
+    "multistream-frontier",
+    "negative-cycle-propagation",
+    "nested-aggregation",
+    "number-theory",
+    "operation-simulation",
+    "optimal-count-ties",
+    "ordered-segmentation",
+    "original-identity",
+    "original-state-flags",
+    "paired-position-state",
+    "paired-structure-comparison",
+    "parity-propagation",
+    "parity-reachability",
+    "partition-balance",
+    "partition-mask",
+    "pattern-consumption",
+    "postorder",
+    "precedence-state",
+    "prefix-cycle",
+    "prefix-navigation",
+    "prefix-product",
+    "prefix-pruning",
+    "prefix-reset",
+    "prefix-sum",
+    "prime-valuation",
+    "range-pruning",
+    "rank-counting",
+    "ray-crossing",
+    "reachable-frontier",
+    "read-write-compaction",
+    "rerooting",
+    "residual-network",
+    "restart-or-extend",
+    "retrograde-analysis",
+    "reverse-frontier",
+    "reverse-topological-elimination",
+    "rolling-aggregate",
+    "rotated-order",
+    "run-boundary",
+    "running-extremum",
+    "schedule-simulation",
+    "segment-grammar",
+    "shortest-path",
+    "sieve",
+    "sign-state",
+    "signed-extrema",
+    "skip-or-cover",
+    "sliding-window",
+    "slope-invariant",
+    "slot-allocation",
+    "sorted-merge",
+    "sorting",
+    "stable-partition",
+    "stack",
+    "stateful-history",
+    "strong-components",
+    "subtree-summary",
+    "successor-splice",
+    "tail-frontier",
+    "take-or-skip",
+    "temporal-action-state",
+    "terminal-elimination",
+    "topological-order",
+    "traversal-partition",
+    "tree-mirror",
+    "tree-rotation",
+    "tree-state-dp",
+    "trie",
+    "two-arm-join",
+    "two-coloring",
+    "two-pointers",
+    "two-prefix-state",
+    "unbounded-choice",
+    "variable-reach-transition",
+    "weighted-potential"
+  ],
+  "records": [
+    {
+      "problemId": "arrays-hashing-01",
+      "contentIdentity": "b492a0092aa22a0ec2961adf2cfa6a9221431771781b43acbaba0f4691e43776",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linear-scan",
+        "arithmetic"
+      ],
+      "rationale": "Accumulate signed values without losing negatives or overflowing a 32-bit result. The classified approach is linear-scan, arithmetic; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-02",
+      "contentIdentity": "0b82bcb36a78e9e19e39eeb1261a62e14f4b9a2b1c6c2cacf0cddd5eb39efeb0",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linear-scan",
+        "running-extremum"
+      ],
+      "rationale": "Maintain a running maximum initialized from valid input rather than zero. The classified approach is linear-scan, running-extremum; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-03",
+      "contentIdentity": "95221faa607d9d8dccf9aa60c0c94c743c05e37070db4ce2b30619fea1a2e170",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linear-scan",
+        "hash-set"
+      ],
+      "rationale": "Use membership state to find the first position whose value was already seen. The classified approach is linear-scan, hash-set; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "advanced-graphs-01",
+      "contentIdentity": "2ccd82d40d01c9106ecdf71fa6e0002695a961434ee8b7bd94b03eef1f6c9912",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "sorting",
+        "disjoint-set",
+        "greedy"
+      ],
+      "rationale": "Minimize the total weight of a connected undirected spanning network, rejecting disconnected inputs. The classified approach is sorting, disjoint-set, greedy; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "advanced-graphs-02",
+      "contentIdentity": "534a8054ef84e861505fee04de34c3e7ef6907997470f5d7550b2c7cd8391d74",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "disjoint-set",
+        "weighted-potential"
+      ],
+      "rationale": "Decide whether one integer potential assignment satisfies every directed difference equation, preserving signed offsets across component joins. The classified approach is disjoint-set, weighted-potential; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "advanced-graphs-03",
+      "contentIdentity": "65d8fd95e38efb94dc77df1ad29b0126a7d15687eec5fedc67eec476cd0e3ed8",
+      "secondaryTopics": [
+        "graphs"
+      ],
+      "approachTags": [
+        "sorting",
+        "disjoint-set",
+        "minimax-path"
+      ],
+      "rationale": "Minimize the greatest individual edge risk on an undirected route from vertex 0 to vertex n - 1, rather than its sum or hop count. The classified approach is sorting, disjoint-set, minimax-path; secondary topics identify the additional algorithmic concepts graphs."
+    },
+    {
+      "problemId": "advanced-graphs-04",
+      "contentIdentity": "c6c07efffe78909e4c17b77a2bf20f112c5a3aa50a15c37b55ffb8112c9f3121",
+      "secondaryTopics": [
+        "graphs"
+      ],
+      "approachTags": [
+        "bellman-ford",
+        "negative-cycle-propagation"
+      ],
+      "rationale": "Classify each directed vertex as finitely cheapest, unreachable or unbounded below through a reachable negative cycle and downstream edges. The classified approach is bellman-ford, negative-cycle-propagation; secondary topics identify the additional algorithmic concepts graphs."
+    },
+    {
+      "problemId": "advanced-graphs-05",
+      "contentIdentity": "46783b5692a0400bfd4c0d72846a32026371a7951bf5de684eb7fe07ce225f4d",
+      "secondaryTopics": [
+        "graphs"
+      ],
+      "approachTags": [
+        "residual-network",
+        "shortest-path"
+      ],
+      "rationale": "Send exactly the required integral units at minimum original-edge cost, using residual reverse edges to revise earlier route choices. The classified approach is residual-network, shortest-path; secondary topics identify the additional algorithmic concepts graphs."
+    },
+    {
+      "problemId": "advanced-graphs-06",
+      "contentIdentity": "fa4fce6207a319a4d91bca1df1621bd307c22830ea581311d2f363e40ec5b81d",
+      "secondaryTopics": [
+        "graphs"
+      ],
+      "approachTags": [
+        "retrograde-analysis",
+        "reverse-frontier"
+      ],
+      "rationale": "Classify every position in an alternating-turn directed game as a forced win, forced loss or optimal draw, including cycles and terminal targets. The classified approach is retrograde-analysis, reverse-frontier; secondary topics identify the additional algorithmic concepts graphs."
+    },
+    {
+      "problemId": "heap-03",
+      "contentIdentity": "f1872c6de9ad2b95b047f4ed8482293e2f4ad3541dad3e33f6d4abc1d06b9d8a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "multistream-frontier",
+        "cover-optimization"
+      ],
+      "rationale": "Find the smallest-width closed timestamp range containing an event from every independently sorted feed. The classified approach is heap, multistream-frontier, cover-optimization; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-10",
+      "contentIdentity": "571c1980aea52efb2a1d891480d4dba36c0bed218bef0e95c136c00bb6b3e467",
+      "secondaryTopics": [
+        "math-geometry",
+        "intervals"
+      ],
+      "approachTags": [
+        "heap",
+        "event-sweep",
+        "max-envelope"
+      ],
+      "rationale": "Compute canonical skyline change points from half-open building spans using an expiring maximum frontier. The classified approach is heap, event-sweep, max-envelope; secondary topics identify the additional algorithmic concepts math-geometry, intervals."
+    },
+    {
+      "problemId": "heap-14",
+      "contentIdentity": "9495abbefe7673dd725461c927bad2cd24f94e404ab97e259d4dca6357485a06",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "event-sweep",
+        "fifo-dispatch"
+      ],
+      "rationale": "Assign FIFO arrivals to free weighted servers while advancing a separate completion-time frontier. The classified approach is heap, event-sweep, fifo-dispatch; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-01",
+      "contentIdentity": "282e6069ca6743fd94b3aa12635dc08741c972363ef9998cf5335a38a813be01",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "identity-map"
+      ],
+      "rationale": "Convert a rooted native graph to a directed adjacency-count matrix using identity-based breadth-first discovery. The classified approach is breadth-first-search, identity-map; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-02",
+      "contentIdentity": "273bfb61b2bc393d8bda822db03c9f339aaa1ad03e61864c49957753260c0bae",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "contribution-counting"
+      ],
+      "rationale": "Count the minimum-hop directed edge routes from vertex zero to every vertex, adding only equal-next-layer contributions. The classified approach is breadth-first-search, contribution-counting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-03",
+      "contentIdentity": "e93a2229b8fa9e3b2582a32802fea5926772a9fb129cf34ee01ad096165bc9df",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "component-labeling"
+      ],
+      "rationale": "Partition every undirected vertex into one connected component, including isolated vertices. The classified approach is breadth-first-search, component-labeling; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-04",
+      "contentIdentity": "7b4067e72f7ab90d648bcc554950d0f54796d48cb21d0dada7e0bc9da5763ebe",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "breadth-first-search",
+        "component-labeling",
+        "canonical-key"
+      ],
+      "rationale": "Count distinct orthogonally connected land shapes after removing translation, while preserving rotations and reflections as different shapes. The classified approach is breadth-first-search, component-labeling, canonical-key; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "graphs-05",
+      "contentIdentity": "8e213ba683e5e75c81192a9aec6125595ab67ebeefe14141ac1937880584b6bd",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "breadth-first-search",
+        "component-labeling",
+        "deduplicated-neighbor-union"
+      ],
+      "rationale": "Maximize island area after at most one water-to-land flip without counting a neighboring component more than once. The classified approach is breadth-first-search, component-labeling, deduplicated-neighbor-union; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "graphs-06",
+      "contentIdentity": "b9ba4b7cb3c9fe6c0548941559b60e798c060ff0f21c8c879e3fd20f39c2f349",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "multi-source-frontier"
+      ],
+      "rationale": "Compute each open cell distance to the closest source through orthogonal non-wall moves, seeding every source at once. The classified approach is breadth-first-search, multi-source-frontier; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-07",
+      "contentIdentity": "7ead2099276a16e9a382f465c1b284e0547dd64c94529d5eaba057237471a4e9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "two-coloring"
+      ],
+      "rationale": "Decide whether an undirected graph admits two colors with opposite colors on every edge, checking all components. The classified approach is breadth-first-search, two-coloring; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-08",
+      "contentIdentity": "ab583365c63c901e881fec1912264e3a32d5d75bf23b8030f80ac171fcd98b07",
+      "secondaryTopics": [],
+      "approachTags": [
+        "topological-order"
+      ],
+      "rationale": "Produce any complete topological order of a directed dependency graph, or an empty impossibility result for a directed cycle. The classified approach is topological-order; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-09",
+      "contentIdentity": "acbc0e36f107b6daab056cf028265b7eea829a21e0ee0e7227f67e946cb6ac15",
+      "secondaryTopics": [],
+      "approachTags": [
+        "reverse-topological-elimination",
+        "terminal-elimination"
+      ],
+      "rationale": "All three references start at zero-outdegree terminals and decrement predecessor outdegrees in the reverse graph. Only vertices eliminated into the terminal-safe region are returned; cycles and their unsafe predecessors remain. This is reverse-topological terminal elimination, not a topological ordering of the entire possibly cyclic input."
+    },
+    {
+      "problemId": "graphs-10",
+      "contentIdentity": "ecfa4f1083661b005af4182bc172ab49ccd731e96e549019d3c04f6e7a7f20e0",
+      "secondaryTopics": [],
+      "approachTags": [
+        "euler-trail",
+        "stack"
+      ],
+      "rationale": "Construct a directed Euler trail using every original edge occurrence exactly once, or certify impossibility. The classified approach is euler-trail, stack; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-11",
+      "contentIdentity": "c222c256aab0195b6f30f3a2c8faa3233c5c8938c1d4443d6f1cd02d87d76c4d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "lowlink"
+      ],
+      "rationale": "Identify undirected original edges whose removal increases the graph component count, using alternate-route information. The classified approach is depth-first-search, lowlink; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-12",
+      "contentIdentity": "f916806d70e79dd076ec1fc5c516910a5d39d448af733b7548a87d9d06c362a6",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "strong-components"
+      ],
+      "rationale": "Partition every directed vertex into maximal mutually reachable groups, distinguishing one-way reachability from strong connectivity. The classified approach is depth-first-search, strong-components; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "graphs-13",
+      "contentIdentity": "58ae8a58a5ee32673ab5ee25afdfe88448bc1ba0f889d7cc036578ab2560058c",
+      "secondaryTopics": [],
+      "approachTags": [
+        "indegree-peeling",
+        "cycle-basin-propagation"
+      ],
+      "rationale": "All three references peel zero-indegree vertices, identify the remaining directed cycles, then traverse the removed order backward to propagate each cycle length and approach depth. The cyclic graph is not assigned a full topological order."
+    },
+    {
+      "problemId": "intervals-05",
+      "contentIdentity": "9d4336c5a07761e37db2bb2f672b247089d498dffb94dd0a222d0e790063da8b",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "event-sweep",
+        "prefix-sum"
+      ],
+      "rationale": "Find the maximum signed weight simultaneously active on half-open intervals using grouped endpoint events. The classified approach is event-sweep, prefix-sum; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "intervals-06",
+      "contentIdentity": "9abb3db599feba93f7f77b0981a46a6ec9655d2c06ecda1f89d0e3bbef517fe8",
+      "secondaryTopics": [],
+      "approachTags": [
+        "coverage-counter",
+        "stateful-history"
+      ],
+      "rationale": "Maintain half-open interval union length under handle-owned insertion, replacement and removal operations. The classified approach is coverage-counter, stateful-history; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "intervals-04",
+      "contentIdentity": "ddde0bb8f4fa3499b6de4b22fc95944496f477becbf6943a0609765c55fca603",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sorting",
+        "coordinate-compression",
+        "fenwick-tree"
+      ],
+      "rationale": "Count other enclosing intervals for every original record while handling equal endpoints and duplicate records. The classified approach is sorting, coordinate-compression, fenwick-tree; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "intervals-02",
+      "contentIdentity": "cc41c82958cbd24ce27b36bb0ed14241517f31293a3c040c3737eda337c8cd83",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "two-pointers"
+      ],
+      "rationale": "Compute all closed real-line ranges covered by two individually disjoint sorted calendars. The classified approach is two-pointers; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "intervals-03",
+      "contentIdentity": "9ec255ba5537224fe6a66266fe1d8da11bb0d9857caf3f54031a5297c81f0129",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sorting",
+        "gap-invariant"
+      ],
+      "rationale": "Find the earliest fixed-duration free interval inside a bounded half-open scheduling window. The classified approach is sorting, gap-invariant; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-19",
+      "contentIdentity": "5b67354e37ef08d3ed2ae9269e98b87341795315a5fc5f9dd3b012c7cc9d3e92",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "dynamic-programming",
+        "counting-recurrence"
+      ],
+      "rationale": "Count complete two-row board coverings while accounting for partial frontier shapes. The classified approach is dynamic-programming, counting-recurrence; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "dp-1d-20",
+      "contentIdentity": "e48189b87cb468146d2bed9e2d29831cfb5526b3b4c3c2e460651bdc20c3d4cc",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "variable-reach-transition"
+      ],
+      "rationale": "Minimize the cost of covering required travel dates with passes whose validity is measured in consecutive calendar days. The classified approach is dynamic-programming, variable-reach-transition; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-21",
+      "contentIdentity": "c5053f3264a21cb61a4fca594dd16fb48bba3de76b83eda8e04610cfd6e20a9a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "temporal-action-state"
+      ],
+      "rationale": "Optimize complete buy/sell transactions while distinguishing a just-sold state from cash that is allowed to buy. The classified approach is dynamic-programming, temporal-action-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-22",
+      "contentIdentity": "5cdd7950338c198ae6c3292262028bd7c01263c3d8ccb9f0e2abce90d8d246e4",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "combinatorial-recurrence"
+      ],
+      "rationale": "Count permutations in which every labelled item leaves its original position, using the paired-cycle insertion cases. The classified approach is combinatorial-recurrence; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "dp-1d-23",
+      "contentIdentity": "b651ae32071e773fc54255eb3af2636251aafa4e3f48ec06a5bbbb35d429172d",
+      "secondaryTopics": [
+        "intervals",
+        "binary-search"
+      ],
+      "approachTags": [
+        "dynamic-programming",
+        "binary-search",
+        "compatible-predecessor"
+      ],
+      "rationale": "Choose a maximum-reward nonoverlapping schedule by combining a job with the best compatible predecessor prefix. The classified approach is dynamic-programming, binary-search, compatible-predecessor; secondary topics identify the additional algorithmic concepts intervals, binary-search."
+    },
+    {
+      "problemId": "dp-1d-24",
+      "contentIdentity": "f70e00c11ae9a0f67dad3c39401e83533f3807ced61bac9314d95b93f9ee0194",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "sign-state"
+      ],
+      "rationale": "Maximize an indexed subsequence whose nonzero consecutive differences alternate sign. The classified approach is dynamic-programming, sign-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "greedy-01",
+      "contentIdentity": "6684b72e84f1935870f04e3cdb9a47812d8787d46c137dde8db3a16940cfdf90",
+      "secondaryTopics": [],
+      "approachTags": [
+        "greedy",
+        "reachable-frontier"
+      ],
+      "rationale": "Minimize forward jumps by committing only after scanning the complete reachable frontier. The classified approach is greedy, reachable-frontier; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "greedy-02",
+      "contentIdentity": "b0d87c57924b6b07d4ebde1dd153efe8615c5e7012b4eeeaabf0d486e1112432",
+      "secondaryTopics": [],
+      "approachTags": [
+        "greedy",
+        "prefix-reset"
+      ],
+      "rationale": "Discard an entire failed prefix when selecting the smallest start that can complete a circular route. The classified approach is greedy, prefix-reset; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "greedy-03",
+      "contentIdentity": "b4318a983b01bfc7b5f059c6bcfd7bc49670d1b56e664b536b73f6ca2aaec1f8",
+      "secondaryTopics": [],
+      "approachTags": [
+        "greedy",
+        "bidirectional-constraints"
+      ],
+      "rationale": "Meet both neighboring rating inequalities with the minimum global candy total. The classified approach is greedy, bidirectional-constraints; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "greedy-04",
+      "contentIdentity": "b9345263c9aa0b02448a6c5d4fa54ba6444a2ae62e131526218c9d1431bfddeb",
+      "secondaryTopics": [
+        "intervals"
+      ],
+      "approachTags": [
+        "greedy",
+        "sorting",
+        "slot-allocation"
+      ],
+      "rationale": "Choose and place unit-time jobs to maximize reward while preserving earlier deadline capacity. The classified approach is greedy, sorting, slot-allocation; secondary topics identify the additional algorithmic concepts intervals."
+    },
+    {
+      "problemId": "greedy-05",
+      "contentIdentity": "0dff14dc5f756fa04cbecbc551c01a24b42eec1ba7dc5858623cecf9cf3dc6cc",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "greedy",
+        "monotonic-stack"
+      ],
+      "rationale": "Delete an exact number of indexed digits while preserving order and minimizing the resulting numerical value. The classified approach is greedy, monotonic-stack; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "greedy-08",
+      "contentIdentity": "d38d9e208768e5091128fd1270541a0732706f5639b43dd5bc6719a894bbef24",
+      "secondaryTopics": [],
+      "approachTags": [
+        "greedy",
+        "sorted-merge"
+      ],
+      "rationale": "Minimize repeated merge costs by repeatedly combining the two lightest available components. The classified approach is greedy, sorted-merge; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "greedy-06",
+      "contentIdentity": "4f3c21a15c2cbfd1be6ae52d5f3cca78e0605f2cb7892bfd6ccc5f513fa7f808",
+      "secondaryTopics": [
+        "heap"
+      ],
+      "approachTags": [
+        "greedy",
+        "heap"
+      ],
+      "rationale": "Minimize refueling stops by selecting the largest refill among already reachable stations only when reach must increase. The classified approach is greedy, heap; secondary topics identify the additional algorithmic concepts heap."
+    },
+    {
+      "problemId": "greedy-07",
+      "contentIdentity": "ae6a9592812d420914137148085e67f49262027a752401ca7d792e2568146621",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "greedy",
+        "monotonic-stack",
+        "future-feasibility"
+      ],
+      "rationale": "Select one occurrence of each required letter while preserving order and minimizing lexicographic text. The classified approach is greedy, monotonic-stack, future-feasibility; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "heap-09",
+      "contentIdentity": "2b8b99b62d326ba024ae1f8c0a5c7045109b4492aefd8035120eae23ca46cb14",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "lazy-invalidation",
+        "stateful-history"
+      ],
+      "rationale": "Process stable-priority task extraction with cancellation and safe reuse of inactive handles. The classified approach is heap, lazy-invalidation, stateful-history; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-12",
+      "contentIdentity": "7cc35e5a33f8c13991ac8d23c3da39f730ef655e8f2fedf7f24ede1e32b36515",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "multistream-frontier"
+      ],
+      "rationale": "Enumerate the leading Cartesian index pairs by a stable sum ranking without constructing every pair. The classified approach is heap, multistream-frontier; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "tries-03",
+      "contentIdentity": "168dbf9d260dd9b067f4e95eae6623d994e0877bf28e592447952adfea15fa53",
+      "secondaryTopics": [],
+      "approachTags": [
+        "trie",
+        "contribution-counting"
+      ],
+      "rationale": "For each literal query, sum dictionary-occurrence counts over its nonempty prefixes, equivalently summing longest-common-prefix lengths with every dictionary occurrence. The classified approach is trie, contribution-counting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-01",
+      "contentIdentity": "7a978fac55561450ae4c65cbce7b70ab0671a8955481455d7ddff7f5f3a07ee0",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "grid-state"
+      ],
+      "rationale": "Count monotone grid routes while resetting blocked states and combining two incoming directions. The classified approach is dynamic-programming, grid-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-02",
+      "contentIdentity": "90da71d3f441c37d5b6b2696f5df580e79451405ac2082f7f4b1a032f8fb8389",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "grid-state"
+      ],
+      "rationale": "Minimize a monotone grid route using the cheaper incoming state and include both endpoints. The classified approach is dynamic-programming, grid-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-03",
+      "contentIdentity": "f3e9413d07f93de504adbee2537f24bbc87b0813ff2c37e63d93236304096ffb",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "two-prefix-state"
+      ],
+      "rationale": "Maximize a common subsequence length by matching or skipping positions in two prefixes. The classified approach is dynamic-programming, two-prefix-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-04",
+      "contentIdentity": "eea68a73d2bc60018f35086b0796b909a80763a055f16cede8905fcf0de1cde9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "two-prefix-state"
+      ],
+      "rationale": "Minimize insert, delete and replace operations over a pair of sequence prefixes. The classified approach is dynamic-programming, two-prefix-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-05",
+      "contentIdentity": "f11134fe838beca3c8ecf4698ab9d58f9c70cd8adb4e16e751704f12dd312e50",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "two-prefix-state",
+        "counting-recurrence"
+      ],
+      "rationale": "Count source index selections that spell one fixed target, preserving order and multiplicity. The classified approach is dynamic-programming, two-prefix-state, counting-recurrence; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-06",
+      "contentIdentity": "9429675daf1d80fbb35496b59824e60dc69024671a488b6677f011b61dac2774",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "two-prefix-state"
+      ],
+      "rationale": "Decide whether each target position can consume the next character of either source while preserving both orders. The classified approach is dynamic-programming, two-prefix-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-07",
+      "contentIdentity": "5fd32fe711fdbb168b786be4800ce4f49eed84b451cb9d493a06c995e04b623e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "bounded-selection"
+      ],
+      "rationale": "Maximize total value under a capacity limit while consuming each indexed item at most once. The classified approach is dynamic-programming, bounded-selection; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-08",
+      "contentIdentity": "356292cff498864e1f6ef4bdbafa2c3a58a93b459d802d8d6af3eaf9e4d941c9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "two-prefix-state",
+        "pattern-consumption"
+      ],
+      "rationale": "Match the entire text using zero-or-more star consumption and exactly-one question-mark consumption. The classified approach is dynamic-programming, two-prefix-state, pattern-consumption; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-09",
+      "contentIdentity": "8279cb4e4c4a10982246019801cf045274404dbdcc8fe81a607b07c04ab7b966",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "interval-state"
+      ],
+      "rationale": "Minimize parenthesization cost without changing matrix order, accounting for the shapes of both subproducts. The classified approach is dynamic-programming, interval-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-10",
+      "contentIdentity": "afb39e9cc6bc178a50b4e11909d192ad80de7e757fc8a622c00feba45d40a5a9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "paired-position-state"
+      ],
+      "rationale": "Optimize two simultaneous downward routes with coupled column states and count an occupied shared cell once. The classified approach is dynamic-programming, paired-position-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-2d-11",
+      "contentIdentity": "20ecdcfec4dc997fc2b5be8098d6c17605a963d65f4f822a49a898f0374a5238",
+      "secondaryTopics": [
+        "graphs",
+        "bit-manipulation"
+      ],
+      "approachTags": [
+        "bitmask-dp",
+        "last-vertex-state"
+      ],
+      "rationale": "Minimize an edge-order-dependent directed Hamiltonian cycle using a visited subset and last vertex. The classified approach is bitmask-dp, last-vertex-state; secondary topics identify the additional algorithmic concepts graphs, bit-manipulation."
+    },
+    {
+      "problemId": "intervals-01",
+      "contentIdentity": "3df05115f7532c7bc9d79e626cb04f4daa9f9491fca0b5469f3c82672fa334bc",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sorting",
+        "sorted-merge"
+      ],
+      "rationale": "Represent the union of closed real-line intervals as sorted disjoint coverage ranges. The classified approach is sorting, sorted-merge; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-03",
+      "contentIdentity": "4c499e89d0eb43cbb94bae016e79cd195ba67deadd6fc27ecb9eb250d7532bdb",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "segment-grammar"
+      ],
+      "rationale": "Enumerate every valid segmentation under both segment grammar and remaining-length constraints. The classified approach is backtracking, segment-grammar; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-04",
+      "contentIdentity": "8460311740844ffde1a9f6f9ed367042cff4651eaba27cf04f4718a64c3746e3",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "constraint-state"
+      ],
+      "rationale": "Enumerate complete bijections satisfying position-specific permissions, restoring both the path and used-item state between branches. The classified approach is backtracking, constraint-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-05",
+      "contentIdentity": "78be4ad23840d97f44af1a147ab52fd59957091a1abd631d4bd05af6793c35b3",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "bounded-multiplicity"
+      ],
+      "rationale": "Enumerate bounded multiplicity vectors for a wide target without inventing stock or duplicate orderings. The classified approach is backtracking, bounded-multiplicity; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-06",
+      "contentIdentity": "aa0196fba067a16f8b78b7e12868a566bc21f777b2dd3bdb5a378b457e9341f1",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "backtracking",
+        "prefix-pruning"
+      ],
+      "rationale": "Enumerate all balanced completions while respecting fixed symbols and pruning irrecoverable prefixes. The classified approach is backtracking, prefix-pruning; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "backtracking-07",
+      "contentIdentity": "9830c542e3b355146c50d4bd4bb45be97833eafbf061c8542ab8b89e2201eaa2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "constraint-state"
+      ],
+      "rationale": "Enumerate complete grids under intersecting row, column and block constraints while respecting all fixed clues. The classified approach is backtracking, constraint-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-08",
+      "contentIdentity": "3f67e2cac3a0503e66a46a7f308da4bea1e1c0c5f65f9f7fb310afc68e9647f2",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "backtracking",
+        "precedence-state"
+      ],
+      "rationale": "Enumerate operand boundaries and operators while maintaining multiplication precedence and canonical decimal literals. The classified approach is backtracking, precedence-state; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "backtracking-09",
+      "contentIdentity": "39c5994221c133b8fe6b3731fbb6847a62e5118719b72dc43e06efa476567345",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "backtracking",
+        "constraint-state"
+      ],
+      "rationale": "Enumerate nonattacking placements with blocked squares and immutable row-specific queen constraints. The classified approach is backtracking, constraint-state; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "backtracking-10",
+      "contentIdentity": "e9451cb4eaff2731267a08288bfa1c2bcef51ed5bc04864e6e3aeabd07045e2c",
+      "secondaryTopics": [
+        "intervals"
+      ],
+      "approachTags": [
+        "backtracking",
+        "schedule-simulation"
+      ],
+      "rationale": "Enumerate all original-task orders feasible under release times, durations and inclusive deadlines, pruning failed prefixes. The classified approach is backtracking, schedule-simulation; secondary topics identify the additional algorithmic concepts intervals."
+    },
+    {
+      "problemId": "arrays-hashing-04",
+      "contentIdentity": "d70bf0d7003dfdeb478a5b0421deeedc6d1ee57979b70708603ac913482c5126",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-map",
+        "sorting"
+      ],
+      "rationale": "Count signed values and return deterministic sorted value/count pairs. The classified approach is hash-map, sorting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-05",
+      "contentIdentity": "26c88d1bea6d3b02c6e9115076b59804593fd8b6f5f2eaf8368b70870bdd0c6f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-map",
+        "linear-scan"
+      ],
+      "rationale": "Remove duplicate values while preserving first-appearance order. The classified approach is hash-map, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-06",
+      "contentIdentity": "fbd8c12409ae84f38489e0121dde1bdddfed1d912bca14e62299601f85748aa4",
+      "secondaryTopics": [],
+      "approachTags": [
+        "arithmetic",
+        "linear-scan"
+      ],
+      "rationale": "Find the one missing label from a complete0..n range with distinct inputs. The classified approach is arithmetic, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-07",
+      "contentIdentity": "0fd7784580652c97117d252293bb7d2a7c3e9b8a814abea26bd5c4e9b864e4b1",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-map",
+        "linear-scan"
+      ],
+      "rationale": "Find a target-sum index pair with explicit deterministic tie-breaking. The classified approach is hash-map, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-08",
+      "contentIdentity": "b5cbcdacf313c802d9c0e9535f90d6ae090c48edff3ba4632611f8d8ee953d15",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-map",
+        "sorting",
+        "canonical-key"
+      ],
+      "rationale": "Group words by letter multiplicities while retaining duplicates and deterministic output. The classified approach is hash-map, sorting, canonical-key; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-09",
+      "contentIdentity": "5e123f5acbe93aacb45262da4d94630ba468d2b21afcbc37d702a1e60b38818e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "prefix-sum"
+      ],
+      "rationale": "Return every prefix sum including the empty prefix. The classified approach is prefix-sum; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-10",
+      "contentIdentity": "821db0301256e20b27eb17097895e006d1c23b15f4bef4c642ec68670bc6b13d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "prefix-product"
+      ],
+      "rationale": "Combine prefix and suffix products without dividing or mishandling zeros. The classified approach is prefix-product; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-11",
+      "contentIdentity": "89b4c60669d16f25e14c9845b735528001186de97c2214fe91e235795647ad7a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-set",
+        "run-boundary"
+      ],
+      "rationale": "Find the longest consecutive-value run while ignoring duplicates and original positions. The classified approach is hash-set, run-boundary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-12",
+      "contentIdentity": "6c072d8370d7a14a6f9b43590595c83dda9eedd71e3b0e2a53021d059e06ff4d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "prefix-sum"
+      ],
+      "rationale": "Find the earliest boundary splitting signed values into two nonempty equal-sum parts. The classified approach is prefix-sum; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-13",
+      "contentIdentity": "64edf277f08ee0da1b1085bfb9d8ed92dc300b75b00108d43e1831050fa31e43",
+      "secondaryTopics": [],
+      "approachTags": [
+        "candidate-cancellation"
+      ],
+      "rationale": "Verify whether a label appears strictly more than half the time. The classified approach is candidate-cancellation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-14",
+      "contentIdentity": "43ebcc6265d383b59093255465236deae2ff13b1e096cb643ee0be56809a986e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "prefix-sum",
+        "hash-map"
+      ],
+      "rationale": "Count nonempty contiguous segments whose signed sum matches a target. The classified approach is prefix-sum, hash-map; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-15",
+      "contentIdentity": "89e897c260535d317285f1c014a30162348eb69ef8ed12912537a884c24f2841",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sorting",
+        "linear-scan"
+      ],
+      "rationale": "Find the minimum length of one contiguous region whose sorting orders the whole array. The classified approach is sorting, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-16",
+      "contentIdentity": "060043433aa3c36142d4668e9e69f49d54f4beb010cd53805416adfd450d39fe",
+      "secondaryTopics": [],
+      "approachTags": [
+        "prefix-sum",
+        "hash-map"
+      ],
+      "rationale": "Find the longest contiguous span containing equally many zeros and ones. The classified approach is prefix-sum, hash-map; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-17",
+      "contentIdentity": "dd67ce2d69589288a205337152b6e6e8db7343ba967f0e90bda70f20678ff482",
+      "secondaryTopics": [],
+      "approachTags": [
+        "matrix-transform",
+        "original-state-flags"
+      ],
+      "rationale": "Zero rows and columns based only on zeros in the original matrix. The classified approach is matrix-transform, original-state-flags; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "arrays-hashing-18",
+      "contentIdentity": "6147e407a70257612e10402c870b5f41c9349ecb5eb717cf8bece3fe0456825b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "hash-map",
+        "sorting"
+      ],
+      "rationale": "Merge preaggregated sorted histograms by adding shared-label weights without expanding them. The classified approach is hash-map, sorting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-01",
+      "contentIdentity": "ac4f715f8c60de6b6dd0253e71b5815b9a9655d7e6ea311dd1ea972d63c685a6",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers"
+      ],
+      "rationale": "Visit the two ends of a sequence and build its reversed order. The classified approach is two-pointers; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-02",
+      "contentIdentity": "02fa40b6bdb23bb36aba0bd701a0ccadf162c074857b30fd8b51701121e5e572",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers"
+      ],
+      "rationale": "Recognize symmetry by comparing opposite character pairs until a mismatch is found. The classified approach is two-pointers; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-03",
+      "contentIdentity": "b92aee5b6ca73a115289b451bdbedd34a6d8b973f2e9607c2f15192884b3ea90",
+      "secondaryTopics": [],
+      "approachTags": [
+        "read-write-compaction"
+      ],
+      "rationale": "Move zeros behind nonzero readings while preserving the original nonzero order and every input entry. The classified approach is read-write-compaction; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-04",
+      "contentIdentity": "922611311c0aafdd3f8a9bffaeec6819066523a677a26f083e29a4abebf87354",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers",
+        "sorted-merge"
+      ],
+      "rationale": "Advance the cursor pointing to the smaller next value and retain all remaining values. The classified approach is two-pointers, sorted-merge; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-05",
+      "contentIdentity": "4f084c96cc1b496102d433fc50bb195b7c707f2c34a116f404630f4a113c7c04",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers"
+      ],
+      "rationale": "Place the largest remaining square at the end while comparing opposing absolute magnitudes. The classified approach is two-pointers; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-06",
+      "contentIdentity": "c9d7126fea387388ea3e4c4fac513ac36f1807068274aaa541c6d1d07aeb5cbc",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers",
+        "equal-run-counting"
+      ],
+      "rationale": "Count every matching pair of distinct positions, including multiplicities in equal-value runs. The classified approach is two-pointers, equal-run-counting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-07",
+      "contentIdentity": "dcb731d96fcb72a8299156bbc3d4019330208835696a54123bd52b5c4cce06f1",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sorting",
+        "two-pointers"
+      ],
+      "rationale": "Anchor one value and search opposing pairs while reporting each value triple once. The classified approach is sorting, two-pointers; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "two-pointers-08",
+      "contentIdentity": "0eda40c726a9c0caf518391a22bed3bdaec80855a174eb6f1a989c0803f55161",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers",
+        "greedy"
+      ],
+      "rationale": "Justify eliminating the shorter boundary while optimizing height times distance. The classified approach is two-pointers, greedy; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "two-pointers-09",
+      "contentIdentity": "44214f93b56195ba82e141b322bea62202c39e17d60a68e5f5001f72db0147fc",
+      "secondaryTopics": [
+        "sliding-window"
+      ],
+      "approachTags": [
+        "sliding-window"
+      ],
+      "rationale": "Transform endpoint removal into the longest contiguous middle with a complementary sum. The classified approach is sliding-window; secondary topics identify the additional algorithmic concepts sliding-window."
+    },
+    {
+      "problemId": "two-pointers-10",
+      "contentIdentity": "fb52b757f3d1034166be6cdf97bad125c245a67f03f770f0d998ba5055a3b6d2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "two-pointers",
+        "run-boundary"
+      ],
+      "rationale": "Compare two compressed sequences by consuming the smaller remaining run without expanding large counts. The classified approach is two-pointers, run-boundary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "sliding-window-01",
+      "contentIdentity": "cfb1df6b703e42bf87c744f4b11e25a4c97eb2431eced25e29a1783f25c52d93",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sliding-window",
+        "rolling-aggregate"
+      ],
+      "rationale": "Update a fixed-length total by removing the old left value and adding the new right value. The classified approach is sliding-window, rolling-aggregate; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "sliding-window-02",
+      "contentIdentity": "221b7b13324b32411befa70ce6e4ad548d2fddb95df339ff1f280057028777cf",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "hash-map"
+      ],
+      "rationale": "Maintain distinct-value count while duplicate readings enter and leave a window. The classified approach is sliding-window, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-03",
+      "contentIdentity": "0b08270aadc39a75dee49a9204e48c6b25260b8e6ca3327d2e26726d10418eb2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sliding-window"
+      ],
+      "rationale": "Shrink a valid positive-sum window to find the smallest qualifying batch. The classified approach is sliding-window; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "sliding-window-04",
+      "contentIdentity": "5a43b01b8c0b2743b69aa57d65c474451e305348bc68759b3d60bc071a857a79",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "hash-map"
+      ],
+      "rationale": "Move the left boundary past the last occurrence of a repeated letter. The classified approach is sliding-window, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-05",
+      "contentIdentity": "d2b1c34227cff3c7ee4ef75c3c22c3f44b75acb64eb9a452dd6bb6576d231236",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sliding-window"
+      ],
+      "rationale": "Keep the number of zero readings within a repair budget as the window moves. The classified approach is sliding-window; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "sliding-window-06",
+      "contentIdentity": "18d3d2a2b3ff59d50b9240239742c287009b6160389c73d5d9475a00bdc07ff6",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "hash-map"
+      ],
+      "rationale": "Track which required letter copies remain missing while shrinking a complete cover. The classified approach is sliding-window, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-07",
+      "contentIdentity": "480c0f6aaec954efe27be86214a6e52faf3192c7f830de60dba2fa75f941ba2c",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "frequency-counting"
+      ],
+      "rationale": "Compare a fixed window letter multiset with a pattern and report overlapping matches. The classified approach is sliding-window, frequency-counting; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-08",
+      "contentIdentity": "5928e631e707ac8bbe3531b681657406f846da0c9143e5516667c228db874d96",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "monotonic-deque"
+      ],
+      "rationale": "Retain decreasing candidate maxima and remove expired positions. The classified approach is sliding-window, monotonic-deque; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "sliding-window-09",
+      "contentIdentity": "b489e4b8fa84520006bb6029ed3f8c2b66588e0e5ea53040fba9871405668e10",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sliding-window",
+        "count-valid-endings"
+      ],
+      "rationale": "Count all valid subarrays ending at each right boundary instead of only one optimum. The classified approach is sliding-window, count-valid-endings; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "sliding-window-10",
+      "contentIdentity": "7591162604fd3499e359f74008228b5ca8b8fcfc069b81061135ca0f7c49e166",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "hash-map"
+      ],
+      "rationale": "Maintain a frequency map while limiting the number of different values in the current batch. The classified approach is sliding-window, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-11",
+      "contentIdentity": "47f68c3f31b10d8495548b3b819032b4962f113d206742d0fc750edc7aa079b0",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "hash-map"
+      ],
+      "rationale": "Shrink every window that contains enough distinct values while preserving multiplicity counts. The classified approach is sliding-window, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "sliding-window-12",
+      "contentIdentity": "b269bc52e65d908729bc3a142dbf0691d6ce7b5a664a409cb4ed2ddbb47566cb",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "sliding-window",
+        "monotonic-deque"
+      ],
+      "rationale": "Maintain both the maximum and minimum while shrinking a spread-constrained window. The classified approach is sliding-window, monotonic-deque; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "stack-01",
+      "contentIdentity": "6e4477f8f38b7ce60359dde737e41875e5db051df9f58f6d46431c00fe5811b5",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack"
+      ],
+      "rationale": "Use last-in-first-out state to verify delimiter type and nesting order. The classified approach is stack; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-02",
+      "contentIdentity": "01ea86ec1e3958219295f2b42e76353b604b7b9494fcfb1a20543b514a34e614",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack",
+        "stateful-history"
+      ],
+      "rationale": "Apply push and undo commands and report the current top after every event. The classified approach is stack, stateful-history; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-03",
+      "contentIdentity": "22beb7d987a5f29d925e1617a704f2c436948c7fcfbe526aa21fdeed7fbbcd5b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack"
+      ],
+      "rationale": "Keep unresolved letters and allow removals to expose another matching pair. The classified approach is stack; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-04",
+      "contentIdentity": "1ded976eaf9bc20f13878b1d613e73b6df6018c157b1df5a815bdb29b4b7a9dd",
+      "secondaryTopics": [],
+      "approachTags": [
+        "monotonic-stack"
+      ],
+      "rationale": "Resolve earlier pending positions when a strictly larger reading appears. The classified approach is monotonic-stack; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-05",
+      "contentIdentity": "75630dc5ed83fa8a9d3a24a3234458abfe1030a815dfdba4e21954b8f6c9952f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "monotonic-stack",
+        "circular-scan"
+      ],
+      "rationale": "Reuse a monotonic candidate stack during a bounded second traversal. The classified approach is monotonic-stack, circular-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-06",
+      "contentIdentity": "1b83c6b3729f6551b3d2da853c422e8a33437b97f55238e2e5c0220d5c350eea",
+      "secondaryTopics": [],
+      "approachTags": [
+        "monotonic-stack"
+      ],
+      "rationale": "Identify how far each bar height can extend before a shorter boundary stops it. The classified approach is monotonic-stack; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-07",
+      "contentIdentity": "8672d017a89c4a92a35307c3a32940fe4bc5390baf06d830b2bcd7a1d0076da7",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "stack",
+        "arithmetic"
+      ],
+      "rationale": "Pop the right operand before the left operand when evaluating postfix arithmetic. The classified approach is stack, arithmetic; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "stack-08",
+      "contentIdentity": "a64d5247d65c37422ae823309f97ae8b4021b56bec21ba66504969932df72952",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack",
+        "operation-simulation"
+      ],
+      "rationale": "Validate whether pushing unique labels in a fixed order can produce a proposed pop order by interleaving operations. The classified approach is stack, operation-simulation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-09",
+      "contentIdentity": "bc9f027b618f4839403ce4f5471ff858dbef8027843d8ca42f1b311bc7a493e5",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack",
+        "collision-simulation"
+      ],
+      "rationale": "Resolve a chain of collisions against the latest surviving right-moving object. The classified approach is stack, collision-simulation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-11",
+      "contentIdentity": "fd4206f36961ff13d890cfa086e60cb28c77380c27d6530d601b1fa3e9ea97cd",
+      "secondaryTopics": [],
+      "approachTags": [
+        "monotonic-stack",
+        "contribution-counting"
+      ],
+      "rationale": "Attribute each subarray minimum to one position using asymmetric handling of equal values. The classified approach is monotonic-stack, contribution-counting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-10",
+      "contentIdentity": "89e4835a344db045a204ff3349a73adca3c9308cc9dccbcac8586b03948aa820",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack",
+        "nested-aggregation"
+      ],
+      "rationale": "Accumulate values inside stack frames while validating delimiter types. The classified approach is stack, nested-aggregation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "stack-12",
+      "contentIdentity": "3b8fc8ca67a33dbaef1b360c4c47d296c28d6aa2cd7881be1b0fb0bb7d0d571a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stack",
+        "nested-aggregation"
+      ],
+      "rationale": "Remember the surrounding prefix and repeat count while decoding a nested block safely. The classified approach is stack, nested-aggregation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-01",
+      "contentIdentity": "0043d0e8fad7af980c8a925a5665f700ce8f062c366cd42e6890f2b64cbf56d3",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search"
+      ],
+      "rationale": "Locate an exact value in strictly increasing readings by halving a search range. The classified approach is binary-search; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-02",
+      "contentIdentity": "ec51c370cb8319c65bd3f8b76095b4931206e6ec3ebf308018a050ad330807af",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search"
+      ],
+      "rationale": "Find the first position satisfying a threshold, including duplicates and a missing boundary. The classified approach is binary-search; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-03",
+      "contentIdentity": "f1118cb43f1af654dfe947ea96c29302025c86d2a80fdda1049ac2fac304aaa4",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search"
+      ],
+      "rationale": "Combine lower and upper boundaries to count sorted readings in a closed value interval. The classified approach is binary-search; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-01",
+      "contentIdentity": "7a071a24ca567df778cf5578ecb67b5c58ec2bc06f21d03d6f0200f96038b382",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "counting-recurrence"
+      ],
+      "rationale": "Count ordered one-unit/two-unit routes by combining smaller state counts. The classified approach is dynamic-programming, counting-recurrence; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-02",
+      "contentIdentity": "f29ca55ae6078f10a062f5ca72ce140d22740ec5b7aee1106904be41aa5578b1",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "last-choice-state"
+      ],
+      "rationale": "Minimize daily workstation costs while remembering the previous chosen workstation for switching charges. The classified approach is dynamic-programming, last-choice-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-03",
+      "contentIdentity": "bad04df190e85ee74ea4962c74eb9112010fcde8865570932fbaed051dc683cf",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "take-or-skip"
+      ],
+      "rationale": "Choose rewards with no neighboring selections by comparing take and skip decisions. The classified approach is dynamic-programming, take-or-skip; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-04",
+      "contentIdentity": "1d9e8204175adecd01d64ac0ce97af48f3cc7d211d72c8f6af739bce7c129e7e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "boundary-split"
+      ],
+      "rationale": "Maximize nonadjacent rewards when the first and last positions also conflict. The classified approach is dynamic-programming, boundary-split; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-05",
+      "contentIdentity": "e77cfe6697e4149ad9f91e37d96f2f8e0b6bfe85764e5ff8c9343d9bb405f341",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "segment-grammar"
+      ],
+      "rationale": "Count valid one-digit and two-digit message splits while rejecting leading-zero and out-of-range tokens. The classified approach is dynamic-programming, segment-grammar; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-06",
+      "contentIdentity": "1595778d8681193f57b635a941f485a57b083769161b3896780a1441890336e0",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "unbounded-choice"
+      ],
+      "rationale": "Minimize the number of reusable positive denominations forming an exact amount, preserving unreachable states. The classified approach is dynamic-programming, unbounded-choice; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-07",
+      "contentIdentity": "4e3b2891fb4d807d228d20aa79310b4f5a54d52f9093d1b1cb9bbddc6d906bda",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "unbounded-choice",
+        "counting-recurrence"
+      ],
+      "rationale": "Count unordered denomination multiplicities rather than ordered sequences or the fewest coins. The classified approach is dynamic-programming, unbounded-choice, counting-recurrence; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-08",
+      "contentIdentity": "309528dfed14885838574651a24b329070e484db215233ac658021364607c290",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "bounded-selection"
+      ],
+      "rationale": "Track reachable sums when each indexed item can be chosen at most once, including zero and duplicate-valued items. The classified approach is dynamic-programming, bounded-selection; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-09",
+      "contentIdentity": "53332f3a84cacf8033c11878cd922455a311345e511d1e12d6559c5f54f5a131",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "ordered-segmentation"
+      ],
+      "rationale": "Choose ordered line boundaries minimizing squared unused width, with a free last line and indivisible words. The classified approach is dynamic-programming, ordered-segmentation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-04",
+      "contentIdentity": "4208a5969eedf84369bcd7cfc0c1785e07f34dd2d0801d4f37d791d6fd2c7b77",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search",
+        "rank-counting"
+      ],
+      "rationale": "Search a monotone missing-count function in sparse labels instead of enumerating the gaps. The classified approach is binary-search, rank-counting; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-05",
+      "contentIdentity": "17bdfbaafc335faa3bdaa164b52eb951166bee9d7e5a621278ed4b27823a930f",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "answer-space-search",
+        "arithmetic"
+      ],
+      "rationale": "Find the greatest feasible integer in an implicit ordered domain using safe arithmetic. The classified approach is answer-space-search, arithmetic; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "binary-search-06",
+      "contentIdentity": "fc951f9f0baebe40b6c93a931baa89bc36c454404b83db121e2eef79e3eca549",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search",
+        "rotated-order"
+      ],
+      "rationale": "Locate the split in a rotated strictly increasing sequence using ordered segments. The classified approach is binary-search, rotated-order; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-07",
+      "contentIdentity": "7489cded79abcacacb6753f76605b18b055641be8a8d6cf7402698c0afcdd124",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search",
+        "rotated-order"
+      ],
+      "rationale": "Find an exact target by identifying which half of a rotated distinct sequence stays sorted. The classified approach is binary-search, rotated-order; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-08",
+      "contentIdentity": "4f2a7f3dfec504549a31f95ec1f6bea8937f3ba1ed6d9f7d10410bf2ce0c5646",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search",
+        "slope-invariant"
+      ],
+      "rationale": "Return any neighbor-local peak by maintaining an interval guaranteed to contain a peak. The classified approach is binary-search, slope-invariant; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-09",
+      "contentIdentity": "24a8e3abb66ac8c343f9c82bde49a42db5875d3e6e092cb878c6ff924f2746bb",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "two-pointers",
+        "matrix-frontier"
+      ],
+      "rationale": "Eliminate an entire row or column using a matrix ordered in two directions without assuming row-major total order. The classified approach is two-pointers, matrix-frontier; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "binary-search-10",
+      "contentIdentity": "662705148e5709b51ec5768d8a43f5769ef84f7cca2e171e7427bb5b0fda49cd",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "answer-space-search",
+        "arithmetic"
+      ],
+      "rationale": "Find the minimum rate when each separate job consumes a whole number of clock slots and interjob pauses cannot be shared. The classified approach is answer-space-search, arithmetic; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "binary-search-11",
+      "contentIdentity": "6c2b9f4c505330f6a0389e04b0d97f3b543e3cc7b72c6c918159d017e97b8141",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "answer-space-search",
+        "greedy"
+      ],
+      "rationale": "Find a capacity that partitions ordered indivisible weights into at most a given number of contiguous daily loads. The classified approach is answer-space-search, greedy; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "binary-search-12",
+      "contentIdentity": "951589414d03e20b09ff827c5e30e0a4d80d59340fb8fe422b46826e5a900605",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "answer-space-search",
+        "greedy"
+      ],
+      "rationale": "Choose k distinct positions so the smallest distance between neighboring chosen positions is as large as possible. The classified approach is answer-space-search, greedy; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "binary-search-13",
+      "contentIdentity": "1edadb17e1b5e6b55e1c7648a85a83a881ebc77fbe6ef29f683dd38d181b256d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search",
+        "partition-balance"
+      ],
+      "rationale": "Partition two sorted lists at the combined midpoint while searching only the shorter list. The classified approach is binary-search, partition-balance; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "binary-search-14",
+      "contentIdentity": "81e28ef94d2a7cda59060a41dc26a8110defd5767b1081359b14edb505d83342",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "answer-space-search",
+        "rank-counting"
+      ],
+      "rationale": "Select a ranked product in an implicit multiplication table by counting cells below a candidate value, including duplicates. The classified approach is answer-space-search, rank-counting; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "bit-manipulation-01",
+      "contentIdentity": "8d27d7024dd217e35dfe9b33494e236cbcfc0af558cea2434a8c10f96cc0a575",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "lowest-bit-removal"
+      ],
+      "rationale": "Count the one bits in a fixed unsigned 32 bit representation. The classified approach is bitwise, lowest-bit-removal; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-02",
+      "contentIdentity": "5a796cd5c888ceb2bd2f5ec15765af55f340e32b33b9b6d1f64ffeeb011e75e2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "inclusive-mask"
+      ],
+      "rationale": "Extract the unsigned value stored in an inclusive range of a 32-bit packed word. The classified approach is bitwise, inclusive-mask; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-03",
+      "contentIdentity": "7475c1d62ba200448414a913ce76fc57d3066f1f75e76eb2d3a6b65523bad227",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "fixed-width-transform"
+      ],
+      "rationale": "Reverse a complete 32 bit pattern while retaining its leading zeros. The classified approach is bitwise, fixed-width-transform; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-04",
+      "contentIdentity": "7d986ebb35ad3b8313aed66ae7af205e65070c1bbee6cef98d408eb97b4ce24e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "prefix-cycle"
+      ],
+      "rationale": "Use the repeating four-value prefix pattern to XOR a whole integer interval. The classified approach is bitwise, prefix-cycle; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-05",
+      "contentIdentity": "fe92b801c100c4745b57e22badbc667790b019cc7b85e1ce2a6c3a0f888ca61f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "cancellation-invariant"
+      ],
+      "rationale": "Cancel paired contributions to identify the one odd-frequency value. The classified approach is bitwise, cancellation-invariant; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-06",
+      "contentIdentity": "d925bbc81b7f6fa8aba431c397bcee633c45581093a80f64c0717564edb83645",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "partition-mask"
+      ],
+      "rationale": "Separate two odd-frequency labels with a differing bit before cancellation. The classified approach is bitwise, partition-mask; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-07",
+      "contentIdentity": "f854d1a1dd2d2223fdb70b2d33b8a246ccf31c156355f93ca211f57da9f97dc8",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "bitwise",
+        "contribution-counting"
+      ],
+      "rationale": "Sum XOR values over all unordered pairs of distinct positions through independent bit contributions. The classified approach is bitwise, contribution-counting; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "bit-manipulation-08",
+      "contentIdentity": "0495996d6fb102c067a12d7afcda6a1907d2d604d8db2e81c1a0e76cae5ee59c",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "common-prefix"
+      ],
+      "rationale": "Find the bits retained by AND across every integer in an inclusive interval. The classified approach is bitwise, common-prefix; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-10",
+      "contentIdentity": "051ef2f384970ce027bd02809c48370afdcb2ffad7b1e5fcbfbee5e891b9f6d9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "stateful-history"
+      ],
+      "rationale": "Apply repeated indexed toggles to a fixed-width switch mask. The classified approach is bitwise, stateful-history; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-09",
+      "contentIdentity": "16707765de5bfe92c79d67ef7f5cc09a16dec3544674440fc4831b1bc7f425dd",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "carry-boundary"
+      ],
+      "rationale": "Find the least greater 31 bit word containing the same number of one bits. The classified approach is bitwise, carry-boundary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-11",
+      "contentIdentity": "43d7e2857e7cbb3485550baa895ce1d5f70df84ca57052beafe2a9baf824b1a4",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "fixed-width-transform"
+      ],
+      "rationale": "Map a binary ordinal to its reflected Gray codeword with one-bit transitions between consecutive ordinals. The classified approach is bitwise, fixed-width-transform; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-12",
+      "contentIdentity": "7712b8348aa69ca8f53f1b55224137a33122845e12536d1a6688a52f25a780f2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bitwise",
+        "greedy-prefix-feasibility"
+      ],
+      "rationale": "Find the largest XOR achievable by two distinct array positions. The classified approach is bitwise, greedy-prefix-feasibility; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "bit-manipulation-13",
+      "contentIdentity": "66ee738a9eebc3932144dd4cdf94f5cf1ec749ac38416ec3fc144227bcb2cd87",
+      "secondaryTopics": [
+        "dp-1d"
+      ],
+      "approachTags": [
+        "bitmask-dp",
+        "assignment-state"
+      ],
+      "rationale": "Find a bijection between two equal-length label arrays minimizing the sum of pairwise XOR costs. The classified approach is bitmask-dp, assignment-state; secondary topics identify the additional algorithmic concepts dp-1d."
+    },
+    {
+      "problemId": "bit-manipulation-14",
+      "contentIdentity": "61f5886c8249cb5162b5352b2e0b700a0cf84ea40047322cf8fbfb422376583a",
+      "secondaryTopics": [
+        "dp-1d"
+      ],
+      "approachTags": [
+        "bitmask-dp",
+        "cover-state"
+      ],
+      "rationale": "Minimize the number of selected people whose combined skill masks contain every required skill. The classified approach is bitmask-dp, cover-state; secondary topics identify the additional algorithmic concepts dp-1d."
+    },
+    {
+      "problemId": "linked-list-01",
+      "contentIdentity": "ea1ac6ebbf15841e171f9dd97b86fe70c136069f7dd9106bef85a761301b4d8f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "linear-scan"
+      ],
+      "rationale": "Return a sorted native linked list with exactly one additional occurrence of the supplied value. The classified approach is linked-rewiring, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-02",
+      "contentIdentity": "b9edb4f5f14506a8907b20a230fa6804c9adc0208b9d66e94db1144f2fac883e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "linear-scan"
+      ],
+      "rationale": "Unlink every matching node, including repeated matches at the head, while preserving the order of remaining values. The classified approach is linked-rewiring, linear-scan; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-03",
+      "contentIdentity": "3a1181ca5447dafee47d80db39160044fe7b3d11f255a94c0875753ede6f7cfc",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "two-pointers",
+        "original-identity"
+      ],
+      "rationale": "Locate a node with a fixed gap between traversal cursors and return its original identity rather than a copy with an equal value. The classified approach is two-pointers, original-identity; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "linked-list-04",
+      "contentIdentity": "d14e6c25a5b942bb11c1b067d64383a9f552205006e7456b6255022923a516d4",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "two-pointers",
+        "cycle-detection",
+        "original-identity"
+      ],
+      "rationale": "Distinguish a cycle meeting point from its entry and return the exact original entry node. The classified approach is two-pointers, cycle-detection, original-identity; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "linked-list-05",
+      "contentIdentity": "d4ee672989175a62266b6b17892b94df14bd8775dde5ad15fe268f03236485c6",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "two-pointers",
+        "original-identity"
+      ],
+      "rationale": "Return the first shared original node of two acyclic chains, distinguishing equal values from shared pointer identity. The classified approach is two-pointers, original-identity; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "linked-list-06",
+      "contentIdentity": "038f256bb40fb45556dd9a547c1e8d1149fcf053a62bc6d904b465e9e2ffcce7",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "arithmetic",
+        "linked-construction",
+        "carry-boundary"
+      ],
+      "rationale": "All three references append a fresh reversed-decimal result chain through a dummy head, propagate the base-ten carry, then trim redundant high-order zero nodes to a canonical single zero when necessary. The label describes result construction and carry handling, not mutation of either input chain."
+    },
+    {
+      "problemId": "linked-list-07",
+      "contentIdentity": "c27efb0cb14061a013df4759da72ac117c1cad2b6889a291402012c3bd95b03c",
+      "secondaryTopics": [
+        "arrays-hashing",
+        "graphs"
+      ],
+      "approachTags": [
+        "identity-map",
+        "breadth-first-search"
+      ],
+      "rationale": "Allocate an independent clone preserving next/random topology, cycles, duplicate values and sharing without any original-node alias. The classified approach is identity-map, breadth-first-search; secondary topics identify the additional algorithmic concepts arrays-hashing, graphs."
+    },
+    {
+      "problemId": "linked-list-08",
+      "contentIdentity": "96649445944afc982f0a5ea181172db041dd50a768527f8430cc3684438c6c9f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring"
+      ],
+      "rationale": "Reverse each complete group of k native linked-list values while preserving an incomplete trailing group in its original order. The classified approach is linked-rewiring; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-09",
+      "contentIdentity": "0d5ad7e888f3c504393e80070e953af90f540caf900fd0b3d7accfbf283ae01f",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "combinatorial-recurrence",
+        "original-identity"
+      ],
+      "rationale": "Select the original surviving node in a circular elimination schedule without confusing its value with its identity. The classified approach is combinatorial-recurrence, original-identity; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "linked-list-10",
+      "contentIdentity": "ec74200a323b97c685bd2d082e8ce4aaee7c9b6bb1cfb01efb7babff48b66f3a",
+      "secondaryTopics": [
+        "two-pointers"
+      ],
+      "approachTags": [
+        "linked-rewiring",
+        "two-pointers"
+      ],
+      "rationale": "Relink original nodes in first,last,second,second-last order without replacing equal-valued nodes or changing their values. The classified approach is linked-rewiring, two-pointers; secondary topics identify the additional algorithmic concepts two-pointers."
+    },
+    {
+      "problemId": "linked-list-11",
+      "contentIdentity": "630df9172b8c3a5ac027aa064a1919f9499a05d63a15e8fb16b7a2d3e81c0412",
+      "secondaryTopics": [],
+      "approachTags": [
+        "divide-and-conquer",
+        "sorted-merge",
+        "original-identity"
+      ],
+      "rationale": "Order original nodes by nondecreasing value while preserving the original relative order of equal-valued nodes. The classified approach is divide-and-conquer, sorted-merge, original-identity; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-12",
+      "contentIdentity": "77c807fcc8be247e30529848680aa3752e99674d90f990874b5456883af9954a",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "hash-map",
+        "linked-rewiring",
+        "stateful-history"
+      ],
+      "rationale": "Maintain cache recency across reads, inserts, updates, and evictions, including a zero-capacity cache. The classified approach is hash-map, linked-rewiring, stateful-history; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "linked-list-13",
+      "contentIdentity": "89c4f4a06550c1d7a247a7fb5e95f6d1fe81b21a985ab59556c7cf006fe3c6d2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "stable-partition"
+      ],
+      "rationale": "Relink original nodes into less-than-pivot and at-least-pivot buckets while preserving order inside each bucket. The classified approach is linked-rewiring, stable-partition; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-14",
+      "contentIdentity": "dd4ff92cecc0c6d426d332d0b663ae312e0ccd1907a1a219019e1ab221e5c254",
+      "secondaryTopics": [],
+      "approachTags": [
+        "stateful-history",
+        "cursor-navigation"
+      ],
+      "rationale": "Maintain a current history position, clamp back/forward navigation, and discard the forward branch after a new visit. The classified approach is stateful-history, cursor-navigation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-15",
+      "contentIdentity": "a2a36f6bf559071dcda455ca240aa9209033b8c59a0f72b06c8fa862de7fd500",
+      "secondaryTopics": [],
+      "approachTags": [
+        "sorted-merge",
+        "original-identity",
+        "alias-awareness"
+      ],
+      "rationale": "Merge the disjoint prefixes of sorted native chains stably, then append their shared suffix exactly once. The classified approach is sorted-merge, original-identity, alias-awareness; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-16",
+      "contentIdentity": "400145833a2267985bde775a41890294b6c1e6e6b3540f61e3361631a81ffada",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "run-boundary"
+      ],
+      "rationale": "Remove an entire repeated-value run rather than keeping one representative, preserving the identities of uniquely occurring nodes. The classified approach is linked-rewiring, run-boundary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-01",
+      "contentIdentity": "0f2cf4abe9d5d1ef0b23ed413ce468ac16869392ad0c5d63b688c806f9452a4d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search"
+      ],
+      "rationale": "Visit native child links and count each existing binary-tree node once. The classified approach is depth-first-search; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-02",
+      "contentIdentity": "d29c46ab6b56f007413bbbbf97d9525fa3bac891ddbc4fb7abba310a6fcf3f5b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "arithmetic"
+      ],
+      "rationale": "Recognize nodes with neither child and sum only their signed values using a wide accumulator. The classified approach is depth-first-search, arithmetic; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-03",
+      "contentIdentity": "d2ec730483bf117dbab4b9cd887d600705a2a0fab8f625e958103ecc6406b94c",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "depth-tracking"
+      ],
+      "rationale": "Compute the greatest number of nodes on a root-to-leaf route, handling skewed and sparse trees. The classified approach is breadth-first-search, depth-tracking; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-04",
+      "contentIdentity": "6ab71d52d0d208f8a234a0636d5ed5add368f0e364f898d59d444b67bf68c3d8",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "depth-first-search",
+        "stack"
+      ],
+      "rationale": "Produce preorder values from native child links while preserving duplicate visits and left-before-right ordering. The classified approach is depth-first-search, stack; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "heap-01",
+      "contentIdentity": "a2fb28e8b8fdb170b2e8780712c7f8c1cea968d8d3666212cef85d0d2ae562b6",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "bounded-frontier"
+      ],
+      "rationale": "Retain the k largest multiset readings and return them in descending order. The classified approach is heap, bounded-frontier; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-02",
+      "contentIdentity": "25c0c95e053cd999fdd77bcaf031b2f7d94f13a361c2de5bf210e3c6680a68df",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "bounded-frontier"
+      ],
+      "rationale": "Track the kth-largest multiset reading after each new stream arrival. The classified approach is heap, bounded-frontier; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-04",
+      "contentIdentity": "1fecf5d2373b8a9116b6abf8fd43e486ab4304fb4de39e88dbdffbd6e36207a7",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "dynamic-eligibility"
+      ],
+      "rationale": "Follow deterministic hiring from the first and last remaining candidate windows, revealing a new candidate only from the chosen side. The classified approach is heap, dynamic-eligibility; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-06",
+      "contentIdentity": "a258ededb17f3c2df2c3cebe1a9e653a2dcd592e4fddd88d00ad396a34ab928d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "multiset-simulation"
+      ],
+      "rationale": "Simulate deterministic largest-pair subtraction until at most one stone remains. The classified approach is heap, multiset-simulation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-05",
+      "contentIdentity": "a615029f758e39674bffd0a78be1654a6ddc3187d8d61ac6bb432309d7ddac43",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "heap",
+        "hash-map"
+      ],
+      "rationale": "Select distinct labels by descending occurrence count with ascending numeric tie order. The classified approach is heap, hash-map; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "heap-07",
+      "contentIdentity": "bb0ab68e9d23ce15641c7969eebfd439f8a1e5c1e40c5ebff7827eac0fbfe9f2",
+      "secondaryTopics": [],
+      "approachTags": [
+        "heap",
+        "partition-balance"
+      ],
+      "rationale": "Maintain the exact median of each growing ordered prefix, returning twice its value. The classified approach is heap, partition-balance; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-08",
+      "contentIdentity": "f313e72758765cf21e7a17142b26a4ceeaab9e20aab27e9b635184d2c98190ec",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "hash-map",
+        "cooldown-lower-bound",
+        "greedy"
+      ],
+      "rationale": "Minimize elapsed unit intervals when repeated task labels require a fixed cooldown. The classified approach is hash-map, cooldown-lower-bound, greedy; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "heap-11",
+      "contentIdentity": "8a14cedcbf22dab83d639d5fb6a92c78b76a51317ea0466dfa0407fc9fae18cc",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "heap",
+        "greedy",
+        "dynamic-eligibility"
+      ],
+      "rationale": "Maximize final capital after at most k one-use projects whose eligibility changes with earned profit. The classified approach is heap, greedy, dynamic-eligibility; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "trees-22",
+      "contentIdentity": "a10274f76a47a4b1923764a658270a41462474633efd2c14bf1e0321a2e99145",
+      "secondaryTopics": [],
+      "approachTags": [
+        "inorder-traversal",
+        "original-identity"
+      ],
+      "rationale": "Return the original native node at a one-based key rank, or null when that rank does not exist. The classified approach is inorder-traversal, original-identity; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-23",
+      "contentIdentity": "327f6df07336851560bb0cce9b634658de82c4b93627cf92b0b6c52bee48068b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search-tree-route",
+        "range-pruning"
+      ],
+      "rationale": "Sum every native key in the inclusive bounds, pruning branches ruled out by strict subtree ordering. The classified approach is binary-search-tree-route, range-pruning; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-17",
+      "contentIdentity": "7a7ef4449ceee576ab01ca24b7f2fe22e534e38b69d8f1309f7858a4dfa283ff",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "identity-map",
+        "ancestor-chain",
+        "original-identity"
+      ],
+      "rationale": "Return the deepest original node that is an ancestor of both native target objects, allowing repeated values and identical targets. The classified approach is identity-map, ancestor-chain, original-identity; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "linked-list-22",
+      "contentIdentity": "ffa0ccc4616810af989caae735352f191d777eee395932e1f23d03db8425189b",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "depth-first-search",
+        "linked-rewiring",
+        "original-identity"
+      ],
+      "rationale": "Flatten original multilevel native nodes in node/child/next order, clearing child fields and making a valid reciprocal doubly linked chain. The classified approach is depth-first-search, linked-rewiring, original-identity; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "tries-01",
+      "contentIdentity": "788f95cb833bdbd78757aee42978b19fffc832d7bff9597d932c2833d55fa1b1",
+      "secondaryTopics": [],
+      "approachTags": [
+        "trie",
+        "prefix-navigation"
+      ],
+      "rationale": "Replace each word with its shortest dictionary prefix while preserving unmatched words and their order. The classified approach is trie, prefix-navigation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "tries-02",
+      "contentIdentity": "bc51905bfe6a8b55cfd8a44042c38dc4b953daf85bb2952fb649b67398560da5",
+      "secondaryTopics": [
+        "backtracking"
+      ],
+      "approachTags": [
+        "trie",
+        "backtracking"
+      ],
+      "rationale": "Decide whether one whole dictionary word matches a literal-and-one-letter-wildcard pattern. The classified approach is trie, backtracking; secondary topics identify the additional algorithmic concepts backtracking."
+    },
+    {
+      "problemId": "backtracking-01",
+      "contentIdentity": "12e661ede8ad53c0f254b2fa1f7b369fc67ec44a7a29703f5a544b454d79b15b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "prefix-pruning"
+      ],
+      "rationale": "Enumerate every fixed-length ordered string from an allowed digit set whose digit sum equals the target. The classified approach is backtracking, prefix-pruning; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "backtracking-02",
+      "contentIdentity": "ee133ef55bb4fe1de6c49d80b97d88759e79506feea84f28c6f9449661f3e0c8",
+      "secondaryTopics": [],
+      "approachTags": [
+        "backtracking",
+        "cardinality-pruning"
+      ],
+      "rationale": "Enumerate original-position subsets of exactly k entries having the target signed total, keeping equal-valued positions distinct. The classified approach is backtracking, cardinality-pruning; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "heap-13",
+      "contentIdentity": "c57183eab394d394d54794ef6318face77a45f6754b7bda566d5ebd40f037b49",
+      "secondaryTopics": [
+        "math-geometry"
+      ],
+      "approachTags": [
+        "heap",
+        "parity-reachability"
+      ],
+      "rationale": "Minimize the range of positive values using parity-dependent doubling and halving operations. The classified approach is heap, parity-reachability; secondary topics identify the additional algorithmic concepts math-geometry."
+    },
+    {
+      "problemId": "dp-1d-17",
+      "contentIdentity": "b42164c0d8a23cdf94cb0f604a0d59fa5f89d511be39f2a1b4b1ac0ecaec4316",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "interval-state"
+      ],
+      "rationale": "Count all indexed contiguous palindromes using mirrored endpoints and their previously solved interior. The classified approach is dynamic-programming, interval-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-18",
+      "contentIdentity": "f01879b482c045248124f5637fd2dd0dfcc114438276c93bf1a501369fdeebac",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "ordered-segmentation",
+        "interval-state"
+      ],
+      "rationale": "Partition every character into palindrome pieces while minimizing cuts between consecutive pieces. The classified approach is dynamic-programming, ordered-segmentation, interval-state; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-10",
+      "contentIdentity": "412bfcbae75be013cca23921a758698672a2bc5a368e22b177084c367b09e132",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "counting-recurrence"
+      ],
+      "rationale": "Count mandatory sign choices for every indexed item, including distinct plus/minus choices on zero. The classified approach is dynamic-programming, counting-recurrence; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-11",
+      "contentIdentity": "40de3d5409a3fb40560464a168db30ea76b1ff1fa3fa57aee1b0545003fa4bb5",
+      "secondaryTopics": [
+        "binary-search"
+      ],
+      "approachTags": [
+        "binary-search",
+        "tail-frontier"
+      ],
+      "rationale": "Find the length of a strictly increasing indexed subsequence without requiring contiguous positions. The classified approach is binary-search, tail-frontier; secondary topics identify the additional algorithmic concepts binary-search."
+    },
+    {
+      "problemId": "dp-1d-12",
+      "contentIdentity": "bcc3ab15785d0bbc8871f879c9734feeea6d92ea013e831bc85a6fee214d167d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "optimal-count-ties"
+      ],
+      "rationale": "Count all indexed subsequences tied for the maximum strict increasing length, merging and replacing counts correctly. The classified approach is dynamic-programming, optimal-count-ties; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-13",
+      "contentIdentity": "7a85804726e03cfef55358ae8d136e989b7f34e34c259eb75aa834ba86fe429b",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "restart-or-extend"
+      ],
+      "rationale": "Maximize a nonempty contiguous segment by deciding whether to restart or extend the ending state. The classified approach is dynamic-programming, restart-or-extend; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-14",
+      "contentIdentity": "883726085e53110c15efaa799c7ae6ca0b8342fefffb3c8a2b36c596b09743ed",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "signed-extrema"
+      ],
+      "rationale": "Track both ending extrema when maximizing a signed contiguous product; negative values exchange their roles. The classified approach is dynamic-programming, signed-extrema; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-15",
+      "contentIdentity": "a8ac4a358ef983f8a9cb775d6be7e479733a60ffea258c8e2f56eab45350d2e5",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "ordered-segmentation"
+      ],
+      "rationale": "Determine whether consecutive dictionary words cover every character exactly, without greedy boundary choices. The classified approach is dynamic-programming, ordered-segmentation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "dp-1d-16",
+      "contentIdentity": "38839e736deb8e7d8c0db9a32554f8e2fc650812169ca0a5824e01ff07d46e9d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "dynamic-programming",
+        "skip-or-cover"
+      ],
+      "rationale": "Minimize uncovered characters using disjoint dictionary substrings and explicit one-character skip transitions. The classified approach is dynamic-programming, skip-or-cover; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-05",
+      "contentIdentity": "2d63284461c4636ef507f4a5bac3e8355df06bc4f0ccf44d9c4eb8f93afacd99",
+      "secondaryTopics": [],
+      "approachTags": [
+        "postorder",
+        "subtree-summary"
+      ],
+      "rationale": "Group every original value by the round in which its node becomes a leaf after simultaneous previous removals. The classified approach is postorder, subtree-summary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-06",
+      "contentIdentity": "2bfe43d8b72be99c60aa3ec35b2a166558ed2a430159e601f81f840b56834c12",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "boundary-contour"
+      ],
+      "rationale": "Combine root, left boundary, ordered leaves, and reversed right boundary without repeating any node. The classified approach is depth-first-search, boundary-contour; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-07",
+      "contentIdentity": "d5968ae5ab4269935c68720427d62002f88c6c71719ab3658ffcb8cf1ededdcb",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search"
+      ],
+      "rationale": "Return every node value grouped by depth, preserving left-to-right order and capturing each level before adding its children. The classified approach is breadth-first-search; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-08",
+      "contentIdentity": "440952b91e23294e65a09c2ed364d043bf84568ac2a5f5af8483032106d5582a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "tree-mirror"
+      ],
+      "rationale": "Exchange left and right structure at every node, preserving the corresponding node values and sparse topology. The classified approach is depth-first-search, tree-mirror; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-09",
+      "contentIdentity": "f858a9965496719b95bdaa788800fdcb009d280f24cd23c85ef419585c09c59a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "paired-structure-comparison"
+      ],
+      "rationale": "Compare both node values and corresponding child structure of two independently supplied trees. The classified approach is paired-structure-comparison; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-10",
+      "contentIdentity": "daf4d89d3e79230fe93ee9202ce31c800693f24f73080d3ada6a8add6cf56d23",
+      "secondaryTopics": [],
+      "approachTags": [
+        "breadth-first-search",
+        "gap-invariant"
+      ],
+      "rationale": "Check the complete-tree shape rule: full earlier levels and a left-filled final level. The classified approach is breadth-first-search, gap-invariant; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-11",
+      "contentIdentity": "c039a74a30b3b4e6a45740403de721bb6508d62a3053110084e82ef8b69345db",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "branch-aggregate"
+      ],
+      "rationale": "Test whether one complete root-to-leaf route has the supplied signed total, without accepting internal prefixes or pruning negative values incorrectly. The classified approach is depth-first-search, branch-aggregate; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-12",
+      "contentIdentity": "23579803c84da07af92bd256a12f2f0f58a6e754fd8092f561c9fbbf19da973b",
+      "secondaryTopics": [
+        "greedy"
+      ],
+      "approachTags": [
+        "postorder",
+        "greedy",
+        "coverage-state"
+      ],
+      "rationale": "Minimize cameras placed on original tree nodes when each camera covers its parent, itself, and immediate children. The classified approach is postorder, greedy, coverage-state; secondary topics identify the additional algorithmic concepts greedy."
+    },
+    {
+      "problemId": "trees-13",
+      "contentIdentity": "8442f5d9205a66fb3ac25d4b8a6de12d7e7537f2f2d0cfc79e83f374c36f3d77",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bottom-up",
+        "subtree-summary"
+      ],
+      "rationale": "Verify that the two child subtree heights differ by at most one at every node. The classified approach is bottom-up, subtree-summary; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-14",
+      "contentIdentity": "3b802a4bf279d96cf8f726a2f6817e3429db46db459a21fc81a95720cfe3a503",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bottom-up",
+        "two-arm-join"
+      ],
+      "rationale": "Find the largest number of edges on any simple path between two native nodes. The classified approach is bottom-up, two-arm-join; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-15",
+      "contentIdentity": "fed50e78b611d32df8863703c866280a73f5bb20e50293f6eceda7cfcde84db8",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "bottom-up",
+        "hash-map",
+        "canonical-key"
+      ],
+      "rationale": "Count distinct complete rooted subtree types, including both values and child orientation, that occur at least twice. The classified approach is bottom-up, hash-map, canonical-key; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "trees-16",
+      "contentIdentity": "cbe127ed203326d3e2d99242d9f8650ce88f73859a9972f28911e98ac2fc447e",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "branch-aggregate"
+      ],
+      "rationale": "Count nodes whose values are at least every value on their own root-to-parent route. The classified approach is depth-first-search, branch-aggregate; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-25",
+      "contentIdentity": "5e14b80d03807ecc1a2c183dacaeb35fbcc26a304423bb4de846c82ce80d0613",
+      "secondaryTopics": [
+        "graphs"
+      ],
+      "approachTags": [
+        "breadth-first-search",
+        "graph-validation"
+      ],
+      "rationale": "Decide whether proposed parent indices describe exactly one nonempty rooted tree with at most two children per node. The classified approach is breadth-first-search, graph-validation; secondary topics identify the additional algorithmic concepts graphs."
+    },
+    {
+      "problemId": "trees-26",
+      "contentIdentity": "6dfeee49ec097515e410b6bf193e9fd6aa8f61445a2b5a623f74616d5bf6c869",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "prefix-sum",
+        "hash-map",
+        "depth-first-search"
+      ],
+      "rationale": "Count every nonempty ancestor-to-descendant route with the target signed sum, including routes beginning below the root and overlapping routes. The classified approach is prefix-sum, hash-map, depth-first-search; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "trees-27",
+      "contentIdentity": "2b4ac091203eef3d7169849f5cd24c970045e4aa307df3d2306dad2605eb560d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "parity-propagation"
+      ],
+      "rationale": "Find the minimum number of conceptual whole-subtree bit toggles that makes every node value zero. The classified approach is depth-first-search, parity-propagation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-28",
+      "contentIdentity": "ec0a8e107ab61ccd0f78252dab6b64725b695ec9099b4f2ac407c38a7cd90917",
+      "secondaryTopics": [],
+      "approachTags": [
+        "bottom-up",
+        "two-arm-join",
+        "branch-aggregate"
+      ],
+      "rationale": "Find the maximum signed total of a nonempty simple path between any two nodes, discarding harmful child branches without allowing an empty result. The classified approach is bottom-up, two-arm-join, branch-aggregate; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-29",
+      "contentIdentity": "75e625aee51aa9c5e9bd06d2e621987462d4914029c34ee104055616a1f6bebb",
+      "secondaryTopics": [
+        "dp-1d"
+      ],
+      "approachTags": [
+        "tree-state-dp"
+      ],
+      "rationale": "Maximize the total value of a selected original-node set containing no parent-child pair; allow the empty selection. The classified approach is tree-state-dp; secondary topics identify the additional algorithmic concepts dp-1d."
+    },
+    {
+      "problemId": "trees-30",
+      "contentIdentity": "0f870bfc8bf52ac00c44676960d5a4035789335aea671e359e49529f836fb03b",
+      "secondaryTopics": [
+        "dp-1d"
+      ],
+      "approachTags": [
+        "breadth-first-search",
+        "subtree-summary",
+        "rerooting"
+      ],
+      "rationale": "Return each native node’s total edge distance to every node, in breadth-first existing-node order. The classified approach is breadth-first-search, subtree-summary, rerooting; secondary topics identify the additional algorithmic concepts dp-1d."
+    },
+    {
+      "problemId": "trees-18",
+      "contentIdentity": "526067f42460fdd8d6ca39b1c23d9536d8d958d633104b731189bd92d4496f05",
+      "secondaryTopics": [],
+      "approachTags": [
+        "tree-rotation"
+      ],
+      "rationale": "Perform one specified root rotation, preserving the entire inorder value sequence and all unaffected subtree structure. The classified approach is tree-rotation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-19",
+      "contentIdentity": "3a854ff16fd70a6195df6ec96a8f684c9f7004ea474bad4a1cc3ff06f03ea0a9",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search-tree-route",
+        "linked-rewiring"
+      ],
+      "rationale": "Return the exact tree formed by adding an absent key at its search-route null child, while preserving existing structure. The classified approach is binary-search-tree-route, linked-rewiring; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-20",
+      "contentIdentity": "3ba69a4fdca7547f74b1be760b0427401269d76bee265405aa9ac3390ca4ba60",
+      "secondaryTopics": [],
+      "approachTags": [
+        "binary-search-tree-route",
+        "successor-splice"
+      ],
+      "rationale": "Remove one key while preserving the canonical successor-based tree shape, including the successor’s right child. The classified approach is binary-search-tree-route, successor-splice; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-21",
+      "contentIdentity": "8909aca2f8db5cb184a8fc8b823e34264726ab993e88577e814a8942a10c8d73",
+      "secondaryTopics": [],
+      "approachTags": [
+        "depth-first-search",
+        "ancestor-bounds"
+      ],
+      "rationale": "Test global strict search-tree ordering on an arbitrary native tree, including descendants and duplicate values. The classified approach is depth-first-search, ancestor-bounds; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "trees-24",
+      "contentIdentity": "b899222cce7e2a5fe9d250642fd4311c9bd7e5122c04bf6c3f8bc7a614542706",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "stack",
+        "traversal-partition"
+      ],
+      "rationale": "Reconstruct the unique native tree described by compatible distinct-valued preorder and inorder traversals. The classified approach is stack, traversal-partition; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "linked-list-17",
+      "contentIdentity": "f994bb9a3f92dd2d1d5baeefb4d662134d4af7cb151bec3758eceba2880083fd",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "stateful-history",
+        "original-identity"
+      ],
+      "rationale": "Apply cut-and-insert operations addressed by immutable original node indexes, rather than changing current positions or values. The classified approach is linked-rewiring, stateful-history, original-identity; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-18",
+      "contentIdentity": "425171d89b713c74372945fcbb6c18d54f6e9a56261422c6d0f70bf17f0aab71",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "arithmetic"
+      ],
+      "rationale": "Move a suffix to the front using a modular cut point while preserving all original node identities and values. The classified approach is linked-rewiring, arithmetic; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-19",
+      "contentIdentity": "352ebb5cec4941ddab30af797c8b8ee2b556a3c88c3bf9832aada35476685075",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring"
+      ],
+      "rationale": "Reverse one inclusive interval while preserving the prefix and suffix and returning the correct original head. The classified approach is linked-rewiring; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "linked-list-20",
+      "contentIdentity": "1acd14fe41a7ccbe92b0b724810b328673cd9af242e2d7ceca6f291a3d092bc0",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "prefix-sum",
+        "hash-map",
+        "linked-rewiring"
+      ],
+      "rationale": "Return an original-node subsequence obtainable by zero-sum block removal, with no zero-sum consecutive block left. The classified approach is prefix-sum, hash-map, linked-rewiring; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "linked-list-21",
+      "contentIdentity": "c04e62e4970f83df4e5ae5c8b480af03a5bbfcd1c9368eb61e2566a8caae040d",
+      "secondaryTopics": [],
+      "approachTags": [
+        "linked-rewiring",
+        "balanced-partition"
+      ],
+      "rationale": "Return k native heads whose disjoint consecutive chains preserve original node order, with earlier parts receiving any remainder. The classified approach is linked-rewiring, balanced-partition; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-01",
+      "contentIdentity": "a4bcc90cf20dda2b1a84538787c9c0162c3b5a4fcd8cde34db7bc1adfce5e571",
+      "secondaryTopics": [],
+      "approachTags": [
+        "arithmetic",
+        "digit-extraction"
+      ],
+      "rationale": "Reverse a signed integer’s decimal digits while enforcing a signed 32 bit result. The classified approach is arithmetic, digit-extraction; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-02",
+      "contentIdentity": "e21e9eaad9af6998959c95c0f45ab47ee9b8a26f46c119805fb269f94afe6c1a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "number-theory",
+        "euclidean-reduction"
+      ],
+      "rationale": "Find the largest positive common divisor of two signed integers, with explicit zero conventions. The classified approach is number-theory, euclidean-reduction; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-03",
+      "contentIdentity": "9f7b174a18ababf79c1356feccd19fd955816b01b9ac74181c68185a22bf8ef7",
+      "secondaryTopics": [],
+      "approachTags": [
+        "number-theory",
+        "exponent-decomposition"
+      ],
+      "rationale": "Compute a large nonnegative power modulo a positive modulus without constructing the full power. The classified approach is number-theory, exponent-decomposition; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-04",
+      "contentIdentity": "021a4a3460e64264a33cd1509e71c81a2f427f47b505dd4ffbe38ba12fd20093",
+      "secondaryTopics": [],
+      "approachTags": [
+        "number-theory",
+        "sieve"
+      ],
+      "rationale": "Count primes in an inclusive integer band using composite marking. The classified approach is number-theory, sieve; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-05",
+      "contentIdentity": "17082e4981e57c1f53c1d022821fd9b165ecb43f2d51b0a1bd5ebd82fe592911",
+      "secondaryTopics": [
+        "arrays-hashing"
+      ],
+      "approachTags": [
+        "arithmetic",
+        "cycle-detection"
+      ],
+      "rationale": "Decide whether repeated decimal digit-square transformation reaches one or enters another cycle. The classified approach is arithmetic, cycle-detection; secondary topics identify the additional algorithmic concepts arrays-hashing."
+    },
+    {
+      "problemId": "math-geometry-06",
+      "contentIdentity": "7ce482da1552a96a59b256460a436fdb3eb60d54287e5d544100e6c3b2fe842a",
+      "secondaryTopics": [],
+      "approachTags": [
+        "number-theory",
+        "prime-valuation"
+      ],
+      "rationale": "Count decimal trailing zeros in a huge factorial through the multiplicity of factor five. The classified approach is number-theory, prime-valuation; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-07",
+      "contentIdentity": "dd76d853d871f0b38719464262b5bc632ad3b03662d2198614cf282c8dfe01ef",
+      "secondaryTopics": [],
+      "approachTags": [
+        "matrix-transform"
+      ],
+      "rationale": "Rotate a square integer grid by a clockwise quarter turn. The classified approach is matrix-transform; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-08",
+      "contentIdentity": "75915fa9412f8b2f1fe3103f14baa44ea81638e720d3d49dc2466074dd20f885",
+      "secondaryTopics": [],
+      "approachTags": [
+        "boundary-contour"
+      ],
+      "rationale": "Read every cell exactly once while winding clockwise from the top-left corner inward. The classified approach is boundary-contour; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-15",
+      "contentIdentity": "1686fbeefa722e7ad2d42bbc0025852991828e4cd561745e8ce7f07e9456d9aa",
+      "secondaryTopics": [],
+      "approachTags": [
+        "arithmetic",
+        "euclidean-reduction"
+      ],
+      "rationale": "Perform one exact arithmetic operation on two rational numbers and return their canonical reduced representation. The classified approach is arithmetic, euclidean-reduction; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-09",
+      "contentIdentity": "40de64fd1a3e5011095fe825d6c6bdf0f8b438534c847f7c27f87e69f96a1150",
+      "secondaryTopics": [],
+      "approachTags": [
+        "geometry",
+        "arithmetic"
+      ],
+      "rationale": "Compute an axis-aligned rectangle area from unordered opposite integer corners. The classified approach is geometry, arithmetic; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-10",
+      "contentIdentity": "3f12f313b3ecf55dac3797fb49f772cec93e6653dacc82c851faf6d1f7061e13",
+      "secondaryTopics": [],
+      "approachTags": [
+        "geometry",
+        "cross-product"
+      ],
+      "rationale": "Test a complete integer point set for collinearity while tolerating repeated points. The classified approach is geometry, cross-product; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-11",
+      "contentIdentity": "e46bbf7e726fb03aeea95eb06ec00e6a06f722b50c72ce33cb75134335ff9027",
+      "secondaryTopics": [],
+      "approachTags": [
+        "geometry",
+        "cross-product",
+        "closed-boundaries"
+      ],
+      "rationale": "Detect proper crossings, shared endpoints, collinear overlap and degenerate intersections between closed integer segments. The classified approach is geometry, cross-product, closed-boundaries; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-16",
+      "contentIdentity": "cf5e8c63318a241fad025c566fdf6195eabeed8be26b1d8b444b58b259ab040f",
+      "secondaryTopics": [],
+      "approachTags": [
+        "geometry",
+        "arithmetic"
+      ],
+      "rationale": "Reflect an integer point across a translated vertical, horizontal or diagonal line exactly. The classified approach is geometry, arithmetic; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-12",
+      "contentIdentity": "d2795c14175086c19a2c0a8289592441129014e4dd58975f53029bd1d1a12091",
+      "secondaryTopics": [],
+      "approachTags": [
+        "geometry",
+        "ray-crossing",
+        "closed-boundaries"
+      ],
+      "rationale": "Classify an integer query point against a simple polygon while including boundary points. The classified approach is geometry, ray-crossing, closed-boundaries; the objective is classified within its primary topic; generic array storage or arithmetic alone is not treated as an additional curriculum topic."
+    },
+    {
+      "problemId": "math-geometry-13",
+      "contentIdentity": "134247d60989c9ae72045ca1e217bd32cb2e27db4ce74cf9d89238a046c55988",
+      "secondaryTopics": [
+        "stack"
+      ],
+      "approachTags": [
+        "geometry",
+        "sorting",
+        "monotonic-stack"
+      ],
+      "rationale": "Construct the extreme vertices of a point set’s convex hull in a canonical order. The classified approach is geometry, sorting, monotonic-stack; secondary topics identify the additional algorithmic concepts stack."
+    },
+    {
+      "problemId": "math-geometry-14",
+      "contentIdentity": "10f8bcbba8eac709951ac4e8c7fea42647bd8935002f195cc78f1fa96fcd1bd1",
+      "secondaryTopics": [
+        "intervals"
+      ],
+      "approachTags": [
+        "geometry",
+        "event-sweep"
+      ],
+      "rationale": "Compute the total area covered by possibly overlapping axis-aligned integer rectangles without double counting. The classified approach is geometry, event-sweep; secondary topics identify the additional algorithmic concepts intervals."
+    }
+  ]
+}

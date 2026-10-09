@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "3a854ff16fd70a6195df6ec96a8f684c9f7004ea474bad4a1cc3ff06f03ea0a9",
+  "reviewer": "CodeWise2 judge/content independent of the Tree problem author",
+  "reviewedAt": "2026-10-08T13:11:12.728Z",
+  "evidence": [
+    "docs/release-evidence/judge-tree-review/native-update-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/native-update-route-evidence.json",
+    "docs/release-evidence/judge-tree-review/assets-review-bundle.json"
+  ],
+  "assessmentScope": {
+    "sourceModule": "content/authoring/trees-bst-updates.mjs",
+    "sourceHash": "6a236cf5820c4af307a776ff7fca29801021a452371c011e48222f627f6fd35a",
+    "allNineCurrentLanguageAssets": {
+      "java": {
+        "starter": "a8c8fbefcda7513cb7256da495e11f65801df5636e28b1c1490ac686008d01b8",
+        "wrapper": "cc2968d3dbce820f7bc1d649a27d3799e842fa5ba72e8359c0d400435a9fe88d",
+        "reference": "d08b33d2da6fab2a42922f38270f4478fb9218315d1af2523f9f29b9c0b85760"
+      },
+      "cpp": {
+        "starter": "ec2d35943deaee34d0f36531cf165fb7898c7d841ee3b12a8354b6e30b742932",
+        "wrapper": "2ba418a78a44d9d8430c498bbfe431f3eab477868ab5d28223a2dd6fef1cf7cb",
+        "reference": "53b24f369613798d7f9e2177a0912b85f1b16887630dd069fe3c149eb2d0f881"
+      },
+      "python": {
+        "starter": "a7f016b1650f6795fa1a36f13b767cfa64c733a7a6a3c5cb2ada7de9599ec9f2",
+        "wrapper": "9f4bc219e87078ca365b815e63999238693d213e487e6ca76a5c63796f35c63f",
+        "reference": "94c1c01ab260d195ba12ecf7898725d02a2b026f28959e37308beb65aa0ec171"
+      }
+    },
+    "reviewedCommonPrefixGroups": {
+      "java": "java-2",
+      "cpp": "cpp-2",
+      "python": "python-2"
+    },
+    "actualSchemaAndWrapperContractReviewed": true,
+    "graphQualification": "New source not_tracked in generation2026-10-07T22:57:49; full direct source and actual native asset fallback used."
+  },
+  "limitations": [
+    "Content review is independent of author oracle and historical execution receipts; this is not publication or containment approval.",
+    "Conditional route checks assume genuinely eligible source and explicit independent teacher completions, without universal-history or mastery claims.",
+    "Final current243 global distinctness, all729 current-runtime references and public/private separation remain separate."
+  ],
+  "reviewType": "progression",
+  "rationale": "Step3 actually introduces the search-route comparisons before using the terminal null child for leaf insertion; its former search-route prerequisite is removed for this justified introduction, not granted by a bridge. Child links remain required. Same-step23 shares tested route practice but missing signed accumulation uses a real Arrays01 teacher. Deletion20 then legitimately requires independently demonstrated search-route skill.",
+  "conditionalRouteAssessment": {
+    "id": "trees-19",
+    "step": 3,
+    "routes": [
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-23",
+        "targetStep": 3,
+        "practiceAccessOnly": [
+          "trees.child-links",
+          "trees.bst-search-route"
+        ],
+        "simulatedIndependentTeachers": [
+          "arrays-hashing-01"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-13",
+        "targetStep": 3,
+        "practiceAccessOnly": [
+          "trees.child-links"
+        ],
+        "simulatedIndependentTeachers": [
+          "trees-03"
+        ],
+        "unresolved": []
+      },
+      {
+        "kind": "checkpointIds",
+        "targetId": "trees-16",
+        "targetStep": 3,
+        "practiceAccessOnly": [
+          "trees.child-links"
+        ],
+        "simulatedIndependentTeachers": [],
+        "unresolved": []
+      },
+      {
+        "kind": "nextIds",
+        "targetId": "trees-20",
+        "targetStep": 4,
+        "practiceAccessOnly": [],
+        "simulatedIndependentTeachers": [],
+        "unresolved": []
+      }
+    ]
+  }
+}

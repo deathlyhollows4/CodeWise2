@@ -1,0 +1,1 @@
+a and b are sparse histograms. Each pair[label,count] says that label occurs count times. Within each histogram, labels are strictly increasing and counts are positive. Merge them into one histogram with strictly increasing labels, adding counts when the same label occurs in both. Do not expand counts into repeated labels.

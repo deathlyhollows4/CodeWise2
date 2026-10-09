@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-05",
+  "version": "1.0.0",
+  "slug": "count-valid-digit-decodings",
+  "title": "Count valid digit decodings",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.counting-recurrence",
+    "strings.zero-sensitive-decoding"
+  ],
+  "prerequisites": [
+    "dp.one-dimensional-state"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Count valid one-digit and two-digit message splits while rejecting leading-zero and out-of-range tokens.",
+  "constraints": [
+    "0 <= digits.length <= 100000",
+    "Every character is a decimal digit 0..9",
+    "Return an integer in 0..1000000006"
+  ],
+  "interface": "Solution.solve(digits) returns the modular number of valid full-message decodings.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "digits": {
+        "kind": "string",
+        "minLength": 0,
+        "maxLength": 100000,
+        "ascii": true
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 1000000006
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-06"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-07",
+    "dp-1d-08"
+  ],
+  "rationale": "A valid last token contributes a preceding state; zero cannot form a token alone.",
+  "commonMistakes": [
+    "allow-zero-singletons",
+    "allow-every-nonzero-pair"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "alphabet",
+      "field": "digits",
+      "alphabet": "digits"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "status": "source-ready-exact-backend-handoff",
+  "generatedAt": "2026-10-08T12:47:56.272Z",
+  "sourceIds": [
+    "dp-2d-09",
+    "dp-2d-10",
+    "dp-2d-11",
+    "graphs-08",
+    "graphs-09",
+    "graphs-10",
+    "graphs-11",
+    "graphs-12",
+    "graphs-13",
+    "advanced-graphs-06"
+  ],
+  "nativeDispatch": "none",
+  "materializedWrites": false,
+  "rows": [
+    {
+      "id": "dp-2d-09",
+      "module": "content/authoring/dp2d-fourth.mjs",
+      "moduleSha256": "c5385ee2e193b3e769b46b63301b91584499f184d695f39a02415e3e0138cc73",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 5,
+        "checkpointIds": [
+          "dp-2d-10",
+          "dp-2d-11"
+        ],
+        "remedialIds": [
+          "dp-2d-03",
+          "dp-2d-04",
+          "dp-2d-07",
+          "dp-2d-08"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "dp.two-prefix-state"
+        ]
+      },
+      "changedMetadataFields": [
+        "checkpointIds",
+        "nextIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "42b99a4c03b53082e24de458a6a8a89d8d7ac8b3a445b0198f026c5425652e9e",
+      "currentMaterializedSuiteHash": "42b99a4c03b53082e24de458a6a8a89d8d7ac8b3a445b0198f026c5425652e9e",
+      "suiteChanged": false,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "dp-2d-10",
+      "module": "content/authoring/dp2d-fourth.mjs",
+      "moduleSha256": "c5385ee2e193b3e769b46b63301b91584499f184d695f39a02415e3e0138cc73",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 5,
+        "checkpointIds": [
+          "dp-2d-09",
+          "dp-2d-11"
+        ],
+        "remedialIds": [
+          "dp-2d-01",
+          "dp-2d-02",
+          "dp-2d-07",
+          "dp-2d-08"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "dp.two-coordinate-state",
+          "dp.two-prefix-state"
+        ]
+      },
+      "changedMetadataFields": [
+        "checkpointIds",
+        "nextIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "9b94fc6021a8bde110e68873af8880f9a84f5de578fa51aac0d732897ae1f9b5",
+      "currentMaterializedSuiteHash": "9b94fc6021a8bde110e68873af8880f9a84f5de578fa51aac0d732897ae1f9b5",
+      "suiteChanged": false,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "dp-2d-11",
+      "module": "content/authoring/dp2d-fourth.mjs",
+      "moduleSha256": "c5385ee2e193b3e769b46b63301b91584499f184d695f39a02415e3e0138cc73",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 5,
+        "checkpointIds": [
+          "dp-2d-09",
+          "dp-2d-10"
+        ],
+        "remedialIds": [
+          "bit-manipulation-13",
+          "dp-2d-02",
+          "dp-2d-07"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "bits.assigned-subset-state",
+          "dp.two-coordinate-state"
+        ]
+      },
+      "changedMetadataFields": [
+        "step",
+        "checkpointIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "25dbf3ebf0879ca143793bf26dd3a2e759fc119734c17382e2064977e609d06c",
+      "currentMaterializedSuiteHash": "25dbf3ebf0879ca143793bf26dd3a2e759fc119734c17382e2064977e609d06c",
+      "suiteChanged": false,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-08",
+      "module": "content/authoring/graphs-thread-third.mjs",
+      "moduleSha256": "c24522078ac8782ab44fed9dc0e652881b6d16f530a65cc7467612266db45824",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 4,
+        "checkpointIds": [
+          "graphs-07"
+        ],
+        "remedialIds": [
+          "graphs-01",
+          "graphs-03"
+        ],
+        "nextIds": [
+          "graphs-09",
+          "graphs-10"
+        ],
+        "prerequisites": [
+          "graphs.identity-discovery"
+        ]
+      },
+      "changedMetadataFields": [],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "d2fe3f67e84c42658149f0282d9e0b87094f645064ebce79335d559ae9302d54",
+      "currentMaterializedSuiteHash": "02184b6c530b46d311ab91e7b60daa3e162e9ef172b57e3c5925072fd59df57c",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-09",
+      "module": "content/authoring/graphs-thread-third.mjs",
+      "moduleSha256": "c24522078ac8782ab44fed9dc0e652881b6d16f530a65cc7467612266db45824",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 5,
+        "checkpointIds": [
+          "graphs-10"
+        ],
+        "remedialIds": [
+          "graphs-08"
+        ],
+        "nextIds": [
+          "graphs-11",
+          "graphs-12"
+        ],
+        "prerequisites": [
+          "graphs.directed-cycle-consequences"
+        ]
+      },
+      "changedMetadataFields": [],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "f086b16f6d4fcf427a2de2a489d24d4659ab01f25ae72fee7c0320e3eb05f9a4",
+      "currentMaterializedSuiteHash": "2ea43c7207a3deddba8bdce9b92868c5eb219d3e84edd297f9ef9a75c28abab6",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-10",
+      "module": "content/authoring/graphs-thread-fourth.mjs",
+      "moduleSha256": "3dda9e5bd3f103a5c579f28c1004d4ed477b84accf0ced5a6e5738d6a8b6da80",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 5,
+        "checkpointIds": [
+          "graphs-09"
+        ],
+        "remedialIds": [
+          "graphs-01",
+          "graphs-08"
+        ],
+        "nextIds": [
+          "graphs-11",
+          "graphs-12"
+        ],
+        "prerequisites": [
+          "graphs.directed-cycle-consequences"
+        ]
+      },
+      "changedMetadataFields": [],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "d66467f7d31cd0dc672573f8a7ec2ddfe88e77da9bed9aa0923d7a3d560470d8",
+      "currentMaterializedSuiteHash": "69db497f07d793f677ad5607a2a8bdee715d331dfe0bafa30654437dc0488ee5",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-11",
+      "module": "content/authoring/graphs-thread-fourth.mjs",
+      "moduleSha256": "3dda9e5bd3f103a5c579f28c1004d4ed477b84accf0ced5a6e5738d6a8b6da80",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 6,
+        "checkpointIds": [
+          "graphs-12",
+          "graphs-13"
+        ],
+        "remedialIds": [
+          "graphs-03",
+          "graphs-04"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "graphs.component-partition"
+        ]
+      },
+      "changedMetadataFields": [
+        "checkpointIds",
+        "nextIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "7d6c55508a3d8cd089f1a6b0ca2c54be56409ea1e9b2cbaca297d8016a4a9cc1",
+      "currentMaterializedSuiteHash": "f1aa9b12b68568105d249c8db96c667d678359835fa236f89b10a33e52dc0233",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-12",
+      "module": "content/authoring/graphs-thread-fifth.mjs",
+      "moduleSha256": "c8cafa06e4a1c8b801e0e384ea50627d6b03e1117be4884ad477d253425d9c39",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 6,
+        "checkpointIds": [
+          "graphs-11",
+          "graphs-13"
+        ],
+        "remedialIds": [
+          "graphs-03",
+          "graphs-08",
+          "graphs-09"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "graphs.component-partition"
+        ]
+      },
+      "changedMetadataFields": [
+        "checkpointIds",
+        "nextIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "5c5165bc418f2a281f1d7b9ae862613d1a95b3641a71c835ad11d595c6810f60",
+      "currentMaterializedSuiteHash": "0c03eae9d901c29a7161cb0a13cb95f6a43d458373671a998539bdae0686c78e",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "graphs-13",
+      "module": "content/authoring/graphs-thread-fifth.mjs",
+      "moduleSha256": "c8cafa06e4a1c8b801e0e384ea50627d6b03e1117be4884ad477d253425d9c39",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 6,
+        "checkpointIds": [
+          "graphs-11",
+          "graphs-12"
+        ],
+        "remedialIds": [
+          "graphs-09",
+          "graphs-12"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "graphs.strong-components"
+        ]
+      },
+      "changedMetadataFields": [
+        "step",
+        "checkpointIds"
+      ],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "ca06eac037ffc700898a61c3831dfa00e301ab480cf26c5651b5be0f04431ee0",
+      "currentMaterializedSuiteHash": "ca06eac037ffc700898a61c3831dfa00e301ab480cf26c5651b5be0f04431ee0",
+      "suiteChanged": false,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    },
+    {
+      "id": "advanced-graphs-06",
+      "module": "content/authoring/advanced-thread-third.mjs",
+      "moduleSha256": "11777f3559d2c517a461a2a5ad32957a675840be4444674dd0beaf7de7594ae0",
+      "version": "1.0.0",
+      "metadata": {
+        "step": 3,
+        "checkpointIds": [
+          "advanced-graphs-05"
+        ],
+        "remedialIds": [
+          "graphs-08",
+          "graphs-09",
+          "advanced-graphs-04"
+        ],
+        "nextIds": [],
+        "prerequisites": [
+          "graphs.directed-cycle-consequences"
+        ]
+      },
+      "changedMetadataFields": [],
+      "hiddenCount": 60,
+      "sourceSuiteHash": "c39c693b3633f69d2900621340d54604b0d19e1c17eb0b2f219bf96014984ce7",
+      "currentMaterializedSuiteHash": "1815a9c729b9a01e737030b67c2cc1c250c4515fb1de1bec2df0b0a73948906e",
+      "suiteChanged": true,
+      "refsStartersStatementSchemas": "Unchanged by these source repairs; suite selection and explicitly authorized metadata are the only intended pack changes."
+    }
+  ],
+  "testedReports": [
+    {
+      "path": "docs/release-evidence/dp2d-thread/fourth.json",
+      "sha256": "2c46e076208f96b02132f394599698358af7dac2af2808cae5c41d38cdeb0db2",
+      "status": "passed-source-only",
+      "command": "node content/authoring/dp2d-audit.mjs fourth"
+    },
+    {
+      "path": "docs/release-evidence/dp2d-thread/all.json",
+      "sha256": "9c4dad1b5b1dcc5eba2af84aaf469cc6405ecac22c266bf51d2bb0e50850ce5a",
+      "status": "passed-source-only",
+      "command": "node content/authoring/dp2d-audit.mjs all"
+    },
+    {
+      "path": "docs/release-evidence/graphs-thread/third.json",
+      "sha256": "0c2dfcb598d43806aa5bb5265de62eed5252a1bce20f09b553306ad26832f5af",
+      "status": "passed-source-only",
+      "command": "node content/authoring/graphs-thread-audit.mjs third"
+    },
+    {
+      "path": "docs/release-evidence/graphs-thread/fourth.json",
+      "sha256": "cead898a31f28a2313823e4edf15ffaf61b9521a24203446c01045188e5f1a66",
+      "status": "passed-source-only",
+      "command": "node content/authoring/graphs-thread-audit.mjs fourth"
+    },
+    {
+      "path": "docs/release-evidence/graphs-thread/fifth.json",
+      "sha256": "3d4d5935bf0e347097e57464850e27a100354243f5541497833c25744cff0c7a",
+      "status": "passed-source-only",
+      "command": "node content/authoring/graphs-thread-audit.mjs fifth"
+    },
+    {
+      "path": "docs/release-evidence/graphs-thread/all.json",
+      "sha256": "6aa59849197e930af5a054825ab635c706425642002c78a7f5bf8729a9e85812",
+      "status": "passed-source-only",
+      "command": "node content/authoring/graphs-thread-audit.mjs all"
+    },
+    {
+      "path": "docs/release-evidence/graphs-thread/pack-preflight.json",
+      "sha256": "9c2de1954bd4fd51d0b2b7e2ed550868c61b5dfa00ae11f7b7953d2b108f1b0c",
+      "status": "passed-source-pack-structure",
+      "command": "node content/authoring/graphs-thread-pack-preflight.mjs"
+    },
+    {
+      "path": "docs/release-evidence/advanced-thread/third.json",
+      "sha256": "1c4fef3770049f741a97fb9268dd19274bae4fae128f134f652a897c842a8d49",
+      "status": "passed-source-only",
+      "command": "node content/authoring/advanced-thread-audit.mjs third"
+    },
+    {
+      "path": "docs/release-evidence/advanced-thread/all.json",
+      "sha256": "3c9cbe73d627f71f148919ff43f7c34e0145e1df33ebf70e7ead85e150371aed",
+      "status": "passed-source-only",
+      "command": "node content/authoring/advanced-thread-audit.mjs all"
+    },
+    {
+      "path": "docs/release-evidence/advanced-thread/pack-preflight.json",
+      "sha256": "17fc4b2faf829d2953605f4c1effbde8a319cd16d75277f2d8b97f60d00a7bc2",
+      "status": "passed-source-pack-structure",
+      "command": "node content/authoring/advanced-thread-pack-preflight.mjs"
+    }
+  ],
+  "integrationOrder": "Coordinate with judge: preserve every active exact native freeze. Backend owns registry/materialization and receipt invalidation; integrate these ten IDs after applicable freeze release, then reconcile new packIdentity(v2), fresh independent category records and judge-required exact native acceptance. Source metadata calibration is main-approved; no finite-content waiver.",
+  "reasons": "Graphs08/09/10/11/12 erase relabeling/edge-order padding (10/11 ignored isolates), with genuine chain/chord candidates added for11. A6 erases terminal-colored relabeling and target-outgoing padding. DP09/10/11 share advanced step5; Graph11/12/13 share advanced step6 with real teachers and reciprocal prepared peers. No prerequisite or cap is weakened.",
+  "newTrie03": "Separate ready source: content/authoring/tries-thread-prefix-agreement.mjs; docs/handoffs/tries-replacement-thread.md. Do not wait for its integration to process these ten. Copy-only original archive is verified separately; original board3 remains unchanged until its applicable freeze releases."
+}

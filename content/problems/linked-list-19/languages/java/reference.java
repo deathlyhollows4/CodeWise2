@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head,int left,int right){ListNode dummy=new ListNode(0,head),before=dummy;for(int i=0;i<left;i++)before=before.next;ListNode first=before.next;for(int i=0;i<right-left;i++){ListNode moved=first.next;first.next=moved.next;moved.next=before.next;before.next=moved;}return dummy.next;}}

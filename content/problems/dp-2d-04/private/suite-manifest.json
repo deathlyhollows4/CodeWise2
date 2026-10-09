@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D04",
+  "hiddenCount": 1038,
+  "suiteHash": "a58733de4d3898e06a5632eeaeb4ca054248c45b9c37abb8e88b718b1cb8f759",
+  "categories": [
+    "seeded-edit-frontier",
+    "max-replacements",
+    "max-identical",
+    "max-insertions-escaped"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

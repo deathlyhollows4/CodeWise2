@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "a258ededb17f3c2df2c3cebe1a9e653a2dcd592e4fddd88d00ad396a34ab928d",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:33:02.211Z",
+  "rationale": "Deterministic multiset transitions reinsert a difference after each two-largest removal; this is not selecting an original subset or optimizing the pairing order. Large paired and odd-equal certificates retain multiplicity.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-first.mjs",
+    "sourceHash": "3812ed4a84efddb24c1b81efbb5c0a45a0242e7b6fab67953c2f3ca07a1a571f",
+    "reconciliation": "docs/release-evidence/coordinator-heap-six-curriculum-diversity.json",
+    "priorSourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Per-pack source, rights and curriculum conclusion only; isolated reference execution and final243 global synthesis remain separate.",
+    "Changing bound content invalidates this review."
+  ]
+}

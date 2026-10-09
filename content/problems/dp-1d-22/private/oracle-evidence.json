@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "5cdd7950338c198ae6c3292262028bd7c01263c3d8ccb9f0e2abce90d8d246e4",
+  "suiteHash": "6c65072f87c29259a2d99841115da5759be754dc49f8de469f6749864302047c",
+  "oracleChecks": 606,
+  "hiddenUnique": 603,
+  "mutations": [
+    {
+      "name": "count-all-permutations",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "empty-permutation-is-invalid",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

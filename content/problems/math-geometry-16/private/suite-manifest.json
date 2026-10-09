@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/math-reflection.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xca16",
+  "hiddenCount": 754,
+  "suiteHash": "c76e0b765b84944603dfd78cc6a81f50e5e8a68143d5a786d19d82e0c4cf16a5",
+  "categories": [
+    "translated-mirror-family",
+    "maximum-coordinate-reflection"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public:long long solve(long long initial,vector<int> positions){for(int p:positions)initial^=1LL<<p;return initial;}};

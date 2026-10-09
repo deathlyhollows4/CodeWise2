@@ -1,0 +1,1 @@
+class Solution {public long solve(int[] values){long previous=0,best=0;for(int v:values){long next=Math.max(best,previous+v);previous=best;best=next;}return best;}}

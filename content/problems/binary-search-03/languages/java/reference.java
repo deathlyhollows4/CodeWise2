@@ -1,0 +1,1 @@
+class Solution {private int bound(int[] a,int target,boolean strict){int lo=0,hi=a.length;while(lo<hi){int m=lo+(hi-lo)/2;if(a[m]<target||(strict&&a[m]==target))lo=m+1;else hi=m;}return lo;}public int solve(int[] values,int lo,int hi){return bound(values,hi,true)-bound(values,lo,false);}}

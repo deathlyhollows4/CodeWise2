@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-skyline.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xde10",
+  "hiddenCount": 60,
+  "suiteHash": "c24c3f2c657748323863ceb3f5eade31945c15831ce4e3f9bd356bfd048a69d3",
+  "categories": [
+    "maximum-60000-disjoint-skyline-points",
+    "maximum-nested-expiry-descent-certificate",
+    "exact-coordinate-and-height-extrema",
+    "coincident-events-buried-expiry-and-height-ties",
+    "single-building-rise-and-terminal-drop",
+    "duplicate-leading-building-and-hidden-nested-spans",
+    "curated-endpoint-expiry-and-hidden-buildings",
+    "curated-overlapping-height-envelope"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

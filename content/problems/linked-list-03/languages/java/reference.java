@@ -1,0 +1,1 @@
+class Solution {public ListNode solve(ListNode head,int k){ListNode lead=head;for(int i=0;i<k;i++){if(lead==null)return null;lead=lead.next;}ListNode follow=head;while(lead!=null){lead=lead.next;follow=follow.next;}return follow;}}

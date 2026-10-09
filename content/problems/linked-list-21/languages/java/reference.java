@@ -1,0 +1,1 @@
+class Solution {public ListNode[] solve(ListNode head,int k){int n=0;for(ListNode p=head;p!=null;p=p.next)n++;ListNode[] parts=new ListNode[k];int size=n/k,remainder=n%k;for(int i=0;i<k;i++){parts[i]=head;int count=size+(i<remainder?1:0);for(int j=1;j<count;j++)head=head.next;if(head!=null){ListNode next=head.next;head.next=null;head=next;}}return parts;}}

@@ -1,0 +1,1 @@
+class Solution {public:int solve(TreeNode* root){if(!root)return 0;vector<pair<TreeNode*,int>> stack{{root,0}};int answer=0;while(!stack.empty()){auto [node,parity]=stack.back();stack.pop_back();if((node->val^parity)==1){answer++;parity^=1;}if(node->left)stack.push_back({node->left,parity});if(node->right)stack.push_back({node->right,parity});}return answer;}};

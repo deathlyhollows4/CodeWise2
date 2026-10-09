@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/sliding-window-extra.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 697,
+  "suiteHash": "88bfbe35f3e39b68d8bab454364f387524863f61b0c6838566bf2ca4a3dcfc4b",
+  "categories": [
+    "letter-multiplicities",
+    "retained-declared-max-sliding-window-04-1",
+    "retained-declared-max-sliding-window-04-2",
+    "retained-declared-max-sliding-window-04-3"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

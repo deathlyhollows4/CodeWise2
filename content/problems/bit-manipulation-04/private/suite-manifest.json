@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 601,
+  "suiteHash": "d3e1486f45431d9cbd05a3c29ce9a99917c9e7387e2352c2c639cae2bc667aa5",
+  "categories": [
+    "bounded-interval-xor",
+    "maximum-wide-interval",
+    "near-maximum-endpoints"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

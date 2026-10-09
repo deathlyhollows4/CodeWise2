@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "b9ba4b7cb3c9fe6c0548941559b60e798c060ff0f21c8c879e3fd20f39c2f349",
+  "suiteHash": "d8f369e76d752a1a6a80288cf11ca09b2c74a62965d5c4766b285db87c42827b",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "ignore-walls-Manhattan",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "seed-only-first-source",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

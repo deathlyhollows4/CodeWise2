@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "7d986ebb35ad3b8313aed66ae7af205e65070c1bbee6cef98d408eb97b4ce24e",
+  "suiteHash": "d3e1486f45431d9cbd05a3c29ce9a99917c9e7387e2352c2c639cae2bc667aa5",
+  "oracleChecks": 604,
+  "hiddenUnique": 601,
+  "mutations": [
+    {
+      "name": "exclude-left",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "prefix-offset-wrong",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

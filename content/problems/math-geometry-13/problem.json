@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-13",
+  "version": "1.0.0",
+  "slug": "canonical-convex-boundary",
+  "title": "The convex boundary of a point set",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.convex-turn-invariant",
+    "geometry.canonical-boundary"
+  ],
+  "prerequisites": [
+    "geometry.cross-product-collinearity",
+    "numbers.wide-intermediates",
+    "geometry.coordinate-difference",
+    "arrays.traversal",
+    "sorted.order"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Construct the extreme vertices of a point set’s convex hull in a canonical order.",
+  "constraints": [
+    "0 <= points.length <= 1000",
+    "Each point is an integer [x,y] pair in [-1000000,1000000].",
+    "Duplicate points and collinear edge points are allowed in the input."
+  ],
+  "interface": "Solution.solve(points) receives a typed point matrix and returns a coordinate matrix.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "points": {
+        "kind": "array",
+        "maxLength": 1000,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000,
+            "maximum": 1000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 1000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-14"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "two-pointers-04"
+  ],
+  "nextIds": [],
+  "rationale": "Maintain outward turns while building lower and upper boundary chains, removing duplicate and collinear interior points.",
+  "commonMistakes": [
+    "keep-interior-points",
+    "reverse-boundary"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

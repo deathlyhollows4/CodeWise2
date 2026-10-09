@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "662705148e5709b51ec5768d8a43f5769ef84f7cca2e171e7427bb5b0fda49cd",
+  "suiteHash": "60a5a62c10855dd13838318f1f64fd0ad894cff641db2db1b9f4624ca240e36d",
+  "oracleChecks": 744,
+  "hiddenUnique": 741,
+  "mutations": [
+    {
+      "name": "share-leftover-capacity",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "pause-after-last-job",
+      "detected": true,
+      "caseId": "hidden-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

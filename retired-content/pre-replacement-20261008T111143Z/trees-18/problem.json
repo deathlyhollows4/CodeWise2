@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-18",
+  "version": "1.0.0",
+  "slug": "follow-strict-bst-search-route",
+  "title": "Search a strict binary search tree",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.bst-search-route"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 2,
+  "status": "draft",
+  "objective": "Follow value comparisons through a native ordered tree to decide whether the requested key exists.",
+  "constraints": [
+    "The input has 0 to 2,000 native nodes.",
+    "All node values and value lie in [-1,000,000,000,1,000,000,000].",
+    "All original values are distinct. Every left subtree value is strictly less than its root and every right subtree value is strictly greater."
+  ],
+  "interface": "Solution.solve(root,value) returns boolean.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "value": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-07",
+    "trees-09",
+    "trees-10"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-19"
+  ],
+  "rationale": "The subtree ordering invariant rules out an entire branch after each comparison; null ends an unsuccessful route.",
+  "commonMistakes": [
+    "search-only-left-child",
+    "stop-at-root"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    },
+    {
+      "kind": "strict-bst",
+      "field": "root"
+    }
+  ]
+}

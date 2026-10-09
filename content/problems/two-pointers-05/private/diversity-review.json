@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "contentIdentity": "4f084c96cc1b496102d433fc50bb195b7c707f2c34a116f404630f4a113c7c04",
+  "reviewer": "CodeWise2 backend worker, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T13:02:35.150Z",
+  "evidence": "docs/release-evidence/independent-tp-sw-stack-27-review-binding.json",
+  "algorithmReview": "Compare endpoint magnitudes, write the largest remaining square from the output end, and widen before multiplication. The actual visible signed1e6 endpoints yield two1e12 squares.",
+  "coverageLimits": [
+    "Read authored Java/C++/Python reference algorithms and reconciled actual statement/examples/tests/assets/provenance; this review runs no native or learner code.",
+    "Native current-runtime receipts and final global243 diversity/curriculum synthesis remain separate.",
+    "Immediate declared routes and first-entry prerequisites inspected; finite already-solved peer exhaustion is not labelled missing content."
+  ],
+  "reviewType": "diversity",
+  "rationale": "Absolute magnitude reverses the negative run and combines two monotone sources; squaring an already sorted array without reordering is wrong. Duplicates and mixed signs materially affect output order. Actual567 canonical hidden inputs and categories sorted-with-duplicates, all-distinct-large, wide-integer-squares were reconciled; these counts are input uniqueness, not a fabricated count of independent algorithms."
+}

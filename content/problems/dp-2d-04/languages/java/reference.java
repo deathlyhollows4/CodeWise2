@@ -1,0 +1,1 @@
+class Solution {public int solve(String a,String b){int[] d=new int[b.length()+1];for(int j=0;j<d.length;j++)d[j]=j;for(int i=1;i<=a.length();i++){int old=d[0];d[0]=i;for(int j=1;j<=b.length();j++){int above=d[j];d[j]=Math.min(Math.min(above+1,d[j-1]+1),old+(a.charAt(i-1)==b.charAt(j-1)?0:1));old=above;}}return d[b.length()];}}

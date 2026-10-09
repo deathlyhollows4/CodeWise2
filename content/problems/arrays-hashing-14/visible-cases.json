@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        2,
+        1
+      ],
+      "target": 3
+    },
+    "expected": 2,
+    "explanation": "[1,2] and[2,1] are separate matching segments."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "target": 0
+    },
+    "expected": 0,
+    "explanation": "Only nonempty segments count."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "target": 0
+    },
+    "expected": 6,
+    "explanation": "There are 3 length-1, 2 length-2 and 1 length-3 segments."
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        1,
+        1
+      ]
+    },
+    "expected": 1,
+    "explanation": "One root-subtree toggle changes all three bits to zero."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    "expected": 4,
+    "explanation": "Toggle the root, its left child, and both children of that left child. The right branch needs no additional toggle."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "There are no bits to clear."
+  }
+]

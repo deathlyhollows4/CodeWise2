@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-27",
+  "version": "1.0.0",
+  "slug": "minimum-whole-subtree-bit-toggles",
+  "title": "Clear every bit with subtree toggles",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.branch-toggle-parity",
+    "trees.forced-subtree-flip"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Find the minimum number of conceptual whole-subtree bit toggles that makes every node value zero.",
+  "constraints": [
+    "The tree contains 0 to 2,000 nodes.",
+    "Every node value is exactly 0 or 1.",
+    "Each operation flips an entire rooted subtree; operations do not change tree links."
+  ],
+  "interface": "Solution.solve(root) returns int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-13",
+    "trees-16",
+    "trees-21",
+    "trees-25"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-14",
+    "trees-15",
+    "trees-26"
+  ],
+  "rationale": "Once ancestor toggles are fixed, only a toggle rooted at the current node can correct that node without changing an ancestor; carry its parity separately into both branches.",
+  "commonMistakes": [
+    "ignore-inherited-flip-parity",
+    "only-one-operation-for-any-nonzero-tree"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

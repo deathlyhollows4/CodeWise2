@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 665,
+  "suiteHash": "0868943284220ded1259f1e8bd9047ffc923bf249a190db88810ab4115ed2eaa",
+  "categories": [
+    "seeded-small",
+    "duplicate-zero",
+    "signed-extremes",
+    "performance-repetition",
+    "maximum-distinct-stable-output"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-2d-10",
+  "version": "1.0.0",
+  "slug": "two-downward-collectors-share-cells",
+  "title": "Two downward collectors share cells",
+  "primaryTopic": "dp-2d",
+  "skillIds": [
+    "dp.two-coordinate-state",
+    "dp.paired-position-state",
+    "dp.shared-cell-accounting"
+  ],
+  "prerequisites": [
+    "dp.two-coordinate-state",
+    "dp.two-prefix-state"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Optimize two simultaneous downward routes with coupled column states and count an occupied shared cell once.",
+  "constraints": [
+    "0 <= rows,columns <= 70",
+    "All rows have the same number of columns",
+    "0 <= grid[r][c] <= 1000000000",
+    "0 <= result <= 140000000000"
+  ],
+  "interface": "Solution.solve(grid) receives an integer matrix and returns long / long long / int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 70,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 70,
+          "items": {
+            "kind": "integer",
+            "minimum": 0,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer",
+    "minimum": 0,
+    "maximum": 140000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-2d-09",
+    "dp-2d-11"
+  ],
+  "remedialIds": [
+    "dp-2d-01",
+    "dp-2d-02",
+    "dp-2d-07",
+    "dp-2d-08"
+  ],
+  "nextIds": [],
+  "rationale": "Keep the current row shared and add the second collector column. Their choices interact when they meet.",
+  "commonMistakes": [
+    "double-count-overlap",
+    "never-leave-starting-columns",
+    "narrow-signed32-reward"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

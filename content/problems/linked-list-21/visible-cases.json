@@ -1,0 +1,67 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "head": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "k": 3
+    },
+    "expected": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "explanation": "Seven nodes split as 3, 2 and 2; identities remain stable despite equal values."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "head": [
+        4,
+        5
+      ],
+      "k": 4
+    },
+    "expected": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [],
+      []
+    ],
+    "explanation": "The two earliest parts have one original node each, then two null heads."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "head": [],
+      "k": 3
+    },
+    "expected": [
+      [],
+      [],
+      []
+    ],
+    "explanation": "A null input still requires three null native heads."
+  }
+]

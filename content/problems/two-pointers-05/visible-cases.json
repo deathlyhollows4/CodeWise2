@@ -1,0 +1,42 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        -4,
+        -1,
+        0,
+        3
+      ]
+    },
+    "expected": [
+      0,
+      1,
+      9,
+      16
+    ],
+    "explanation": "The negative value with largest magnitude contributes the largest square."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": [],
+    "explanation": "No readings produce no squares."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        -1000000,
+        1000000
+      ]
+    },
+    "expected": [
+      1000000000000,
+      1000000000000
+    ],
+    "explanation": "Use a wide integer and keep both equal squares."
+  }
+]

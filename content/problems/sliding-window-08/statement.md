@@ -1,0 +1,1 @@
+For each contiguous batch of exactly `k` entries in `values`, return its maximum value. Return maxima in the order of batch starting positions. Negative and duplicate values are allowed. The result has values.length - k + 1 entries.

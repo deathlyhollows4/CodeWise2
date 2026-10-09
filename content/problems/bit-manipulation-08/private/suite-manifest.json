@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xb808",
+  "hiddenCount": 754,
+  "suiteHash": "3e85d5ec215cb43777aca4c899b62c4ef73fb3acb956c4e84bc3bc9f29fcd4f3",
+  "categories": [
+    "varying-common-prefix",
+    "word-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

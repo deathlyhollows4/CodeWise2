@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "4f3c21a15c2cbfd1be6ae52d5f3cca78e0605f2cb7892bfd6ccc5f513fa7f808",
+  "suiteHash": "9db0f4af0c003abccbaee7f92cc9f989651ce72b76112db6df627eda244964db",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "fuel-every-passed-station",
+      "detected": true,
+      "caseId": "hidden-4"
+    },
+    {
+      "name": "ignore-station-reachability",
+      "detected": true,
+      "caseId": "visible-2"
+    }
+  ],
+  "languageExecution": "not-run"
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-12",
+  "version": "1.0.0",
+  "slug": "maximum-minimum-placement-gap",
+  "title": "Maximize the smallest placement gap",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.maximum-feasible",
+    "greedy.earliest-placement"
+  ],
+  "prerequisites": [
+    "binary-search.implicit-predicate"
+  ],
+  "step": 6,
+  "status": "published",
+  "objective": "Choose k distinct positions so the smallest distance between neighboring chosen positions is as large as possible.",
+  "constraints": [
+    "2 <= positions.length <= 100000",
+    "positions is strictly increasing",
+    "-1000000000 <= positions[i] <= 1000000000",
+    "2 <= k <= positions.length",
+    "0 <= answer <= 2000000000"
+  ],
+  "interface": "Solution.solve(positions,k) returns the maximum integer minimum gap.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "positions": {
+        "kind": "array",
+        "minLength": 2,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 2,
+        "maximum": 100000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-11"
+  ],
+  "remedialIds": [
+    "binary-search-05",
+    "binary-search-10"
+  ],
+  "nextIds": [
+    "binary-search-13",
+    "binary-search-14"
+  ],
+  "rationale": "For a proposed gap, always taking the earliest next feasible position leaves the most room for later placements.",
+  "commonMistakes": [
+    "average-endpoint-gap",
+    "return-first-gap"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "positions"
+    },
+    {
+      "kind": "unique",
+      "field": "positions"
+    },
+    {
+      "kind": "length-relative",
+      "field": "k",
+      "array": "positions",
+      "minimum": 2
+    }
+  ]
+}

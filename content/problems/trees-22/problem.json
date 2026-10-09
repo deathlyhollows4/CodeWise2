@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-22",
+  "version": "1.0.0",
+  "slug": "original-kth-smallest-bst-node",
+  "title": "Return the original node at a sorted rank",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.inorder-rank",
+    "trees.original-target-identity"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Return the original native node at a one-based key rank, or null when that rank does not exist.",
+  "constraints": [
+    "The input has 0 to 2,000 native nodes.",
+    "All node values lie in [-1,000,000,000,1,000,000,000].",
+    "All original values are distinct. Every left subtree value is strictly less than its root and every right subtree value is strictly greater.",
+    "1 ≤ k ≤ 2,000; a missing rank returns null."
+  ],
+  "interface": "Solution.solve(root,k) returns an original TreeNode or null.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "nullable",
+    "value": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 4000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-19",
+    "trees-23"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-20",
+    "trees-24"
+  ],
+  "rationale": "Inorder traversal visits strict-BST keys in increasing order, but the returned object must be the original node rather than an equal-valued replacement.",
+  "commonMistakes": [
+    "treat-k-as-zero-based",
+    "return-key-instead-of-original-node-id"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    },
+    {
+      "kind": "strict-bst",
+      "field": "root"
+    }
+  ]
+}

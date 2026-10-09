@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-09",
+  "version": "1.0.0",
+  "slug": "resolve-opposing-motion",
+  "title": "Resolve opposing moving readings",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.collision-resolution"
+  ],
+  "prerequisites": [
+    "stack.push-pop-history"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Resolve a chain of collisions against the latest surviving right-moving object.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "-1,000,000 ≤ values[i] ≤ 1,000,000.",
+    "All objects have the same speed."
+  ],
+  "interface": "Solution.solve(values) returns the survivor array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-12"
+  ],
+  "remedialIds": [
+    "stack-02",
+    "stack-01"
+  ],
+  "nextIds": [
+    "stack-06"
+  ],
+  "rationale": "One new object can remove several earlier candidates before it survives or disappears.",
+  "commonMistakes": [
+    "skip-all-collisions",
+    "one-collision-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "words": [
+        "ab",
+        "ba",
+        "x",
+        "ab"
+      ]
+    },
+    "expected": [
+      [
+        "ab",
+        "ab",
+        "ba"
+      ],
+      [
+        "x"
+      ]
+    ],
+    "explanation": "ab and ba share the same two letters; duplicates remain."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "words": []
+    },
+    "expected": [],
+    "explanation": "No words to group."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "words": [
+        "",
+        "a",
+        "",
+        "aa"
+      ]
+    },
+    "expected": [
+      [
+        "",
+        ""
+      ],
+      [
+        "a"
+      ],
+      [
+        "aa"
+      ]
+    ],
+    "explanation": "Empty words match each other; letter counts distinguish a from aa."
+  }
+]

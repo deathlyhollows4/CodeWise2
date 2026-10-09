@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "ee133ef55bb4fe1de6c49d80b97d88759e79506feea84f28c6f9449661f3e0c8",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:20:45.947Z",
+  "rationale": "Fully read original author source, generator/independent model and native references. Current statement, three visible examples, 661 hidden cases and nine native assets exactly reconcile to authored source and project templates. No imported material occurs; project-owned asset provenance matches the observed source.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-first.mjs",
+    "sourceHash": "16b27021aa6fee68348c6f81014245a0099af3167b1514d457ff80fe150315a8",
+    "reconciliation": "docs/release-evidence/coordinator-repaired-eight-review.json"
+  },
+  "limitations": [
+    "Current per-pack source/progression/distinctness/rights conclusion, not language execution or publication.",
+    "Final243 global synthesis remains required; changed bound assets invalidate this record."
+  ]
+}

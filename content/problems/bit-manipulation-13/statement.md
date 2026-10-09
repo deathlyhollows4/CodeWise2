@@ -1,0 +1,1 @@
+Match every position of left to a different position of right, using each right position exactly once. The cost of a matched pair is the bitwise XOR of its labels. Return the minimum total cost over all bijections. Duplicate labels are allowed, but positions are still distinct.

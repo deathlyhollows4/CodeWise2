@@ -1,0 +1,75 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "left": [
+        1,
+        7,
+        11
+      ],
+      "right": [
+        2,
+        4,
+        6
+      ],
+      "k": 3
+    },
+    "expected": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "explanation": "Sums 3, 5 and 7 are the three smallest."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "left": [
+        1,
+        1
+      ],
+      "right": [
+        1,
+        1
+      ],
+      "k": 3
+    },
+    "expected": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "explanation": "All sums are equal, so original indices determine the order."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "left": [],
+      "right": [
+        -2,
+        4
+      ],
+      "k": 8
+    },
+    "expected": [],
+    "explanation": "There is no left position to pair."
+  }
+]

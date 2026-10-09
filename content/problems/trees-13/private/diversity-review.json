@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "contentIdentity": "8442f5d9205a66fb3ac25d4b8a6de12d7e7537f2f2d0cfc79e83f374c36f3d77",
+  "reviewer": "CodeWise2 judge/content independent of the Tree problem author",
+  "reviewedAt": "2026-10-08T12:49:15.937Z",
+  "evidence": [
+    "docs/release-evidence/judge-tree-review/assets-review-bundle.json",
+    "docs/release-evidence/judge-tree-review/first-four-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/subtree-model-evidence.json",
+    "docs/release-evidence/judge-tree-review/first-eight-route-evidence.json"
+  ],
+  "assessmentScope": {
+    "authorSource": "content/authoring/trees-subtree-summary.mjs",
+    "sourceHash": "dae83ea1a15e5e4051650dcaf9d918640cdd455078cc15c9ec00e834642b0a73",
+    "actualAllNineLanguageAssets": {
+      "java": {
+        "starter": "70cd10f058368afa0851bf8e7e2eefc8c1c0b45e90e0c95e0fa038b9f492015d",
+        "wrapper": "f81afd402835e7f43fedeb067a369991801f627432cac0eba4e56aec187e0b52",
+        "reference": "60f06ad51ccde1171c732f33ab9c50fe85a151f5c6f93181408384a4e4a54b5b"
+      },
+      "cpp": {
+        "starter": "29f73173a8e7056a7439a7c165941cc809dd84c33c104016775dbbdab79069bc",
+        "wrapper": "43057934d616d1ec488b4b5e3c6704b7397d87ab1623f60c62a0084891e7fe83",
+        "reference": "afd980caa1dcf4dbf9f6bc879670098e210335329610557a776c195b38991598"
+      },
+      "python": {
+        "starter": "fe21e41f98d0be82da58edc19b920ee7d0e6c82d7d30c6c18da2a9f829050c36",
+        "wrapper": "86de144a0c34c5616ad78728a4cfe041580d32f26602941eeb9ce42e6b602215",
+        "reference": "6d5ba7ae372a19a654f6a7ed1017ca3480e40fe54aa466a4f1976d6207e9afb6"
+      }
+    },
+    "actualSchemaAndReadonlyWrapperReviewed": true,
+    "graphQualification": "Generation2026-10-07T22:57:49 marked all relevant sources not_tracked; full direct source/actual asset fallback used."
+  },
+  "limitations": [
+    "These are content rights/progression/diversity assessments, not publication or containment approval.",
+    "Route evidence is conditional on a genuinely eligible source and explicit independent teacher demonstrations; it does not claim every possible history or learner mastery.",
+    "Native reference receipts and final243 global distinctness/runtime gates remain separate."
+  ],
+  "reviewType": "diversity",
+  "rationale": "Every-node height balance differs from a global root height, breadth completeness and simultaneous leaf-pruning output. The equal-height root with unbalanced descendants is a concrete discriminator; empty, skew and wide shapes are covered.",
+  "independentModelChecks": 1396
+}

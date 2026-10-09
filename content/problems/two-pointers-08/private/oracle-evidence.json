@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "0eda40c726a9c0caf518391a22bed3bdaec80855a174eb6f1a989c0803f55161",
+  "suiteHash": "126d50531341359663b3ee91ba8347183890b4d996a44f3d2c6e598e2090a36d",
+  "oracleChecks": 664,
+  "hiddenUnique": 661,
+  "mutations": [
+    {
+      "name": "use-taller-boundary",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "adjacent-only",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

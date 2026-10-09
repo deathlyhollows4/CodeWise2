@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-02",
+  "version": "1.0.0",
+  "slug": "sum-native-leaf-values",
+  "title": "Total the leaf values",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.leaf-predicate",
+    "trees.leaf-value-aggregate"
+  ],
+  "prerequisites": [
+    "trees.child-links"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Recognize nodes with neither child and sum only their signed values using a wide accumulator.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) receives TreeNode and returns long / long long / Python int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -2000000000000,
+    "maximum": 2000000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-01"
+  ],
+  "remedialIds": [
+    "trees-01"
+  ],
+  "nextIds": [
+    "trees-03"
+  ],
+  "rationale": "An internal node is excluded even if one child is missing; negative leaf values must still contribute.",
+  "commonMistakes": [
+    "sum-all-existing-nodes",
+    "drop-negative-leaves"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

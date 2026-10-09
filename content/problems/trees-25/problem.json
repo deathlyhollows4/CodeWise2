@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-25",
+  "version": "1.0.0",
+  "slug": "validate-one-rooted-binary-parent-table",
+  "title": "Check a proposed binary parent table",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "arrays.traversal",
+    "trees.parent-map",
+    "trees.rooted-acyclic-connectivity",
+    "trees.binary-child-capacity"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Decide whether proposed parent indices describe exactly one nonempty rooted tree with at most two children per node.",
+  "constraints": [
+    "0 ≤ parents.length ≤ 2,000.",
+    "Every entry lies in [-1,2,000]; an entry outside the actual node-index range is an invalid proposal.",
+    "Array position is the node identity. Node values and child-side order are not part of the input."
+  ],
+  "interface": "Solution.solve(parents) receives int[] and returns boolean.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "parents": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1,
+          "maximum": 2000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-13",
+    "trees-16",
+    "trees-21"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "trees-14",
+    "trees-15",
+    "trees-24"
+  ],
+  "rationale": "One root and local parent bounds do not exclude a disconnected cycle or an overfull parent.",
+  "commonMistakes": [
+    "ignore-child-capacity",
+    "accept-multiple-root-forest",
+    "check-only-one-root-and-capacity"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

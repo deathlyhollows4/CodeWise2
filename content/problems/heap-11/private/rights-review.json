@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "8a14cedcbf22dab83d639d5fb6a92c78b76a51317ea0466dfa0407fc9fae18cc",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:33:02.211Z",
+  "rationale": "Current statement, all examples and hidden cases, and nine language assets exactly reconcile to independently read original author source and project harness templates. No imported assets.",
+  "assetEvidence": {
+    "source": "content/authoring/batches/heap-capital.mjs",
+    "sourceHash": "364339336eab0d51abe6656231c5c43d9b4f83da1f2ea2b29a3badddb436f83e",
+    "reconciliation": "docs/release-evidence/coordinator-heap-six-curriculum-diversity.json",
+    "priorSourceReview": "docs/release-evidence/coordinator-heap-source-review.json"
+  },
+  "limitations": [
+    "Per-pack source, rights and curriculum conclusion only; isolated reference execution and final243 global synthesis remain separate.",
+    "Changing bound content invalidates this review."
+  ]
+}

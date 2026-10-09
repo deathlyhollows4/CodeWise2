@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "fe92b801c100c4745b57e22badbc667790b019cc7b85e1ce2a6c3a0f888ca61f",
+  "suiteHash": "da624663efce223a30619bab93cc1fd6cc1b04e19fbbaf1be07433e2df6a6780",
+  "oracleChecks": 754,
+  "hiddenUnique": 751,
+  "mutations": [
+    {
+      "name": "or-instead-of-xor",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "return-last",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

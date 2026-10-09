@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "{[()]}"
+    },
+    "expected": true,
+    "explanation": "Round brackets close first, then square brackets, then braces."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": true,
+    "explanation": "No symbol is left unmatched."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "([)]"
+    },
+    "expected": false,
+    "explanation": "The square bracket was opened last, so a round closing bracket cannot close next."
+  }
+]

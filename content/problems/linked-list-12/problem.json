@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-12",
+  "version": "1.0.0",
+  "slug": "lru-linked-recency-operation-history",
+  "title": "Replay an LRU cache history",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.lru-recency",
+    "list.hash-and-link-coordination"
+  ],
+  "prerequisites": [
+    "hashing.membership",
+    "list.link-splice"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Maintain cache recency across reads, inserts, updates, and evictions, including a zero-capacity cache.",
+  "constraints": [
+    "0 ≤ capacity ≤ 2,000; 0 ≤ command count ≤ 2,000.",
+    "commands, keys, and values have identical lengths.",
+    "Commands are exactly get or put.",
+    "Keys and stored values lie in [0,1,000,000]; missing get returns -1 and put returns 0.",
+    "Both a successful get and any put refresh recency; target O(1) expected work per operation."
+  ],
+  "interface": "Solution.solve(capacity,commands,keys,values) receives int,string[],int[],int[] and returns int[].",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "capacity": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2000
+      },
+      "commands": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "enum",
+          "values": [
+            "get",
+            "put"
+          ]
+        }
+      },
+      "keys": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-09",
+    "linked-list-10",
+    "linked-list-11"
+  ],
+  "remedialIds": [
+    "arrays-hashing-03",
+    "linked-list-01"
+  ],
+  "nextIds": [],
+  "rationale": "Hash lookup finds an entry while a doubly linked recency chain updates or evicts it without scanning the cache.",
+  "commonMistakes": [
+    "get-does-not-refresh",
+    "evict-when-updating-existing"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "keys"
+    },
+    {
+      "kind": "lengths-equal",
+      "left": "commands",
+      "right": "values"
+    }
+  ]
+}

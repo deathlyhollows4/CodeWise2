@@ -1,0 +1,1 @@
+For each reading, search the following positions around a circular array for the first strictly greater value. Examine at most the other values.length - 1 positions. Return that greater value, or -1 if none exists. Equal values do not qualify. Return answers in original input order.

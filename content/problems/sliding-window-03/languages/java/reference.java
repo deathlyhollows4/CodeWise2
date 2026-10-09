@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values,long target){int left=0,best=values.length+1;long total=0;for(int right=0;right<values.length;right++){total+=values[right];while(total>=target){best=Math.min(best,right-left+1);total-=values[left++];}}return best>values.length?0:best;}}

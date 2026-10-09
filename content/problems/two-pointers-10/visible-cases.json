@@ -1,0 +1,46 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "symbolsA": "aab",
+      "countsA": [
+        2,
+        3,
+        1
+      ],
+      "symbolsB": "ab",
+      "countsB": [
+        5,
+        1
+      ]
+    },
+    "expected": true,
+    "explanation": "Both expand to five a letters followed by one b."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "symbolsA": "",
+      "countsA": [],
+      "symbolsB": "",
+      "countsB": []
+    },
+    "expected": true,
+    "explanation": "Both descriptions are empty."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "symbolsA": "a",
+      "countsA": [
+        1000000000
+      ],
+      "symbolsB": "a",
+      "countsB": [
+        999999999
+      ]
+    },
+    "expected": false,
+    "explanation": "The final unmatched a matters even though the runs are large."
+  }
+]

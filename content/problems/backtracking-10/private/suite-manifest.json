@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-schedules.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "a2e8f70f98cb48dc1e0566a34f45472243807d80f253971772ff544a7c868401",
+  "categories": [
+    "inclusive-endpoint-idle-release-impossible-and-wide-time-boundary",
+    "explicit-impossible-positive-task-deadline",
+    "feasible-derived-order-with-variable-release-slack"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

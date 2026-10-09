@@ -1,0 +1,1 @@
+Given a nonnegative integer n, return the largest integer r such that r*r <= n. This is the floor of the square root; do not round to the nearest integer. Values can be larger than 32-bit integers. Use integer reasoning so that overflow or rounding does not change a boundary answer. Overflow means a value does not fit its fixed-width integer type.

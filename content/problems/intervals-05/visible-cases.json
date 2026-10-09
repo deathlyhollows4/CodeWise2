@@ -1,0 +1,54 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "segments": [
+        [
+          -1,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          7
+        ]
+      ]
+    },
+    "expected": 12,
+    "explanation": "Both contributions are active on [2,3), giving 5 + 7."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "segments": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          2,
+          4,
+          9
+        ]
+      ]
+    },
+    "expected": 9,
+    "explanation": "The ranges touch but never overlap under half-open endpoints."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "segments": [
+        [
+          -5,
+          5,
+          -3
+        ]
+      ]
+    },
+    "expected": 0,
+    "explanation": "An uncovered position has zero total, greater than the negative covered weight."
+  }
+]

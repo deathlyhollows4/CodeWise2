@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/two-pointers.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 690,
+  "suiteHash": "416b6b1de58f8d8a36665175076ddf6c9cdb45569921ab2b235eece1dd3e9317",
+  "categories": [
+    "duplicate-triplet-combinations",
+    "maximum-80-position-multiplicity-and-distinct-triplets"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values){long n=values.length;long total=n*(n+1)/2;for(int v:values)total-=v;return (int)total;}}

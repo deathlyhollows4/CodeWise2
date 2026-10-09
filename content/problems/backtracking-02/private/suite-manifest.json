@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 661,
+  "suiteHash": "8e32de43bd5d8ebf0f21b889c654fa017d92be1103be3e3b19dc1a58b895dbab",
+  "categories": [
+    "signed-position-subset-feasible",
+    "empty-cardinality-distinction",
+    "maximum-cardinality-zero-and-wide-signed-total"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

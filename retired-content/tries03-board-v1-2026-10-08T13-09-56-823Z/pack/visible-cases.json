@@ -1,0 +1,56 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "board": [
+        "ab",
+        "cd"
+      ],
+      "words": [
+        "aba",
+        "abd",
+        "acdb",
+        "a",
+        "abcd",
+        "dcab",
+        "ab",
+        "ab"
+      ]
+    },
+    "expected": [
+      "a",
+      "ab",
+      "abd",
+      "acdb",
+      "dcab"
+    ],
+    "explanation": "Keep both short and longer prefix words. aba would reuse a cell and abcd would need a diagonal move; duplicate ab appears once."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "board": [
+        "a"
+      ],
+      "words": [
+        "a",
+        "aa"
+      ]
+    },
+    "expected": [
+      "a"
+    ],
+    "explanation": "The only cell forms a but cannot be reused to form aa."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "board": [],
+      "words": [
+        "a"
+      ]
+    },
+    "expected": [],
+    "explanation": "No cell is available to begin a path."
+  }
+]

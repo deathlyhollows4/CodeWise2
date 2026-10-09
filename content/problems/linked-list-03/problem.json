@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "linked-list-03",
+  "version": "1.0.0",
+  "slug": "kth-from-end-original-node",
+  "title": "Return the original kth node from the end",
+  "primaryTopic": "linked-list",
+  "skillIds": [
+    "list.fixed-node-gap",
+    "list.original-identity"
+  ],
+  "prerequisites": [
+    "list.walk"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Locate a node with a fixed gap between traversal cursors and return its original identity rather than a copy with an equal value.",
+  "constraints": [
+    "0 ≤ head.length ≤ 2,000",
+    "1 ≤ k ≤ 2,001",
+    "Values lie in [-1,000,000,1,000,000]; values may all be equal."
+  ],
+  "interface": "Solution.solve(head, k) returns an original ListNode or null; the wrapper reports its original index.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "head": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "k": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 2001
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "nullable",
+    "value": {
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 1999
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "linked-list-04"
+  ],
+  "remedialIds": [
+    "linked-list-02"
+  ],
+  "nextIds": [
+    "linked-list-05"
+  ],
+  "rationale": "Duplicate values make node identity essential; a fixed cursor gap avoids converting the list back into indexed values.",
+  "commonMistakes": [
+    "off-by-one-gap",
+    "equal-value-is-identity"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

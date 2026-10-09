@@ -1,0 +1,1 @@
+class Solution {public long solve(long n){long answer=0;while(n>0){n/=5;answer+=n;}return answer;}}

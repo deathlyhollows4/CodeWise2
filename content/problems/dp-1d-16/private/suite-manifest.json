@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-sixth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC216",
+  "hiddenCount": 768,
+  "suiteHash": "26ec398d37e97bde95398572787860f8f65fd2f2884da4b82d42662c889b3bd2",
+  "categories": [
+    "exhaustive-nonoverlapping-dictionary-cover",
+    "ambiguous-boundaries-defeat-longest-token-greedy",
+    "empty-partial-coverage-overlap-and-literal-ascii",
+    "upper-bound-independent-block-certificate",
+    "maximum-distinct-dictionary-count"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

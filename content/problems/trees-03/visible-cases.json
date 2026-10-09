@@ -1,0 +1,34 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        1,
+        null,
+        2,
+        null,
+        3
+      ]
+    },
+    "expected": 3,
+    "explanation": "The three nodes form one rightward route."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        9
+      ]
+    },
+    "expected": 1,
+    "explanation": "The only route contains the root itself."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": []
+    },
+    "expected": 0,
+    "explanation": "An empty tree has no route."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 1
+    },
+    "expected": 2147483648,
+    "explanation": "The low one bit moves to the high position."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": 0
+    },
+    "expected": 0,
+    "explanation": "Reversing all zero bits changes nothing."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 2147483649
+    },
+    "expected": 2147483649,
+    "explanation": "The two end bits exchange places and remain set."
+  }
+]

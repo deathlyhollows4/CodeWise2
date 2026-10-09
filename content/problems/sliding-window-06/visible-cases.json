@@ -1,0 +1,29 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "bacabb",
+      "pattern": "ab"
+    },
+    "expected": "ba",
+    "explanation": "ba at the beginning is the earliest cover of length two."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": "abc",
+      "pattern": ""
+    },
+    "expected": "",
+    "explanation": "An empty requirement needs no substring."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "aab",
+      "pattern": "aa"
+    },
+    "expected": "aa",
+    "explanation": "Both copies of a are required."
+  }
+]

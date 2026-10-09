@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "e9451cb4eaff2731267a08288bfa1c2bcef51ed5bc04864e6e3aeabd07045e2c",
+  "suiteHash": "a2e8f70f98cb48dc1e0566a34f45472243807d80f253971772ff544a7c868401",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "ignore-release-times",
+      "detected": true,
+      "caseId": "hidden-4"
+    },
+    {
+      "name": "treat-deadline-as-exclusive",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "ignore-deadline-failures",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

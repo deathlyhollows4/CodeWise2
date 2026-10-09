@@ -1,0 +1,1 @@
+class Solution {long best(int[] a,int l,int h){long p=0,b=0;for(int i=l;i<h;i++){long n=Math.max(b,p+a[i]);p=b;b=n;}return b;}public long solve(int[] a){if(a.length==0)return 0;if(a.length==1)return a[0];return Math.max(best(a,0,a.length-1),best(a,1,a.length));}}

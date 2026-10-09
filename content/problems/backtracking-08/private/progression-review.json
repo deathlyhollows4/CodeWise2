@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "progression",
+  "contentIdentity": "3f67e2cac3a0503e66a46a7f308da4bea1e1c0c5f65f9f7fb310afc68e9647f2",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Step4 adds precedence and operand boundaries after restoration/signed accumulation01/02. Grid07 requires the real used-item teacher04 if absent;09/10 are step5 continuations.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-expressions.mjs",
+    "sourceHash": "2e433ed85903b7c4d78d64e335e7c6bdfbd9a1eac5e77d28ba1d24ef17c7937a",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}

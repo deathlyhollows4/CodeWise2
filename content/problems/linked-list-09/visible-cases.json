@@ -1,0 +1,63 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "data": {
+        "values": [
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "next": [
+          1,
+          2,
+          3,
+          4,
+          0
+        ],
+        "heads": [
+          0
+        ]
+      },
+      "k": 2
+    },
+    "expected": 2,
+    "explanation": "The removal order is1,3,0,4, leaving original node2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "data": {
+        "values": [
+          9
+        ],
+        "next": [
+          0
+        ],
+        "heads": [
+          0
+        ]
+      },
+      "k": 1000000000
+    },
+    "expected": 0,
+    "explanation": "A singleton survives regardless of count size."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "data": {
+        "values": [],
+        "next": [],
+        "heads": [
+          null
+        ]
+      },
+      "k": 1
+    },
+    "expected": null,
+    "explanation": "An empty ring has no survivor."
+  }
+]

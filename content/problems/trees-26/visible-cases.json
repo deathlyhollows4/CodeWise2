@@ -1,0 +1,45 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        10,
+        5,
+        -3,
+        3,
+        2,
+        null,
+        11,
+        3,
+        -2,
+        null,
+        1
+      ],
+      "target": 8
+    },
+    "expected": 3,
+    "explanation": "The routes 5 → 3, 5 → 2 → 1, and -3 → 11 total 8. None starts at the root."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        0,
+        0,
+        0
+      ],
+      "target": 0
+    },
+    "expected": 5,
+    "explanation": "Three singleton routes and the two root-to-child routes count; a route between the two children does not."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [],
+      "target": 0
+    },
+    "expected": 0,
+    "explanation": "An empty route is excluded."
+  }
+]

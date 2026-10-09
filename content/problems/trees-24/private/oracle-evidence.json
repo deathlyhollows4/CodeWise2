@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "b899222cce7e2a5fe9d250642fd4311c9bd7e5122c04bf6c3f8bc7a614542706",
+  "suiteHash": "552087f767c6f34a6330057f42b18cb05f232f5e48b700ae63a78b100ac2a824",
+  "oracleChecks": 1115,
+  "hiddenUnique": 1112,
+  "mutations": [
+    {
+      "name": "ignore-inorder-build-preorder-right-chain",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "mirror-the-required-tree",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

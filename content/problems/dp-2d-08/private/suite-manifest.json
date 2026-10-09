@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/dp2d-third.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xD2D08",
+  "hiddenCount": 60,
+  "suiteHash": "485053d8285be7aa880250b7d568e2272da027f8e38d1999fee73e3675112ae0",
+  "categories": [
+    "curated-boundary-question-must-consume",
+    "curated-boundary-missing-question-character",
+    "curated-boundary-empty-pattern",
+    "curated-boundary-reserved-text-is-literal",
+    "curated-boundary-backslash-is-literal",
+    "curated-boundary-literal-backslash-ending",
+    "curated-boundary-stars-can-consume-zero",
+    "curated-boundary-whole-text-ending",
+    "max-consecutive-stars",
+    "max-single-character-wildcards",
+    "max-nonempty-star-consumption",
+    "max-literal-mismatch",
+    "seeded-star-length-choices",
+    "literal-ascii-control-and-escape"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

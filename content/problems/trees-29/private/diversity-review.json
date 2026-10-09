@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "contentIdentity": "75e625aee51aa9c5e9bd06d2e621987462d4914029c34ee104055616a1f6bebb",
+  "reviewer": "CodeWise2 coordinator, independent of frontend author",
+  "reviewerType": "independent-source-review",
+  "reviewedAt": "2026-10-08T11:40:19.652Z",
+  "evidence": "docs/release-evidence/coordinator-tree23-30-decisions.json",
+  "reviewType": "diversity",
+  "rationale": "Chooses a possibly disconnected weighted set under arbitrary parent-child conflicts. Branch combination is substantive beyond linear nonadjacent rewards, and it differs from a connected path or camera domination. Negative values and empty selection remain meaningful.",
+  "algorithmReview": "For each subtree, take excludes both children while skip independently takes the better state of each. Wide signed weights permit empty selection. Independent bipartite min-cut uses positive-weight total minus minimum vertex-cover weight, with capacity total+1 forbidding uncovered edges; small exhaustive subsets independently corroborate that model.",
+  "coverageLimits": [
+    "Native execution remains an independent runner gate; no learner code executed by this review.",
+    "Curriculum decisions inspect actual taught skills and immediate links; final whole-bank actual-engine history audit remains separately required."
+  ]
+}

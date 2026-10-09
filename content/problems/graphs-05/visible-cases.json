@@ -1,0 +1,55 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "grid": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "expected": 3,
+    "explanation": "Flip either zero to join both single-cell islands, creating area 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "grid": [
+        [
+          0
+        ]
+      ]
+    },
+    "expected": 1,
+    "explanation": "Flip the only water cell to create one land cell."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "grid": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "expected": 9,
+    "explanation": "The center touches the same eight-cell island four times. Count those eight cells once, then add the flipped cell."
+  }
+]

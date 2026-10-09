@@ -1,0 +1,1 @@
+Choose a cut k so the first k values and the remaining values have equal sums. Both parts must be nonempty: 1 <= k < n. Return the smallest valid k, or -1 if no cut works. Empty and single-value inputs cannot be cut. k is a count of left-side values, not a zero-based value position.

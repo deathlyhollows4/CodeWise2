@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-02",
+  "version": "1.0.0",
+  "slug": "first-reading-at-least",
+  "title": "First reading at least a threshold",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.halving",
+    "binary-search.lower-bound",
+    "binary-search.duplicates"
+  ],
+  "prerequisites": [
+    "binary-search.halving"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Find the first position satisfying a threshold, including duplicates and a missing boundary.",
+  "constraints": [
+    "0 ≤ values.length ≤ 100000",
+    "Values and target are between -1000000000 and 1000000000",
+    "values is sorted in nondecreasing order"
+  ],
+  "interface": "Solution.solve(values, target) returns an integer boundary position.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": -1000000000,
+    "maximum": 1000000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-04"
+  ],
+  "remedialIds": [
+    "binary-search-01"
+  ],
+  "nextIds": [
+    "binary-search-03"
+  ],
+  "rationale": "The search now locates a boundary rather than an exact match.",
+  "commonMistakes": [
+    "strictly-greater",
+    "minus-one-if-absent"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "values"
+    }
+  ]
+}

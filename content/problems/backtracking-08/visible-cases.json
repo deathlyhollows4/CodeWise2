@@ -1,0 +1,35 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "digits": "123",
+      "target": 6
+    },
+    "expected": [
+      "1*2*3",
+      "1+2+3"
+    ],
+    "explanation": "Multiplication binds more tightly than addition, and both expressions use every digit in order."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "digits": "105",
+      "target": 5
+    },
+    "expected": [
+      "1*0+5",
+      "10-5"
+    ],
+    "explanation": "The operand 10 is allowed, but a multi-digit operand 05 would be invalid."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "digits": "",
+      "target": 0
+    },
+    "expected": [],
+    "explanation": "An empty input cannot form a nonempty arithmetic expression."
+  }
+]

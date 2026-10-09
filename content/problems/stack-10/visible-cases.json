@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "text": "([]){}"
+    },
+    "expected": 7,
+    "explanation": "[] scores 2, so ([]) scores 4; the separate {} adds 3."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "text": ""
+    },
+    "expected": 0,
+    "explanation": "No pair contributes a score."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "text": "([)]"
+    },
+    "expected": -1,
+    "explanation": "A mismatched closing type makes the whole string invalid."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC204",
+  "hiddenCount": 730,
+  "suiteHash": "74536d904a7786db9cc99babf36c8508bbfdb1a93c00225ffebdff4b8ae2ef97",
+  "categories": [
+    "small-exhaustive-cycle-subsets",
+    "wraparound-and-small-boundaries",
+    "large-wide-cycle"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values){long long n=values.size(),total=n*(n+1)/2;for(int v:values)total-=v;return (int)total;}};

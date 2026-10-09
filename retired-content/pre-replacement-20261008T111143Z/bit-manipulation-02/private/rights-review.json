@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "5615dd513b60bebe0308e731fa72f07c7468dd748be81b93ecccf44e46cf2a32",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T07:38:26.981Z",
+  "rationale": "Reviewed content/authoring/batches/bits-first.mjs in full and reconciled the materialized statement, three visible examples, all 663 deterministic hidden cases, three reference sources, and starters with the original author definitions. The task is Recognize a positive power of two and reject zero. No imported statement, example, reference or test assets occur in this source. Common algorithmic ideas are expressed in project-authored prose and implementation.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/bits-first.mjs",
+    "authorSourceSha256": "8717760f9ee5b56875c35a9707f2c1f4bb600e00d8cced2c9fabccd8f29bbcd9",
+    "reconciliation": "docs/release-evidence/coordinator-bit-original-assets.json",
+    "wrapperReview": "C++ and Python equal the project template. Java equals the project template or its inspected older Gson-construction line without serializeNulls; scalar/nonnullable results here make that difference irrelevant to provenance. Library imports are dependencies, not copied library sources in these packs."
+  },
+  "limitations": [
+    "Rights review only; no publication, global diversity, progression or runtime-health approval.",
+    "Application dependency-license packaging remains a separate release review.",
+    "Any change to bound assets invalidates this review."
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "words": [
+        "cat",
+        "car",
+        "dog"
+      ],
+      "pattern": "ca?"
+    },
+    "expected": true,
+    "explanation": "The wildcard matches t or r, producing a complete dictionary word."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "words": [
+        "cat"
+      ],
+      "pattern": "ca"
+    },
+    "expected": false,
+    "explanation": "ca is only a nonterminal prefix and has the wrong length."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "words": [
+        "a",
+        "ab"
+      ],
+      "pattern": "??"
+    },
+    "expected": true,
+    "explanation": "Two wildcards consume the two letters of ab; they cannot match the shorter word a."
+  }
+]

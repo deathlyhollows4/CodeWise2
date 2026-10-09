@@ -1,0 +1,1 @@
+class Solution {public:long long solve(vector<int> values){int l=0,r=(int)values.size()-1;long long best=0;while(l<r){best=max(best,1LL*(r-l)*min(values[l],values[r]));if(values[l]<=values[r])l++;else r--;}return best;}};

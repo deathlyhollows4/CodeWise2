@@ -1,0 +1,68 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "moves": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "targets": [
+        0,
+        0,
+        1
+      ]
+    },
+    "expected": [
+      "LOSE",
+      "WIN",
+      "LOSE"
+    ],
+    "explanation": "From 1, move to target 2 and win. From 0, the only move hands that winning position to the opponent. Target 2 is terminal losing for a player whose turn is considered there."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "moves": [],
+      "targets": []
+    },
+    "expected": [],
+    "explanation": "No vertex means no game position to classify."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "moves": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "targets": [
+        0,
+        1
+      ]
+    },
+    "expected": [
+      "WIN",
+      "LOSE"
+    ],
+    "explanation": "Vertex 0 has a self-loop, but its player can instead move to target 1 and force a win. Choosing the loop is unnecessary."
+  }
+]

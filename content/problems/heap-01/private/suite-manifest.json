@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdea1",
+  "hiddenCount": 726,
+  "suiteHash": "984ab2763d6aa5c84a705cb9b5c71c431b748c02717aea167b9dfb558a0d1e27",
+  "categories": [
+    "signed-multiset-selection",
+    "maximum-input-and-selection-count",
+    "exact-signed-reading-extrema"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

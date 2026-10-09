@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "cc41c82958cbd24ce27b36bb0ed14241517f31293a3c040c3737eda337c8cd83",
+  "suiteHash": "a3a9614cbcba598329b8a544a9fb89678752523f64f4c90d3499f5e1a3837fcf",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "discard-point-intersections",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "advance-both-every-time",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "use-outer-endpoints",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

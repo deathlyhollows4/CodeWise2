@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "dp-1d-20",
+  "version": "1.0.0",
+  "slug": "cover-travel-calendar-with-valid-duration-passes",
+  "title": "Minimum travel pass cost",
+  "primaryTopic": "dp-1d",
+  "skillIds": [
+    "dp.calendar-coverage-cost",
+    "dp.variable-reach-transition"
+  ],
+  "prerequisites": [
+    "dp.minimum-cost-recurrence",
+    "dp.one-dimensional-state"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Minimize the cost of covering required travel dates with passes whose validity is measured in consecutive calendar days.",
+  "constraints": [
+    "0 <= days.length <= 365",
+    "days is strictly increasing with every date in 1..365",
+    "costs has exactly 3 entries, each in 1..1000000",
+    "The answer is at most 365000000"
+  ],
+  "interface": "Solution.solve(days, costs) returns the minimum total pass cost.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "days": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 365,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 365
+        }
+      },
+      "costs": {
+        "kind": "array",
+        "minLength": 3,
+        "maxLength": 3,
+        "items": {
+          "kind": "integer",
+          "minimum": 1,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 365000000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "dp-1d-09",
+    "dp-1d-16",
+    "dp-1d-17"
+  ],
+  "remedialIds": [
+    "dp-1d-01",
+    "dp-1d-02"
+  ],
+  "nextIds": [
+    "dp-1d-18",
+    "dp-1d-19",
+    "dp-1d-11",
+    "dp-1d-12"
+  ],
+  "rationale": "A pass skips a variable number of required dates because validity advances calendar time rather than consuming a fixed count of trips.",
+  "commonMistakes": [
+    "duration-counts-trip-entries",
+    "only-one-day-passes"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "sorted",
+      "field": "days"
+    },
+    {
+      "kind": "unique",
+      "field": "days"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "contentIdentity": "f11134fe838beca3c8ecf4698ab9d58f9c70cd8adb4e16e751704f12dd312e50",
+  "reviewIdentityVersion": 2,
+  "reviewer": "dp2d-graphs-thread-coordinator",
+  "reviewerType": "automated-independent",
+  "reviewedAt": "2026-10-08T11:38:53.638Z",
+  "rationale": "Indexed selections spelling one fixed target count separately, unlike longest common subsequence or coin multiplicities.815 role-preserving equality patterns retain exact C(1000,500) modulo certificate and empty-target identity.",
+  "evidence": "docs/release-evidence/dp2d-thread/independent-materialized-review.json",
+  "limitations": [
+    "Global243 task-map synthesis and exhaustive learner histories are separate.",
+    "Native receipt matching is read-only reconciliation; no native dispatch or publication is performed here.",
+    "Original-asset source review is automated independent technical evidence, not human legal approval."
+  ],
+  "nativeValidation": "separate-gate",
+  "publication": "not-implied"
+}

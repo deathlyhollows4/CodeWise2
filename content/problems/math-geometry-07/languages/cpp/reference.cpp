@@ -1,0 +1,1 @@
+class Solution {public:vector<vector<int>> solve(vector<vector<int>> grid){int n=grid.size();vector<vector<int>> out(n,vector<int>(n));for(int row=0;row<n;row++)for(int col=0;col<n;col++)out[col][n-1-row]=grid[row][col];return out;}};

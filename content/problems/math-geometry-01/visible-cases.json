@@ -1,0 +1,26 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "value": 120
+    },
+    "expected": 21,
+    "explanation": "Reversing 120 gives 021, which is the integer 21."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "value": -507
+    },
+    "expected": -705,
+    "explanation": "Reverse the digits, then keep the negative sign."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "value": 1534236469
+    },
+    "expected": 0,
+    "explanation": "9646324351 is outside the allowed result interval."
+  }
+]

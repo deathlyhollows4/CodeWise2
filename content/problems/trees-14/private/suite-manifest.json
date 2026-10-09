@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-subtree-summary.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1394,
+  "suiteHash": "1e75aae0ccc62520a966dc37b7add9719a70f0812158b3cf4376d32fc45afa9e",
+  "categories": [
+    "duplicate-negative-values-sparse-shape",
+    "varied-branching-and-sparse-shape",
+    "left-depth-spectrum",
+    "right-depth-spectrum",
+    "deep-2000-native-nodes",
+    "wide-2000-positive-nodes",
+    "wide-2000-negative-nodes",
+    "repeated-complete-subtree-types",
+    "duplicate-values-with-shape-boundaries",
+    "targeted-subtree-or-ancestor-counterexample"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

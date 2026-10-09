@@ -1,0 +1,1 @@
+Distinct signed readings were originally strictly increasing, then rotated by moving a prefix to the end. Return the zero-based index of target in the current list, or -1 if absent. The list may be empty or unrotated. Use the ordered half of each search interval to keep the search logarithmic. Local decoded input arrays may be modified; only the returned result is graded.

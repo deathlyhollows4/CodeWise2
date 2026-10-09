@@ -1,0 +1,1 @@
+Return the largest length of a strictly increasing subsequence. A subsequence may skip positions but must keep the original index order. Strictly increasing means each next chosen value is greater, not equal. The empty list returns 0. Return only the length; you do not need to reconstruct a subsequence. Aim for O(n log n) time so long inputs remain practical.

@@ -1,0 +1,1 @@
+class Solution {public:string solve(string text){string out;for(char c:text){if(!out.empty()&&out.back()==c)out.pop_back();else out.push_back(c);}return out;}};

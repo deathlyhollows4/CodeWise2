@@ -1,0 +1,1 @@
+class Solution {public int[] solve(int[] values){long mixed=0;for(int v:values)mixed^=v;long mask=mixed&-mixed;int a=0,b=0;for(int v:values)if(((long)v&mask)!=0)a^=v;else b^=v;return new int[]{Math.min(a,b),Math.max(a,b)};}}

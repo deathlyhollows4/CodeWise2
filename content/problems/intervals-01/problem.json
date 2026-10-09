@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "intervals-01",
+  "version": "1.0.0",
+  "slug": "closed-coverage-union",
+  "title": "Merge closed coverage ranges",
+  "primaryTopic": "intervals",
+  "skillIds": [
+    "intervals.sorted-union",
+    "intervals.endpoint-contact"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 1,
+  "status": "published",
+  "objective": "Represent the union of closed real-line intervals as sorted disjoint coverage ranges.",
+  "constraints": [
+    "0 <= intervals.length <= 10000",
+    "Every row has exactly two integer endpoints in [-1000000000, 1000000000].",
+    "Each start is at most its end."
+  ],
+  "interface": "Solution.solve(intervals) receives a native integer matrix and returns a native matrix of merged endpoint pairs.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "intervals": {
+        "kind": "array",
+        "maxLength": 10000,
+        "unordered": true,
+        "deduplicate": true,
+        "items": {
+          "kind": "array",
+          "minLength": 2,
+          "maxLength": 2,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 10000,
+    "items": {
+      "kind": "array",
+      "minLength": 2,
+      "maxLength": 2,
+      "items": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "intervals-02"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "intervals-03"
+  ],
+  "rationale": "Sorting puts the next possible overlap beside the current range. Endpoint contact counts as coverage and extends that range.",
+  "commonMistakes": [
+    "do-not-merge-touching",
+    "drop-point-ranges",
+    "overwrite-containing-end"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "pair-ranges",
+      "field": "intervals",
+      "ordered": true,
+      "firstMin": -1000000000,
+      "firstMax": 1000000000,
+      "secondMin": -1000000000,
+      "secondMax": 1000000000
+    }
+  ]
+}

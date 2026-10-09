@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "58ae8a58a5ee32673ab5ee25afdfe88448bc1ba0f889d7cc036578ab2560058c",
+  "suiteHash": "ca06eac037ffc700898a61c3831dfa00e301ab480cf26c5651b5be0f04431ee0",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "give-all-vertices-distance-zero",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "assume-one-global-cycle-length",
+      "detected": true,
+      "caseId": "visible-3"
+    }
+  ],
+  "languageExecution": "not-run"
+}

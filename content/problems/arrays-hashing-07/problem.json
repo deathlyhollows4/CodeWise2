@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-07",
+  "version": "1.0.0",
+  "slug": "lexical-pair-indices",
+  "title": "Earliest matching pair",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "hashing.complement",
+    "arrays.lexicographic-indices"
+  ],
+  "prerequisites": [
+    "arrays.traversal",
+    "hashing.membership"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Find a target-sum index pair with explicit deterministic tie-breaking.",
+  "constraints": [
+    "0 <= values.length <=2000",
+    "Each value is in[-1000000000,1000000000]; target in[-2000000000,2000000000]."
+  ],
+  "interface": "Solution.solve(values, target) returns a 2-element integer array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000000,
+          "maximum": 1000000000
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -2000000000,
+        "maximum": 2000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2,
+    "items": {
+      "kind": "integer",
+      "minimum": -2000000000,
+      "maximum": 2000000000
+    },
+    "minLength": 2
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-08"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01",
+    "arrays-hashing-04"
+  ],
+  "nextIds": [
+    "arrays-hashing-09"
+  ],
+  "rationale": "A lookup now matches the value needed to complete a pair, while preserving the earliest indices.",
+  "commonMistakes": [
+    "first-finish",
+    "reuse-position"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "days": [
+        1,
+        4,
+        6,
+        7,
+        8,
+        20
+      ],
+      "costs": [
+        2,
+        7,
+        15
+      ]
+    },
+    "expected": 11,
+    "explanation": "A 1-day pass on day1, a 7-day pass covering days4..10 and a 1-day pass on day20 cost11."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "days": [
+        1,
+        8
+      ],
+      "costs": [
+        2,
+        3,
+        100
+      ]
+    },
+    "expected": 4,
+    "explanation": "One 7-day pass starting day1 expires on day7, so it cannot cover both dates. Two 1-day passes cost4."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "days": [],
+      "costs": [
+        5,
+        1,
+        9
+      ]
+    },
+    "expected": 0,
+    "explanation": "No travel dates require a purchase, regardless of pass prices."
+  }
+]

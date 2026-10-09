@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-toggle-maxpath.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1125,
+  "suiteHash": "1a8dc1ad863839144bc7b6205e14b3edd25eb21aced876dd7d86930cfc5ca63a",
+  "categories": [
+    "binary-duplicate-negative-values-sparse-shape",
+    "binary-varied-branching-and-sparse-shape",
+    "binary-right-depth-spectrum",
+    "binary-left-depth-spectrum",
+    "binary-deep-2000-native-nodes",
+    "binary-wide-2000-positive-nodes",
+    "divergent-sibling-parity-and-ancestor-flips"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

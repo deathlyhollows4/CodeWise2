@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 620,
+  "suiteHash": "587f5091bf3e0b7d39be50c58706a292e4646d72d937d138070ae3d3f18c1f38",
+  "categories": [
+    "negative-target-no-sequence",
+    "feasible-value-constrained-sequence",
+    "empty-leading-zero-reuse-and-no-solution",
+    "bounded-all-digit-extremes",
+    "single-max-coefficient-case"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "contentIdentity": "a10274f76a47a4b1923764a658270a41462474633efd2c14bf1e0321a2e99145",
+  "reviewer": "CodeWise2 coordinator independent of frontend author",
+  "reviewedAt": "2026-10-08T12:44:47.936Z",
+  "evidence": [
+    "docs/release-evidence/coordinator-tree21-22-review.md",
+    "docs/release-evidence/coordinator-tree21-22-asset-reconciliation.json"
+  ],
+  "scope": "Bounded source/assets review; no native execution or publication claim"
+}

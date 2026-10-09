@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "821db0301256e20b27eb17097895e006d1c23b15f4bef4c642ec68670bc6b13d",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:52:21.850Z",
+  "rationale": "Full independently inspected author source and native algorithms for Product without this position. The objective is: Combine prefix and suffix products without dividing or mishandling zeros. Exact reconciliation covers the current statement, three examples, 604 hidden cases, all three references and original or project-template starters/wrappers. No imported prose, tests or code assets occur in the source; common algorithmic ideas are expressed as original project assets.",
+  "assetEvidence": {
+    "authorSource": "content/authoring/batches/arrays-third.mjs",
+    "authorSourceSha256": "bf02d010ce927d11f231a9b9f064c1ea0eb508bc48299e60efca5315bea71d46",
+    "reconciliation": "docs/release-evidence/coordinator-arrays-original-assets.json",
+    "wrapperReview": "Read all actual wrappers for Arrays10/16: only the optional blank line before USER_CODE and earlier Java Gson constructor differ from factory. Starters are exact original author strings, not placeholders."
+  },
+  "limitations": [
+    "Rights only; not diversity, progression, publication or execution approval.",
+    "Changed bound assets invalidate the review."
+  ]
+}

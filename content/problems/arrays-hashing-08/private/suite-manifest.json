@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/arrays-second.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 430,
+  "suiteHash": "5b94ffdf66a4eeb57765950fffaf67305d5d4637f77ce982ba550fe4a2392672",
+  "categories": [
+    "small-alphabet-multisets",
+    "maximum-full-alphabet-multiple-multiplicity-groups",
+    "near-maximum-full-alphabet-repeated-groups"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

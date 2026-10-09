@@ -1,0 +1,1 @@
+Start with all readings in initial. Append each reading from arrivals in order. After every append, record the kth-largest reading among everything seen so far. Return these thresholds in arrival order. Equal readings occupy separate ranks. initial already contains at least k readings, so every requested threshold exists.

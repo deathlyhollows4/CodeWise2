@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "binary-search-09",
+  "version": "1.0.0",
+  "slug": "target-in-monotone-grid",
+  "title": "Find a target in a monotone grid",
+  "primaryTopic": "binary-search",
+  "skillIds": [
+    "binary-search.two-dimensional-elimination",
+    "matrix.monotone-frontier"
+  ],
+  "prerequisites": [
+    "binary-search.halving"
+  ],
+  "step": 5,
+  "status": "published",
+  "objective": "Eliminate an entire row or column using a matrix ordered in two directions without assuming row-major total order.",
+  "constraints": [
+    "0 <= grid.length <=100",
+    "0 <= columns per row <=100; every row has the same length",
+    "-1000000000 <= grid[r][c],target <=1000000000",
+    "Every row and every column is nondecreasing"
+  ],
+  "interface": "Solution.solve(grid,target) returns a boolean.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "grid": {
+        "kind": "array",
+        "minLength": 0,
+        "maxLength": 100,
+        "rectangular": true,
+        "items": {
+          "kind": "array",
+          "minLength": 0,
+          "maxLength": 100,
+          "items": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      },
+      "target": {
+        "kind": "integer",
+        "minimum": -1000000000,
+        "maximum": 1000000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "boolean"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "binary-search-10"
+  ],
+  "remedialIds": [
+    "binary-search-02",
+    "binary-search-04"
+  ],
+  "nextIds": [
+    "binary-search-11"
+  ],
+  "rationale": "Moving left lowers a candidate; moving down raises it. Each comparison removes one impossible strip.",
+  "commonMistakes": [
+    "binary-search-flattened",
+    "check-first-row-only"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "matrix-sorted",
+      "field": "grid"
+    }
+  ]
+}

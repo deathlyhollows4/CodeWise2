@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-binary-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC1101",
+  "hiddenCount": 704,
+  "suiteHash": "b99d60b6f33c4717cbb5a16d5ccdce9b9483cd4de7d76843f52e6252b474f111",
+  "categories": [
+    "ordered-partition-cuts",
+    "order-and-indivisibility",
+    "large-wide-capacity"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

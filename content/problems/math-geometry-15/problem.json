@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-15",
+  "version": "1.0.0",
+  "slug": "exact-rational-operation",
+  "title": "Normalize an exact rational operation",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "numbers.rational-normalization",
+    "numbers.sign-canonicalization"
+  ],
+  "prerequisites": [
+    "numbers.divisibility",
+    "numbers.wide-intermediates"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Perform one exact arithmetic operation on two rational numbers and return their canonical reduced representation.",
+  "constraints": [
+    "-1000000 <= aNum,bNum <= 1000000",
+    "1 <= aDen,bDen <= 1000000",
+    "operation is +, -, *, or /; when it is /, bNum is nonzero.",
+    "Intermediate products and sums fit signed 64 bit integers."
+  ],
+  "interface": "Solution.solve(aNum, aDen, bNum, bDen, operation) receives four long integers and a string, and returns a long array of length two.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "aNum": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      },
+      "aDen": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 1000000
+      },
+      "bNum": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      },
+      "bDen": {
+        "kind": "integer",
+        "minimum": 1,
+        "maximum": 1000000
+      },
+      "operation": {
+        "kind": "enum",
+        "values": [
+          "+",
+          "-",
+          "*",
+          "/"
+        ]
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 2,
+    "maxLength": 2,
+    "items": {
+      "kind": "safe-integer"
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original",
+    "exercism-rational-numbers-9943fd751b684ba1a6a8673c3700a6e79c10a808"
+  ],
+  "checkpointIds": [
+    "math-geometry-11"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-02",
+    "math-geometry-04",
+    "math-geometry-09",
+    "math-geometry-16",
+    "math-geometry-10",
+    "math-geometry-11",
+    "arrays-hashing-01",
+    "arrays-hashing-02"
+  ],
+  "nextIds": [
+    "math-geometry-12"
+  ],
+  "rationale": "Keep integer numerators and denominators, combine them exactly, then reduce by the greatest common divisor and normalize the sign.",
+  "commonMistakes": [
+    "do-not-reduce",
+    "discard-sign"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "nonzero-when",
+      "whenField": "operation",
+      "equals": "/",
+      "field": "bNum"
+    }
+  ]
+}

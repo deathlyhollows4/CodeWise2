@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "trees-14",
+  "version": "1.0.0",
+  "slug": "longest-path-between-arbitrary-tree-nodes",
+  "title": "Measure the longest path across the tree",
+  "primaryTopic": "trees",
+  "skillIds": [
+    "trees.child-links",
+    "trees.subtree-height-summary",
+    "trees.two-arm-path-join"
+  ],
+  "prerequisites": [
+    "trees.child-links",
+    "trees.subtree-height-summary"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Find the largest number of edges on any simple path between two native nodes.",
+  "constraints": [
+    "0 ≤ native node count ≤ 2,000.",
+    "Node values lie in [-1,000,000,000,1,000,000,000].",
+    "The input is a finite binary tree; sparse children, duplicate values and deep chains are allowed.",
+    "Do not modify original node values or links."
+  ],
+  "interface": "Solution.solve(root) returns int.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "root": {
+        "kind": "array",
+        "maxLength": 4001,
+        "trimTrailingNulls": true,
+        "items": {
+          "kind": "nullable",
+          "value": {
+            "kind": "integer",
+            "minimum": -1000000000,
+            "maximum": 1000000000
+          }
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "integer",
+    "minimum": 0,
+    "maximum": 2000
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "trees-15"
+  ],
+  "remedialIds": [
+    "trees-01",
+    "trees-13"
+  ],
+  "nextIds": [
+    "trees-12"
+  ],
+  "rationale": "The longest path may join two child branches below the root; a root-to-leaf height alone is insufficient.",
+  "commonMistakes": [
+    "return-root-height",
+    "root-only-two-arm-path"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": [
+    {
+      "kind": "tree-level",
+      "field": "root",
+      "maxNodes": 2000
+    }
+  ]
+}

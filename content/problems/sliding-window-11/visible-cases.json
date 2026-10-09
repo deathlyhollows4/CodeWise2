@@ -1,0 +1,37 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "k": 3
+    },
+    "expected": 3,
+    "explanation": "The final [1,2,3] has all three required types."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [],
+      "k": 1
+    },
+    "expected": 0,
+    "explanation": "No type can be found."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        5,
+        5
+      ],
+      "k": 2
+    },
+    "expected": 0,
+    "explanation": "Only one different value exists."
+  }
+]

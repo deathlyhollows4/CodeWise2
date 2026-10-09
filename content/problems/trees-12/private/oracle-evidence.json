@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "23579803c84da07af92bd256a12f2f0f58a6e754fd8092f561c9fbbf19da973b",
+  "suiteHash": "dd1b8587d1a32ac893bc8a5569662252a5cbbe25526b15c71721b17b880fd4cf",
+  "oracleChecks": 1138,
+  "hiddenUnique": 1135,
+  "mutations": [
+    {
+      "name": "forget-uncovered-root",
+      "detected": true,
+      "caseId": "visible-2"
+    },
+    {
+      "name": "place-camera-at-every-leaf",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

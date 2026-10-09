@@ -1,0 +1,33 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        3,
+        1,
+        2
+      ]
+    },
+    "expected": 9,
+    "explanation": "Singleton minima total 6; the other three batch minima are each 1."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": []
+    },
+    "expected": 0,
+    "explanation": "No nonempty batch exists."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [
+        2,
+        2
+      ]
+    },
+    "expected": 6,
+    "explanation": "The two singleton batches and the length-two batch each contribute 2."
+  }
+]

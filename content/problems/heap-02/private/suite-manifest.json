@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/heap-first.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xdea1",
+  "hiddenCount": 753,
+  "suiteHash": "9b0a900ee71c250ed3cccf6fed4c0582326d09f2d5730eae20dff6c09640edcd",
+  "categories": [
+    "ordered-stream-thresholds",
+    "maximum-monotone-stream",
+    "maximum-rank-lower-arrivals",
+    "exact-stream-extrema-and-duplicates"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

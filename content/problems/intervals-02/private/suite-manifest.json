@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/intervals-intersection.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0x1a02",
+  "hiddenCount": 60,
+  "suiteHash": "a3a9614cbcba598329b8a544a9fb89678752523f64f4c90d3499f5e1a3837fcf",
+  "categories": [
+    "maximum-paired-interval-intersection-certificate",
+    "maximum-19999-alternating-intersections-certificate",
+    "extreme-endpoint-point-intersections",
+    "isolated-point-inside-other-range",
+    "empty-right-calendar",
+    "curated-paired-calendar-frontiers",
+    "curated-contained-and-disjoint-calendar-ranges"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

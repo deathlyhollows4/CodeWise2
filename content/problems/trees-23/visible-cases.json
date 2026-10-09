@@ -1,0 +1,50 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "root": [
+        5,
+        3,
+        8,
+        1,
+        4,
+        6,
+        9
+      ],
+      "lo": 4,
+      "hi": 8
+    },
+    "expected": 23,
+    "explanation": "The inclusive keys 4, 5, 6, 8 contribute 23."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "root": [
+        0,
+        -5,
+        7,
+        -8,
+        -2
+      ],
+      "lo": -8,
+      "hi": -2
+    },
+    "expected": -15,
+    "explanation": "The matching negative keys -8, -5, -2 total -15."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "root": [
+        5,
+        3,
+        8
+      ],
+      "lo": 6,
+      "hi": 6
+    },
+    "expected": 0,
+    "explanation": "The singleton interval contains no original key."
+  }
+]

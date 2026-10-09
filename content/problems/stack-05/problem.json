@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "stack-05",
+  "version": "1.0.0",
+  "slug": "next-greater-around-a-ring",
+  "title": "Next greater reading around a ring",
+  "primaryTopic": "stack",
+  "skillIds": [
+    "stack.circular-scan",
+    "stack.monotonic-candidates"
+  ],
+  "prerequisites": [
+    "stack.monotonic-candidates"
+  ],
+  "step": 3,
+  "status": "published",
+  "objective": "Reuse a monotonic candidate stack during a bounded second traversal.",
+  "constraints": [
+    "0 ≤ values.length ≤ 2,000",
+    "Each value is in [-1,000,000,1,000,000].",
+    "Empty input returns an empty answer array."
+  ],
+  "interface": "Solution.solve(values) returns the next-greater value array.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "values": {
+        "kind": "array",
+        "maxLength": 2000,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "maxLength": 2000,
+    "items": {
+      "kind": "integer",
+      "minimum": -1000000,
+      "maximum": 1000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "stack-04"
+  ],
+  "remedialIds": [],
+  "nextIds": [
+    "stack-06"
+  ],
+  "rationale": "A second pass completes answers near the end without treating the ring as an endless search.",
+  "commonMistakes": [
+    "never-wrap",
+    "accept-equality-around-ring"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

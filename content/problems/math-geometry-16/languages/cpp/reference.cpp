@@ -1,0 +1,1 @@
+class Solution {public:vector<int> solve(vector<int> point,string line,int offset){int a,b;if(line=="vertical"){a=1;b=0;}else if(line=="horizontal"){a=0;b=1;}else if(line=="rising"){a=-1;b=1;}else{a=1;b=1;}int factor=2*(a*point[0]+b*point[1]-offset)/(a*a+b*b);return {point[0]-a*factor,point[1]-b*factor};}};

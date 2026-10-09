@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-fifth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC214",
+  "hiddenCount": 887,
+  "suiteHash": "95826ed61fc8b555a5c363321e99084c516dd82ff5e4d76317f8ce1f316db9c9",
+  "categories": [
+    "exact-bigint-all-contiguous-products",
+    "max-length-sign-parity-zero-restart-and-wide-products"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

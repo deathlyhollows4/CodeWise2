@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/backend-dp1-workstations.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xCC202",
+  "hiddenCount": 787,
+  "suiteHash": "1cac03afc7815381a6672ce26fc3fe787fa3dd292a22aa318f3b6a7e8bba068a",
+  "categories": [
+    "enumerate-every-daily-A-B-assignment",
+    "ties-zero-costs-free-start-and-stay-versus-switch",
+    "upper-bound90000-days90000000000000-int64-cost",
+    "upper-bound-free-switches-independent-pointwise-optimum",
+    "upper-bound-varied-costs-switch-exceeds-every-constant-plan"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

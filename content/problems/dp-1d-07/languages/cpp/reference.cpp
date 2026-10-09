@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> coins,int a){vector<int> dp(a+1);dp[0]=1;for(int c:coins)for(int n=c;n<=a;n++)dp[n]=(dp[n]+dp[n-c])%1000000007;return dp[a];}};

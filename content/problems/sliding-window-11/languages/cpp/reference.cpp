@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values,int k){unordered_map<int,int> counts;int left=0,best=values.size()+1;for(int right=0;right<(int)values.size();right++){counts[values[right]]++;while((int)counts.size()>=k){best=min(best,right-left+1);int old=values[left++];if(--counts[old]==0)counts.erase(old);}}return best>(int)values.size()?0:best;}};

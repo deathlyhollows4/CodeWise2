@@ -1,0 +1,52 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "jobs": [
+        [
+          1,
+          20
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          40
+        ]
+      ]
+    },
+    "expected": 60,
+    "explanation": "Put the reward 20 deadline 1 job in slot 1 and the reward 40 deadline 2 job in slot 2."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "jobs": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          9
+        ]
+      ]
+    },
+    "expected": 9,
+    "explanation": "All three jobs need the sole first slot, so take only the largest reward 9."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "jobs": []
+    },
+    "expected": 0,
+    "explanation": "No jobs produce no reward."
+  }
+]

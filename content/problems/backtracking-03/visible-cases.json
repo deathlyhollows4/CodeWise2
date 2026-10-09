@@ -1,0 +1,31 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "digits": "25525511135"
+    },
+    "expected": [
+      "255.255.11.135",
+      "255.255.111.35"
+    ],
+    "explanation": "Both choices for the final two segment widths satisfy the value limit."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "digits": "0000"
+    },
+    "expected": [
+      "0.0.0.0"
+    ],
+    "explanation": "Each zero is a single canonical segment; a multi-digit zero segment would be invalid."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "digits": "123"
+    },
+    "expected": [],
+    "explanation": "Three digits cannot fill four nonempty segments."
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/stack-pop-sequence.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 754,
+  "suiteHash": "cc73f51915a1544782b022587cafd1a8f2b3e92626691d997f074e44dd1cb9df",
+  "categories": [
+    "foreign-pop-id",
+    "candidate-interleaving",
+    "missing-pop",
+    "retained-declared-max-stack-08-1",
+    "retained-declared-max-stack-08-2",
+    "retained-declared-max-stack-08-3",
+    "retained-declared-max-stack-08-4",
+    "retained-declared-max-stack-08-5",
+    "retained-declared-max-stack-08-6"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

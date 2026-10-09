@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/batches/bits-fourth.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xb911",
+  "hiddenCount": 757,
+  "suiteHash": "dd2f0d6e248e368bb2cb93be374946a782060d68dd3a0fe40aec2760087a488b",
+  "categories": [
+    "varied-word",
+    "carry-or-domain-boundary"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

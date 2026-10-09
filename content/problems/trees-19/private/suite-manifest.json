@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-bst-updates.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 835,
+  "suiteHash": "186cb20a3a29a0111405ce37764f4feb9bbd68ae1145cf9a9d01a6cb1bb98428",
+  "categories": [
+    "existing-key-native-shape",
+    "absent-key-native-shape",
+    "empty-extremes-root-or-successor-right-child",
+    "maximum-skew-existing-and-absent"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "target": 1
+    },
+    "expected": 3,
+    "explanation": "Exactly one of the three indexed values receives a minus sign."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "values": [
+        0,
+        0
+      ],
+      "target": 0
+    },
+    "expected": 4,
+    "explanation": "The choices ++, +-, -+ and -- are all distinct assignments."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "values": [],
+      "target": 0
+    },
+    "expected": 1,
+    "explanation": "The empty assignment totals zero."
+  }
+]

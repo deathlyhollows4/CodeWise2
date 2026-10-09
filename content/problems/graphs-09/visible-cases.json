@@ -1,0 +1,69 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "n": 5,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ]
+    },
+    "expected": [
+      1,
+      3,
+      4
+    ],
+    "explanation": "3 is terminal and 1 and 4 must reach it. Vertex 2 loops; vertex 0 can choose the loop-reaching branch and is unsafe."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "n": 0,
+      "edges": []
+    },
+    "expected": [],
+    "explanation": "No starting vertices exist."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "n": 4,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    },
+    "expected": [
+      3
+    ],
+    "explanation": "Vertices 1 and 2 form a cycle; predecessor 0 is unsafe too. Isolated vertex 3 is terminal."
+  }
+]

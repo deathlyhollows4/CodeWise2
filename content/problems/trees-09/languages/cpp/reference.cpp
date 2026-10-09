@@ -1,0 +1,1 @@
+class Solution {public:bool solve(TreeNode* a,TreeNode* b){vector<pair<TreeNode*,TreeNode*>> stack{{a,b}};while(!stack.empty()){auto item=stack.back();stack.pop_back();auto x=item.first;auto y=item.second;if(!x||!y){if(x!=y)return false;continue;}if(x->val!=y->val)return false;stack.push_back({x->left,y->left});stack.push_back({x->right,y->right});}return true;}};

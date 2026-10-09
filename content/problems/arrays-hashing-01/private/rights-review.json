@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "rights",
+  "contentIdentity": "b492a0092aa22a0ec2961adf2cfa6a9221431771781b43acbaba0f4691e43776",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T09:58:54.983Z",
+  "rationale": "Read entire original scalar author source and all actual nine language assets for Running total. Statement, three visible cases, all858hidden cases and reference body interpolation exactly match original source. Directly inspected the short native typed-array templates: bounded count/length decoding, one Solution.solve call per case, scalar output. Starters are original empty project interfaces. No imported assets present; asset provenance declares project-owned code/prose/tests.",
+  "assetEvidence": {
+    "source": "content/authoring/slice.mjs",
+    "sourceSha256": "dc03ef3c0d51dba96072ac14f94662ff83c22ee11f8fa3c649bd915767372366",
+    "reconciliation": "docs/release-evidence/coordinator-legacy-arrays-rights.json"
+  },
+  "limitations": [
+    "Rights only; execution is proven separately by matching real native receipts.",
+    "No full-bank publication claim."
+  ]
+}

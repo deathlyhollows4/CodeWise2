@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "math-geometry-16",
+  "version": "1.0.0",
+  "slug": "integer-line-mirror",
+  "title": "Reflect a point across an integer line",
+  "primaryTopic": "math-geometry",
+  "skillIds": [
+    "geometry.normal-projection",
+    "geometry.reflection-midpoint",
+    "geometry.coordinate-difference"
+  ],
+  "prerequisites": [],
+  "step": 2,
+  "status": "published",
+  "objective": "Reflect an integer point across a translated vertical, horizontal or diagonal line exactly.",
+  "constraints": [
+    "point is exactly one [x,y] pair.",
+    "-1000000 <= x,y,offset <= 1000000",
+    "line is vertical, horizontal, rising, or falling.",
+    "Reflected coordinates lie in [-3000000,3000000]."
+  ],
+  "interface": "Solution.solve(point, line, offset) receives a typed coordinate array, a line-name string and an integer offset.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "point": {
+        "kind": "array",
+        "minLength": 2,
+        "maxLength": 2,
+        "items": {
+          "kind": "integer",
+          "minimum": -1000000,
+          "maximum": 1000000
+        }
+      },
+      "line": {
+        "kind": "enum",
+        "values": [
+          "vertical",
+          "horizontal",
+          "rising",
+          "falling"
+        ]
+      },
+      "offset": {
+        "kind": "integer",
+        "minimum": -1000000,
+        "maximum": 1000000
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "array",
+    "minLength": 2,
+    "maxLength": 2,
+    "items": {
+      "kind": "integer",
+      "minimum": -3000000,
+      "maximum": 3000000
+    }
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "math-geometry-10"
+  ],
+  "remedialIds": [
+    "math-geometry-01",
+    "math-geometry-09",
+    "math-geometry-10"
+  ],
+  "nextIds": [
+    "math-geometry-11"
+  ],
+  "rationale": "The midpoint of a point and its reflection lies on the mirror line, and their difference points along the line normal.",
+  "commonMistakes": [
+    "ignore-translation",
+    "reflect-across-wrong-family"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

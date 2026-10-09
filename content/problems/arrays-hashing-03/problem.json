@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "arrays-hashing-03",
+  "version": "1.0.0",
+  "slug": "first-repeated-position",
+  "title": "First repeated position",
+  "primaryTopic": "arrays-hashing",
+  "skillIds": [
+    "arrays.traversal",
+    "hashing.membership",
+    "arrays.index-semantics"
+  ],
+  "prerequisites": [
+    "arrays.traversal"
+  ],
+  "step": 2,
+  "status": "published",
+  "objective": "Use membership state to find the first position whose value was already seen.",
+  "constraints": [
+    "0 <= values.length <= 100000",
+    "-1000000000 <= values[i] <= 1000000000",
+    "Return an integer; total results fit a signed 64-bit integer and JSON safe integer."
+  ],
+  "interface": "Solution.solve(values): signed 64-bit integer. Input values are signed 32-bit integers.",
+  "inputSchema": {
+    "kind": "integer-array",
+    "field": "values",
+    "minLength": 0,
+    "maxLength": 100000,
+    "minValue": -1000000000,
+    "maxValue": 1000000000
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "arrays-hashing-04"
+  ],
+  "remedialIds": [
+    "arrays-hashing-01"
+  ],
+  "nextIds": [
+    "arrays-hashing-05"
+  ],
+  "approachTags": [
+    "hash-set"
+  ],
+  "commonMistakes": [
+    "first-occurrence",
+    "adjacent-only",
+    "sorted-repeat"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 1048576,
+    "fileKb": 2048,
+    "inputBytes": 8388608
+  },
+  "rationale": "The scan is familiar. A set, which stores distinct values, adds one new idea: detecting a value seen earlier. Frequency counting is a planned same-step checkpoint, pending validation."
+}

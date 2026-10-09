@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/backtracking-delimiters.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 60,
+  "suiteHash": "e19f95c9cf6fefc517092a1da287035e4828bb0a60829094831b438218ffa276",
+  "categories": [
+    "empty-fixed-prefix-parity-max-and-branch-boundary",
+    "mixed-fixed-branch-constraints",
+    "mixed-fixed-boundaries"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution { public: vector<vector<int>> solve(vector<int> values){map<int,int> counts;for(int v:values)counts[v]++;vector<vector<int>> result;for(auto [v,c]:counts)result.push_back({v,c});return result;} };

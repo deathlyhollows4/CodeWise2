@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "kind": "trusted-oracle-and-mutation-audit",
+  "contentIdentity": "8e213ba683e5e75c81192a9aec6125595ab67ebeefe14141ac1937880584b6bd",
+  "suiteHash": "de7718e780f212e478ec3c503488e9915da4063cb2021a14c0a83819fb06d9fc",
+  "oracleChecks": 63,
+  "hiddenUnique": 60,
+  "mutations": [
+    {
+      "name": "count-neighbor-component-more-than-once",
+      "detected": true,
+      "caseId": "visible-3"
+    },
+    {
+      "name": "ignore-possible-flip",
+      "detected": true,
+      "caseId": "visible-1"
+    },
+    {
+      "name": "allow-all-water-to-flip",
+      "detected": true,
+      "caseId": "visible-1"
+    }
+  ],
+  "languageExecution": "not-run"
+}

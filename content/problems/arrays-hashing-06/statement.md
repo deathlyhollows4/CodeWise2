@@ -1,0 +1,1 @@
+There are n readings containing distinct labels from 0 through n inclusive. Exactly one label in that range is absent. Return that missing label. Readings may be in any order. The empty list has n = 0, so label 0 is missing.

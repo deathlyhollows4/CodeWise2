@@ -1,0 +1,126 @@
+[
+  {
+    "id": "visible-1",
+    "input": {
+      "operations": [
+        {
+          "op": "constructor",
+          "args": []
+        },
+        {
+          "op": "put",
+          "args": [
+            1,
+            0,
+            5
+          ]
+        },
+        {
+          "op": "put",
+          "args": [
+            2,
+            3,
+            8
+          ]
+        },
+        {
+          "op": "covered",
+          "args": []
+        },
+        {
+          "op": "remove",
+          "args": [
+            1
+          ]
+        },
+        {
+          "op": "covered",
+          "args": []
+        }
+      ]
+    },
+    "expected": [
+      null,
+      null,
+      null,
+      8,
+      null,
+      5
+    ],
+    "explanation": "The union [0,8) has length 8; after removing handle 1, [3,8) remains."
+  },
+  {
+    "id": "visible-2",
+    "input": {
+      "operations": [
+        {
+          "op": "constructor",
+          "args": []
+        },
+        {
+          "op": "put",
+          "args": [
+            7,
+            0,
+            10
+          ]
+        },
+        {
+          "op": "put",
+          "args": [
+            7,
+            20,
+            25
+          ]
+        },
+        {
+          "op": "covered",
+          "args": []
+        }
+      ]
+    },
+    "expected": [
+      null,
+      null,
+      null,
+      5
+    ],
+    "explanation": "Replacement releases [0,10) and stores only [20,25)."
+  },
+  {
+    "id": "visible-3",
+    "input": {
+      "operations": [
+        {
+          "op": "constructor",
+          "args": []
+        },
+        {
+          "op": "put",
+          "args": [
+            0,
+            4,
+            4
+          ]
+        },
+        {
+          "op": "remove",
+          "args": [
+            99
+          ]
+        },
+        {
+          "op": "covered",
+          "args": []
+        }
+      ]
+    },
+    "expected": [
+      null,
+      null,
+      null,
+      0
+    ],
+    "explanation": "A point range and removing an absent handle add no covered length."
+  }
+]

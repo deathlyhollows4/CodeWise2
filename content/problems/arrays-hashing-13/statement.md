@@ -1,0 +1,1 @@
+Return a one-element array containing the label that occurs strictly more than n/2 times. If no label meets that rule, return an empty array. At most one label can qualify. Empty input returns an empty array. A tie at exactly half does not qualify. Aim for constant auxiliary space apart from the output.

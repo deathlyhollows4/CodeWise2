@@ -1,0 +1,1 @@
+class Solution {public:TreeNode* solve(TreeNode* root,string direction){if(!root)return nullptr;if(direction=="LEFT"){auto pivot=root->right;if(!pivot)return root;root->right=pivot->left;pivot->left=root;return pivot;}auto pivot=root->left;if(!pivot)return root;root->left=pivot->right;pivot->right=root;return pivot;}};

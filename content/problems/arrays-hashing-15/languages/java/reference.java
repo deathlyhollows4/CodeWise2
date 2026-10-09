@@ -1,0 +1,1 @@
+class Solution {public int solve(int[] values){int[] sorted=values.clone();Arrays.sort(sorted);int left=0,right=values.length-1;while(left<values.length&&values[left]==sorted[left])left++;while(right>=left&&values[right]==sorted[right])right--;return right<left?0:right-left+1;}}

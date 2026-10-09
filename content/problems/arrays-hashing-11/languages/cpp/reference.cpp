@@ -1,0 +1,1 @@
+class Solution {public:int solve(vector<int> values){unordered_set<int> s(values.begin(),values.end());int best=0;for(int v:s)if(!s.count(v-1)){int count=1;while(s.count(v+count))count++;best=max(best,count);}return best;}};

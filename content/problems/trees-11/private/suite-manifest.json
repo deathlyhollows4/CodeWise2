@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generator": "content/authoring/trees-compare-target-cover.mjs",
+  "generatorVersion": "1.0.0",
+  "seed": "0xC02E",
+  "hiddenCount": 1138,
+  "suiteHash": "85e86e874c1a3cc1dd9721b2dd4abcb62f5651949ace83afffd2b9214023a4ab",
+  "categories": [
+    "existing-complete-leaf-route",
+    "negative-and-internal-match-counterexamples",
+    "deep-wide-sum-2000-node-route"
+  ],
+  "oracleStatus": "pending-trusted-audit",
+  "referenceStatus": "not-run"
+}

@@ -1,0 +1,1 @@
+class Solution {public long[] solve(int[] values){long[] out=new long[values.length];int l=0,r=values.length-1;for(int w=values.length-1;w>=0;w--){long a=(long)values[l]*values[l],b=(long)values[r]*values[r];if(a>b){out[w]=a;l++;}else{out[w]=b;r--;}}return out;}}

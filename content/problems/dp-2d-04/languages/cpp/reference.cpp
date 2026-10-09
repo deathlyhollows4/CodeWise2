@@ -1,0 +1,1 @@
+class Solution {public:int solve(string a,string b){vector<int>d(b.size()+1);iota(d.begin(),d.end(),0);for(int i=1;i<=(int)a.size();i++){int old=d[0];d[0]=i;for(int j=1;j<=(int)b.size();j++){int above=d[j];d[j]=min({above+1,d[j-1]+1,old+(a[i-1]==b[j-1]?0:1)});old=above;}}return d[b.size()];}};

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "bit-manipulation-09",
+  "version": "1.0.0",
+  "slug": "next-equal-population-word",
+  "title": "The next word with the same bit population",
+  "primaryTopic": "bit-manipulation",
+  "skillIds": [
+    "bits.carry-boundary",
+    "bits.population-successor"
+  ],
+  "prerequisites": [
+    "bits.unsigned32"
+  ],
+  "step": 4,
+  "status": "published",
+  "objective": "Find the least greater 31 bit word containing the same number of one bits.",
+  "constraints": [
+    "0 <= value <= 2147483647",
+    "The answer must fit in 31 bits and be strictly greater, or be -1."
+  ],
+  "interface": "Solution.solve(value) receives a nonnegative long integer.",
+  "inputSchema": {
+    "kind": "object",
+    "properties": {
+      "value": {
+        "kind": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      }
+    }
+  },
+  "outputSchema": {
+    "kind": "safe-integer"
+  },
+  "checker": {
+    "kind": "exact"
+  },
+  "harness": {
+    "encoding": "json-lines-v1"
+  },
+  "languageFiles": {
+    "java": {
+      "starter": "languages/java/starter.java",
+      "wrapper": "languages/java/wrapper.java",
+      "reference": "languages/java/reference.java"
+    },
+    "cpp": {
+      "starter": "languages/cpp/starter.cpp",
+      "wrapper": "languages/cpp/wrapper.cpp",
+      "reference": "languages/cpp/reference.cpp"
+    },
+    "python": {
+      "starter": "languages/python/starter.py",
+      "wrapper": "languages/python/wrapper.py",
+      "reference": "languages/python/reference.py"
+    }
+  },
+  "sourceIds": [
+    "codewise2-original"
+  ],
+  "checkpointIds": [
+    "bit-manipulation-07",
+    "bit-manipulation-12"
+  ],
+  "remedialIds": [
+    "bit-manipulation-01",
+    "arrays-hashing-01",
+    "arrays-hashing-02",
+    "arrays-hashing-03"
+  ],
+  "nextIds": [
+    "bit-manipulation-14"
+  ],
+  "rationale": "Move the lowest movable one bit upward, then pack the remaining low one bits as tightly as possible.",
+  "commonMistakes": [
+    "numeric-successor",
+    "forget-domain-limit"
+  ],
+  "limits": {
+    "cpuSeconds": 5,
+    "wallSeconds": 15,
+    "memoryKb": 262144,
+    "processes": 64,
+    "outputBytes": 4194304,
+    "fileKb": 4096,
+    "inputBytes": 8388608
+  },
+  "semanticConstraints": []
+}

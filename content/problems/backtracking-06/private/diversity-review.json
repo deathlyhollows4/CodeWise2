@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "reviewType": "diversity",
+  "contentIdentity": "aa0196fba067a16f8b78b7e12868a566bc21f777b2dd3bdb5a378b457e9341f1",
+  "reviewer": "CodeWise2 coordinator independent of content author",
+  "reviewedAt": "2026-10-08T10:06:03.756Z",
+  "rationale": "Enumerates every replacement of a partially fixed delimiter pattern that is balanced at every prefix. This differs from Stack predicate validation of an already fixed string and from wildcard string matching; assignment-stack enumeration independently checks fixed-character constraints and maximum Catalan output.",
+  "assetEvidence": {
+    "source": "content/authoring/backtracking-delimiters.mjs",
+    "sourceHash": "6a2f5b221755033c4eea5172bef4ed7946203fd38705c2736650569b35dada44",
+    "reconciliation": "docs/release-evidence/coordinator-backtracking-eight-review.json"
+  },
+  "limitations": [
+    "Substantive per-pack review only; final global243 distinctness/curriculum synthesis and current native receipts remain separate gates.",
+    "Changed bound assets invalidate this review."
+  ]
+}
