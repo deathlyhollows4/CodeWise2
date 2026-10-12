@@ -2,6 +2,17 @@
 
 ## Start studying from a clone
 
+### Windows scripts (PowerShell 7)
+
+```powershell
+pwsh -File scripts/setup.ps1
+pwsh -File scripts/start.ps1
+```
+
+Setup installs dependencies and builds the app; subsequent study sessions need only `start.ps1`. Startup wakes the existing dedicated runner, checks readiness, and renews expired isolation verification. If WSL reset the shared crash-dump policy, it explains the effect on all WSL distros and asks you to type `YES` before recovery. Declining or failed verification stops startup without bypassing isolation. Stop an already-running app before recovery; keep the start terminal open and use Ctrl+C or `scripts/stop.ps1` to stop safely.
+
+For a new computer, `pwsh -File scripts/setup.ps1 -InstallRunner` additionally offers dedicated runner installation with an `INSTALL` confirmation. It does not overwrite an existing distro, install missing Windows WSL features, or reboot Windows. Read [runner setup](docs/runner.md) for prerequisites. Use `pwsh -File scripts/start.ps1 -ReadingOnly` to read/edit without runner preflight; Run/Submit still requires verified isolation. `-CheckRunnerOnly` performs the preflight without launching the app.
+
 Install Git and Node.js 24 or later, clone this repository, and open a terminal in the cloned folder:
 
 ```sh
