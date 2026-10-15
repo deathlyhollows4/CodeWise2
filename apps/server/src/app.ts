@@ -14,8 +14,10 @@ import {
   TUTOR_PROMPT_VERSION,
   summarizeTutorSkills,
   publicGeneration,
+  tutorOutputPolicy,
 } from "./tutor-context.ts";
 import { derivePathStates } from "../../../packages/learning-engine/src/path-state.ts";
+import { projectProgressDashboard } from "./progress-dashboard.ts";
 import { REVIEW_SCHEDULE_VERSION } from "../../../packages/learning-engine/src/review-calendar.ts";
 import { RULE_VERSION } from "../../../packages/learning-engine/src/index.ts";
 import {
@@ -229,20 +231,12 @@ export function createApp(options: {
     });
   const progress = () => {
     const evidence = store.list("evidence");
-    const independent = [
-      ...new Set(
-        evidence
-          .filter((e) => e.outcome === "accepted" && !e.assisted)
-          .map((e) => e.problemId),
-      ),
-    ];
-    const assisted = [
-      ...new Set(
-        evidence
-          .filter((e) => e.outcome === "accepted" && e.assisted)
-          .map((e) => e.problemId),
-      ),
-    ].filter((id) => !independent.includes(id));
+    const dashboard = projectProgressDashboard(
+      catalogue,
+      evidence,
+      store.list("jobs"),
+      store.meta("preferences").timezone,
+    );
     const allReviews = evidence
       .filter((e) => e.outcome === "accepted")
       .map((e) => ({
@@ -265,8 +259,9 @@ export function createApp(options: {
         (e, i, a) => a.findLastIndex((x) => x.problemId === e.problemId) === i,
       );
     return {
-      independent: independent.length,
-      assisted: assisted.length,
+      independent: dashboard.independent,
+      assisted: dashboard.assisted,
+      dashboard,
       evidence,
       paths: derivePathStates(catalogue, evidence),
       reviewQueue: allReviews.filter((x) => Date.parse(x.dueAt) <= Date.now()),
@@ -515,7 +510,7 @@ ORDER BY (json_extract(data,'$.status')='accepted' AND json_extract(data,'$.asse
             if (!g.markdown && g.problemId !== "settings-connection-test")
               store.assistance(
                 g.problemId,
-                g.action === "solution"
+                g.action === "solution" || g.action === "idea_map"
                   ? "solution"
                   : g.action === "walkthrough"
                     ? "walkthrough"
@@ -604,6 +599,13 @@ ORDER BY (json_extract(data,'$.status')='accepted' AND json_extract(data,'$.asse
           )
             return;
           batches.push(text);
+        },
+        {
+          thinking: tutorOutputPolicy(
+            g.action,
+            g.maxOutputTokens ?? prefs.maxOutputTokens,
+            g.hintDepth,
+          ).thinking,
         },
       );
       batches.flush();
@@ -1748,11 +1750,11 @@ ORDER BY (json_extract(data,'$.status')='accepted' AND json_extract(data,'$.asse
         const inputBudgetTokens = prepared.inputBudgetTokens;
         const outputLimit = isTest
           ? 128
-          : input.action === "error"
-            ? Math.min(prefs.maxOutputTokens, 768)
-            : input.action === "hint"
-              ? Math.min(prefs.maxOutputTokens, 512)
-              : prefs.maxOutputTokens;
+          : tutorOutputPolicy(
+              input.action,
+              prefs.maxOutputTokens,
+              prefs.defaultHintDepth,
+            ).maxOutputTokens;
         if (inputBudgetTokens > 250000)
           throw new Error(
             "This tutor context exceeds the safe input budget. Start a new conversation or shorten the code.",
@@ -1908,7 +1910,7 @@ ORDER BY (json_extract(data,'$.status')='accepted' AND json_extract(data,'$.asse
             )
               store.assistance(
                 summary.problemId,
-                summary.action === "solution"
+                summary.action === "solution" || summary.action === "idea_map"
                   ? "solution"
                   : summary.action === "walkthrough"
                     ? "walkthrough"
@@ -1931,7 +1933,7 @@ ORDER BY (json_extract(data,'$.status')='accepted' AND json_extract(data,'$.asse
         )
           store.assistance(
             g.problemId,
-            g.action === "solution"
+            g.action === "solution" || g.action === "idea_map"
               ? "solution"
               : g.action === "walkthrough"
                 ? "walkthrough"

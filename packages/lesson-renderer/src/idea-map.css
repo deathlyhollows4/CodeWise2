@@ -1,0 +1,151 @@
+.idea-map {
+  margin: 20px 0;
+  border: 1px solid var(--border, #393b42);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface, #202124);
+}
+.idea-map-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 13px 15px;
+  border-bottom: 1px solid var(--border, #393b42);
+}
+.idea-map-header strong {
+  font-size: 14px;
+}
+.idea-map-header span {
+  color: var(--muted, #adb1bd);
+  font-size: 10px;
+}
+.idea-map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border, #393b42);
+}
+.idea-map-tabs,
+.idea-map-zoom {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.idea-map-toolbar button {
+  min-height: 27px;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 5px;
+}
+.idea-map-tabs button[aria-pressed="true"] {
+  background: var(--hover, #33353a);
+  color: var(--accent, #b5a0f6);
+}
+.idea-map-zoom span {
+  font-size: 10px;
+  min-width: 34px;
+  text-align: center;
+}
+.idea-map-canvas {
+  height: clamp(260px, 50vh, 440px);
+  max-height: 440px;
+  min-height: 260px;
+  overflow: auto;
+  background-color: var(--bg, #191a1d);
+  background-image: radial-gradient(
+    var(--border, #393b42) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+  cursor: grab;
+  touch-action: none;
+}
+.idea-map-canvas:active {
+  cursor: grabbing;
+}
+.idea-map-canvas svg {
+  display: block;
+  margin-inline: auto;
+  max-width: none;
+}
+.idea-map-node {
+  cursor: pointer;
+}
+.idea-map-node rect,
+.idea-map-node > path {
+  fill: var(--raised, #292a2e);
+  stroke: var(--accent, #b5a0f6);
+  stroke-width: 1.5;
+}
+.idea-map-node.start rect,
+.idea-map-node.end rect {
+  stroke: var(--success, #86d6ad);
+}
+.idea-map-node.decision > path {
+  stroke: var(--warn, #ecc684);
+}
+.idea-map-node.selected rect,
+.idea-map-node.selected > path,
+.idea-map-node:focus-visible rect,
+.idea-map-node:focus-visible > path {
+  stroke-width: 3;
+  fill: var(--hover, #33353a);
+}
+.idea-map-node text {
+  font:
+    11px "Segoe UI",
+    sans-serif;
+  fill: var(--text, #e8eaed);
+  pointer-events: none;
+}
+.idea-map-edge {
+  fill: none;
+  stroke: var(--muted, #adb1bd);
+  stroke-width: 1.4;
+}
+.idea-map-arrow {
+  fill: var(--muted, #adb1bd);
+}
+.idea-map-edge-label {
+  fill: var(--text, #e8eaed);
+  font:
+    10px "Segoe UI",
+    sans-serif;
+  paint-order: stroke;
+  stroke: var(--bg, #191a1d);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+.idea-map-definition {
+  padding: 12px;
+}
+.idea-map-definition small {
+  color: var(--muted, #adb1bd);
+  font-size: 11px;
+}
+.idea-map-definition pre,
+.idea-map-invalid pre {
+  max-height: 420px;
+  overflow: auto;
+  font-size: 11px;
+  white-space: pre;
+}
+.idea-map-footer {
+  font-size: 11px;
+  color: var(--muted, #adb1bd);
+  padding: 10px 13px;
+  border-top: 1px solid var(--border, #393b42);
+  line-height: 1.6;
+}
+.idea-map-invalid {
+  border: 1px solid var(--border, #393b42);
+  border-radius: 7px;
+  padding: 14px;
+  font-size: 12px;
+}
+.idea-map-invalid p {
+  font-size: 12px;
+}

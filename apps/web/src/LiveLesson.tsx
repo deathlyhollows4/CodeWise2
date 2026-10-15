@@ -6,11 +6,13 @@ export function LiveLesson({
   markdown,
   streaming,
   reducedMotion,
+  mapOnly = false,
 }: {
   id: string;
   markdown: string;
   streaming: boolean;
   reducedMotion: boolean;
+  mapOnly?: boolean;
 }) {
   const end = useRef<HTMLDivElement>(null),
     following = useRef(false),
@@ -20,10 +22,15 @@ export function LiveLesson({
     [unread, setUnread] = useState(false),
     [top, setTop] = useState(12);
   const scrollPosition = () =>
-    (end.current?.closest(".tutor-drawer") as HTMLElement | null)?.scrollTop ??
-    window.scrollY;
+    (
+      end.current?.closest(
+        ".tutor-conversation, .tutor-drawer",
+      ) as HTMLElement | null
+    )?.scrollTop ?? window.scrollY;
   const scrollToEnd = (behavior: ScrollBehavior) => {
-    const panel = end.current?.closest(".tutor-drawer") as HTMLElement | null;
+    const panel = end.current?.closest(
+      ".tutor-conversation, .tutor-drawer",
+    ) as HTMLElement | null;
     if (panel) panel.scrollTo({ top: panel.scrollHeight, behavior });
     else end.current?.scrollIntoView({ block: "end", behavior });
   };
@@ -60,7 +67,8 @@ export function LiveLesson({
       }
       lastScroll.current = scrollPosition();
     };
-    const scrollTarget = end.current?.closest(".tutor-drawer") || window;
+    const scrollTarget =
+      end.current?.closest(".tutor-conversation, .tutor-drawer") || window;
     scrollTarget.addEventListener("scroll", scrolled, { passive: true });
     return () => scrollTarget.removeEventListener("scroll", scrolled);
   }, [id]);
@@ -106,7 +114,11 @@ export function LiveLesson({
           <small>{streaming ? "New text is arriving" : "Answer text"}</small>
         </div>
       )}
-      <LessonRenderer markdown={markdown} streaming={streaming} />
+      <LessonRenderer
+        markdown={markdown}
+        streaming={streaming}
+        mapOnly={mapOnly}
+      />
       <div ref={end} className="live-response-end" aria-hidden="true" />
     </div>
   );

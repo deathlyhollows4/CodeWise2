@@ -1,5 +1,11 @@
 import { z } from "zod";
 import scopeData from "./delivery-scope.json";
+export {
+  IdeaMapSchema,
+  parseIdeaMapDefinition,
+  IDEA_MAP_MAX_CHARACTERS,
+} from "./idea-map.ts";
+export type { IdeaMap, IdeaMapParseResult } from "./idea-map.ts";
 export const API_VERSION = 2;
 export const SourceReviewSnapshotSchema = z
   .object({
@@ -181,6 +187,7 @@ export const TutorRequestSchema = z
       "simplify",
       "walkthrough",
       "solution",
+      "idea_map",
       "complexity",
       "followup",
     ]),
@@ -734,10 +741,97 @@ const reviewItem = z
     dueAt: z.string().datetime(),
   })
   .strict();
+export const ProgressSkillSchema = z
+  .object({
+    skillId: z.string().max(100),
+    status: z.enum([
+      "reviewed_successfully",
+      "solved_independently",
+      "learned_with_help",
+      "practising",
+      "not_assessed",
+    ]),
+    workingStep: z.number().int().min(1).nullable(),
+    highestIndependentStep: z.number().int().min(1).nullable(),
+    evidenceIds: z.array(z.string().uuid()).max(50000),
+  })
+  .strict();
+export const ProgressDashboardSchema = z
+  .object({
+    timezone: PreferencesSchema.shape.timezone,
+    asOfDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    totalPublished: z.number().int().nonnegative(),
+    completed: z.number().int().nonnegative(),
+    independent: z.number().int().nonnegative(),
+    assisted: z.number().int().nonnegative(),
+    problems: z
+      .array(
+        z
+          .object({
+            id: z.string().max(100),
+            title: z.string().max(500),
+            topic: z.string().max(100),
+            step: z.number().int().min(1),
+          })
+          .strict(),
+      )
+      .max(50000),
+    topicSkills: z
+      .array(
+        z
+          .object({
+            topic: z.string().max(100),
+            skillIds: z.array(z.string().max(100)).max(2000),
+            steps: z.array(z.number().int().min(1)).max(1000),
+          })
+          .strict(),
+      )
+      .max(100),
+    activity: z
+      .array(
+        z
+          .object({
+            date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+            submissions: z.number().int().nonnegative(),
+            accepted: z.number().int().nonnegative(),
+          })
+          .strict(),
+      )
+      .max(50000),
+    languages: z
+      .array(
+        z
+          .object({
+            language: LanguageSchema,
+            completed: z.number().int().nonnegative(),
+            independent: z.number().int().nonnegative(),
+            assisted: z.number().int().nonnegative(),
+            paths: z
+              .array(
+                z
+                  .object({
+                    topic: z.string().max(100),
+                    workingStep: z.number().int().min(1),
+                    highestIndependentStep: z.number().int().min(1).nullable(),
+                    lastEvidenceId: z.string().uuid().nullable(),
+                  })
+                  .strict(),
+              )
+              .max(100),
+            skills: z.array(ProgressSkillSchema).max(2000),
+          })
+          .strict(),
+      )
+      .length(3),
+  })
+  .strict();
+export type ProgressDashboard = z.infer<typeof ProgressDashboardSchema>;
+export type ProgressDashboardData = ProgressDashboard;
 export const ProgressSchema = z
   .object({
     independent: z.number().int().nonnegative(),
     assisted: z.number().int().nonnegative(),
+    dashboard: ProgressDashboardSchema.optional(),
     evidence: z.array(LearningEvidenceSchema).max(50000),
     paths: z
       .array(
@@ -777,6 +871,9 @@ export const ProgressSchema = z
       .max(2000),
   })
   .strict();
+
+export type Progress = z.infer<typeof ProgressSchema>;
+export type ProgressData = Progress;
 
 export {
   LearningMetadataRecordSchema,

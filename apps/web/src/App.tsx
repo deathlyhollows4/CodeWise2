@@ -5,6 +5,7 @@ import React, {
   createContext,
   useContext,
   useRef,
+  useId,
 } from "react";
 import {
   applyTutorEvent,
@@ -51,12 +52,19 @@ import {
   Plus,
   Minus,
   Maximize,
+  Minimize,
   GraduationCap,
   History,
   Loader2,
   Terminal,
   PanelLeft,
   RotateCcw,
+  ChevronLeft,
+  Shuffle,
+  Sparkles,
+  List,
+  FileText,
+  ListFilter,
 } from "lucide-react";
 import Editor from "@monaco-editor/react";
 import * as monaco from "monaco-editor/editor/editor.api";
@@ -78,20 +86,24 @@ import { ProblemNotes } from "./ProblemNotes";
 import { RuntimeMeasurements } from "./RuntimeMeasurements";
 import { CommandSearch } from "./CommandSearch";
 import { TopicSuggestion } from "./TopicSuggestion";
-import { LiveLesson } from "./LiveLesson";
+import { TutorAnswer } from "./TutorAnswer";
+import { ProgressDashboard } from "./ProgressDashboard";
+import { revealProgressEvidence } from "./progress-projection";
+import type { ProgressData, Language } from "../../../packages/contracts/src";
+import "./progress.css";
 loader.config({ monaco });
 monaco.editor.defineTheme("codewise-dark", {
   base: "vs-dark",
   inherit: true,
   rules: [],
   colors: {
-    "editor.background": "#0e121b",
+    "editor.background": "#202124",
     "editor.foreground": "#e7ebf4",
     "editorLineNumber.foreground": "#7e8ba3",
     "editorLineNumber.activeForeground": "#9aaaff",
     "editor.selectionBackground": "#46568a88",
     "editorCursor.foreground": "#9aaaff",
-    "editor.lineHighlightBackground": "#151b27",
+    "editor.lineHighlightBackground": "#26272b",
     "editorIndentGuide.background1": "#2b3547",
   },
 });
@@ -473,7 +485,9 @@ function Shell() {
           : location.pathname.startsWith(path),
       )?.[1] || "Practice workspace";
   return (
-    <div className="app">
+    <div
+      className={`app ${/^\/problems\/[^/]+$/.test(location.pathname) ? "practice-app" : ""}`}
+    >
       <aside
         className={`sidebar ${open ? "open" : ""} ${collapsed && !compact ? "collapsed" : ""}`}
         inert={compact && !open}
@@ -538,57 +552,60 @@ function Shell() {
               ` · ${bootstrap.catalogue.preview} draft questions in this validation preview`}
           </div>
         )}
-        <header className="topbar">
-          <button
-            className="ghost mobile-menu"
-            aria-label="Open navigation"
-            onClick={() => setOpen(!open)}
-          >
-            <Menu size={20} />
-          </button>
-          <span className="breadcrumb">
-            Your workspace <span style={{ margin: "0 9px" }}> / </span> {title}
-          </span>
-          <div className="topbar-actions">
-            <CommandSearch
-              topics={topics}
-              destinations={navigation.map(([href, label]) => ({
-                href,
-                label,
-              }))}
-            />
-            <span className="muted" style={{ fontSize: 12 }}>
-              <span
-                className="status-dot"
-                style={{ background: "var(--success)" }}
-              />{" "}
-              On this device
-            </span>
+        {!/^\/problems\/[^/]+$/.test(location.pathname) && (
+          <header className="topbar">
             <button
-              className="ghost"
-              aria-label="Toggle light and dark theme"
-              onClick={() =>
-                savePreferences({
-                  theme:
-                    document.documentElement.dataset.theme === "dark"
-                      ? "light"
-                      : "dark",
-                })
-              }
+              className="ghost mobile-menu"
+              aria-label="Open navigation"
+              onClick={() => setOpen(!open)}
             >
-              {document.documentElement.dataset.theme === "dark" ? (
-                <Sun size={18} />
-              ) : (
-                <Moon size={18} />
-              )}
+              <Menu size={20} />
             </button>
-            <span className="avatar">
-              {(bootstrap.preferences.displayName || "You")
-                .slice(0, 2)
-                .toUpperCase()}
+            <span className="breadcrumb">
+              Your workspace <span style={{ margin: "0 9px" }}> / </span>{" "}
+              {title}
             </span>
-          </div>
-        </header>
+            <div className="topbar-actions">
+              <CommandSearch
+                topics={topics}
+                destinations={navigation.map(([href, label]) => ({
+                  href,
+                  label,
+                }))}
+              />
+              <span className="muted" style={{ fontSize: 12 }}>
+                <span
+                  className="status-dot"
+                  style={{ background: "var(--success)" }}
+                />{" "}
+                On this device
+              </span>
+              <button
+                className="ghost"
+                aria-label="Toggle light and dark theme"
+                onClick={() =>
+                  savePreferences({
+                    theme:
+                      document.documentElement.dataset.theme === "dark"
+                        ? "light"
+                        : "dark",
+                  })
+                }
+              >
+                {document.documentElement.dataset.theme === "dark" ? (
+                  <Sun size={18} />
+                ) : (
+                  <Moon size={18} />
+                )}
+              </button>
+              <span className="avatar">
+                {(bootstrap.preferences.displayName || "You")
+                  .slice(0, 2)
+                  .toUpperCase()}
+              </span>
+            </div>
+          </header>
+        )}
         {syncError && (
           <div style={{ padding: "16px 24px 0" }}>
             <ErrorNotice error={syncError} retry={refresh} />
@@ -1241,6 +1258,41 @@ function Problems({ topicDetail = false }: { topicDetail?: boolean }) {
     </div>
   );
 }
+function MagicTutorIcon({ size = 17 }: { size?: number }) {
+  const gradient = "tutor-magic-" + useId().replace(/:/g, "");
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className="magic-tutor-icon"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient
+          id={gradient}
+          x1="0"
+          y1="0"
+          x2="24"
+          y2="24"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#a78bfa" />
+          <stop offset="0.5" stopColor="#f0a6e8" />
+          <stop offset="1" stopColor="#75bcff" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M12 4 14.4 9.6 20 12 14.4 14.4 12 20 9.6 14.4 4 12 9.6 9.6 12 4Z M20 2V6 M18 4H22 M4 18V22 M2 20H6"
+        stroke={`url(#${gradient})`}
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 function Workspace() {
   const { id } = useParams();
   const location = useLocation(),
@@ -1248,14 +1300,85 @@ function Workspace() {
   const review = new URLSearchParams(location.search).get("mode") === "review";
   const assessmentMode =
     new URLSearchParams(location.search).get("mode") === "assessment";
-  const { bootstrap, notify } = useApp();
+  const { bootstrap, notify, savePreferences } = useApp();
+  const catalogue = useData("problems");
+  const [fullscreen, setFullscreen] = useState(
+    Boolean(document.fullscreenElement),
+  );
+  useEffect(() => {
+    const sync = () => setFullscreen(Boolean(document.fullscreenElement));
+    const exitOnEscape = (event: KeyboardEvent) => {
+      if (
+        event.key !== "Escape" ||
+        !document.fullscreenElement ||
+        document.querySelector("dialog[open], .modal-backdrop")
+      )
+        return;
+      event.preventDefault();
+      event.stopPropagation();
+      void document
+        .exitFullscreen()
+        .catch(() =>
+          notify(
+            "The browser could not exit fullscreen. Use the fullscreen button to try again.",
+          ),
+        );
+    };
+    document.addEventListener("fullscreenchange", sync);
+    window.addEventListener("keydown", exitOnEscape, true);
+    return () => {
+      document.removeEventListener("fullscreenchange", sync);
+      window.removeEventListener("keydown", exitOnEscape, true);
+    };
+  }, [notify]);
+  const toggleFullscreen = async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else {
+        if (!document.fullscreenEnabled || !document.body.requestFullscreen) {
+          notify("Fullscreen is unavailable in this browser.");
+          return;
+        }
+        await document.body.requestFullscreen();
+      }
+    } catch {
+      notify(
+        "The browser could not change fullscreen. Try again using the fullscreen button.",
+      );
+    }
+  };
+  const [tutorWidth, setTutorWidth] = useState(390),
+    [tutorMaxWidth, setTutorMaxWidth] = useState(640);
+  const workspaceLayout = useRef<HTMLDivElement>(null),
+    tutorDragCleanup = useRef<(() => void) | null>(null);
+  useEffect(() => () => tutorDragCleanup.current?.(), []);
+  useEffect(() => {
+    const key = (event: KeyboardEvent) => {
+      if (
+        (event.ctrlKey || event.metaKey) &&
+        !event.altKey &&
+        event.key.toLowerCase() === "k"
+      ) {
+        event.preventDefault();
+        if (!document.querySelector("dialog[open], .modal-backdrop"))
+          setListOpen(true);
+      }
+    };
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, []);
+  const problemSelection = useRef(false);
+  const [listOpen, setListOpen] = useState(false),
+    [selectingProblem, setSelectingProblem] = useState(false);
   const problem = useData(`problems/${id}`);
   const [language, setLanguage] = useState(bootstrap.preferences.language),
     [code, setCode] = useState(""),
     [revision, setRevision] = useState(0),
     [saved, setSaved] = useState("Loading draft"),
     [tab, setTab] = useState("problem"),
-    [resultTab, setResultTab] = useState("results"),
+    [resultTab, setResultTab] = useState("testcase"),
+    [problemTab, setProblemTab] = useState("description"),
+    [caseIndex, setCaseIndex] = useState(0),
     [custom, setCustom] = useState(""),
     [job, setJob] = useState<any>(null),
     [jobDetailLoading, setJobDetailLoading] = useState(false),
@@ -1269,7 +1392,7 @@ function Workspace() {
     [assessmentReady, setAssessmentReady] = useState(!assessmentMode),
     [autoGeneration, setAutoGeneration] = useState<any>(null),
     [editorHeight, setEditorHeight] = useState(
-      window.innerWidth >= 1700 ? 460 : 370,
+      Math.max(180, Math.min(460, window.innerHeight * 0.42)),
     );
   const autoHandled = useRef(new Set<string>()),
     latestSubmitted = useRef("");
@@ -1282,6 +1405,7 @@ function Workspace() {
   const currentDraftContext = `${id}:${language}`;
   const executionBlocked =
     busy ||
+    selectingProblem ||
     !draftReady ||
     draftContext !== currentDraftContext ||
     (assessmentMode && !assessmentReady);
@@ -1290,6 +1414,8 @@ function Workspace() {
   }, [id, assessmentMode]);
   useEffect(() => {
     jobSelection.current++;
+    setProblemTab("description");
+    setCaseIndex(0);
     setJob(null);
     setBusy(false);
     setJobDetailLoading(false);
@@ -1475,6 +1601,7 @@ function Workspace() {
   }, [job?.id, job?.status, id]);
   async function execute(mode: string) {
     if (
+      problemSelection.current ||
       !draftReady ||
       draftContext !== currentDraftContext ||
       (assessmentMode && !assessmentReady)
@@ -1518,6 +1645,7 @@ function Workspace() {
     }
   }
   async function changeLanguage(value: string) {
+    if (problemSelection.current) return;
     try {
       await save();
       setLanguage(value);
@@ -1528,6 +1656,64 @@ function Workspace() {
       );
     }
   }
+  const navigationBlocked =
+    assessmentMode ||
+    busy ||
+    selectingProblem ||
+    !draftReady ||
+    draftContext !== currentDraftContext;
+  async function selectProblem(nextId: string) {
+    if (navigationBlocked || problemSelection.current || nextId === id) return;
+    problemSelection.current = true;
+    setSelectingProblem(true);
+    try {
+      await save();
+      setListOpen(false);
+      navigate(`/problems/${nextId}${review ? "?mode=review" : ""}`);
+    } catch {
+      notify(
+        "The draft could not be saved. Resolve the save error before changing problems.",
+      );
+    } finally {
+      problemSelection.current = false;
+      setSelectingProblem(false);
+    }
+  }
+  const catalogueRows = catalogue.data || [];
+  const currentIndex = catalogueRows.findIndex((item: any) => item.id === id);
+  useEffect(() => {
+    const layout = workspaceLayout.current;
+    if (!layout) return;
+    const measure = () => {
+      const problemPane = layout.querySelector<HTMLElement>(".problem-pane"),
+        editorPane = layout.querySelector<HTMLElement>(".editor-pane"),
+        splitter = layout.querySelector<HTMLElement>(
+          ".workspace-grid > .splitter",
+        );
+      const problemMinimum = problemPane
+          ? parseFloat(getComputedStyle(problemPane).minWidth) || 200
+          : 200,
+        editorMinimum = editorPane
+          ? parseFloat(getComputedStyle(editorPane).minWidth) || 240
+          : 240,
+        splitterWidth = splitter?.getBoundingClientRect().width || 8,
+        fraction = width / 100;
+      const leftMinimum = Math.max(
+        problemMinimum / fraction,
+        (editorMinimum + splitterWidth) / (1 - fraction),
+      );
+      const maximum = Math.max(
+        260,
+        Math.min(640, layout.clientWidth - leftMinimum - 8),
+      );
+      setTutorMaxWidth(maximum);
+      setTutorWidth((value) => Math.max(260, Math.min(maximum, value)));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(layout);
+    return () => observer.disconnect();
+  }, [problem.data?.id, width, tutorOpen, tab]);
   if (problem.loading) return <Loading />;
   if (problem.error)
     return (
@@ -1537,35 +1723,150 @@ function Workspace() {
     );
   const p = problem.data;
   return (
-    <div className="workspace">
+    <div
+      className="workspace"
+      style={
+        assessmentMode || error || !bootstrap.runner.ready
+          ? { overflowY: "auto" }
+          : undefined
+      }
+    >
       <div className="workspace-head">
-        <div className="row">
-          <div>
-            <div className="eyebrow">
-              {review ? "Review practice" : p.primaryTopic.replaceAll("-", " ")}{" "}
-              · Step {p.step}
-            </div>
-            <h1 className="workspace-title">{p.title}</h1>
-          </div>
+        <div className="practice-nav-left">
+          <Link to="/" className="practice-logo" aria-label="CodeWise2 home">
+            {"{·}"}
+          </Link>
+          <span className="nav-divider" />
           <button
-            className="ghost"
+            className="ghost workspace-back"
+            aria-haspopup="dialog"
+            aria-expanded={listOpen}
+            onClick={() => setListOpen(true)}
+          >
+            <List size={16} /> Problem List
+          </button>
+          <button
+            className="ghost nav-icon"
+            aria-label="Previous problem"
+            title="Previous problem"
+            disabled={navigationBlocked || currentIndex <= 0}
+            onClick={() =>
+              void selectProblem(catalogueRows[currentIndex - 1].id)
+            }
+          >
+            <ChevronLeft size={17} />
+          </button>
+          <button
+            className="ghost nav-icon"
+            aria-label="Next problem"
+            title="Next problem"
+            disabled={
+              navigationBlocked ||
+              currentIndex < 0 ||
+              currentIndex >= catalogueRows.length - 1
+            }
+            onClick={() =>
+              void selectProblem(catalogueRows[currentIndex + 1].id)
+            }
+          >
+            <ChevronRight size={17} />
+          </button>
+          <button
+            className="ghost nav-icon"
+            aria-label="Random problem"
+            title="Random problem"
+            disabled={navigationBlocked || catalogueRows.length < 2}
+            onClick={() => {
+              const choices = catalogueRows.filter(
+                (item: any) => item.id !== id,
+              );
+              void selectProblem(
+                choices[Math.floor(Math.random() * choices.length)].id,
+              );
+            }}
+          >
+            <Shuffle size={15} />
+          </button>
+        </div>
+        <div className="workspace-run-actions">
+          <button disabled={executionBlocked} onClick={() => execute("run")}>
+            <Play size={15} /> Run
+          </button>
+          <button
+            className="primary"
+            disabled={executionBlocked}
+            onClick={() => execute("submit")}
+          >
+            {busy ? (
+              <Loader2 className="spinner" size={15} />
+            ) : (
+              <Send size={15} />
+            )}{" "}
+            Submit
+          </button>
+          <button
+            className="ghost nav-icon navbar-tutor"
+            aria-label="Open Tutor"
+            title="Open Tutor"
             aria-expanded={tutorOpen || tab === "tutor"}
             aria-controls="workspace-tutor"
             onClick={() => {
-              if (tutorOpen || tab === "tutor") {
-                setTutorOpen(false);
-                setTab("code");
-              } else {
-                setTutorOpen(true);
-                setTab("tutor");
-              }
+              setTutorOpen(true);
+              setTab("tutor");
             }}
           >
-            <GraduationCap size={17} />
-            Tutor
+            <MagicTutorIcon size={17} />
           </button>
         </div>
+        <div className="practice-nav-right">
+          <Link
+            className="ghost nav-icon"
+            to="/settings"
+            aria-label="Settings"
+            title="Settings"
+          >
+            <SettingsIcon size={17} />
+          </Link>
+          <button
+            className="ghost nav-icon"
+            aria-label="Toggle light and dark theme"
+            onClick={() =>
+              savePreferences({
+                theme:
+                  document.documentElement.dataset.theme === "dark"
+                    ? "light"
+                    : "dark",
+              })
+            }
+          >
+            {document.documentElement.dataset.theme === "dark" ? (
+              <Sun size={17} />
+            ) : (
+              <Moon size={17} />
+            )}
+          </button>
+          <details className="practice-menu">
+            <summary aria-label="Workspace navigation">
+              <Menu size={18} />
+            </summary>
+            <nav aria-label="Workspace navigation">
+              {navigation.map(([href, label]) => (
+                <Link key={href} to={href}>
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </details>
+        </div>
       </div>
+      {listOpen && (
+        <WorkspaceProblemList
+          currentId={id!}
+          disabled={navigationBlocked}
+          onSelect={selectProblem}
+          onClose={() => setListOpen(false)}
+        />
+      )}
       {!bootstrap.runner.ready && (
         <div className="notice">
           <Terminal size={17} />
@@ -1591,6 +1892,10 @@ function Workspace() {
           <button
             key={t}
             className={tab === t ? "active" : ""}
+            aria-controls={t === "tutor" ? "workspace-tutor" : undefined}
+            aria-expanded={
+              t === "tutor" ? tutorOpen || tab === "tutor" : undefined
+            }
             onClick={() => {
               setTab(t);
               setTutorOpen(t === "tutor");
@@ -1602,54 +1907,144 @@ function Workspace() {
       </div>
       <div
         className="workspace-layout"
+        ref={workspaceLayout}
+        style={
+          {
+            "--tutor-width": `${tutorWidth}px`,
+            ...(assessmentMode || error || !bootstrap.runner.ready
+              ? { minHeight: 440, flexShrink: 0 }
+              : {}),
+          } as React.CSSProperties
+        }
         data-tutor-open={tutorOpen || tab === "tutor"}
       >
         <div className="workspace-grid" data-tab={tab}>
           <section className="problem-pane" style={{ width: `${width}%` }}>
-            <div className="pane-heading">
-              <strong>Problem description</strong>
-              <span className="badge">v{p.version}</span>
-            </div>
-            {(p.learnerRationale || p.objective) && (
-              <p className="muted" style={{ fontSize: 13 }}>
-                <strong>Learning goal: </strong>
-                {p.learnerRationale || p.objective}
-              </p>
-            )}
-            <LessonRenderer markdown={p.statement} />
-            <h3 style={{ marginTop: 26 }}>Examples</h3>
-            {p.visibleCases.map((c: any, i: number) => (
-              <div className="example" key={c.id}>
-                <strong>Example {i + 1}</strong>
-                <pre>Input: {JSON.stringify(c.input)}</pre>
-                <pre>Output: {JSON.stringify(c.expected)}</pre>
-                <p>{c.explanation}</p>
-              </div>
-            ))}
-            <h3 style={{ marginTop: 26 }}>Constraints</h3>
-            <ul
-              className="muted"
-              style={{ paddingLeft: 20, fontSize: 13, lineHeight: 1.8 }}
-            >
-              {p.constraints.map((s: string) => (
-                <li key={s}>{s}</li>
+            <div className="problem-tabs" aria-label="Problem sections">
+              {["description", "submissions"].map((section) => (
+                <button
+                  key={section}
+                  aria-pressed={problemTab === section}
+                  className={problemTab === section ? "active" : ""}
+                  onClick={() => setProblemTab(section)}
+                >
+                  {section === "submissions" ? (
+                    <History size={14} />
+                  ) : (
+                    <FileText size={14} />
+                  )}
+                  {statusLabel(section)}
+                </button>
               ))}
-            </ul>
-            <h3>Interface</h3>
-            <p className="muted" style={{ fontSize: 13 }}>
-              {p.interface}
-            </p>
-            <div className="divider" />
-            <ProblemNotes problemId={id!} notify={notify} />
-            <div className="divider" />
-            <small>
-              Skills: {p.skillIds.join(" · ")}
-              <br />
-              Prerequisites:{" "}
-              {p.prerequisites.length
-                ? p.prerequisites.join(" · ")
-                : "No earlier skills required"}
-            </small>
+            </div>
+            <div className="problem-content">
+              <div hidden={problemTab !== "description"}>
+                <div className="eyebrow">
+                  {p.primaryTopic.replaceAll("-", " ")} · Step {p.step}
+                  {review ? " · Review" : ""}
+                </div>
+                <h1 className="workspace-title">{p.title}</h1>
+                <span className="badge">v{p.version}</span>
+                {(p.learnerRationale || p.objective) && (
+                  <p className="muted" style={{ fontSize: 13 }}>
+                    <strong>Learning goal: </strong>
+                    {p.learnerRationale || p.objective}
+                  </p>
+                )}
+                <LessonRenderer markdown={p.statement} />
+                <h3 style={{ marginTop: 26 }}>Examples</h3>
+                {p.visibleCases.map((c: any, i: number) => (
+                  <div className="example" key={c.id}>
+                    <strong>Example {i + 1}</strong>
+                    <pre>Input: {JSON.stringify(c.input)}</pre>
+                    <pre>Output: {JSON.stringify(c.expected)}</pre>
+                    <p>{c.explanation}</p>
+                  </div>
+                ))}
+                <h3 style={{ marginTop: 26 }}>Constraints</h3>
+                <ul
+                  className="muted"
+                  style={{ paddingLeft: 20, fontSize: 13, lineHeight: 1.8 }}
+                >
+                  {p.constraints.map((s: string) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+                <h3>Interface</h3>
+                <p className="muted" style={{ fontSize: 13 }}>
+                  {p.interface}
+                </p>
+                <div className="divider" />
+                <ProblemNotes problemId={id!} notify={notify} />
+                <div className="divider" />
+                <small>
+                  Skills: {p.skillIds.join(" · ")}
+                  <br />
+                  Prerequisites:{" "}
+                  {p.prerequisites.length
+                    ? p.prerequisites.join(" · ")
+                    : "No earlier skills required"}
+                </small>
+              </div>
+              {problemTab === "description" ? null : problemTab ===
+                "submissions" ? (
+                history.error ? (
+                  <ErrorNotice error={history.error} retry={history.reload} />
+                ) : history.loading ? (
+                  <Loading />
+                ) : history.data?.items.length ? (
+                  <div>
+                    {history.data.items.map((h: any) => (
+                      <button
+                        key={h.id}
+                        className="row ghost"
+                        style={{
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                        disabled={busy || jobDetailLoading}
+                        onClick={async () => {
+                          const selected = ++jobSelection.current;
+                          setJobDetailLoading(true);
+                          try {
+                            const detail = await api(`jobs/${h.id}`);
+                            if (selected === jobSelection.current) {
+                              setJob(detail);
+                              setResultTab("results");
+                              setTab("results");
+                            }
+                          } catch (e: any) {
+                            if (selected === jobSelection.current)
+                              notify(e.message);
+                          } finally {
+                            if (selected === jobSelection.current)
+                              setJobDetailLoading(false);
+                          }
+                        }}
+                      >
+                        <span>
+                          {statusLabel(h.status)} · {languageName(h.language)}
+                        </span>
+                        <small>{date(h.createdAt)}</small>
+                      </button>
+                    ))}
+                    {jobDetailLoading && (
+                      <p role="status">Opening saved result…</p>
+                    )}
+                    <PageControls page={history} label="Saved results" />
+                  </div>
+                ) : (
+                  <div>
+                    <p className="muted">
+                      {history.data?.total
+                        ? "No saved results on this page. Return to a newer page."
+                        : "No runs or submissions for this problem yet."}
+                    </p>
+                    <PageControls page={history} label="Saved results" />
+                  </div>
+                )
+              ) : null}
+            </div>
           </section>
           <div
             className="splitter"
@@ -1692,12 +2087,15 @@ function Workspace() {
             }}
           />
           <section className="editor-pane">
+            <div className="code-heading">
+              <Code2 size={16} /> <strong>Code</strong>
+            </div>
             <div className="editor-toolbar">
               <div className="actions">
                 <Code2 size={16} />
                 <select
                   aria-label="Programming language"
-                  disabled={assessmentMode}
+                  disabled={assessmentMode || selectingProblem}
                   value={language}
                   onChange={(e) => changeLanguage(e.target.value)}
                 >
@@ -1722,10 +2120,20 @@ function Workspace() {
               </Link>
               <button
                 className="ghost"
+                disabled={selectingProblem}
                 aria-label="Reset draft to starter"
                 onClick={() => setReset(true)}
               >
                 <RotateCcw size={15} />
+              </button>
+              <button
+                className="ghost"
+                aria-label={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                title={fullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+                aria-pressed={fullscreen}
+                onClick={() => void toggleFullscreen()}
+              >
+                {fullscreen ? <Minimize size={15} /> : <Maximize size={15} />}
               </button>
             </div>
             <div className="editor" style={{ height: editorHeight }}>
@@ -1752,6 +2160,7 @@ function Workspace() {
                   wordWrap: "on",
                   fontFamily: "Cascadia Code, Consolas, monospace",
                   readOnly:
+                    selectingProblem ||
                     !draftReady ||
                     draftContext !== currentDraftContext ||
                     (assessmentMode && !assessmentReady),
@@ -1759,22 +2168,30 @@ function Workspace() {
                 }}
               />
             </div>
+            <div className="editor-actions">
+              <span className="muted" role="status">
+                {saved}
+              </span>
+            </div>
             <div
               className="horizontal-splitter"
               role="separator"
               aria-orientation="horizontal"
               aria-label="Resize code editor height"
               aria-valuenow={editorHeight}
-              aria-valuemin={250}
-              aria-valuemax={800}
+              aria-valuemin={180}
+              aria-valuemax={Math.max(180, window.innerHeight - 340)}
               tabIndex={0}
               onKeyDown={(e) => {
                 if (e.key === "ArrowUp" || e.key === "ArrowDown") {
                   e.preventDefault();
                   setEditorHeight((h) =>
                     Math.max(
-                      250,
-                      Math.min(800, h + (e.key === "ArrowDown" ? 20 : -20)),
+                      180,
+                      Math.min(
+                        Math.max(180, window.innerHeight - 340),
+                        h + (e.key === "ArrowDown" ? 20 : -20),
+                      ),
                     ),
                   );
                 }
@@ -1785,7 +2202,13 @@ function Workspace() {
                   height = editorHeight;
                 const move = (ev: PointerEvent) =>
                   setEditorHeight(
-                    Math.max(250, Math.min(800, height + ev.clientY - start)),
+                    Math.max(
+                      180,
+                      Math.min(
+                        Math.max(180, window.innerHeight - 340),
+                        height + ev.clientY - start,
+                      ),
+                    ),
                   );
                 const end = () => {
                   document.removeEventListener("pointermove", move);
@@ -1795,43 +2218,61 @@ function Workspace() {
                 document.addEventListener("pointerup", end);
               }}
             />
-            <div className="editor-actions">
-              <span className="muted" role="status">
-                {saved}
-              </span>
-              <button
-                disabled={executionBlocked}
-                onClick={() => execute("run")}
-              >
-                <Play size={15} />
-                Run
-              </button>
-              <button
-                className="primary"
-                disabled={executionBlocked}
-                onClick={() => execute("submit")}
-              >
-                {busy ? (
-                  <Loader2 className="spinner" size={15} />
-                ) : (
-                  <Send size={15} />
-                )}
-                Submit
-              </button>
-            </div>
             <div className="results">
               <div className="tabs">
-                {["results", "custom input", "history"].map((t) => (
+                {["testcase", "results", "custom input"].map((t) => (
                   <button
                     key={t}
                     className={resultTab === t ? "active" : ""}
                     onClick={() => setResultTab(t)}
                   >
-                    {statusLabel(t)}
+                    {t === "results"
+                      ? "Test Result"
+                      : t === "testcase"
+                        ? "Testcase"
+                        : "Custom input"}
                   </button>
                 ))}
               </div>
-              {resultTab === "custom input" ? (
+              {resultTab === "testcase" ? (
+                <div className="testcase-content">
+                  <div className="case-tabs" aria-label="Visible testcases">
+                    {p.visibleCases.map((c: any, index: number) => (
+                      <button
+                        key={c.id}
+                        className={caseIndex === index ? "active" : "ghost"}
+                        aria-pressed={caseIndex === index}
+                        onClick={() => setCaseIndex(index)}
+                      >
+                        Case {index + 1}
+                      </button>
+                    ))}
+                  </div>
+                  {p.visibleCases[caseIndex] && (
+                    <div className="testcase-fields">
+                      <label>Input</label>
+                      <pre>
+                        {JSON.stringify(
+                          p.visibleCases[caseIndex].input,
+                          null,
+                          2,
+                        )}
+                      </pre>
+                      <label>Expected output</label>
+                      <pre>
+                        {JSON.stringify(
+                          p.visibleCases[caseIndex].expected,
+                          null,
+                          2,
+                        )}
+                      </pre>
+                      <p className="muted">
+                        {p.visibleCases[caseIndex].explanation}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ) : resultTab === "custom input" ? (
                 <>
                   <label htmlFor="custom" className="muted">
                     JSON input · validated against this problem's contract
@@ -1851,61 +2292,6 @@ function Workspace() {
                     Run custom input
                   </button>
                 </>
-              ) : resultTab === "history" ? (
-                history.error ? (
-                  <ErrorNotice error={history.error} retry={history.reload} />
-                ) : history.loading ? (
-                  <Loading />
-                ) : history.data?.items.length ? (
-                  <div>
-                    {history.data.items.map((h: any) => (
-                      <button
-                        key={h.id}
-                        className="row ghost"
-                        style={{
-                          width: "100%",
-                          justifyContent: "space-between",
-                        }}
-                        disabled={busy || jobDetailLoading}
-                        onClick={async () => {
-                          const selected = ++jobSelection.current;
-                          setJobDetailLoading(true);
-                          try {
-                            const detail = await api(`jobs/${h.id}`);
-                            if (selected === jobSelection.current) {
-                              setJob(detail);
-                              setResultTab("results");
-                            }
-                          } catch (e: any) {
-                            if (selected === jobSelection.current)
-                              notify(e.message);
-                          } finally {
-                            if (selected === jobSelection.current)
-                              setJobDetailLoading(false);
-                          }
-                        }}
-                      >
-                        <span>
-                          {statusLabel(h.status)} · {languageName(h.language)}
-                        </span>
-                        <small>{date(h.createdAt)}</small>
-                      </button>
-                    ))}
-                    {jobDetailLoading && (
-                      <p role="status">Opening saved result…</p>
-                    )}
-                    <PageControls page={history} label="Saved results" />
-                  </div>
-                ) : (
-                  <div>
-                    <p className="muted">
-                      {history.data?.total
-                        ? "No saved results on this page. Return to a newer page."
-                        : "No runs or submissions for this problem yet."}
-                    </p>
-                    <PageControls page={history} label="Saved results" />
-                  </div>
-                )
               ) : job ? (
                 <>
                   <div className="row">
@@ -2023,6 +2409,56 @@ function Workspace() {
             </div>
           </section>
         </div>
+        {(tutorOpen || tab === "tutor") && (
+          <div
+            className="splitter tutor-splitter"
+            role="separator"
+            aria-label="Resize Tutor panel"
+            aria-orientation="vertical"
+            aria-valuenow={Math.round(tutorWidth)}
+            aria-valuemin={260}
+            aria-valuemax={Math.round(tutorMaxWidth)}
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+                event.preventDefault();
+                setTutorWidth((value) =>
+                  Math.max(
+                    260,
+                    Math.min(
+                      tutorMaxWidth,
+                      value + (event.key === "ArrowLeft" ? 20 : -20),
+                    ),
+                  ),
+                );
+              }
+            }}
+            onPointerDown={(event) => {
+              tutorDragCleanup.current?.();
+              event.currentTarget.setPointerCapture(event.pointerId);
+              const start = event.clientX,
+                width = tutorWidth;
+              const move = (pointer: PointerEvent) =>
+                setTutorWidth(
+                  Math.max(
+                    260,
+                    Math.min(tutorMaxWidth, width + start - pointer.clientX),
+                  ),
+                );
+              const end = () => {
+                document.removeEventListener("pointermove", move);
+                document.removeEventListener("pointerup", end);
+                document.removeEventListener("pointercancel", end);
+                tutorDragCleanup.current = null;
+              };
+              tutorDragCleanup.current = end;
+              document.addEventListener("pointermove", move);
+              document.addEventListener("pointerup", end);
+              document.addEventListener("pointercancel", end);
+            }}
+            onLostPointerCapture={() => tutorDragCleanup.current?.()}
+          />
+        )}
         <aside
           id="workspace-tutor"
           className="card tutor-drawer"
@@ -2034,28 +2470,38 @@ function Workspace() {
               setTab("code");
               document
                 .querySelector<HTMLButtonElement>(
-                  '[aria-controls="workspace-tutor"]',
+                  matchMedia("(max-width:800px)").matches
+                    ? '.mobile-workspace-tabs [aria-controls="workspace-tutor"]'
+                    : '.navbar-tutor',
                 )
                 ?.focus();
             }
           }}
         >
-          <button
-            className="ghost tutor-close"
-            aria-label="Close tutor"
-            onClick={() => {
-              setTutorOpen(false);
-              setTab("code");
-              document
-                .querySelector<HTMLButtonElement>(
-                  '[aria-controls="workspace-tutor"]',
-                )
-                ?.focus();
-            }}
-          >
-            Close tutor ×
-          </button>
+          <div className="tutor-pane-heading">
+            <span>
+              <Sparkles size={15} /> Tutor
+            </span>
+            <button
+              className="ghost tutor-close"
+              aria-label="Close tutor"
+              onClick={() => {
+                setTutorOpen(false);
+                setTab("code");
+                document
+                  .querySelector<HTMLButtonElement>(
+                    matchMedia("(max-width:800px)").matches
+                      ? '.mobile-workspace-tabs [aria-controls="workspace-tutor"]'
+                      : '.navbar-tutor',
+                  )
+                  ?.focus();
+              }}
+            >
+              <X size={14} />
+            </button>
+          </div>
           <Tutor
+            compactWorkspace
             key={id}
             problemId={id!}
             language={language}
@@ -2080,6 +2526,227 @@ function Workspace() {
     </div>
   );
 }
+function WorkspaceProblemList({
+  currentId,
+  disabled,
+  onSelect,
+  onClose,
+}: {
+  currentId: string;
+  disabled: boolean;
+  onSelect: (id: string) => Promise<void>;
+  onClose: () => void;
+}) {
+  const { topics } = useApp();
+  const [query, setQuery] = useState(""),
+    [topic, setTopic] = useState(""),
+    [step, setStep] = useState(""),
+    [filtersOpen, setFiltersOpen] = useState(false);
+  const result = useData(
+    `problems?q=${encodeURIComponent(query)}&topic=${encodeURIComponent(topic)}`,
+  );
+  const dialog = useRef<HTMLDialogElement>(null),
+    filterButton = useRef<HTMLButtonElement>(null),
+    filterPanel = useRef<HTMLDivElement>(null);
+  const filterPanelId = useId();
+  useEffect(() => {
+    if (filtersOpen)
+      filterPanel.current?.querySelector<HTMLSelectElement>("select")?.focus();
+  }, [filtersOpen]);
+  const closeRef = useRef(onClose);
+  closeRef.current = onClose;
+  useEffect(() => {
+    const previous = document.activeElement as HTMLElement | null;
+    const panel = dialog.current!;
+    panel.showModal();
+    return () => {
+      panel.close();
+      previous?.focus();
+    };
+  }, []);
+  const rows = (result.data || []).filter(
+    (item: any) => !step || String(item.step) === step,
+  );
+  return (
+    <dialog
+      ref={dialog}
+      className="problem-list-drawer"
+      onKeyDownCapture={(e) => {
+        if (e.key === "Escape" && filtersOpen) {
+          e.preventDefault();
+          e.stopPropagation();
+          setFiltersOpen(false);
+          filterButton.current?.focus();
+          return;
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }}
+      aria-labelledby="problem-list-title"
+      onCancel={(e) => {
+        e.preventDefault();
+        closeRef.current();
+      }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) {
+          const box = e.currentTarget.getBoundingClientRect();
+          if (
+            e.clientX < box.left ||
+            e.clientX > box.right ||
+            e.clientY < box.top ||
+            e.clientY > box.bottom
+          )
+            closeRef.current();
+        }
+      }}
+    >
+      <div className="problem-list-heading">
+        <div>
+          <h2 id="problem-list-title">Problem List</h2>
+          <small>
+            {result.loading
+              ? "Loading catalogue…"
+              : `${rows.length} ${rows.length === 1 ? "question" : "questions"}`}
+          </small>
+        </div>
+        <button
+          className="ghost"
+          aria-label="Close Problem List"
+          onClick={onClose}
+        >
+          <X size={19} />
+        </button>
+      </div>
+      <div className="problem-list-filters">
+        <div className="problem-list-search-row">
+          <div className="search">
+            <Search size={16} />
+            <input
+              autoFocus
+              aria-label="Search problem titles and skills"
+              placeholder="Search titles and skills"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
+          <button
+            ref={filterButton}
+            className="ghost problem-list-filter-button"
+            aria-label="Filter Problem List"
+            aria-expanded={filtersOpen}
+            aria-controls={filterPanelId}
+            onClick={() => setFiltersOpen((value) => !value)}
+          >
+            <ListFilter size={18} />
+            {(topic || step) && (
+              <span>{Number(Boolean(topic)) + Number(Boolean(step))}</span>
+            )}
+          </button>
+        </div>
+        {filtersOpen && (
+          <div
+            ref={filterPanel}
+            id={filterPanelId}
+            className="problem-list-filter-popover"
+            aria-label="Problem List filters"
+          >
+            <label>
+              Topic
+              <select
+                aria-label="Problem List topic"
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+              >
+                <option value="">All topics</option>
+                {topics.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Challenge step
+              <select
+                aria-label="Problem List challenge step"
+                value={step}
+                onChange={(e) => setStep(e.target.value)}
+              >
+                <option value="">All steps</option>
+                {Array.from(
+                  new Set((result.data || []).map((item: any) => item.step)),
+                )
+                  .sort()
+                  .map((value) => (
+                    <option key={String(value)} value={String(value)}>
+                      Step {String(value)}
+                    </option>
+                  ))}
+              </select>
+            </label>
+            <div className="problem-list-filter-actions">
+              <button
+                className="ghost"
+                disabled={!topic && !step}
+                onClick={() => {
+                  setTopic("");
+                  setStep("");
+                }}
+              >
+                Clear filters
+              </button>
+              <button
+                onClick={() => {
+                  setFiltersOpen(false);
+                  filterButton.current?.focus();
+                }}
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+      {disabled && (
+        <p className="problem-list-status">
+          Finish the current operation before switching. Placement assessment
+          keeps its selected question.
+        </p>
+      )}
+      <div className="problem-list-rows">
+        {result.error ? (
+          <ErrorNotice error={result.error} retry={result.reload} />
+        ) : result.loading ? (
+          <Loading />
+        ) : rows.length ? (
+          rows.map((item: any, index: number) => (
+            <button
+              className={`problem-list-row ${item.id === currentId ? "current" : ""}`}
+              key={item.id}
+              aria-current={item.id === currentId ? "page" : undefined}
+              disabled={disabled || item.id === currentId}
+              onClick={() => void onSelect(item.id)}
+            >
+              <span className="problem-list-index">{index + 1}</span>
+              <span className="problem-list-label">
+                <strong>{item.title}</strong>
+                <small>{item.skillIds?.join(" · ")}</small>
+              </span>
+              <span className="badge">Step {item.step}</span>
+              {item.id === currentId && <Check size={16} />}
+            </button>
+          ))
+        ) : (
+          <p className="empty">
+            No matching questions. Try another title, skill or topic.
+          </p>
+        )}
+      </div>
+    </dialog>
+  );
+}
 function Tutor({
   problemId,
   language,
@@ -2088,6 +2755,7 @@ function Tutor({
   threadId,
   parentId,
   existingGeneration,
+  compactWorkspace = false,
 }: {
   problemId: string;
   language: string;
@@ -2096,17 +2764,22 @@ function Tutor({
   threadId?: string;
   parentId?: string;
   existingGeneration?: any;
+  compactWorkspace?: boolean;
 }) {
   const { bootstrap, notify } = useApp();
   const [prompt, setPrompt] = useState(""),
     [generation, setGeneration] = useState<any>(null),
     [error, setError] = useState<any>(null),
-    [busy, setBusy] = useState(false),
-    [consent, setConsent] = useState(false),
-    [pending, setPending] = useState("");
-  const pendingRetry = useRef<any>(null);
+    [busy, setBusy] = useState(false);
+  const [helpAction, setHelpAction] = useState("hint");
+  const requestLock = useRef(false),
+    generationEpoch = useRef(0);
   useEffect(() => {
     if (existingGeneration) {
+      generationEpoch.current++;
+      requestLock.current = ["queued", "streaming"].includes(
+        existingGeneration.status,
+      );
       setGeneration(existingGeneration);
       setBusy(["queued", "streaming"].includes(existingGeneration.status));
     }
@@ -2114,21 +2787,36 @@ function Tutor({
   useEffect(() => {
     if (!generation || !["queued", "streaming"].includes(generation.status))
       return;
-    let last = 0;
+    let last = 0,
+      current = true;
+    const epoch = generationEpoch.current,
+      isCurrent = () => current && epoch === generationEpoch.current;
     const source = new EventSource(
       `/api/tutor/${generation.id}/events?after=${last}`,
     );
     source.onmessage = (e) => {
+      if (!isCurrent()) return;
       last = Number(e.lastEventId) || last;
       try {
         const event = parseTutorEvent(JSON.parse(e.data));
-        setGeneration((g: any) => (g ? applyTutorEvent(g, event) : g));
+        setGeneration((g: any) =>
+          g?.id === generation.id ? applyTutorEvent(g, event) : g,
+        );
         if (event.status) {
-          setGeneration((g: any) => ({ ...g, status: event.status }));
+          setGeneration((g: any) =>
+            g?.id === generation.id ? { ...g, status: event.status } : g,
+          );
           if (!["queued", "streaming"].includes(event.status)) {
+            requestLock.current = false;
             source.close();
             setBusy(false);
-            api(`tutor/${generation.id}`).then(setGeneration).catch(setError);
+            api(`tutor/${generation.id}`)
+              .then((detail) => {
+                if (isCurrent()) setGeneration(detail);
+              })
+              .catch((failure) => {
+                if (isCurrent()) setError(failure);
+              });
           }
         }
       } catch {
@@ -2140,10 +2828,13 @@ function Tutor({
       }
     };
     source.onerror = () => {
+      if (!isCurrent()) return;
       source.close();
       api(`tutor/${generation.id}`)
         .then((g) => {
+          if (!isCurrent()) return;
           setGeneration(g);
+          requestLock.current = ["queued", "streaming"].includes(g.status);
           setBusy(false);
           if (["queued", "streaming"].includes(g.status))
             setError(
@@ -2152,12 +2843,18 @@ function Tutor({
               ),
             );
         })
-        .catch(setError);
+        .catch((failure) => {
+          if (isCurrent()) setError(failure);
+        });
     };
-    return () => source.close();
+    return () => {
+      current = false;
+      source.close();
+    };
   }, [generation?.id]);
   const active = busy || ["queued", "streaming"].includes(generation?.status);
-  async function generate(action: string, retry?: any, confirmed = consent) {
+  async function generate(action: string, retry?: any) {
+    if (requestLock.current || active) return;
     if (!bootstrap.key.configured) {
       notify("Add a DeepSeek key in Settings to use the tutor.");
       return;
@@ -2168,200 +2865,259 @@ function Tutor({
       );
       return;
     }
-    if (!confirmed) {
-      setPending(action);
-      pendingRetry.current = retry;
-      return;
-    }
+    const epoch = ++generationEpoch.current;
+    requestLock.current = true;
     setBusy(true);
     setError(null);
     try {
-      setGeneration(
-        await api("tutor", "POST", {
-          problemId,
-          language,
-          code,
-          action,
-          prompt: prompt || statusLabel(action),
-          submissionId,
-          threadId: threadId || generation?.threadId,
-          parentId: parentId || generation?.id,
-          ...(retry ? tutorRetryContext(retry) : {}),
-          idempotencyKey: crypto.randomUUID(),
-          consent: true,
-        }),
-      );
+      const created = await api("tutor", "POST", {
+        problemId,
+        language,
+        code,
+        action,
+        prompt: prompt || statusLabel(action),
+        submissionId,
+        threadId: threadId || generation?.threadId,
+        parentId: parentId || generation?.id,
+        ...(retry ? tutorRetryContext(retry) : {}),
+        idempotencyKey: crypto.randomUUID(),
+        consent: true,
+      });
+      if (epoch !== generationEpoch.current) return;
+      setGeneration(created);
+      requestLock.current = ["queued", "streaming"].includes(created.status);
       setPrompt("");
     } catch (e) {
+      if (epoch !== generationEpoch.current) return;
+      requestLock.current = false;
       setError(e);
     } finally {
-      setBusy(false);
+      if (epoch === generationEpoch.current) setBusy(false);
     }
   }
   return (
-    <>
-      <div className="row">
-        <div>
-          <div className="eyebrow">Understand the missing piece</div>
-          <h2 style={{ marginBottom: 0 }}>Your learning companion</h2>
-        </div>
-        <span className="badge">DeepSeek · optional</span>
+    <div className={`tutor-chat ${compactWorkspace ? "compact" : "reading"}`}>
+      <div className="tutor-chat-toolbar">
+        {!compactWorkspace && (
+          <strong>
+            <Sparkles size={15} /> Tutor
+          </strong>
+        )}
+        <button
+          className="ghost"
+          aria-label="New tutor conversation"
+          title="New conversation"
+          disabled={active || Boolean(parentId || threadId)}
+          onClick={() => {
+            if (requestLock.current || active) return;
+            generationEpoch.current++;
+            setGeneration(null);
+            setPrompt("");
+            setError(null);
+          }}
+        >
+          <Plus size={17} />
+        </button>
+        <Link
+          className="ghost"
+          aria-label="Tutor history for this problem"
+          title="Saved tutor history"
+          to={`/library?problemId=${encodeURIComponent(problemId)}`}
+        >
+          <History size={17} />
+        </Link>
       </div>
-      {!bootstrap.key.configured ? (
-        <div className="notice" style={{ marginTop: 20 }}>
-          <GraduationCap size={18} />
-          <div>
-            Practice works without an AI key.{" "}
-            <Link to="/settings">Configure DeepSeek in localhost Settings</Link>{" "}
-            when you'd like a hint or a guided explanation.
+      <div className="tutor-conversation">
+        {!generation && (
+          <div className="tutor-chat-empty">
+            <span aria-hidden="true">😎</span>
+            <p>
+              Ask Tutor about this challenge.
+              <br />
+              Choose a quick command to get started.
+            </p>
+            {!bootstrap.key.configured ? (
+              <Link to="/settings?section=AI">
+                Set up DeepSeek in Settings →
+              </Link>
+            ) : !bootstrap.preferences.model ? (
+              <Link to="/settings?section=AI">
+                Choose a tutor model in Settings →
+              </Link>
+            ) : null}
           </div>
-        </div>
-      ) : !bootstrap.preferences.model ? (
-        <div className="notice" style={{ marginTop: 20 }}>
-          <div>
-            <strong>Choose a tutor model first.</strong> Test your key and
-            choose an available model in <Link to="/settings">Settings</Link>.
-          </div>
-        </div>
-      ) : (
-        <>
-          <div className="tutor-controls">
-            {[
-              ["hint", "Give me a hint"],
-              ["error", "Explain this error"],
-              ["simplify", "Explain more simply"],
-              ["walkthrough", "Walk through an example"],
-              ["solution", "Teach the full solution"],
-              ["complexity", "Explain complexity"],
-            ].map(([a, label]) => (
-              <button key={a} disabled={active} onClick={() => generate(a)}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <small>
-            Hints and walkthroughs record assistance. A full solution records
-            exposure for this problem across languages.
-          </small>
-          <div className="field" style={{ marginTop: 18 }}>
-            <label htmlFor="followup">Ask a contextual follow-up</label>
-            <textarea
-              id="followup"
-              rows={3}
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-              placeholder="Which part would you like to understand?"
+        )}
+        {error && <ErrorNotice error={error} />}
+        {generation && (
+          <div className="tutor-answer">
+            <div className="lesson-meta">
+              <span>{statusLabel(generation.status)}</span>
+              <span>
+                {generation.status === "complete"
+                  ? "Stored on this device"
+                  : generation.markdown?.trim()
+                    ? "Partial answer saved on this device"
+                    : "Request saved · no answer text yet"}
+              </span>
+              <Link to={`/library/${generation.id}`}>Open saved lesson →</Link>
+            </div>
+            {["failed", "interrupted", "canceled"].includes(
+              generation.status,
+            ) && (
+              <div className="notice" role="status">
+                <div>
+                  <strong>
+                    {generation.markdown?.trim()
+                      ? "Partial answer saved."
+                      : "No answer was generated."}
+                  </strong>
+                  {generation.error && (
+                    <p>
+                      {generation.error.message}{" "}
+                      <small>({generation.error.code})</small>
+                    </p>
+                  )}
+                  <div className="actions">
+                    <Link to="/settings">Check tutor Settings →</Link>
+                    <button
+                      disabled={
+                        active ||
+                        !bootstrap.key.configured ||
+                        !bootstrap.preferences.model
+                      }
+                      onClick={() => generate(generation.action, generation)}
+                    >
+                      Retry same request
+                    </button>
+                  </div>
+                  <small>
+                    The saved request stays in your library. Retry sends its
+                    original prompt and code as a new request.
+                  </small>
+                </div>
+              </div>
+            )}
+            {!generation.markdown?.trim() &&
+              ["queued", "streaming"].includes(generation.status) && (
+                <p role="status" className="muted">
+                  Waiting for the first answer text…
+                </p>
+              )}
+            <TutorAnswer
+              live
+              key={generation.id}
+              id={generation.id}
+              markdown={generation.markdown || ""}
+              mapOnly={generation.action === "idea_map"}
+              streaming={generation.status === "streaming"}
+              reducedMotion={bootstrap.preferences.reducedMotion}
             />
           </div>
-          <div className="actions">
+        )}
+      </div>
+      {!generation && (
+        <div className="tutor-suggestions" aria-label="Tutor recommendations">
+          {[
+            ["hint", "Give me a hint"],
+            ["error", "Explain this error"],
+            ["idea_map", "Generate Idea Map"],
+            ["solution", "Learn complete solution"],
+          ].map(([action, label]) => (
             <button
-              className="primary"
-              disabled={active || !prompt.trim()}
-              onClick={() => generate("followup")}
+              key={action}
+              aria-pressed={helpAction === action}
+              onClick={() => {
+                setHelpAction(action);
+                void generate(action);
+              }}
+              disabled={active}
             >
-              Ask DeepSeek <ArrowRight size={15} />
+              <span aria-hidden="true">✧</span>
+              {label}
             </button>
-            {active && generation && (
-              <button
-                onClick={async () => {
-                  setGeneration(
-                    await api(`tutor/${generation.id}/cancel`, "POST", {}),
-                  );
-                  setBusy(false);
-                }}
-              >
-                Cancel response
-              </button>
-            )}
-          </div>
-        </>
-      )}
-      {error && (
-        <>
-          <ErrorNotice error={error} />
-          <Link to="/settings">Check tutor Settings →</Link>
-        </>
-      )}{" "}
-      {generation && (
-        <div style={{ marginTop: 28 }}>
-          <div className="lesson-meta">
-            <span>{statusLabel(generation.status)}</span>
-            <span>
-              {generation.status === "complete"
-                ? "Stored on this device"
-                : generation.markdown?.trim()
-                  ? "Partial answer saved on this device"
-                  : "Request saved · no answer text yet"}
-            </span>
-            <Link to={`/library/${generation.id}`}>Open saved lesson →</Link>
-          </div>
-          {["failed", "interrupted", "canceled"].includes(
-            generation.status,
-          ) && (
-            <div className="notice" role="status">
-              <div>
-                <strong>
-                  {generation.markdown?.trim()
-                    ? "Partial answer saved."
-                    : "No answer was generated."}
-                </strong>
-                {generation.error && (
-                  <p>
-                    {generation.error.message}{" "}
-                    <small>({generation.error.code})</small>
-                  </p>
-                )}
-                <div className="actions">
-                  <Link to="/settings">Check tutor Settings →</Link>
-                  <button
-                    disabled={
-                      active ||
-                      !bootstrap.key.configured ||
-                      !bootstrap.preferences.model
-                    }
-                    onClick={() => generate(generation.action, generation)}
-                  >
-                    Retry same request
-                  </button>
-                </div>
-                <small>
-                  The saved request stays in your library. Retry sends its
-                  original prompt and code as a new request.
-                </small>
-              </div>
-            </div>
-          )}
-          {!generation.markdown?.trim() &&
-            ["queued", "streaming"].includes(generation.status) && (
-              <p role="status" className="muted">
-                Waiting for the first answer text…
-              </p>
-            )}
-          <LiveLesson
-            key={generation.id}
-            id={generation.id}
-            markdown={generation.markdown || ""}
-            streaming={generation.status === "streaming"}
-            reducedMotion={bootstrap.preferences.reducedMotion}
-          />
+          ))}
         </div>
       )}
-      {pending && (
-        <Confirm
-          title="Send this context to DeepSeek?"
-          description={`This sends the problem, selected language, your code snapshot, safe result feedback, a short summary of independently demonstrated skills, and relevant messages or selected prior answer (including saved partial text) to DeepSeek. ${pending === "solution" ? "A requested full solution may also include a historically validated reference in the selected language. " : ""}It can consume API usage. The answer saves locally, and algorithmic teaching records assistance.`}
-          label="Send request"
-          onClose={() => setPending("")}
-          onConfirm={() => {
-            setConsent(true);
-            const a = pending;
-            setPending("");
-            void generate(a, pendingRetry.current, true);
-            pendingRetry.current = null;
-          }}
+      <div className="tutor-composer">
+        <textarea
+          aria-label="Ask Tutor"
+          rows={2}
+          placeholder="Ask about this challenge…"
+          value={prompt}
+          onChange={(e) => setPrompt(e.target.value)}
+          disabled={
+            active || !bootstrap.key.configured || !bootstrap.preferences.model
+          }
         />
-      )}
-    </>
+        <div className="tutor-composer-bottom">
+          <select
+            aria-label="Tutor help type"
+            value={helpAction}
+            onChange={(e) => setHelpAction(e.target.value)}
+            disabled={active}
+          >
+            {[
+              ["idea_map", "Idea map"],
+              ["hint", "Hint"],
+              ["error", "Explain error"],
+              ["simplify", "Explain simply"],
+              ["walkthrough", "Walkthrough"],
+              ["solution", "Full solution"],
+              ["complexity", "Complexity"],
+              ["followup", "Follow-up"],
+            ].map(([action, label]) => (
+              <option key={action} value={action}>
+                {label}
+              </option>
+            ))}
+          </select>
+          <span title={bootstrap.preferences.model || "No model selected"}>
+            {bootstrap.preferences.model || "DeepSeek · not configured"}
+          </span>
+          {active && generation ? (
+            <button
+              className="ghost tutor-stop"
+              aria-label="Cancel tutor response"
+              onClick={async () => {
+                const epoch = generationEpoch.current;
+                try {
+                  const canceled = await api(
+                    `tutor/${generation.id}/cancel`,
+                    "POST",
+                    {},
+                  );
+                  if (epoch !== generationEpoch.current) return;
+                  setGeneration(canceled);
+                  requestLock.current = ["queued", "streaming"].includes(
+                    canceled.status,
+                  );
+                  setBusy(false);
+                } catch (failure) {
+                  if (epoch === generationEpoch.current) setError(failure);
+                }
+              }}
+            >
+              <X size={16} />
+            </button>
+          ) : (
+            <button
+              className="tutor-send"
+              aria-label="Send tutor request"
+              title="Send request"
+              disabled={
+                active ||
+                !bootstrap.key.configured ||
+                !bootstrap.preferences.model ||
+                (helpAction === "followup" && !prompt.trim())
+              }
+              onClick={() => void generate(helpAction)}
+            >
+              <ArrowRight size={17} />
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 function LessonRow({
@@ -2403,7 +3159,9 @@ function LearningLibrary() {
     [language, setLanguage] = useState(""),
     [status, setStatus] = useState(""),
     [bookmarked, setBookmarked] = useState(false),
-    [problemId, setProblemId] = useState(""),
+    [problemId, setProblemId] = useState(
+      () => new URLSearchParams(window.location.search).get("problemId") || "",
+    ),
     [topic, setTopic] = useState(""),
     [action, setAction] = useState(""),
     [from, setFrom] = useState(""),
@@ -2456,6 +3214,7 @@ function LearningLibrary() {
         >
           <option value="">All answer types</option>
           {[
+            "idea_map",
             "hint",
             "error",
             "simplify",
@@ -2873,17 +3632,15 @@ function Lesson() {
               : "This saved request has no answer text."}
           </p>
         )}
-        {liveReadingSession.current === l.id ? (
-          <LiveLesson
-            key={l.id}
-            id={l.id}
-            markdown={l.markdown || ""}
-            streaming={l.status === "streaming"}
-            reducedMotion={bootstrap.preferences.reducedMotion}
-          />
-        ) : (
-          <LessonRenderer markdown={l.markdown || ""} />
-        )}
+        <TutorAnswer
+          key={l.id}
+          id={l.id}
+          markdown={l.markdown}
+          live={liveReadingSession.current === l.id}
+          mapOnly={l.action === "idea_map"}
+          streaming={l.status === "streaming"}
+          reducedMotion={bootstrap.preferences.reducedMotion}
+        />
         <span id="answer-end" />
       </div>
       {["queued", "streaming"].includes(l.status) && (
@@ -2904,7 +3661,11 @@ function Lesson() {
             <span>{statusLabel(compare.status)}</span>
             <span>{compare.model || "Model not recorded"}</span>
           </div>
-          <LessonRenderer markdown={compare.markdown || ""} />
+          <TutorAnswer
+            id={compare.id}
+            markdown={compare.markdown}
+            mapOnly={compare.action === "idea_map"}
+          />
         </section>
       )}
       <div className="card section">
@@ -3021,52 +3782,24 @@ function Lesson() {
 }
 function Progress() {
   const { topics, bootstrap } = useApp();
-  const progress = useData("progress");
+  const [language, setLanguage] = useState<Language>(bootstrap.preferences.language);
+  const progress = useData<ProgressData>("progress");
+  const recommendation = useData(`recommendation?language=${language}`);
+  useEffect(() => {
+    const revealFragment = () => {
+      if (window.location.hash === "#progress-evidence") revealProgressEvidence(document.querySelector<HTMLDetailsElement>("#progress-evidence"));
+    };
+    revealFragment();
+    window.addEventListener("hashchange", revealFragment);
+    return () => window.removeEventListener("hashchange", revealFragment);
+  }, [progress.data]);
+  if (progress.loading && !progress.data) return <Loading />;
   return (
     <div className="page">
-      <div className="page-head">
-        <div>
-          <div className="eyebrow">Evidence, not a score</div>
-          <h1>Your progress</h1>
-          <p className="subtitle">
-            Independent understanding, supported learning, and review are
-            different parts of the same journey.
-          </p>
-        </div>
-      </div>
-      {progress.error && <ErrorNotice error={progress.error} />}
-      <div className="grid three">
-        <div className="card">
-          <span className="metric-label">Independent questions</span>
-          <div className="stat">{progress.data?.independent ?? "—"}</div>
-          <small>Without recorded in-app assistance</small>
-        </div>
-        <div className="card">
-          <span className="metric-label">Learned with help</span>
-          <div className="stat">{progress.data?.assisted ?? "—"}</div>
-          <small>Consolidate with a fresh checkpoint</small>
-        </div>
-        <div className="card">
-          <span className="metric-label">Due reviews</span>
-          <div className="stat">
-            {progress.data?.reviewQueue?.length ?? "—"}
-          </div>
-          <small>Retention evidence, at your own pace</small>
-        </div>
-      </div>
-      <section className="section">
-        <div className="section-head">
-          <h2>Topic evidence</h2>
-          <span className="muted" style={{ fontSize: 12 }}>
-            Completion is separate from mastery
-          </span>
-        </div>
-        <div className="topic-grid">
-          {topics.map((t) => (
-            <TopicCard key={t.id} topic={t} />
-          ))}
-        </div>
-      </section>
+      <div className="page-head"><div><div className="eyebrow">Evidence, not a score</div><h1>Your progress</h1><p className="subtitle">Independent understanding, supported learning, and review. Different parts of the same journey, now easier to see.</p></div></div>
+      {progress.error && <ErrorNotice error={progress.error} retry={progress.reload} />}
+      {progress.data && <ProgressDashboard progress={progress.data} topics={topics} language={language} onLanguage={setLanguage} recommendation={recommendation.data} recommendationLoading={recommendation.loading} recommendationError={recommendation.error} retryRecommendation={recommendation.reload} formatDate={date} />}
+      {progress.data && <details id="progress-evidence" className="pd-all-evidence"><summary>All skills and learning evidence</summary>
       <section className="section">
         <div className="section-head">
           <h2>Skills and language evidence</h2>
@@ -3110,7 +3843,7 @@ function Progress() {
                             {s.evidenceIds?.length || 0} outcomes
                           </summary>
                           {(s.evidenceIds || []).map((eid: string) => {
-                            const e = progress.data.evidence.find(
+                            const e = progress.data?.evidence.find(
                               (x: any) => x.id === eid,
                             );
                             return e ? (
@@ -3181,17 +3914,17 @@ function Progress() {
                 </thead>
                 <tbody>
                   {progress.data.evidence.map((e: any) => (
-                    <tr key={e.id || e.submissionId}>
+                    <tr key={e.id}>
                       <td>
                         <Link to={`/problems/${e.problemId}`}>
                           {e.problemId}
                         </Link>
                         <small style={{ display: "block" }}>
-                          {e.skillId || e.skillIds?.join(", ")}
+                          {(e.skillIds || e.skills)?.join(", ")}
                         </small>
                       </td>
                       <td>
-                        {statusLabel(e.type || e.classification || e.kind)}
+                        {statusLabel(e.classification || e.outcome)}
                       </td>
                       <td>{languageName(e.language)}</td>
                       <td>{date(e.createdAt)}</td>
@@ -3212,6 +3945,7 @@ function Progress() {
           </Empty>
         )}
       </section>
+      </details>}
     </div>
   );
 }

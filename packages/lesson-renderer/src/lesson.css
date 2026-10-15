@@ -1,3 +1,4 @@
+@import url("./idea-map.css");
 .lesson-content {
   font-size: var(--lesson-size, 16px);
   line-height: 1.72;
@@ -9,17 +10,19 @@
   margin-bottom: 0;
 }
 .lesson-content h2 {
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.4;
   margin: 32px 0 14px;
   letter-spacing: -0.3px;
+  font-weight: 600;
 }
 .lesson-content h2:first-child {
   margin-top: 0;
 }
 .lesson-content h3 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 25px 0 10px;
+  font-weight: 600;
 }
 .lesson-content p {
   margin: 0 0 17px;
@@ -52,8 +55,8 @@
   margin: 22px 0;
   padding: 14px 18px;
   border-left: 3px solid var(--accent);
-  background: var(--raised);
-  border-radius: 0 7px 7px 0;
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
+  border-radius: 0 8px 8px 0;
   color: var(--text);
 }
 .lesson-content blockquote p:last-child {
@@ -62,7 +65,7 @@
 .lesson-code {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 20px 0;
   overflow: hidden;
 }
@@ -70,12 +73,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 14px;
+  padding: 10px 14px;
   border-bottom: 1px solid var(--border);
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  background: color-mix(in srgb, var(--raised) 45%, var(--surface));
+  gap: 10px;
 }
 .code-label button {
   min-height: 28px;
@@ -111,7 +116,7 @@
 .lesson-content .table-scroll {
   margin: 20px 0;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .lesson-content table {
   border-collapse: collapse;
@@ -119,7 +124,7 @@
   font-size: 13px;
 }
 .lesson-content th {
-  background: var(--raised);
+  background: color-mix(in srgb, var(--raised) 45%, var(--surface));
   font-weight: 600;
 }
 .lesson-content th,
@@ -174,22 +179,27 @@
 .hljs-type {
   color: #80ced2;
 }
-:root[data-theme="light"] .hljs-keyword {
+:root[data-theme="light"] .hljs-keyword,
+:root[data-theme="light"] .hljs-selector-tag {
   color: #7051aa;
 }
-:root[data-theme="light"] .hljs-string {
+:root[data-theme="light"] .hljs-string,
+:root[data-theme="light"] .hljs-attr {
   color: #287649;
 }
-:root[data-theme="light"] .hljs-number {
+:root[data-theme="light"] .hljs-number,
+:root[data-theme="light"] .hljs-literal {
   color: #965f19;
 }
-:root[data-theme="light"] .hljs-title {
+:root[data-theme="light"] .hljs-title,
+:root[data-theme="light"] .hljs-function {
   color: #24609d;
 }
 :root[data-theme="light"] .hljs-comment {
   color: #67717f;
 }
-:root[data-theme="light"] .hljs-built_in {
+:root[data-theme="light"] .hljs-built_in,
+:root[data-theme="light"] .hljs-type {
   color: #146b78;
 }
 @media (max-width: 500px) {

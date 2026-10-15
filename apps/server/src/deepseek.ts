@@ -51,6 +51,7 @@ export class DeepSeek {
     max: number,
     signal: AbortSignal,
     onChunk: (text: string) => void,
+    options: { thinking?: "disabled" } = {},
   ) {
     const connectionError = () => {
       if (signal.aborted && signal.reason?.name !== "TimeoutError")
@@ -77,6 +78,12 @@ export class DeepSeek {
           max_tokens: max,
           stream: true,
           stream_options: { include_usage: true },
+          // Only these documented models support the thinking toggle. Keep
+          // full solutions and unknown/legacy models on their prior behavior.
+          ...(options.thinking === "disabled" &&
+          ["deepseek-flash", "deepseek-v4-pro"].includes(model)
+            ? { thinking: { type: "disabled" } }
+            : {}),
         }),
         signal,
       });
@@ -116,7 +123,54 @@ export class DeepSeek {
     let buffer = "",
       usage: any = null,
       finishReason: string | null = null,
-      total = 0;
+      total = 0,
+      hasVisibleAnswer = false,
+      leadingWhitespace = "";
+    const consume = (line: string) => {
+      if (!line.startsWith("data:")) return;
+      const raw = line.slice(5).trim();
+      if (!raw || raw === "[DONE]") return;
+      let packet: any;
+      try {
+        packet = JSON.parse(raw);
+      } catch {
+        throw new ProviderError(
+          "MALFORMED_RESPONSE",
+          "DeepSeek returned an invalid stream event.",
+        );
+      }
+      const text = packet.choices?.[0]?.delta?.content;
+      if (typeof text === "string") {
+        total += text.length;
+        if (total > 250000)
+          throw new ProviderError(
+            "OUTPUT_LIMIT",
+            "The response exceeded the saved answer limit.",
+          );
+        if (!hasVisibleAnswer && !text.trim()) leadingWhitespace += text;
+        else {
+          hasVisibleAnswer = true;
+          onChunk(leadingWhitespace + text);
+          leadingWhitespace = "";
+        }
+      }
+      if (packet.usage) {
+        usage = {};
+        for (const field of [
+          "prompt_tokens",
+          "completion_tokens",
+          "total_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+        ]) {
+          const value = packet.usage[field];
+          if (Number.isSafeInteger(value) && value >= 0) usage[field] = value;
+        }
+        if (!Object.keys(usage).length) usage = null;
+      }
+      if (packet.choices?.[0]?.finish_reason)
+        finishReason = packet.choices[0].finish_reason;
+    };
     try {
       for (;;) {
         let next: ReadableStreamReadResult<Uint8Array>;
@@ -135,52 +189,16 @@ export class DeepSeek {
           );
         const lines = buffer.split("\n");
         buffer = lines.pop() ?? "";
-        for (const line of lines) {
-          if (!line.startsWith("data:")) continue;
-          const raw = line.slice(5).trim();
-          if (raw === "[DONE]") continue;
-          let packet: any;
-          try {
-            packet = JSON.parse(raw);
-          } catch {
-            throw new ProviderError(
-              "MALFORMED_RESPONSE",
-              "DeepSeek returned an invalid stream event.",
-            );
-          }
-          const text = packet.choices?.[0]?.delta?.content;
-          if (typeof text === "string") {
-            total += text.length;
-            if (total > 250000)
-              throw new ProviderError(
-                "OUTPUT_LIMIT",
-                "The response exceeded the saved answer limit.",
-              );
-            onChunk(text);
-          }
-          if (packet.usage) {
-            usage = {};
-            for (const field of [
-              "prompt_tokens",
-              "completion_tokens",
-              "total_tokens",
-              "prompt_cache_hit_tokens",
-              "prompt_cache_miss_tokens",
-            ]) {
-              const value = packet.usage[field];
-              if (Number.isSafeInteger(value) && value >= 0)
-                usage[field] = value;
-            }
-            if (!Object.keys(usage).length) usage = null;
-          }
-          if (packet.choices?.[0]?.finish_reason)
-            finishReason = packet.choices[0].finish_reason;
-        }
+        for (const line of lines) consume(line);
       }
-      if (!total)
+      buffer += decoder.decode();
+      for (const line of buffer.split("\n")) consume(line);
+      if (!hasVisibleAnswer)
         throw new ProviderError(
           "EMPTY_RESPONSE",
-          "DeepSeek returned no user-facing answer.",
+          finishReason === "length"
+            ? "DeepSeek reached the output token limit before returning a user-facing answer. Thinking can consume this budget. Increase the output limit in Settings if needed, then retry explicitly; reported usage is retained."
+            : "DeepSeek returned no user-facing answer.",
         );
       if (!finishReason)
         throw new ProviderError(

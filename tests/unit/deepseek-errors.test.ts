@@ -87,3 +87,137 @@ test("broken response stream reports a network failure after preserving delivere
   );
   assert.equal(delivered, "saved partial");
 });
+
+test("non-thinking option is sent only for documented compatible models and never by default", async () => {
+  const bodies: any[] = [];
+  const provider = new DeepSeek((async (_url, init) => {
+    bodies.push(JSON.parse(String(init?.body)));
+    return new Response(
+      'data: {"choices":[{"delta":{"content":"Brief answer"},"finish_reason":"stop"}]}',
+    );
+  }) as typeof fetch);
+  for (const model of ["deepseek-flash", "deepseek-v4-pro", "legacy-model"]) {
+    await provider.stream(
+      "fixture",
+      model,
+      [],
+      256,
+      new AbortController().signal,
+      () => {},
+      { thinking: "disabled" },
+    );
+  }
+  await provider.stream(
+    "fixture",
+    "deepseek-flash",
+    [],
+    4096,
+    new AbortController().signal,
+    () => {},
+  );
+  assert.deepEqual(
+    bodies.map((b) => b.thinking),
+    [{ type: "disabled" }, { type: "disabled" }, undefined, undefined],
+  );
+  assert.deepEqual(
+    bodies.map((b) => b.max_tokens),
+    [256, 256, 256, 4096],
+  );
+});
+
+test("trailing SSE frame without newline retains usage and completion while discarding private reasoning", async () => {
+  let delivered = "";
+  const provider = new DeepSeek(
+    (async () =>
+      new Response(
+        'data: {"choices":[{"delta":{"reasoning_content":"PRIVATE_REASONING"}}]}\n\n' +
+          'data: {"choices":[{"delta":{"content":"Visible answer"}}]}\n\n' +
+          'data: {"choices":[{"delta":{},"finish_reason":"length"}],"usage":{"prompt_tokens":10,"completion_tokens":128,"total_tokens":138,"reasoning_content":"PRIVATE_USAGE"}}',
+      )) as typeof fetch,
+  );
+  const result = await provider.stream(
+    "fixture",
+    "deepseek-flash",
+    [],
+    128,
+    new AbortController().signal,
+    (text) => (delivered += text),
+  );
+  assert.equal(delivered, "Visible answer");
+  assert.deepEqual(result, {
+    usage: { prompt_tokens: 10, completion_tokens: 128, total_tokens: 138 },
+    finishReason: "length",
+  });
+  assert(!JSON.stringify(result).includes("PRIVATE"));
+});
+
+test("reasoning-only or whitespace-only token exhaustion is explanatory and retains reported usage", async () => {
+  for (const content of [undefined, " \n\t"]) {
+    let delivered = "";
+    const provider = new DeepSeek(
+      (async () =>
+        new Response(
+          "data: " +
+            JSON.stringify({
+              choices: [
+                {
+                  delta: { content, reasoning_content: "PRIVATE_REASONING" },
+                  finish_reason: "length",
+                },
+              ],
+              usage: {
+                prompt_tokens: 11,
+                completion_tokens: 1525,
+                total_tokens: 1536,
+              },
+            }),
+        )) as typeof fetch,
+    );
+    await assert.rejects(
+      provider.stream(
+        "fixture",
+        "deepseek-flash",
+        [],
+        1525,
+        new AbortController().signal,
+        (text) => (delivered += text),
+      ),
+      (e: any) => {
+        assert.equal(e.code, "EMPTY_RESPONSE");
+        assert.match(e.message, /output token limit/);
+        assert.equal(e.finishReason, "length");
+        assert.equal(e.usage.completion_tokens, 1525);
+        assert(!JSON.stringify(e).includes("PRIVATE_REASONING"));
+        return true;
+      },
+    );
+    assert.equal(delivered, "");
+  }
+});
+
+test("leading whitespace split across provider chunks preserves the exact visible Markdown answer", async () => {
+  const chunks = ["\n", "    ", "indented code", "\n", "more text"];
+  let delivered = "";
+  const provider = new DeepSeek(
+    (async () =>
+      new Response(
+        chunks
+          .map(
+            (content) =>
+              "data: " +
+              JSON.stringify({ choices: [{ delta: { content } }] }) +
+              "\n\n",
+          )
+          .join("") + 'data: {"choices":[{"delta":{},"finish_reason":"stop"}]}',
+      )) as typeof fetch,
+  );
+  await provider.stream(
+    "fixture",
+    "deepseek-flash",
+    [],
+    128,
+    new AbortController().signal,
+    (text) => (delivered += text),
+  );
+  assert.equal(delivered, chunks.join(""));
+});

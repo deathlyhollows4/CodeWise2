@@ -81,6 +81,139 @@ async function harness(
   return { dir, app, base, boot, cookie, request, close: () => app.close() };
 }
 
+test("idea maps stream and persist unchanged, record full algorithm exposure, and reopen/export without inference", async () => {
+  const markdown =
+    'Brief public problem summary.\n\n```idea-map\n{"version":1,"title":"Sum","nodes":[{"id":"start","label":"Read input","kind":"start","row":0,"column":0},{"id":"end","label":"Return sum","kind":"end","row":1,"column":0}],"edges":[{"from":"start","to":"end"}]}\n```\n\nTime O(n), auxiliary space O(1).';
+  let calls = 0,
+    referenceLookups = 0;
+  const provider = {
+    stream: async (
+      _key: any,
+      _model: any,
+      messages: any,
+      _limit: any,
+      _signal: any,
+      onChunk: any,
+    ) => {
+      calls++;
+      const context = JSON.parse(messages.at(-1).content);
+      assert.equal(context.action, "idea_map");
+      assert.equal(context.verifiedReference, null);
+      onChunk(markdown.slice(0, 80));
+      onChunk(markdown.slice(80));
+      return {
+        finishReason: "stop",
+        usage: { prompt_tokens: 10, completion_tokens: 10, total_tokens: 20 },
+      };
+    },
+  };
+  const judge = {
+    getVerifiedReference: async () => {
+      referenceLookups++;
+      throw new Error("idea maps must never request trusted references");
+    },
+  };
+  const h = await harness(provider as any, judge);
+  let restarted: Awaited<ReturnType<typeof harness>> | undefined;
+  try {
+    h.app.secrets.read = () => "fixture-only-key";
+    h.app.store.setMeta("preferences", {
+      ...h.app.store.meta("preferences"),
+      model: "fixture-model",
+    });
+    const input = {
+      problemId: pack.id,
+      language: "python",
+      code: "",
+      action: "idea_map",
+      prompt: "Map the approach",
+      consent: true,
+      idempotencyKey: randomUUID(),
+    };
+    const response = await h.request("/api/tutor", "POST", input);
+    assert.equal(response.status, 202);
+    const generation: any = await response.json();
+    for (
+      let i = 0;
+      i < 100 &&
+      h.app.store.get("generations", generation.id).status !== "complete";
+      i++
+    )
+      await new Promise((resolve) => setTimeout(resolve, 5));
+    const saved = h.app.store.get("generations", generation.id);
+    assert.equal(saved.status, "complete");
+    assert.equal(saved.markdown, markdown);
+    assert.equal(
+      saved.contentHash,
+      createHash("sha256").update(markdown).digest("hex"),
+    );
+    assert.equal(saved.action, "idea_map");
+    assert.equal(saved.verification, "not-run");
+    assert.equal(referenceLookups, 0);
+    assert.equal(h.app.store.assisted(pack.id), true);
+    assert.equal(
+      h.app.store.db
+        .prepare("SELECT kind FROM assistance WHERE problem=?")
+        .get(pack.id)?.kind,
+      "solution",
+    );
+    const duplicate: any = await (
+      await h.request("/api/tutor", "POST", input)
+    ).json();
+    assert.equal(duplicate.id, saved.id);
+    h.close();
+    restarted = await harness(provider as any, judge, [pack], h.dir);
+    assert.equal(restarted.app.store.assisted(pack.id), true);
+    // Simulate imported historical maps without prior minimal assistance evidence.
+    restarted.app.store.db.prepare("DELETE FROM assistance").run();
+    const page: any = await (
+      await restarted.request("/api/library?action=idea_map")
+    ).json();
+    assert.equal(page.items[0].id, saved.id);
+    assert.equal(
+      restarted.app.store.db
+        .prepare("SELECT kind FROM assistance WHERE problem=?")
+        .get(pack.id)?.kind,
+      "solution",
+    );
+    restarted.app.store.db.prepare("DELETE FROM assistance").run();
+    const detail: any = await (
+      await restarted.request("/api/library/" + saved.id)
+    ).json();
+    assert.equal(detail.markdown, markdown);
+    assert.equal(detail.contentHash, saved.contentHash);
+    assert.equal(
+      restarted.app.store.db
+        .prepare("SELECT kind FROM assistance WHERE problem=?")
+        .get(pack.id)?.kind,
+      "solution",
+    );
+    assert.equal(
+      await (
+        await restarted.request(
+          "/api/library/" + saved.id + "/export?format=markdown",
+        )
+      ).text(),
+      markdown,
+    );
+    const backup = BackupSchema.parse(
+      await (await restarted.request("/api/data/export")).json(),
+    );
+    assert.equal(
+      backup.generations.find((g: any) => g.id === saved.id)?.action,
+      "idea_map",
+    );
+    assert.equal(
+      backup.generations.find((g: any) => g.id === saved.id)?.markdown,
+      markdown,
+    );
+    assert.equal(calls, 1);
+  } finally {
+    if (restarted) restarted.close();
+    else h.close();
+  }
+});
+
 test("incomplete tutor setup cannot reserve usage or create empty saved lessons", async () => {
   let calls = 0;
   const h = await harness(
@@ -502,12 +635,13 @@ test("failed tutor before visible output preserves independence; saved partial r
 });
 
 test("failed empty answers retain provider token usage and cost without recording teaching or reasoning", async () => {
-  const provider = new DeepSeek(
-    (async () =>
-      new Response(
-        'data: {"choices":[{"delta":{"reasoning_content":"private fixture reasoning"},"finish_reason":"length"}],"usage":{"prompt_tokens":13,"completion_tokens":128,"total_tokens":141,"secret":"must be dropped"}}\n\ndata: [DONE]\n\n',
-      )) as typeof fetch,
-  );
+  let calls = 0;
+  const provider = new DeepSeek((async () => {
+    calls++;
+    return new Response(
+      'data: {"choices":[{"delta":{"reasoning_content":"private fixture reasoning"},"finish_reason":"length"}],"usage":{"prompt_tokens":13,"completion_tokens":128,"total_tokens":141,"secret":"must be dropped"}}\n\ndata: [DONE]\n\n',
+    );
+  }) as typeof fetch);
   const h = await harness(provider);
   try {
     h.app.secrets.read = () => "fixture-only-key";
@@ -535,6 +669,7 @@ test("failed empty answers retain provider token usage and cost without recordin
     const g = h.app.store.get("generations", initial.id);
     assert.equal(g.status, "failed");
     assert.equal(g.error.code, "EMPTY_RESPONSE");
+    assert.match(g.error.message, /output token limit/);
     assert.deepEqual(g.usage, {
       prompt_tokens: 13,
       completion_tokens: 128,
@@ -550,6 +685,70 @@ test("failed empty answers retain provider token usage and cost without recordin
     assert.equal(settings.usage.knownTokens, 141);
     assert.equal(settings.usage.tokenMissingRequests, 0);
     assert.equal(settings.usage.costKnown, true);
+    assert.equal(calls, 1);
+  } finally {
+    h.close();
+  }
+});
+
+test("real adapter request policy disables thinking for brief/diagram actions, preserves user cap and full solution settings", async () => {
+  const requests: any[] = [];
+  const provider = new DeepSeek((async (_url, init) => {
+    const request = JSON.parse(String(init?.body));
+    requests.push(request);
+    return new Response(
+      'data: {"choices":[{"delta":{"content":"Explicit fixture answer; no provider call or code execution."},"finish_reason":"stop"}],"usage":{"prompt_tokens":10,"completion_tokens":10,"total_tokens":20}}',
+    );
+  }) as typeof fetch);
+  const h = await harness(provider);
+  try {
+    h.app.secrets.read = () => "fixture-only-key";
+    const cases = [
+      { action: "hint", cap: 4096, expected: 256 },
+      { action: "idea_map", cap: 1525, expected: 1525 },
+      { action: "complexity", cap: 128, expected: 128 },
+      { action: "solution", cap: 1525, expected: 1525 },
+    ];
+    for (const item of cases) {
+      h.app.store.setMeta("preferences", {
+        ...h.app.store.meta("preferences"),
+        model: "deepseek-flash",
+        maxOutputTokens: item.cap,
+        defaultHintDepth: "concept",
+      });
+      const response = await h.request("/api/tutor", "POST", {
+        problemId: pack.id,
+        language: "python",
+        code: "",
+        action: item.action,
+        prompt: "Controlled policy fixture",
+        consent: true,
+        idempotencyKey: randomUUID(),
+      });
+      assert.equal(response.status, 202);
+      const initial: any = await response.json();
+      for (
+        let i = 0;
+        i < 40 &&
+        h.app.store.get("generations", initial.id).status !== "complete";
+        i++
+      )
+        await new Promise((resolve) => setTimeout(resolve, 5));
+      const saved = h.app.store.get("generations", initial.id);
+      assert.equal(saved.status, "complete");
+      assert.equal(saved.maxOutputTokens, item.expected);
+      assert.equal(saved.model, "deepseek-flash");
+      const request = requests.at(-1);
+      assert.equal(request.model, "deepseek-flash");
+      assert.equal(request.max_tokens, item.expected);
+      assert.deepEqual(
+        request.thinking,
+        item.action === "solution" ? undefined : { type: "disabled" },
+      );
+      assert.equal(saved.usage.total_tokens, 20);
+      assert.equal(saved.verification, "not-run");
+    }
+    assert.equal(requests.length, cases.length);
   } finally {
     h.close();
   }

@@ -2,15 +2,25 @@ param([switch]$ReadingOnly, [switch]$CheckRunnerOnly)
 $ErrorActionPreference = 'Stop'
 Set-Location (Split-Path $PSScriptRoot -Parent)
 if ($PSVersionTable.PSVersion.Major -lt 7) { throw 'Use PowerShell 7: pwsh -File scripts/start.ps1' }
+if ($PSHOME -match '\\WindowsApps\\Microsoft\.PowerShell_') {
+    throw 'Use the single launcher: powershell -NoProfile -ExecutionPolicy Bypass -File .\final.ps1. It selects standalone PowerShell and recovers missing runner profile files.'
+}
 if (-not (Get-Command node -ErrorAction SilentlyContinue)) { throw 'Install Node.js 24 or later, then run scripts/setup.ps1.' }
 if (-not (Test-Path node_modules/tsx)) { throw 'Dependencies missing. Run .\scripts\setup.ps1 first.' }
 if (-not (Test-Path dist/server/index.mjs)) { throw 'Build missing. Run .\scripts\setup.ps1 first.' }
+. (Join-Path $PSScriptRoot 'prepare-runner.ps1')
+$folders = Resolve-CodeWiseDataFolders
+# Pin the same profile for the script, Node diagnostics and the actual app.
+# Store/packaged shells may supply a redirected LOCALAPPDATA environment value.
+$env:CODEWISE2_DATA_DIR = $folders.DataDirectory
+$env:CODEWISE2_RUNNER_DATA_DIR = $folders.RunnerDirectory
+Write-Host "Learning data: $($folders.DataDirectory)"
 $anchor = $null
 try {
     if (-not $ReadingOnly) {
-        $runnerData = if ($env:CODEWISE2_RUNNER_DATA_DIR) { $env:CODEWISE2_RUNNER_DATA_DIR } elseif ($env:CODEWISE2_DATA_DIR) { $env:CODEWISE2_DATA_DIR } else { Join-Path $env:LOCALAPPDATA 'CodeWise2' }
+        $runnerData = $folders.RunnerDirectory
         if (-not (Test-Path (Join-Path $runnerData 'runner.json'))) {
-            throw 'Runner is not installed for this profile. Run .\scripts\setup.ps1 -InstallRunner for guided setup, or .\scripts\start.ps1 -ReadingOnly to read/edit without grading.'
+            throw "Runner configuration not found at '$runnerData\runner.json'. If you set CODEWISE2_DATA_DIR or CODEWISE2_RUNNER_DATA_DIR, check that override first. Do not reinstall an existing CodeWise2Runner distro. New installations: .\scripts\setup.ps1 -InstallRunner. Reading only: .\scripts\start.ps1 -ReadingOnly."
         }
         # Do not recover policy while any CodeWise2 app in the standard port range is active.
         foreach ($port in 3000..3010) {
@@ -27,7 +37,6 @@ try {
         $info.RedirectStandardInput = $true
         foreach ($argument in @('--distribution','CodeWise2Runner','--user','root','--exec','/bin/cat')) { $info.ArgumentList.Add($argument) }
         $anchor = [Diagnostics.Process]::Start($info)
-        . (Join-Path $PSScriptRoot 'prepare-runner.ps1')
         Initialize-CodeWiseRunner
         if ($anchor.HasExited) { throw 'Dedicated WSL lifetime exited unexpectedly. App startup withheld.' }
     }

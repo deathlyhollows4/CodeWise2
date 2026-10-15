@@ -1,0 +1,134 @@
+{
+  "date": "2026-10-12",
+  "commit": "a8b3db423a2d3bd4c70e2e84667b53a3ae60fa55",
+  "method": "Read-only source inspection; static catalogue/file-presence checks; no submitted-code execution, provider calls or live data inspection.",
+  "runtime": {
+    "main": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "evidence": "Current chat turn_context record, extracted only model/effort fields.",
+      "serviceTier": "unverified"
+    },
+    "agents": {
+      "requestedModel": "gpt-6.1-sol",
+      "requestedEffort": "low",
+      "evidence": "Accepted explicit spawn arguments for market, learning and buyers.",
+      "effectiveSettings": "unverified",
+      "speed": "unverified"
+    }
+  },
+  "coverage": {
+    "project": "C-Users-brawl-OneDrive-Desktop-CodeWise2",
+    "initialGeneration": "2026-10-07T22:57:49Z",
+    "autoRefreshedGeneration": "2026-10-12T17:13:13Z",
+    "initialResult": "not_tracked",
+    "finalResult": "metadata_changed/excluded for relied-on paths",
+    "fallback": "Direct source reads and targeted grep; no completeness or absence inference from graph."
+  },
+  "staticInventory": {
+    "catalogueEntries": 243,
+    "publishedCatalogueFlags": 243,
+    "topics": 18,
+    "visibleCases": 729,
+    "starterFiles": {
+      "java": 243,
+      "cpp": 243,
+      "python": 243
+    },
+    "executionValidatedThisTask": false
+  },
+  "github": {
+    "endpoint": "https://api.github.com/repos/deathlyhollows4/CodeWise2",
+    "private": false,
+    "defaultBranch": "main",
+    "license": null,
+    "commercialRightsEstablished": false
+  },
+  "finalVerification": {
+  "inspectedSourceHashesChecked": 19,
+  "changedInspectedFiles": [],
+  "trackedGitDiff": "empty",
+  "onlyUntrackedTaskOutput": "docs/usp-research/",
+  "brokenRelativeLinks": 0,
+  "review": "Independent research-agent review identified missing assessment labour and coding-retention gate; coordinator corrected both.",
+  "applicationTestsRun": false
+},
+  "sources": [
+    {
+      "path": "packages/learning-engine/src/index.ts",
+      "sha256": "7a1655bf1d9fa4459f715b6e723a8bed04a5d773423c10f2a49e8e732d3a0d31"
+    },
+    {
+      "path": "packages/learning-engine/src/assessment.ts",
+      "sha256": "140acee9df4b6895ca800924a431c833124804fba8863bec41fe15b5feee7666"
+    },
+    {
+      "path": "packages/learning-engine/src/attempts.ts",
+      "sha256": "e2f74751fe8f8628da6d7af5adcce6e106061476e55fe026e1d4844f6dc84954"
+    },
+    {
+      "path": "packages/learning-engine/src/path-state.ts",
+      "sha256": "a34b2a9d1fac0bb44e17034f14bca8df99c94dbb90a4ae90da53d5ed69c7b781"
+    },
+    {
+      "path": "packages/learning-engine/src/review-calendar.ts",
+      "sha256": "d704e13eab19b44fd2b52f5400742678f57405d0ce010613256cddb0d900c640"
+    },
+    {
+      "path": "packages/learning-engine/src/teacher-closure.ts",
+      "sha256": "823a6be12f922512d575f83b6fbf128acb0a84f8a7e27b6051bcbf21b2ccc3cc"
+    },
+    {
+      "path": "apps/server/src/app.ts",
+      "sha256": "4b52fbf2354269b3de3c39c4b815e73c0e210d8fcf704c81ca6683bd1ae5aeef"
+    },
+    {
+      "path": "apps/server/src/store.ts",
+      "sha256": "f7266300e1debc0a8da91d338f79ccee6febdd894df0cdf6f1b0ca96e388d278"
+    },
+    {
+      "path": "apps/server/src/deepseek.ts",
+      "sha256": "423db46fc90dcdae7d1d13093db97132517650ff417c9aaa6e8bfa7534b2b0ca"
+    },
+    {
+      "path": "apps/server/src/tutor-context.ts",
+      "sha256": "22ec4da82a5502e41c439cbd1c5170a1fccd4cf5d78ec32aa581cd30329bde17"
+    },
+    {
+      "path": "apps/server/src/usage.ts",
+      "sha256": "36acf38b31edb6b34467632f2e52123a41492df7caf7b970b21df8cefcd99b15"
+    },
+    {
+      "path": "apps/server/src/usage-ledger.ts",
+      "sha256": "cda66a5287b70b8e62600d8248435f3c59007d4894dc7ebbf3151f9ce6d7e335"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "sha256": "3a0a2765f63f819f43c8e81313add932f258df87a3aa1fda23b3e78873ad3af1"
+    },
+    {
+      "path": "content/catalogue.json",
+      "sha256": "1772936fdb4e4ee3363fedd7ff07f1bc61a238b0653fc846e29a57311f23d11e"
+    },
+    {
+      "path": "scripts/start.ps1",
+      "sha256": "4e22b5a40094aad6663929ab4395b61bdd1d6ae175960bed96e8141ea35f6cd2"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0b720fb0226423f137f4873e6e18db23737deb92757b6592ede4100678d21227"
+    },
+    {
+      "path": "package.json",
+      "sha256": "2418c3ad66088dc6cc4845db05e7f494059d52d1803b41860362b019ecba8d3b"
+    },
+    {
+      "path": "BUILD_STATUS.md",
+      "sha256": "ebbfdba58a628aedfa5416bb90dcc1e66874b2279841a397d39bf1805650bd01"
+    },
+    {
+      "path": "docs/RELEASE_HANDOVER.md",
+      "sha256": "6595247bb1e605f6871af7e97780feeaa482620ad4a698df34c5cbf161652431"
+    }
+  ]
+}

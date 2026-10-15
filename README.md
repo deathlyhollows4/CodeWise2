@@ -1,8 +1,22 @@
 # CodeWise2
 
+## One-command Windows startup
+
+From the project folder, run this in Windows PowerShell, PowerShell 7, Command Prompt, or Windows Terminal:
+
+```text
+powershell -NoProfile -ExecutionPolicy Bypass -File .\final.ps1
+```
+
+`final.ps1` finds or downloads standalone PowerShell and Node.js with official SHA256 checks, runs dependency setup/build when missing or application inputs change, offers first-time dedicated runner setup, and starts the app. Future unchanged sessions skip install/build. It preserves your existing learning profile and never overwrites a preexisting runner distro. If this account's verified runner already exists but its Windows configuration or credential is missing, the launcher recovers only those missing files from that installation with private permissions. Windows WSL installation may require permission and a manual restart; rerun this same command afterward. Shared WSL crash-policy recovery asks for `YES`. Keep the app terminal open and press Ctrl+C to stop safely. `-ReadingOnly` starts without grading; `-CheckOnly` reports prerequisites without starting the app.
+
+After a profile recovery, the launcher can use a machine-local `.runtime/active-profile.json` selection for a stable data folder outside AppData redirection. This selection is ignored by Git, preserves a separate existing runner folder, and refuses to create an empty replacement if the selected database is missing. Explicit data-directory environment overrides still take precedence. The startup terminal prints the learning-data folder in use.
+
 ## Start studying from a clone
 
 ### Windows scripts (PowerShell 7)
+
+Use standalone PowerShell 7 (MSI or ZIP installation). Microsoft Store PowerShell virtualizes some app-data paths and can hide an existing runner configuration. `Start-CodeWise2.cmd` selects a local portable copy at `.runtime/powershell7/pwsh.exe`, or the standalone installation at `%ProgramFiles%/PowerShell/7/pwsh.exe`. Run it from Windows PowerShell with `.\Start-CodeWise2.cmd`, or double-click it from Explorer. A portable runtime is machine-local and is not included in Git.
 
 ```powershell
 pwsh -File scripts/setup.ps1

@@ -4,6 +4,7 @@ import {
   prepareTutorContext,
   summarizeTutorSkills,
   publicGeneration,
+  tutorOutputPolicy,
 } from "../../apps/server/src/tutor-context.ts";
 import type { Evidence } from "../../packages/learning-engine/src/index.ts";
 const base = {
@@ -94,7 +95,7 @@ test("trusted selected-language reference is accepted only for explicit full sol
   };
   const payload = (input: any) =>
     JSON.parse(prepareTutorContext(input).messages.at(-1)!.content);
-  for (const action of ["hint", "error", "walkthrough", "tests"])
+  for (const action of ["hint", "error", "walkthrough", "tests", "idea_map"])
     assert.equal(
       payload({ ...base, action, verifiedReference }).verifiedReference,
       null,
@@ -123,6 +124,29 @@ test("trusted selected-language reference is accepted only for explicit full sol
   );
 });
 
+test("idea map guidance requests only a complete algorithm graph grounded in public context without solver code or private references", () => {
+  const prepared = prepareTutorContext({ ...base, action: "idea_map" });
+  const policy = prepared.messages[0].content;
+  assert.match(policy, /supplied public problem and constraints/);
+  assert.match(policy, /exactly one fenced ```idea-map/);
+  assert.match(
+    policy,
+    /Include no headings, prose, explanations, complexity discussion, or other text before or after the block/,
+  );
+  assert.doesNotMatch(
+    policy,
+    /Use meaningful headings|Finish with|Briefly restate|explain why it fits/,
+  );
+  assert.match(policy, /24 nodes and 48 edges/);
+  assert.match(policy, /complete algorithm/);
+  assert.match(policy, /not solver code/);
+  assert.match(policy, /not evidence of correctness or execution/);
+  const context = JSON.parse(prepared.messages.at(-1)!.content);
+  assert.equal(context.action, "idea_map");
+  assert.deepEqual(context.problem, base.problem);
+  assert.equal(context.verifiedReference, null);
+});
+
 test("action-specific teaching guidance requests examples, justified reasoning and evidence-limited claims without promising tested output", () => {
   const system = (action: string) =>
     prepareTutorContext({ ...base, action, language: "cpp" }).messages[0]
@@ -136,7 +160,82 @@ test("action-specific teaching guidance requests examples, justified reasoning a
   assert.match(system("solution"), /newly generated code is still not tested/);
   assert.match(system("complexity"), /Define the input quantities/);
   assert.match(
+    system("complexity"),
+    /allocation, initialization and materialization of mandatory output in time cost/,
+  );
+  assert.match(
+    system("complexity"),
+    /auxiliary space excludes the returned output/,
+  );
+  assert.match(
+    system("complexity"),
+    /Do not assume duplicate input entries are bounded/,
+  );
+  assert.match(
+    system("complexity"),
+    /incomplete starter is not a completed algorithm/,
+  );
+  assert.match(
+    system("complexity"),
+    /Mandatory output size is a lower bound on final time/,
+  );
+  assert.match(
+    system("complexity"),
+    /r-by-c dense output costs O\(r\*c\).*n-by-n output costs O\(n\^2\)/,
+  );
+  assert.match(
+    system("complexity"),
+    /Sum or take the maximum of actual phase costs in the final time Big-O/,
+  );
+  assert.match(
+    system("complexity"),
+    /final time bound explicitly includes the output construction bound/,
+  );
+  assert.match(
     system("hint"),
     /without imposing a long template on short hints/,
   );
+});
+
+test("short tutor actions have bounded prose policies, diagrams have a schema-sized budget, solutions retain detail", () => {
+  const system = (action: string, hintDepth?: "nudge" | "concept" | "steps") =>
+    prepareTutorContext({ ...base, action, hintDepth }).messages[0].content;
+  assert.match(system("hint", "nudge"), /one sentence, at most 30 words/);
+  assert.match(
+    system("hint", "concept"),
+    /1-3 short sentences, at most 60 words/,
+  );
+  assert.match(
+    system("hint", "steps"),
+    /three short sentences or bullets, at most 60 words/,
+  );
+  assert.match(
+    system("complexity"),
+    /time and auxiliary space bounds.*100 words/,
+  );
+  for (const action of ["error", "simplify", "followup"])
+    assert.match(system(action), /within 100 words/);
+  assert.match(system("walkthrough"), /within 150 words/);
+  assert.match(system("idea_map"), /prefer 6-10 nodes/);
+  assert.doesNotMatch(system("solution"), /within \d+ words|at most \d+ words/);
+  for (const action of [
+    "hint",
+    "error",
+    "simplify",
+    "followup",
+    "complexity",
+    "walkthrough",
+    "idea_map",
+  ]) {
+    assert.equal(tutorOutputPolicy(action, 128).maxOutputTokens, 128);
+    assert.equal(tutorOutputPolicy(action, 4096).thinking, "disabled");
+  }
+  assert.equal(tutorOutputPolicy("idea_map", 1525).maxOutputTokens, 1525);
+  assert.equal(tutorOutputPolicy("idea_map", 4096).maxOutputTokens, 2048);
+  assert.deepEqual(tutorOutputPolicy("solution", 4096), {
+    maxOutputTokens: 4096,
+  });
+  assert.deepEqual(tutorOutputPolicy("solution", 128), {
+    maxOutputTokens: 128,
+  });
 });
